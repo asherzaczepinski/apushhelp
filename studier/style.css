@@ -271,6 +271,11 @@ a:hover { color: #5f120c; }
   font-style: italic;
   fill: #2b2118;
 }
+.map-hot { cursor: pointer; }
+text.map-hot { fill: var(--patriot); text-decoration: underline; }
+.ch-map circle.map-hot { fill: var(--patriot); }
+.trow { transition: background 0.4s ease; }
+.trow.flash { background: #f4e2b0; }
 .ch-map figcaption {
   font-size: 0.88rem;
   font-style: italic;
@@ -278,6 +283,33 @@ a:hover { color: #5f120c; }
   margin-top: 8px;
   max-width: 60ch;
 }
+
+/* ── chapter quiz ── */
+.ch-quiz {
+  margin-top: 34px;
+  padding-top: 14px;
+  border-top: 3px double var(--brass);
+}
+.cq-count { color: var(--brass); font-size: 0.85rem; }
+.quiz-q { font-size: 1.1rem; margin: 6px 0 12px; }
+.cq-opts { display: flex; flex-direction: column; gap: 8px; max-width: 72ch; }
+.quiz-opt {
+  font-family: inherit;
+  font-size: 0.95rem;
+  text-align: left;
+  background: var(--cream);
+  border: 2px solid var(--brass-pale);
+  border-radius: 4px;
+  padding: 10px 13px;
+  cursor: pointer;
+  color: var(--ink);
+}
+.quiz-opt:hover:not(:disabled) { border-color: var(--patriot); }
+.quiz-opt:disabled { cursor: default; }
+.quiz-opt.right { border-color: #3f6d3f; background: #e6ecdd; }
+.quiz-opt.wrong { border-color: var(--patriot); background: #f0dcd8; }
+.cq-next { margin-top: 12px; }
+.cq-score { font-size: 1.3rem; font-weight: bold; color: var(--patriot); margin-bottom: 12px; }
 
 /* ── small screens ── */
 @media (max-width: 640px) {

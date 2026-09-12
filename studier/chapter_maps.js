@@ -3,14 +3,15 @@
 // for the colonial-space map). All shapes are rough teaching sketches.
 window.CHAPTER_MAPS = {
   1: {
-    caption: "The Columbian Exchange: Old World animals and diseases sailed west; New World crops sailed east. Chapter 1's core story.",
-    base: ['na', 'sa', 'eu', 'af', 'gb', 'cuba'],
-    view: [-110, -12, 28, 62],
+    caption: "Chapter 1's world, placed: the great Indian cities of Cahokia and Tenochtitlan, the Pueblo towns, and Europe's first footholds. Click a labeled place to jump to its definition.",
+    base: ['na', 'cuba'],
+    view: [-115, 14, -61, 52],
     layers: [
-      { t: 'arrow', color: '#8c1c13', pts: [[-5, 40], [-30, 36], [-55, 30], [-72, 26]],
-        label: { text: 'horses, cattle, smallpox', at: [-40, 38.5], side: 'w' } },
-      { t: 'arrow', color: '#33506b', pts: [[-75, 14], [-45, 19], [-15, 27], [2, 33]],
-        label: { text: 'corn, potatoes, tobacco', at: [-48, 14] } }
+      { t: 'dot', at: [-99.13, 19.43], term: 'Tenochtitlan', label: { text: 'Tenochtitlan', side: 'w' } },
+      { t: 'dot', at: [-90.06, 38.65], term: 'Cahokia', label: { text: 'Cahokia', side: 'w' } },
+      { t: 'dot', at: [-105.94, 35.69], label: { text: 'Santa Fe 1610' } },
+      { t: 'dot', at: [-71.21, 46.81], term: 'New France', label: { text: 'Quebec 1608', side: 'w' } },
+      { t: 'dot', at: [-74.0, 40.7], term: 'New Netherland', label: { text: 'New Amsterdam', side: 'w' } }
     ]
   },
   2: {

@@ -6,6 +6,7 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const unitOf = n => U.find(u => u.chapters.includes(Number(n)));
   const chap = n => C[String(n)];
   const chTitle = n => (chap(n) ? chap(n).title : 'Chapter ' + n);
@@ -88,9 +89,10 @@
       <ol class="tl">${(c.timeline || []).map(t => `<li><span class="yr">${esc(t.year)}</span><span>${esc(t.event)}</span></li>`).join('')}</ol>
       <h2 class="terms-head">Key terms <button class="btn small" id="toggledefs" aria-pressed="false">Hide definitions</button></h2>
       <dl class="terms" id="terms">
-        ${(c.key_terms || []).map(t => `<div class="trow"><dt tabindex="0">${esc(t.term)}</dt><dd>${esc(t.def)}</dd></div>`).join('')}
+        ${(c.key_terms || []).map(t => `<div class="trow" id="term-${slug(t.term)}"><dt tabindex="0">${esc(t.term)}</dt><dd>${esc(t.def)}</dd></div>`).join('')}
       </dl>
       ${(c.themes || []).length ? `<h2>Course themes</h2><ul class="themes">${c.themes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+      ${chapterQuizHtml(n)}
       <nav class="pager">
         ${prev ? `<a href="#/ch/${prev}">‹ Ch ${prev}. ${esc(chTitle(prev))}</a>` : '<span></span>'}
         ${next ? `<a href="#/ch/${next}">Ch ${next}. ${esc(chTitle(next))} ›</a>` : ''}
@@ -104,6 +106,14 @@
     const spec = (window.CHAPTER_MAPS || {})[n];
     const B = window.MAP_BASES;
     if (!spec || !B) return '';
+    const chTerms = (chap(n) || {}).key_terms || [];
+    const resolveTerm = L => {
+      if (L.term) return L.term;
+      if (!L.label) return null;
+      const base = L.label.text.replace(/\s*\d.*$/, '').trim().toLowerCase();
+      const hit = chTerms.find(t => t.term.toLowerCase() === base);
+      return hit ? hit.term : null;
+    };
     const P = spec.space === 'colonial'
       ? (x, y) => [x, -y]
       : (lon, lat) => [lon * 0.8, -lat];
@@ -136,15 +146,18 @@
           (L.dash ? ` stroke-dasharray="${(fs / 2).toFixed(2)} ${(fs / 3).toFixed(2)}"` : '') +
           (L.t === 'arrow' ? ' marker-end="url(#mapArrow)"' : '') + '/>';
       }
+      const lk = resolveTerm(L);
+      const hot = lk ? ` class="map-hot" data-term="${esc(lk)}"` : '';
       if (L.t === 'dot') {
         const [x, y] = P(L.at[0], L.at[1]);
-        out += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${(fs / 2.6).toFixed(2)}" fill="#2b2118" stroke="#fffaf0" stroke-width="${lw}"/>`;
+        out += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${(fs / 2.6).toFixed(2)}" fill="#2b2118" stroke="#fffaf0" stroke-width="${lw}"${hot}/>`;
       }
       if (L.label) {
         const at = L.label.at || (L.t === 'dot' ? L.at : L.pts[Math.floor(L.pts.length / 2)]);
         const [x, y] = P(at[0], at[1]);
         const west = L.label.side === 'w';
-        out += `<text x="${(x + (west ? -fs / 2 : fs / 2)).toFixed(2)}" y="${(y - fs / 3).toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${west ? 'end' : 'start'}" class="map-label">${esc(L.label.text)}</text>`;
+        const cls = lk ? 'map-label map-hot' : 'map-label';
+        out += `<text x="${(x + (west ? -fs / 2 : fs / 2)).toFixed(2)}" y="${(y - fs / 3).toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${west ? 'end' : 'start'}" class="${cls}"${lk ? ` data-term="${esc(lk)}"` : ''}>${esc(L.label.text)}</text>`;
       }
     });
     return `<figure class="ch-map">
@@ -154,6 +167,71 @@
       </svg>
       <figcaption>${esc(spec.caption)}</figcaption>
     </figure>`;
+  }
+
+  // ---------------------------------------------------------- chapter quiz
+
+  const cq = { n: null, deck: [], i: 0, score: 0, answered: false };
+
+  function chapterQuizHtml(n) {
+    const c = chap(n);
+    if (!c || (c.key_terms || []).length < 4) return '';
+    return `<section class="ch-quiz" id="ch-quiz"><h2>Quiz yourself</h2><div id="cq-body"></div></section>`;
+  }
+
+  function startChapterQuiz(n) {
+    const terms = ((chap(n) || {}).key_terms || []).slice();
+    shuffle(terms);
+    cq.n = n;
+    cq.deck = terms.slice(0, Math.min(8, terms.length));
+    cq.i = 0; cq.score = 0; cq.answered = false;
+    renderChapterQuiz();
+  }
+
+  function renderChapterQuiz() {
+    const body = document.getElementById('cq-body');
+    if (!body) return;
+    if (cq.i >= cq.deck.length) {
+      const pct = Math.round(100 * cq.score / cq.deck.length);
+      body.innerHTML = `<p class="cq-score">${cq.score} / ${cq.deck.length} right — ${pct}%</p>
+        <button class="btn" id="cq-restart">Quiz again</button>`;
+      return;
+    }
+    const q = cq.deck[cq.i];
+    const all = (chap(cq.n) || {}).key_terms || [];
+    const wrong = [];
+    let guard = 0;
+    while (wrong.length < 3 && guard++ < 60) {
+      const w = all[Math.floor(Math.random() * all.length)];
+      if (w.term !== q.term && wrong.indexOf(w) === -1) wrong.push(w);
+    }
+    const opts = [q].concat(wrong).sort(() => Math.random() - 0.5);
+    cq.answered = false;
+    body.innerHTML = `<p class="cq-count">Question ${cq.i + 1} of ${cq.deck.length} · score ${cq.score}</p>
+      <p class="quiz-q">What is <strong>${esc(q.term)}</strong>?</p>
+      <div class="cq-opts">${opts.map(o => `<button class="quiz-opt" data-term="${esc(o.term)}">${esc(o.def)}</button>`).join('')}</div>`;
+  }
+
+  function answerChapterQuiz(btn) {
+    if (cq.answered) return;
+    cq.answered = true;
+    const q = cq.deck[cq.i];
+    if (btn.dataset.term === q.term) cq.score += 1;
+    const body = document.getElementById('cq-body');
+    body.querySelectorAll('.quiz-opt').forEach(b => {
+      b.disabled = true;
+      if (b.dataset.term === q.term) b.classList.add('right');
+      else if (b === btn) b.classList.add('wrong');
+    });
+    const nav = document.createElement('div');
+    nav.className = 'cq-next';
+    nav.innerHTML = `<button class="btn small" id="cq-advance">${cq.i + 1 < cq.deck.length ? 'Next question' : 'See score'}</button>`;
+    body.appendChild(nav);
+  }
+
+  function wireChapter(n) {
+    n = Number(n);
+    if (chap(n)) startChapterQuiz(n);
   }
 
   // ---------------------------------------------------------- flashcards
@@ -242,6 +320,26 @@
     if (dt) dt.parentElement.classList.toggle('revealed');
   });
 
+  // map location -> jump straight to that term's definition
+  app.addEventListener('click', e => {
+    const hot = e.target.closest('.ch-map [data-term]');
+    if (hot) {
+      const row = document.getElementById('term-' + slug(hot.getAttribute('data-term')));
+      if (row) {
+        const dl = document.getElementById('terms');
+        if (dl && dl.classList.contains('hidden')) row.classList.add('revealed');
+        row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        row.classList.add('flash');
+        setTimeout(() => row.classList.remove('flash'), 1600);
+      }
+      return;
+    }
+    const opt = e.target.closest('.ch-quiz .quiz-opt');
+    if (opt) { answerChapterQuiz(opt); return; }
+    if (e.target.closest('#cq-advance')) { cq.i += 1; renderChapterQuiz(); return; }
+    if (e.target.closest('#cq-restart')) { startChapterQuiz(cq.n); return; }
+  });
+
   app.addEventListener('keydown', e => {
     if (e.key === ' ' && e.target.id === 'fcard') {
       e.preventDefault(); flipped = !flipped; renderCard();
@@ -271,6 +369,7 @@
     else html = notFound();
     app.innerHTML = html;
     if (view === 'quiz') renderCard();
+    if (view === 'ch') wireChapter(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
