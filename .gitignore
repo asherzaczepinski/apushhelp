@@ -16,3 +16,6 @@ __pycache__/
 # Secrets — never commit
 .openai_key
 .env
+
+# Vercel
+.vercel

@@ -109,6 +109,17 @@ def build_items(ch, c):
                       + " — mark on the map where it took place.", "map"))
     for i, th in enumerate(c.get("themes", [])):
         items.append(("themes", i, f"theme{i}", "A symbolic illustration of the theme: " + th[:200], "cartoon"))
+    # one comic-book panel per summary sentence (matches comic.js splitting)
+    sents = []
+    for p in c.get("summary", []):
+        for s in re.split(r'(?<=[.!?])\s+(?=[A-Z"\'])', p):
+            s = s.strip()
+            if len(s) > 4:
+                sents.append(s)
+    for i, s in enumerate(sents[:16]):
+        items.append(("comic", i, f"comic{i}",
+                      "A single dramatic comic-book graphic-novel panel illustrating this moment: "
+                      + s[:210], "cartoon"))
     return items
 
 

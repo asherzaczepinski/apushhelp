@@ -54,6 +54,18 @@ window.CH_IMAGES = {
    "images/ch01/theme2.jpg",
    "images/ch01/theme3.jpg",
    "images/ch01/theme4.jpg"
+  ],
+  "comic": [
+   "images/ch01/comic0.jpg",
+   "images/ch01/comic1.jpg",
+   "images/ch01/comic2.jpg",
+   "images/ch01/comic3.jpg",
+   "images/ch01/comic4.jpg",
+   "images/ch01/comic5.jpg",
+   "images/ch01/comic6.jpg",
+   "images/ch01/comic7.jpg",
+   "images/ch01/comic8.jpg",
+   "images/ch01/comic9.jpg"
   ]
  }
 };

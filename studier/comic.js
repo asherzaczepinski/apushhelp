@@ -220,8 +220,15 @@ window.Comic = (function () {
     if (!c) return '<h1>Not here</h1><p><a href="#/">Back</a></p>';
     const ss = sentences(c);
     const first = pick(ss[0] || c.title);
+    const imgs = (window.CH_IMAGES || {})[String(n)] || {};
+    const panelArt = (i, m, action) => (imgs.comic && imgs.comic[i])
+      ? `<img class="cart-img" src="${imgs.comic[i]}" alt="" loading="lazy">`
+      : panelSVG(m, action);
+    const splashArt = imgs.cover
+      ? `<img class="cart-img" src="${imgs.cover}" alt="" loading="lazy">`
+      : panelSVG(first, false);
     const splash = `<figure class="cpanel splash" data-i="-1">
-      <div class="cart cart-wide">${panelSVG(first, false)}
+      <div class="cart cart-wide">${splashArt}
         <div class="splash-title"><span class="splash-ch">Chapter ${n}</span><strong>${esc(c.title)}</strong><span class="splash-yr">${esc(c.years)}</span></div></div>
     </figure>`;
     const panels = ss.map((sen, i) => {
@@ -229,7 +236,7 @@ window.Comic = (function () {
       const action = ACTION.test(sen);
       const side = i % 2 ? 'right' : 'left';
       return `<figure class="cpanel ${side}${action ? ' action' : ''}" data-i="${i}">
-        <div class="cart">${panelSVG(m, action)}<span class="cpanel-no">${i + 1}</span></div>
+        <div class="cart">${panelArt(i, m, action)}<span class="cpanel-no">${i + 1}</span></div>
         <div class="cbubble"><p data-text="${esc(sen)}"></p></div>
       </figure>`;
     }).join('');

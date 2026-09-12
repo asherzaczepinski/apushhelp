@@ -493,8 +493,8 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 .cpanel.right .cart { order: 2; }
 .cpanel.splash { grid-template-columns: 1fr; }
 .cart { position: relative; border: 2px solid var(--ink); background: #efe4c8; overflow: hidden; line-height: 0; }
-.cart-svg { width: 100%; height: auto; display: block; }
-.cpanel.in .cart-svg { animation: cpop 0.6s cubic-bezier(.2, 1.5, .4, 1) both; }
+.cart-svg, .cart-img { width: 100%; height: auto; display: block; }
+.cpanel.in .cart-svg, .cpanel.in .cart-img { animation: cpop 0.6s cubic-bezier(.2, 1.5, .4, 1) both; }
 @keyframes cpop { 0% { transform: scale(0.68); opacity: 0; } 55% { opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
 .cpanel-no {
   position: absolute; top: 6px; left: 6px;
