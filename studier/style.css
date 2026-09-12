@@ -323,6 +323,8 @@ a:hover { color: #5f120c; }
 
 /* ── chapter sketch maps ── */
 .ch-map { margin: 26px 0 8px; max-width: 640px; position: relative; }
+.ch-map-inline { max-width: 440px; margin: 6px 0 22px; }
+.ch-map-inline figcaption { font-size: 0.82rem; }
 .map-pin { cursor: pointer; }
 #map-pop {
   position: absolute;

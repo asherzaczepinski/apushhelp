@@ -178,8 +178,7 @@
         <p class="ch-years">${esc(c.years)}</p>
         <p><a class="btn" href="#/comic/${n}">Read as a graphic novel</a></p>
       </header>
-      <section class="prose">${(c.summary || []).map(p => `<p>${esc(p)}</p>`).join('')}</section>
-      ${mapFigure(n)}
+      <section class="prose">${proseWithMaps(n, c)}</section>
       <h2>The big ideas</h2>
       <ul class="ideas">${(c.big_ideas || []).map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <h2>Timeline</h2>
@@ -199,12 +198,38 @@
 
   // ---------------------------------------------------------- fact maps
 
-  // Plot every located fact for a chapter on an auto-fitted map. Pins whose
-  // label matches a key term are clickable and jump to that definition.
-  function mapFigure(n) {
+  // A paragraph gets its own little map of just the places it names, so a
+  // fresh map appears under each part of the story that mentions a place.
+  let mapSeq = 0;
+  function proseWithMaps(n, c) {
     const spec = (window.LOCATED_FACTS || {})[String(n)];
+    const paras = c.summary || [];
+    const pins = spec ? spec.pins : [];
+    return paras.map(p => {
+      const lc = String(p).toLowerCase();
+      const here = pins.filter(pin => {
+        const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
+        return base.length > 2 && lc.indexOf(base) !== -1;
+      });
+      const map = here.length
+        ? mapFigure(n, { pins: here, caption: 'Places named in this passage.', inline: true })
+        : '';
+      return `<p>${esc(p)}</p>${map}`;
+    }).join('');
+  }
+
+  // Plot located facts on an auto-fitted map. Pins matching a key term are
+  // clickable for a popover. opts.pins overrides the chapter's full set.
+  function mapFigure(n, opts) {
+    const base = (window.LOCATED_FACTS || {})[String(n)];
     const B = window.MAP_BASES;
-    if (!spec || !B || !spec.pins || !spec.pins.length) return '';
+    const spec = {
+      pins: (opts && opts.pins) || (base && base.pins) || [],
+      caption: (opts && opts.caption) || (base && base.caption) || '',
+      scope: (opts && opts.scope) || (base && base.scope) || 'us'
+    };
+    if (!B || !spec.pins.length) return '';
+    const mapId = ++mapSeq;
     const chTerms = (chap(n) || {}).key_terms || [];
     const chTimeline = (chap(n) || {}).timeline || [];
     const resolveTerm = pin => {
@@ -232,8 +257,8 @@
     const ys = spec.pins.map(p => -p.lat);
     let minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
     let minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
-    const padX = Math.max(6, (maxX - minX) * 0.22);
-    const padY = Math.max(5, (maxY - minY) * 0.22);
+    const padX = Math.max(16, (maxX - minX) * 0.25);
+    const padY = Math.max(12, (maxY - minY) * 0.25);
     minX -= padX; maxX += padX; minY -= padY; maxY += padY;
     // keep a readable aspect ratio (width : height between 1.2 and 1.8);
     // taller maps give stacked labels vertical room to de-collide
@@ -272,7 +297,7 @@
     let dots = '', labels = '', leaders = '';
 
     items.forEach((it, idx) => {
-      const pinId = n + ':' + idx;
+      const pinId = mapId + ':' + idx;
       MAP_PIN_DETAILS[pinId] = { label: it.pin.label, detail: detailOf(it.pin, it.lk) };
       const label = it.pin.label;
       const wEst = label.length * fs * 0.56;
@@ -312,7 +337,7 @@
     });
     out += leaders + dots + labels;
 
-    return `<figure class="ch-map">
+    return `<figure class="ch-map${opts && opts.inline ? ' ch-map-inline' : ''}">
       <svg viewBox="${minX.toFixed(1)} ${minY.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}" role="img" aria-label="${esc(spec.caption)}">${out}</svg>
       <figcaption>${esc(spec.caption)} <span class="map-hint">Tap any pin to see its fact.</span></figcaption>
     </figure>`;
