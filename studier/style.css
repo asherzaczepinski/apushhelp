@@ -508,6 +508,51 @@ path.southern { fill: #8c1c13; }
 .camp-real { max-width: 58ch; font-style: italic; margin-bottom: 14px; }
 .camp-endnav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 
+/* ── gilded globe ── */
+.globe-callout { border-left-color: #33506b; }
+.tycoon-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.globe-host {
+  border: 3px double var(--brass);
+  background: var(--parchment);
+  line-height: 0;
+  overflow: hidden;
+}
+.globe-host canvas { cursor: grab; max-width: 100%; }
+.globe-host canvas:active { cursor: grabbing; }
+.tycoon-status { margin-top: 0; }
+.terr-card {
+  background: var(--cream);
+  border: 3px double var(--brass);
+  padding: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.terr-card strong { font-size: 1.15rem; }
+.terr-meta { color: var(--brass); font-size: 0.85rem; }
+.terr-owner { font-style: italic; color: var(--ink-soft); font-size: 0.92rem; }
+.terr-owner.you { color: var(--patriot); }
+#ty-quiz { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.standings { margin: 10px 0 14px; display: flex; flex-direction: column; gap: 6px; }
+.stand-row { display: grid; grid-template-columns: 92px 1fr auto; gap: 10px; align-items: center; font-size: 0.88rem; }
+.stand-name { font-weight: bold; }
+.stand-bar { background: #e7dcc2; border: 1px solid var(--brass-pale); height: 14px; display: block; }
+.stand-bar span { display: block; height: 100%; }
+.stand-num { color: var(--ink-soft); white-space: nowrap; }
+.tycoon-endturn { display: flex; gap: 10px; }
+.end-rank { margin: 0 0 12px 20px; }
+
+@media (max-width: 900px) {
+  .tycoon-layout { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 640px) {
   .mast-nav { order: 3; }
   .colony-head { flex-direction: column; align-items: flex-start; }
