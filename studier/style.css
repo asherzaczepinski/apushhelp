@@ -401,6 +401,27 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 }
 .map-hint { color: var(--brass); }
 
+/* ── Atlantic atlas ── */
+.ch-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.atlas-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(220px, 1fr); gap: 18px; align-items: start; }
+.atlas-wrap { background: #c3d3dc; border: 3px double var(--brass); padding: 8px; }
+.atlas-svg { width: 100%; height: auto; display: block; }
+.atlas-colony, .atlas-land { stroke: #4a3b2a; stroke-width: 0.14; cursor: pointer; transition: opacity 0.12s; }
+.atlas-colony:hover, .atlas-land:hover { opacity: 0.8; }
+.atlas-colony.sel, .atlas-land.sel { stroke: #2b2118; stroke-width: 0.4; }
+.atlas-lbl { font: italic 1.5px Georgia, serif; fill: var(--cream); text-anchor: middle; pointer-events: none; }
+.atlas-route { fill: none; stroke: #2b2118; stroke-width: 0.32; stroke-dasharray: 0.9 0.6; marker-end: url(#atlasArrow); cursor: pointer; }
+.atlas-route:hover, .atlas-route.sel { stroke: var(--patriot); stroke-width: 0.5; }
+.atlas-route-lbl { font: 1.4px Georgia, serif; fill: #2b2118; text-anchor: middle; pointer-events: none; }
+.atlas-legend { list-style: none; display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; font-size: 0.85rem; color: var(--ink-soft); }
+.atlas-legend .sw { display: inline-block; width: 13px; height: 13px; margin-right: 5px; vertical-align: -2px; border: 1px solid #4a3b2a; }
+.atlas-info { background: var(--cream); border: 3px double var(--brass); padding: 16px; position: sticky; top: 12px; }
+.atlas-info h2 { font-size: 1.3rem; margin-bottom: 8px; border: none; padding: 0; }
+.atlas-info p { font-size: 0.95rem; line-height: 1.5; }
+.atlas-hint { font-style: italic; color: var(--brass); }
+.atlas-img { width: 100%; border: 2px solid var(--brass); border-radius: 5px; margin-bottom: 10px; }
+@media (max-width: 720px) { .atlas-layout { grid-template-columns: 1fr; } .atlas-info { position: static; } }
+
 /* ── word drop typing game ── */
 .ch-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .typer-wrap { max-width: 720px; }

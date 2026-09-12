@@ -185,6 +185,7 @@
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>
         <p class="ch-years">${esc(c.years)}</p>
+        <p class="ch-actions"><a class="btn ghost" href="#/atlas">Atlantic world map</a></p>
       </header>
       ${graphicNovel(n, c)}
       <h2>The big ideas</h2>
@@ -698,6 +699,7 @@
     else if (view === 'quiz') html = quiz(arg);
     else if (view === 'review') html = reviewHtml();
     else if (view === 'order') html = orderHtml(arg);
+    else if (view === 'atlas') html = Atlas.html();
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
@@ -705,6 +707,7 @@
     if (view === 'ch') { wireChapter(arg); Comic.wire(arg); }
     if (view === 'review') startReview();
     if (view === 'order') startOrder(arg);
+    if (view === 'atlas') Atlas.wire();
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
