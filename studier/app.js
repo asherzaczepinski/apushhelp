@@ -100,72 +100,113 @@
     </article>`;
   }
 
-  // ---------------------------------------------------------- sketch maps
+  // ---------------------------------------------------------- fact maps
 
+  // Plot every located fact for a chapter on an auto-fitted map. Pins whose
+  // label matches a key term are clickable and jump to that definition.
   function mapFigure(n) {
-    const spec = (window.CHAPTER_MAPS || {})[n];
+    const spec = (window.LOCATED_FACTS || {})[String(n)];
     const B = window.MAP_BASES;
-    if (!spec || !B) return '';
+    if (!spec || !B || !spec.pins || !spec.pins.length) return '';
     const chTerms = (chap(n) || {}).key_terms || [];
-    const resolveTerm = L => {
-      if (L.term) return L.term;
-      if (!L.label) return null;
-      const base = L.label.text.replace(/\s*\d.*$/, '').trim().toLowerCase();
+    const resolveTerm = pin => {
+      if (pin.term) {
+        const exact = chTerms.find(t => t.term === pin.term);
+        if (exact) return exact.term;
+      }
+      const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
       const hit = chTerms.find(t => t.term.toLowerCase() === base);
       return hit ? hit.term : null;
     };
-    const P = spec.space === 'colonial'
-      ? (x, y) => [x, -y]
-      : (lon, lat) => [lon * 0.8, -lat];
-    const [ax, ay] = P(spec.view[0], spec.view[3]);
-    const [bx, by] = P(spec.view[2], spec.view[1]);
-    const w = bx - ax, h = by - ay;
-    const fs = Math.min(w / 30, h / 12);
-    const lw = w / 170;
-    const path = (pts, close) => pts.map((p, i) =>
-      (i ? 'L' : 'M') + P(p[0], p[1]).map(v => v.toFixed(2)).join(',')).join('') + (close ? 'Z' : '');
+
+    const P = (lon, lat) => [lon * 0.8, -lat];
+
+    // auto-fit the view box to the pins, padded, with a minimum span
+    const xs = spec.pins.map(p => p.lon * 0.8);
+    const ys = spec.pins.map(p => -p.lat);
+    let minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
+    let minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
+    const padX = Math.max(6, (maxX - minX) * 0.22);
+    const padY = Math.max(5, (maxY - minY) * 0.22);
+    minX -= padX; maxX += padX; minY -= padY; maxY += padY;
+    // keep a readable aspect ratio (width : height between 1.2 and 1.8);
+    // taller maps give stacked labels vertical room to de-collide
+    let w = maxX - minX, h = maxY - minY;
+    const cx = (minX + maxX) / 2, cy = (minY + maxY) / 2;
+    if (w / h < 1.2) { w = h * 1.2; minX = cx - w / 2; maxX = cx + w / 2; }
+    else if (w / h > 1.8) { h = w / 1.8; minY = cy - h / 2; maxY = cy + h / 2; }
+    const midX = (minX + maxX) / 2;
+    const fs = Math.max(w / 52, Math.min(w / 30, h / 13));
+    const lw = w / 240;
+    const path = pts => pts.map((p, i) =>
+      (i ? 'L' : 'M') + P(p[0], p[1]).map(v => v.toFixed(2)).join(',')).join('') + 'Z';
 
     let out = '';
-    if (spec.base === 'colonies') {
+    if (spec.scope === 'colonial') {
       const fills = { newengland: '#33506b', middle: '#8b6f47', southern: '#8c1c13' };
       Object.values(B.colonies).forEach(c => {
-        out += `<path d="${c.polys.map(r => path(r, true)).join('')}" fill="${fills[c.region]}" stroke="#5f4f35" stroke-width="${lw}"/>`;
+        out += `<path d="${c.polys.map(r => r.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(2) + ',' + (-p[1]).toFixed(2)).join('') + 'Z').join('')}" fill="${fills[c.region] || '#8b6f47'}" stroke="#5f4f35" stroke-width="${lw}"/>`;
       });
     } else {
-      const shapes = (spec.base || []).flatMap(k => k === 'world' ? B.world : [B[k]]);
-      shapes.forEach(s => {
-        out += `<path d="${path(s, true)}" fill="#e7dcc2" stroke="#8b6f47" stroke-width="${lw}"/>`;
+      B.world.forEach(s => {
+        out += `<path d="${path(s)}" fill="#e7dcc2" stroke="#8b6f47" stroke-width="${lw}"/>`;
       });
     }
-    (spec.layers || []).forEach(L => {
-      if (L.t === 'region') {
-        out += `<path d="${path(L.pts, true)}" fill="${L.color}" opacity="0.5" stroke="${L.color}" stroke-width="${lw}"/>`;
+
+    // place each dot, then lay out labels so none overlap (greedy nudging)
+    const halo = (fs * 0.16).toFixed(2);
+    const items = spec.pins.map(pin => {
+      const [x, y] = P(pin.lon, pin.lat);
+      return { pin, x, y, lk: resolveTerm(pin) };
+    }).sort((a, b) => a.y - b.y);
+
+    const placed = [];
+    const hits = box => placed.some(q =>
+      box.x0 < q.x1 && box.x1 > q.x0 && box.y0 < q.y1 && box.y1 > q.y0);
+    let dots = '', labels = '', leaders = '';
+
+    items.forEach(it => {
+      const label = it.pin.label;
+      const wEst = label.length * fs * 0.56;
+      const hEst = fs * 1.2;
+      const baseY = it.y + fs * 0.32;
+      const margin = fs * 0.4;
+      const inBounds = b => b.x0 >= minX + margin && b.x1 <= maxX - margin
+        && b.y0 >= minY + margin && b.y1 <= maxY - margin;
+      let best = null;
+      const sides = it.x > midX ? [-1, 1] : [1, -1];
+      outer:
+      for (const dy of [0, hEst, -hEst, 2 * hEst, -2 * hEst, 3 * hEst, -3 * hEst, 4 * hEst, -4 * hEst, 5 * hEst, -5 * hEst, 6 * hEst]) {
+        for (const s of sides) {
+          const ax = it.x + s * fs * 0.75;
+          const x0 = s > 0 ? ax : ax - wEst;
+          const box = { x0, x1: x0 + wEst, y0: baseY + dy - hEst, y1: baseY + dy };
+          if (inBounds(box) && !hits(box)) { best = { s, ax, ly: baseY + dy, box }; break outer; }
+        }
       }
-      if (L.t === 'line' || L.t === 'arrow') {
-        out += `<path d="${path(L.pts)}" fill="none" stroke="${L.color}" stroke-width="${lw * 2.4}"` +
-          (L.dash ? ` stroke-dasharray="${(fs / 2).toFixed(2)} ${(fs / 3).toFixed(2)}"` : '') +
-          (L.t === 'arrow' ? ' marker-end="url(#mapArrow)"' : '') + '/>';
+      if (!best) {
+        // clamp into bounds on whichever side has more room
+        const s = it.x < midX ? 1 : -1;
+        let ax = it.x + s * fs * 0.75;
+        if (s > 0) ax = Math.min(ax, maxX - margin - wEst);
+        else ax = Math.max(ax, minX + margin + wEst);
+        const x0 = s > 0 ? ax : ax - wEst;
+        best = { s, ax, ly: baseY, box: { x0, x1: x0 + wEst, y0: baseY - hEst, y1: baseY } };
       }
-      const lk = resolveTerm(L);
-      const hot = lk ? ` class="map-hot" data-term="${esc(lk)}"` : '';
-      if (L.t === 'dot') {
-        const [x, y] = P(L.at[0], L.at[1]);
-        out += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${(fs / 2.6).toFixed(2)}" fill="#2b2118" stroke="#fffaf0" stroke-width="${lw}"${hot}/>`;
+      placed.push(best.box);
+      const hot = it.lk ? ` class="map-hot" data-term="${esc(it.lk)}"` : '';
+      dots += `<circle cx="${it.x.toFixed(2)}" cy="${it.y.toFixed(2)}" r="${(fs / 2.8).toFixed(2)}" fill="${it.lk ? '#8c1c13' : '#2b2118'}" stroke="#fffaf0" stroke-width="${lw}"${hot}/>`;
+      if (Math.abs(best.ly - baseY) > hEst * 0.6) {
+        leaders += `<line x1="${it.x.toFixed(2)}" y1="${it.y.toFixed(2)}" x2="${best.ax.toFixed(2)}" y2="${(best.ly - fs * 0.3).toFixed(2)}" stroke="#8b6f47" stroke-width="${(lw * 0.8).toFixed(2)}"/>`;
       }
-      if (L.label) {
-        const at = L.label.at || (L.t === 'dot' ? L.at : L.pts[Math.floor(L.pts.length / 2)]);
-        const [x, y] = P(at[0], at[1]);
-        const west = L.label.side === 'w';
-        const cls = lk ? 'map-label map-hot' : 'map-label';
-        out += `<text x="${(x + (west ? -fs / 2 : fs / 2)).toFixed(2)}" y="${(y - fs / 3).toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${west ? 'end' : 'start'}" class="${cls}"${lk ? ` data-term="${esc(lk)}"` : ''}>${esc(L.label.text)}</text>`;
-      }
+      const cls = it.lk ? 'map-label map-hot' : 'map-label';
+      labels += `<text x="${best.ax.toFixed(2)}" y="${best.ly.toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${best.s > 0 ? 'start' : 'end'}" stroke="#f0e6cd" stroke-width="${halo}" paint-order="stroke" class="${cls}"${it.lk ? ` data-term="${esc(it.lk)}"` : ''}>${esc(label)}</text>`;
     });
+    out += leaders + dots + labels;
+
     return `<figure class="ch-map">
-      <svg viewBox="${ax.toFixed(1)} ${ay.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}" role="img" aria-label="${esc(spec.caption)}">
-        <defs><marker id="mapArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#2b2118"/></marker></defs>
-        ${out}
-      </svg>
-      <figcaption>${esc(spec.caption)}</figcaption>
+      <svg viewBox="${minX.toFixed(1)} ${minY.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}" role="img" aria-label="${esc(spec.caption)}">${out}</svg>
+      <figcaption>${esc(spec.caption)} <span class="map-hint">Underlined places link to their definition.</span></figcaption>
     </figure>`;
   }
 

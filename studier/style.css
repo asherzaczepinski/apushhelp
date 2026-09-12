@@ -283,6 +283,7 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
   margin-top: 8px;
   max-width: 60ch;
 }
+.map-hint { color: var(--brass); }
 
 /* ── chapter quiz ── */
 .ch-quiz {
