@@ -216,7 +216,8 @@ a:hover { color: #5f120c; }
   cursor: pointer;
   text-decoration: none;
 }
-.btn:hover { background: #6e150e; color: var(--cream); }
+.btn:hover:not(:disabled) { background: #6e150e; color: var(--cream); }
+.btn:disabled { opacity: 0.45; cursor: default; }
 .btn.small { font-size: 0.8rem; padding: 4px 10px; }
 .btn.ghost { background: transparent; color: var(--patriot); border: 2px solid var(--patriot); }
 
@@ -382,9 +383,135 @@ path.southern { fill: #8c1c13; }
 }
 .treasury { margin-top: 20px; font-style: italic; color: var(--ink-soft); }
 
+/* ── Become History campaign ── */
+.play-callout { border-left-color: var(--brass); }
+
+.fig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+.fig-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--cream);
+  border: 3px double var(--brass);
+  padding: 16px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.fig-card:hover, .fig-card:focus-visible { border-color: var(--patriot); }
+.fig-card strong { font-size: 1.2rem; }
+.fig-role { color: var(--patriot); font-size: 0.9rem; }
+.fig-blurb { font-style: italic; color: var(--ink-soft); font-size: 0.92rem; }
+.fig-meta { color: var(--brass); font-size: 0.85rem; }
+.fig-resume {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--patriot);
+  color: var(--cream);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.camp-head h1 { font-size: 2rem; }
+.camp-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  background: var(--navy);
+  color: var(--brass-pale);
+  padding: 10px 16px;
+  margin: 14px 0;
+  font-size: 0.95rem;
+}
+.camp-status strong { color: var(--cream); }
+.camp-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.camp-stage { max-width: 700px; }
+.camp-stage canvas {
+  width: 100%;
+  max-width: 640px;
+  cursor: crosshair;
+  border: 3px double var(--brass);
+  background: var(--parchment);
+}
+
+.h3d-host { position: relative; display: inline-block; border: 3px double var(--brass); line-height: 0; }
+.h3d-host canvas { cursor: crosshair; }
+.h3d-hud {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(27, 42, 56, 0.92);
+  color: var(--cream);
+  font: bold 15px Georgia, serif;
+  padding: 7px 12px;
+  line-height: 1.3;
+}
+.h3d-hud em.good { color: var(--brass-pale); font-style: normal; }
+.h3d-hud em.bad { color: #e8a49c; font-style: normal; }
+.h3d-hud .h3d-end { width: 100%; text-align: center; }
+
+.camp-event {
+  background: var(--cream);
+  border: 3px double var(--patriot);
+  padding: 18px;
+  max-width: 640px;
+  margin-bottom: 14px;
+}
+.camp-event h2 { margin: 0 0 8px; border: none; padding: 0; }
+.camp-event p { max-width: 60ch; margin-bottom: 12px; }
+.camp-event-choices { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.quiz-card {
+  background: var(--cream);
+  border: 3px double var(--brass);
+  padding: 18px;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quiz-q { font-size: 1.05rem; }
+.quiz-opt {
+  font-family: inherit;
+  font-size: 0.95rem;
+  text-align: left;
+  background: var(--parchment);
+  border: 2px solid var(--brass-pale);
+  padding: 10px 12px;
+  cursor: pointer;
+  color: var(--ink);
+}
+.quiz-opt:hover:not(:disabled) { border-color: var(--patriot); }
+.quiz-opt.right { border-color: #3f6d3f; background: #e6ecdd; }
+.quiz-opt.wrong { border-color: var(--patriot); background: #f0dcd8; }
+
+.camp-log-head { margin-top: 26px; padding-top: 12px; border-top: 3px double var(--brass); font-size: 1.15rem; }
+.camp-log { list-style: none; max-width: 68ch; font-size: 0.93rem; color: var(--ink-soft); }
+.camp-log li { padding: 5px 0; border-top: 1px solid var(--brass-pale); }
+.camp-log li:first-child { color: var(--ink); }
+
+.camp-end {
+  background: var(--cream);
+  border: 3px double var(--patriot);
+  padding: 22px;
+  max-width: 640px;
+}
+.camp-rank { font-size: 1.9rem; font-weight: bold; color: var(--patriot); margin: 6px 0; }
+.camp-tally { color: var(--ink-soft); margin-bottom: 12px; }
+.camp-real { max-width: 58ch; font-style: italic; margin-bottom: 14px; }
+.camp-endnav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
 @media (max-width: 640px) {
   .mast-nav { order: 3; }
   .colony-head { flex-direction: column; align-items: flex-start; }
+  .camp-status { font-size: 0.85rem; gap: 6px 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

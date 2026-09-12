@@ -27,6 +27,7 @@
     <h1 class="cover">Nine periods.<br>Twenty-eight chapters.<br>One republic.</h1>
     <p class="cover-note">Summaries, big ideas, key terms, and timelines distilled from your ebook. Pick a period.</p>
     <a class="map-callout" href="#/map">The colonies map — open a colony, run its docks, train its militia.</a>
+    <a class="map-callout play-callout" href="#/play">Become history — role-play a real figure: build a fortune, face the frontier, earn your rank.</a>
     <nav class="units">
       ${U.map(u => `
       <a class="band" href="#/unit/${u.id}">
@@ -319,6 +320,7 @@
     const h = location.hash.replace(/^#\/?/, '');
     const [view, arg] = h.split('/');
     if (window.Games) Games.destroy();
+    if (window.Harbor3D) Harbor3D.destroy();
     let html;
     if (!view) html = home();
     else if (view === 'unit') html = unit(arg);
@@ -326,11 +328,13 @@
     else if (view === 'quiz') html = quiz(arg);
     else if (view === 'map') html = mapView();
     else if (view === 'colony') html = colonyView(arg);
+    else if (view === 'play') html = Campaign.html(arg);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
     if (view === 'quiz') renderCard();
     if (view === 'colony') wireColony(arg);
+    if (view === 'play') Campaign.wire(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }

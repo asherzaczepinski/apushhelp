@@ -134,7 +134,7 @@ window.Games = (function () {
         ctx.fillText(flash.txt, flash.x, flash.y);
         if (flash.ttl <= 0) flash = null;
       }
-      hud(ctx, W, 'loaded: ' + score, opts.good || '', Math.ceil(t) + 's');
+      hud(ctx, W, 'loaded: ' + score, opts.title || opts.good || '', Math.ceil(t) + 's');
       if (t <= 0) {
         setBest(opts.key, score); addCoins(score);
         endPanel(ctx, W, H, ['Run over', score + ' coins earned', 'best: ' + best(opts.key) + ' · treasury: ' + coins()]);
@@ -209,7 +209,8 @@ window.Games = (function () {
         ctx.fillText(flash.txt, flash.x, flash.y);
         if (flash.ttl <= 0) flash = null;
       }
-      hud(ctx, W, 'score: ' + score, 'streak: ' + streak, Math.ceil(t) + 's');
+      hud(ctx, W, 'score: ' + score,
+        (opts.title ? opts.title + ' — streak ' : 'streak: ') + streak, Math.ceil(t) + 's');
       if (t <= 0) {
         setBest(opts.key, score); addCoins(score);
         endPanel(ctx, W, H, ['Drill over', score + ' coins earned', 'best: ' + best(opts.key) + ' · treasury: ' + coins()]);
@@ -224,9 +225,10 @@ window.Games = (function () {
   function start(kind, canvas, opts) {
     destroy();
     if (opts.button) { opts.button.disabled = true; activeBtn = opts.button; }
-    const done = () => {
+    const done = (score) => {
       if (opts.button) { opts.button.disabled = false; opts.button.textContent = 'Play again'; }
       activeBtn = null;
+      if (opts.onScore) opts.onScore(score);
     };
     (kind === 'export' ? exportRun : range)(canvas, opts, done);
   }
