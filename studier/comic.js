@@ -286,5 +286,25 @@ window.Comic = (function () {
     return `<svg viewBox="0 0 320 210" class="fc-art" aria-hidden="true">${scene(m.s)}${actor(m.a)}</svg>`;
   }
 
-  return { html, wire, mini };
+  // split a paragraph into sentences (same rule the comic uses)
+  function splitPara(p) {
+    return String(p).split(/(?<=[.!?])\s+(?=[A-Z"'])/).map(s => s.trim()).filter(s => s.length > 4);
+  }
+
+  // one comic panel figure (AI image if generated, else the animated SVG)
+  function panelHTML(n, sen, i) {
+    const m = pick(sen);
+    const action = ACTION.test(sen);
+    const side = i % 2 ? 'right' : 'left';
+    const imgs = (window.CH_IMAGES || {})[String(n)] || {};
+    const art = (imgs.comic && imgs.comic[i])
+      ? `<img class="cart-img" src="${imgs.comic[i]}" alt="" loading="lazy">`
+      : panelSVG(m, action);
+    return `<figure class="cpanel ${side}${action ? ' action' : ''}" data-i="${i}">
+      <div class="cart">${art}<span class="cpanel-no">${i + 1}</span></div>
+      <div class="cbubble"><p data-text="${esc(sen)}"></p></div>
+    </figure>`;
+  }
+
+  return { html, wire, mini, splitPara, panelHTML };
 })();

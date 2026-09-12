@@ -141,28 +141,31 @@ def write_manifest(man):
         "window.CH_IMAGES = " + json.dumps(man, ensure_ascii=False, indent=1) + ";\n")
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--chapter", type=int, default=1)
-    ap.add_argument("--only", type=int, default=0, help="generate only the first N items (test)")
-    ap.add_argument("--workers", type=int, default=2)
-    args = ap.parse_args()
+def store(chman, cat, idx, rel):
+    with lock:
+        if cat == "cover":
+            chman["cover"] = rel
+        else:
+            arr = chman.setdefault(cat, [])
+            while len(arr) <= idx:
+                arr.append(None)
+            arr[idx] = rel
 
-    if not KEY:
-        sys.exit("No API key found (.openai_key or OPENAI_API_KEY).")
 
-    ch = args.chapter
+def run_chapter(ch, cats, workers, man):
     cfile = BASE / "output" / "summaries" / f"ch{ch:02d}.json"
+    if not cfile.exists():
+        print(f"ch{ch:02d}: no summary — skip")
+        return
     c = json.loads(cfile.read_text())
     items = build_items(ch, c)
-    if args.only:
-        items = items[:args.only]
-
+    if cats:
+        items = [it for it in items if it[0] in cats]
+    if not items:
+        return
     outdir = BASE / "studier" / "images" / f"ch{ch:02d}"
-    man = load_manifest()
-    chman = man.get(str(ch), {})
-
-    print(f"Chapter {ch}: generating {len(items)} images ({args.workers} at a time)...")
+    chman = man.setdefault(str(ch), {})
+    print(f"Chapter {ch}: {len(items)} images ({workers} at a time)...")
     done = [0]
 
     def one(item):
@@ -173,7 +176,6 @@ def main():
             store(chman, cat, idx, rel)
             with lock:
                 done[0] += 1
-                print(f"  [{done[0]}/{len(items)}] cached {name}")
             return
         prefix = MAP_STYLE if style == "map" else STYLE
         png = api_image(prefix + subject)
@@ -186,27 +188,30 @@ def main():
                     print("    ! save error", e)
         with lock:
             done[0] += 1
-            print(f"  [{done[0]}/{len(items)}] {'ok ' if png else 'skip'} {name}")
-            man[str(ch)] = chman
+            print(f"  ch{ch:02d} [{done[0]}/{len(items)}] {'ok ' if png else 'skip'} {name}")
             write_manifest(man)
 
-    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         list(ex.map(one, items))
-
-    man[str(ch)] = chman
     write_manifest(man)
-    print("Done. Wrote studier/images.js")
+    print(f"ch{ch:02d}: done")
 
 
-def store(chman, cat, idx, rel):
-    with lock:
-        if cat == "cover":
-            chman["cover"] = rel
-        else:
-            arr = chman.setdefault(cat, [])
-            while len(arr) <= idx:
-                arr.append(None)
-            arr[idx] = rel
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--chapter", type=int, default=0)
+    ap.add_argument("--all", action="store_true", help="all 28 chapters")
+    ap.add_argument("--cats", default="", help="comma list of categories (default all)")
+    ap.add_argument("--workers", type=int, default=3)
+    args = ap.parse_args()
+    if not KEY:
+        sys.exit("No API key found (.openai_key or OPENAI_API_KEY).")
+    cats = set(x for x in args.cats.split(",") if x)
+    man = load_manifest()
+    chapters = list(range(1, 29)) if args.all else [args.chapter or 1]
+    for ch in chapters:
+        run_chapter(ch, cats, args.workers, man)
+    print("All done. Wrote studier/images.js")
 
 
 if __name__ == "__main__":

@@ -187,20 +187,19 @@
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>
         <p class="ch-years">${esc(c.years)}</p>
-        <p class="ch-actions"><a class="btn" href="#/comic/${n}">Read as a graphic novel</a>
-          <a class="btn ghost" href="#/type/${n}">Word Drop game</a></p>
+        <p class="ch-actions"><a class="btn ghost" href="#/type/${n}">Word Drop game</a></p>
       </header>
       ${imgTag(chImg(n, 'cover', 0), 'ch-cover', esc(c.title) + ' cover')}
-      <section class="prose">${proseWithMaps(n, c)}</section>
+      ${graphicNovel(n, c)}
       <h2>The big ideas</h2>
-      <ul class="ideas illus">${(c.big_ideas || []).map((i, idx) => `<li>${imgTag(chImg(n, 'ideas', idx), 'thumb', '')}<span>${esc(i)}</span></li>`).join('')}</ul>
+      <ul class="ideas">${(c.big_ideas || []).map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <h2>Timeline</h2>
-      <ol class="tl illus">${(c.timeline || []).map((t, idx) => `<li><span class="yr">${esc(t.year)}</span>${imgTag(chImg(n, 'timeline', idx), 'thumb', '')}<span>${esc(t.event)}</span></li>`).join('')}</ol>
+      <ol class="tl">${(c.timeline || []).map(t => `<li><span class="yr">${esc(t.year)}</span><span>${esc(t.event)}</span></li>`).join('')}</ol>
       <h2 class="terms-head">Key terms <button class="btn small" id="toggledefs" aria-pressed="false">Hide definitions</button></h2>
       <dl class="terms" id="terms">
         ${(c.key_terms || []).map((t, idx) => `<div class="trow" id="term-${slug(t.term)}">${imgTag(chImg(n, 'terms', idx), 'thumb', esc(t.term))}<div class="trow-txt"><dt tabindex="0">${esc(t.term)}</dt><dd>${esc(t.def)}</dd></div></div>`).join('')}
       </dl>
-      ${(c.themes || []).length ? `<h2>Course themes</h2><ul class="themes illus">${c.themes.map((t, idx) => `<li>${imgTag(chImg(n, 'themes', idx), 'thumb', '')}<span>${esc(t)}</span></li>`).join('')}</ul>` : ''}
+      ${(c.themes || []).length ? `<h2>Course themes</h2><ul class="themes">${c.themes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
       ${chapterQuizHtml(n)}
       <nav class="pager">
         ${prev ? `<a href="#/ch/${prev}">‹ Ch ${prev}. ${esc(chTitle(prev))}</a>` : '<span></span>'}
@@ -211,25 +210,29 @@
 
   // ---------------------------------------------------------- fact maps
 
-  // A paragraph gets its own little map of just the places it names, so a
-  // fresh map appears under each part of the story that mentions a place.
+  // The chapter summary told as an inline graphic novel: each sentence is a
+  // comic panel (AI art when available), with a little map after any passage
+  // that names places, so you still get the geography.
   let mapSeq = 0;
-  function proseWithMaps(n, c) {
+  function graphicNovel(n, c) {
     const spec = (window.LOCATED_FACTS || {})[String(n)];
-    const paras = c.summary || [];
     const pins = spec ? spec.pins : [];
-    return paras.map((p, i) => {
+    const parts = [];
+    let gi = 0;
+    (c.summary || []).forEach(p => {
+      Comic.splitPara(p).forEach(sen => {
+        if (gi < 16) { parts.push(Comic.panelHTML(n, sen, gi)); gi++; }
+      });
       const lc = String(p).toLowerCase();
       const here = pins.filter(pin => {
         const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
         return base.length > 2 && lc.indexOf(base) !== -1;
       });
-      const map = here.length
-        ? mapFigure(n, { pins: here, caption: 'Places named in this passage.', inline: true })
-        : '';
-      const img = imgTag(chImg(n, 'summary', i), 'para-img', 'illustration');
-      return `<div class="para">${img}<p>${esc(p)}</p></div>${map}`;
-    }).join('');
+      if (here.length) {
+        parts.push(mapFigure(n, { pins: here, caption: 'Places named in this passage.', inline: true }));
+      }
+    });
+    return `<div class="comic-strip chapter-gn">${parts.join('')}</div>`;
   }
 
   // Plot located facts on an auto-fitted map. Pins matching a key term are
@@ -707,7 +710,7 @@
     else html = notFound();
     app.innerHTML = html;
     if (view === 'quiz') renderCard();
-    if (view === 'ch') wireChapter(arg);
+    if (view === 'ch') { wireChapter(arg); Comic.wire(arg); }
     if (view === 'review') startReview();
     if (view === 'order') startOrder(arg);
     if (view === 'comic') Comic.wire(arg);
