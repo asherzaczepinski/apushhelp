@@ -98,8 +98,6 @@
       return '<h1>No data yet</h1><p>Run <code>python3 build_data.py</code> in the project folder, then reload.</p>';
     }
     return `
-    <h1 class="cover">Nine periods.<br>Twenty-eight chapters.<br>One republic.</h1>
-    <p class="cover-note">Summaries, big ideas, key terms, and timelines distilled from your ebook. Pick a period.</p>
     ${dashboard()}
     <nav class="units">
       ${U.map(u => {
@@ -641,7 +639,8 @@
     }
   });
 
-  document.getElementById('searchform').addEventListener('submit', e => {
+  const searchForm = document.getElementById('searchform');
+  if (searchForm) searchForm.addEventListener('submit', e => {
     e.preventDefault();
     const q = document.getElementById('q').value.trim();
     if (q) location.hash = '#/find/' + encodeURIComponent(q);

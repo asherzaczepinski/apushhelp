@@ -43,8 +43,10 @@ a:hover { color: #5f120c; }
   text-decoration: none;
   font-size: 1.35rem;
   letter-spacing: 1px;
+  transition: color 0.15s ease;
 }
-.site em { color: var(--brass-pale); }
+.site:hover, .site:focus-visible { color: var(--brass-pale); }
+.mast-right { display: flex; align-items: center; gap: 22px; }
 .mast-nav { display: flex; gap: 18px; }
 .mast-nav a {
   color: var(--brass-pale);
@@ -52,10 +54,23 @@ a:hover { color: #5f120c; }
   font-size: 1rem;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
+  transition: color 0.15s ease;
 }
 .mast-nav a:hover, .mast-nav a:focus-visible {
   color: var(--cream);
   border-bottom-color: var(--patriot);
+}
+.credit {
+  color: var(--brass-pale);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-style: italic;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease;
+}
+.credit:hover, .credit:focus-visible {
+  color: var(--cream);
+  border-bottom-color: var(--brass);
 }
 #q {
   font-family: inherit;
