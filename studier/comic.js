@@ -273,5 +273,11 @@ window.Comic = (function () {
     panels.forEach(p => io.observe(p));
   }
 
-  return { html, wire };
+  // small matched cartoon for a flashcard, keyed off the term text
+  function mini(text) {
+    const m = pick(String(text || ''));
+    return `<svg viewBox="0 0 320 210" class="fc-art" aria-hidden="true">${scene(m.s)}${actor(m.a)}</svg>`;
+  }
+
+  return { html, wire, mini };
 })();

@@ -539,7 +539,7 @@
     <p class="crumb"><a href="#/unit/${u.id}">Unit ${u.id} — ${esc(u.name)}</a></p>
     <h1>Term quiz — Unit ${u.id}</h1>
     <p class="quiz-help">Click the card (or press space) to flip it.</p>
-    <div class="fcard" id="fcard" role="button" tabindex="0" aria-live="polite"></div>
+    <div class="fc-stage"><div class="fcard" id="fcard" role="button" tabindex="0" aria-live="polite"></div></div>
     <nav class="quiz-nav">
       <button class="btn" id="qprev">Back</button>
       <span id="qcount" class="qcount"></span>
@@ -557,8 +557,10 @@
       ? `<span class="fc-term-sm">${esc(t.term)}</span>
          <span class="fc-def">${esc(t.def)}</span>
          <span class="fc-src">from chapter ${t.ch}</span>`
-      : `<span class="fc-term">${esc(t.term)}</span>
+      : `<div class="fc-scene">${window.Comic ? Comic.mini(t.term + ' ' + (t.def || '')) : ''}</div>
+         <span class="fc-term">${esc(t.term)}</span>
          <span class="fc-hint">what is it?</span>`;
+    el.classList.remove('fcflip'); void el.offsetWidth; el.classList.add('fcflip');
     const count = document.getElementById('qcount');
     if (count) count.textContent = (pos + 1) + ' / ' + deck.length;
   }
