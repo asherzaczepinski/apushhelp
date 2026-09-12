@@ -208,28 +208,26 @@
 
   // ---------------------------------------------------------- fact maps
 
-  // The chapter summary told as an inline graphic novel: each sentence is a
-  // comic panel (AI art when available), with a little map after any passage
-  // that names places, so you still get the geography.
+  // The whole chapter told as one inline graphic novel: the story, then the
+  // big ideas, the timeline, and the key terms — each an illustrated panel.
   let mapSeq = 0;
   function graphicNovel(n, c) {
-    const spec = (window.LOCATED_FACTS || {})[String(n)];
-    const pins = spec ? spec.pins : [];
+    const imgs = (window.CH_IMAGES || {})[String(n)] || {};
+    const arr = a => Array.isArray(a) ? a : [];
     const parts = [];
-    let gi = 0;
+    let i = 0;
+    let si = 0;
     (c.summary || []).forEach(p => {
       Comic.splitPara(p).forEach(sen => {
-        if (gi < 16) { parts.push(Comic.panelHTML(n, sen, gi)); gi++; }
+        if (si < 16) { parts.push(Comic.panel(sen, arr(imgs.comic)[si], i++)); si++; }
       });
-      const lc = String(p).toLowerCase();
-      const here = pins.filter(pin => {
-        const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
-        return base.length > 2 && lc.indexOf(base) !== -1;
-      });
-      if (here.length) {
-        parts.push(mapFigure(n, { pins: here, caption: 'Places named in this passage.', inline: true }));
-      }
     });
+    (c.big_ideas || []).forEach((b, k) =>
+      parts.push(Comic.panel(b, arr(imgs.ideas)[k], i++)));
+    (c.timeline || []).forEach((t, k) =>
+      parts.push(Comic.panel(t.year + ' — ' + t.event, arr(imgs.timeline)[k], i++)));
+    (c.key_terms || []).forEach((t, k) =>
+      parts.push(Comic.panel(t.term + ' — ' + t.def, arr(imgs.terms)[k], i++)));
     return `<div class="comic-strip chapter-gn">${parts.join('')}</div>`;
   }
 

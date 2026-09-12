@@ -291,20 +291,18 @@ window.Comic = (function () {
     return String(p).split(/(?<=[.!?])\s+(?=[A-Z"'])/).map(s => s.trim()).filter(s => s.length > 4);
   }
 
-  // one comic panel figure (AI image if generated, else the animated SVG)
-  function panelHTML(n, sen, i) {
-    const m = pick(sen);
-    const action = ACTION.test(sen);
+  // one comic panel: a caption + an image (AI art if given, else animated SVG)
+  function panel(caption, imgSrc, i) {
+    const action = ACTION.test(caption);
     const side = i % 2 ? 'right' : 'left';
-    const imgs = (window.CH_IMAGES || {})[String(n)] || {};
-    const art = (imgs.comic && imgs.comic[i])
-      ? `<img class="cart-img" src="${imgs.comic[i]}" alt="" loading="lazy">`
-      : panelSVG(m, action);
+    const art = imgSrc
+      ? `<img class="cart-img" src="${imgSrc}" alt="" loading="lazy">`
+      : panelSVG(pick(caption), action);
     return `<figure class="cpanel ${side}${action ? ' action' : ''}" data-i="${i}">
       <div class="cart">${art}<span class="cpanel-no">${i + 1}</span></div>
-      <div class="cbubble"><p data-text="${esc(sen)}"></p></div>
+      <div class="cbubble"><p data-text="${esc(caption)}"></p></div>
     </figure>`;
   }
 
-  return { html, wire, mini, splitPara, panelHTML };
+  return { html, wire, mini, splitPara, panel };
 })();

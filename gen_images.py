@@ -105,8 +105,7 @@ def build_items(ch, c):
                       f"An illustration of '{t['term']}': " + t["def"][:170], "cartoon"))
     for i, e in enumerate(c.get("timeline", [])):
         items.append(("timeline", i, f"time{i}",
-                      f"the geographic setting of this {e['year']} event — " + e["event"][:170]
-                      + " — mark on the map where it took place.", "map"))
+                      f"A comic-book panel of this {e['year']} historical moment: " + e["event"][:180], "cartoon"))
     for i, th in enumerate(c.get("themes", [])):
         items.append(("themes", i, f"theme{i}", "A symbolic illustration of the theme: " + th[:200], "cartoon"))
     # one comic-book panel per summary sentence (matches comic.js splitting)
