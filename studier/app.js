@@ -109,7 +109,6 @@
       return '<h1>No data yet</h1><p>Run <code>python3 build_data.py</code> in the project folder, then reload.</p>';
     }
     return `
-    ${dashboard()}
     <nav class="units">
       ${U.map(u => {
         const m = unitMastery(u);
@@ -182,7 +181,6 @@
     const prev = chap(n - 1) ? n - 1 : null;
     const next = chap(n + 1) ? n + 1 : null;
     return `
-    <p class="crumb"><a href="#/">All periods</a> / <a href="#/unit/${u.id}">Unit ${u.id} — ${esc(u.name)}</a></p>
     <article class="chapter">
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>

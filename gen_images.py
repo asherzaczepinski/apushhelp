@@ -18,7 +18,7 @@ import urllib.request
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from threading import Lock
+from threading import Lock, Event
 
 from PIL import Image
 
@@ -43,6 +43,7 @@ MAP_STYLE = ("A stylized vintage illustrated MAP in a warm storybook style: "
              "and non-graphic. Depict: ")
 
 lock = Lock()
+stop = Event()  # set when the account runs out of credits — abort fast
 
 
 def api_image(prompt):
@@ -68,9 +69,12 @@ def api_image(prompt):
                     return base64.b64decode(b64)
             except urllib.error.HTTPError as e:
                 last = e.read().decode()[:300]
+                if "credit_balance_exhausted" in last:
+                    stop.set()  # genuinely out of credits — stop the whole run
+                    return None
                 if e.code == 429:  # rate limited — wait and retry
                     import time
-                    time.sleep(8 * (retry + 1))
+                    time.sleep(6 * (retry + 1))
                     continue
                 break  # other errors: try next model
             except Exception as e:
@@ -168,6 +172,8 @@ def run_chapter(ch, cats, workers, man):
     done = [0]
 
     def one(item):
+        if stop.is_set():
+            return
         cat, idx, name, subject, style = item
         path = outdir / f"{name}.jpg"
         rel = f"images/ch{ch:02d}/{name}.jpg"
