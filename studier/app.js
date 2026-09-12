@@ -16,6 +16,79 @@
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
     }
+    return a;
+  }
+
+  // ------------------------------------------- progress + spaced retrieval
+  // Leitner-style boxes: a missed term comes back today; each correct recall
+  // pushes it to a longer interval. Retrieval practice + spacing, combined.
+  const STORE = 'gml_progress';
+  const DAY = 86400000;
+  const BOX_DAYS = [0, 1, 3, 7, 16];
+  const nowMs = () => Date.now();
+  const loadProg = () => {
+    try { return JSON.parse(localStorage.getItem(STORE)) || { terms: {} }; }
+    catch (e) { return { terms: {} }; }
+  };
+  const saveProg = p => localStorage.setItem(STORE, JSON.stringify(p));
+  const tKey = (ch, term) => ch + '::' + term;
+
+  function recordTerm(ch, term, correct) {
+    const p = loadProg();
+    const k = tKey(ch, term);
+    const t = p.terms[k] || { box: 0, correct: 0, wrong: 0 };
+    if (correct) { t.correct++; t.box = Math.min(BOX_DAYS.length - 1, t.box + 1); }
+    else { t.wrong++; t.box = 0; }
+    t.due = nowMs() + BOX_DAYS[t.box] * DAY;
+    t.seen = nowMs();
+    p.terms[k] = t;
+    saveProg(p);
+  }
+
+  function allTerms() {
+    const list = [];
+    Object.values(C).forEach(c => (c.key_terms || []).forEach(t =>
+      list.push({ ch: c.chapter, term: t.term, def: t.def })));
+    return list;
+  }
+  function masteryStats() {
+    const p = loadProg();
+    let known = 0, learning = 0, fresh = 0;
+    allTerms().forEach(t => {
+      const s = p.terms[tKey(t.ch, t.term)];
+      if (!s) fresh++;
+      else if (s.box >= 3) known++;
+      else learning++;
+    });
+    return { known, learning, fresh, total: known + learning + fresh };
+  }
+  function unitMastery(u) {
+    const p = loadProg();
+    let known = 0, total = 0;
+    u.chapters.forEach(n => ((chap(n) || {}).key_terms || []).forEach(t => {
+      total++;
+      const s = p.terms[tKey(n, t.term)];
+      if (s && s.box >= 3) known++;
+    }));
+    return { known, total };
+  }
+  function dueCount() {
+    const p = loadProg(), n = nowMs();
+    return allTerms().filter(t => {
+      const s = p.terms[tKey(t.ch, t.term)];
+      return s && s.due <= n;
+    }).length;
+  }
+  function dueQueue(limit) {
+    const p = loadProg(), n = nowMs();
+    const due = [], fresh = [];
+    allTerms().forEach(t => {
+      const s = p.terms[tKey(t.ch, t.term)];
+      if (s) { if (s.due <= n) due.push(Object.assign({ due: s.due }, t)); }
+      else fresh.push(t);
+    });
+    due.sort((a, b) => a.due - b.due);
+    return shuffle(due.concat(shuffle(fresh)).slice(0, limit || 15));
   }
 
   // ---------------------------------------------------------- views
@@ -27,17 +100,41 @@
     return `
     <h1 class="cover">Nine periods.<br>Twenty-eight chapters.<br>One republic.</h1>
     <p class="cover-note">Summaries, big ideas, key terms, and timelines distilled from your ebook. Pick a period.</p>
+    ${dashboard()}
     <nav class="units">
-      ${U.map(u => `
+      ${U.map(u => {
+        const m = unitMastery(u);
+        const pct = m.total ? Math.round(100 * m.known / m.total) : 0;
+        return `
       <a class="band" href="#/unit/${u.id}">
         <span class="era">${esc(u.years)}</span>
         <span class="band-main">
           <strong>Unit ${u.id} — ${esc(u.name)}</strong>
           ${u.chapters.map(n => `<span class="band-ch">Ch ${n}. ${esc(chTitle(n))}</span>`).join('')}
         </span>
-        <span class="weight">${esc(u.weight)}</span>
-      </a>`).join('')}
+        <span class="band-side">
+          <span class="weight">${esc(u.weight)}</span>
+          <span class="umini" title="${m.known} of ${m.total} terms mastered"><span style="width:${pct}%"></span></span>
+        </span>
+      </a>`;
+      }).join('')}
     </nav>`;
+  }
+
+  function dashboard() {
+    const m = masteryStats();
+    if (!m.total) return '';
+    const due = dueCount();
+    const pct = k => Math.round(100 * k / m.total);
+    const started = m.known + m.learning > 0;
+    return `<section class="dash">
+      <div class="dash-bar" role="img" aria-label="${m.known} known, ${m.learning} learning, ${m.fresh} not started">
+        <span class="seg known" style="width:${pct(m.known)}%"></span>
+        <span class="seg learning" style="width:${pct(m.learning)}%"></span>
+      </div>
+      <p class="dash-legend"><strong>${m.known}</strong> mastered · <strong>${m.learning}</strong> learning · <strong>${m.fresh}</strong> new · ${m.total} key terms</p>
+      <p class="dash-cta"><a class="btn" href="#/review">${due ? 'Review ' + due + ' due term' + (due === 1 ? '' : 's') : (started ? 'Start a review session' : 'Start studying — mixed review')}</a></p>
+    </section>`;
   }
 
   function unit(id) {
@@ -48,7 +145,8 @@
     <header class="unit-head">
       <p class="era big">${esc(u.years)}</p>
       <h1>Unit ${u.id} — ${esc(u.name)}</h1>
-      <p><a class="btn" href="#/quiz/${u.id}">Quiz this unit's terms</a></p>
+      <p class="unit-actions"><a class="btn" href="#/quiz/${u.id}">Flashcards</a>
+        <a class="btn ghost" href="#/order/${u.id}">Timeline challenge</a></p>
     </header>
     <ul class="ch-list">
       ${u.chapters.map(n => {
@@ -109,6 +207,7 @@
     const B = window.MAP_BASES;
     if (!spec || !B || !spec.pins || !spec.pins.length) return '';
     const chTerms = (chap(n) || {}).key_terms || [];
+    const chTimeline = (chap(n) || {}).timeline || [];
     const resolveTerm = pin => {
       if (pin.term) {
         const exact = chTerms.find(t => t.term === pin.term);
@@ -117,6 +216,14 @@
       const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
       const hit = chTerms.find(t => t.term.toLowerCase() === base);
       return hit ? hit.term : null;
+    };
+    const detailOf = (pin, lk) => {
+      if (lk) { const t = chTerms.find(x => x.term === lk); if (t) return t.def; }
+      const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
+      const yr = (pin.label.match(/\d{3,4}/) || [])[0];
+      const ev = chTimeline.find(e =>
+        (e.event || '').toLowerCase().includes(base) || (yr && String(e.year) === yr));
+      return ev ? ev.year + ' — ' + ev.event : '';
     };
 
     const P = (lon, lat) => [lon * 0.8, -lat];
@@ -165,7 +272,9 @@
       box.x0 < q.x1 && box.x1 > q.x0 && box.y0 < q.y1 && box.y1 > q.y0);
     let dots = '', labels = '', leaders = '';
 
-    items.forEach(it => {
+    items.forEach((it, idx) => {
+      const pinId = n + ':' + idx;
+      MAP_PIN_DETAILS[pinId] = { label: it.pin.label, detail: detailOf(it.pin, it.lk) };
       const label = it.pin.label;
       const wEst = label.length * fs * 0.56;
       const hEst = fs * 1.2;
@@ -194,20 +303,41 @@
         best = { s, ax, ly: baseY, box: { x0, x1: x0 + wEst, y0: baseY - hEst, y1: baseY } };
       }
       placed.push(best.box);
-      const hot = it.lk ? ` class="map-hot" data-term="${esc(it.lk)}"` : '';
-      dots += `<circle cx="${it.x.toFixed(2)}" cy="${it.y.toFixed(2)}" r="${(fs / 2.8).toFixed(2)}" fill="${it.lk ? '#8c1c13' : '#2b2118'}" stroke="#fffaf0" stroke-width="${lw}"${hot}/>`;
+      const pd = ` class="map-pin${it.lk ? ' map-hot' : ''}" data-pin="${pinId}"`;
+      dots += `<circle cx="${it.x.toFixed(2)}" cy="${it.y.toFixed(2)}" r="${(fs / 2.8).toFixed(2)}" fill="${it.lk ? '#8c1c13' : '#2b2118'}" stroke="#fffaf0" stroke-width="${lw}"${pd}/>`;
       if (Math.abs(best.ly - baseY) > hEst * 0.6) {
         leaders += `<line x1="${it.x.toFixed(2)}" y1="${it.y.toFixed(2)}" x2="${best.ax.toFixed(2)}" y2="${(best.ly - fs * 0.3).toFixed(2)}" stroke="#8b6f47" stroke-width="${(lw * 0.8).toFixed(2)}"/>`;
       }
-      const cls = it.lk ? 'map-label map-hot' : 'map-label';
-      labels += `<text x="${best.ax.toFixed(2)}" y="${best.ly.toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${best.s > 0 ? 'start' : 'end'}" stroke="#f0e6cd" stroke-width="${halo}" paint-order="stroke" class="${cls}"${it.lk ? ` data-term="${esc(it.lk)}"` : ''}>${esc(label)}</text>`;
+      const cls = 'map-label map-pin' + (it.lk ? ' map-hot' : '');
+      labels += `<text x="${best.ax.toFixed(2)}" y="${best.ly.toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${best.s > 0 ? 'start' : 'end'}" stroke="#f0e6cd" stroke-width="${halo}" paint-order="stroke" class="${cls}" data-pin="${pinId}">${esc(label)}</text>`;
     });
     out += leaders + dots + labels;
 
     return `<figure class="ch-map">
       <svg viewBox="${minX.toFixed(1)} ${minY.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}" role="img" aria-label="${esc(spec.caption)}">${out}</svg>
-      <figcaption>${esc(spec.caption)} <span class="map-hint">Underlined places link to their definition.</span></figcaption>
+      <figcaption>${esc(spec.caption)} <span class="map-hint">Tap any pin to see its fact.</span></figcaption>
     </figure>`;
+  }
+
+  const MAP_PIN_DETAILS = {};
+
+  function showMapPop(pinEl) {
+    const d = MAP_PIN_DETAILS[pinEl.getAttribute('data-pin')];
+    if (!d) return;
+    const fig = pinEl.closest('.ch-map');
+    if (!fig) return;
+    let pop = document.getElementById('map-pop');
+    if (pop) pop.remove();
+    pop = document.createElement('div');
+    pop.id = 'map-pop';
+    pop.innerHTML = `<strong>${esc(d.label)}</strong>` +
+      (d.detail ? `<span>${esc(d.detail)}</span>` : '<span class="map-pop-none">No detail for this place.</span>');
+    fig.appendChild(pop);
+    const pr = pinEl.getBoundingClientRect(), fr = fig.getBoundingClientRect();
+    const x = pr.left - fr.left + pr.width / 2;
+    const y = pr.top - fr.top;
+    pop.style.left = Math.min(Math.max(70, x), fr.width - 70) + 'px';
+    pop.style.top = Math.max(6, y - 6) + 'px';
   }
 
   // ---------------------------------------------------------- chapter quiz
@@ -257,7 +387,9 @@
     if (cq.answered) return;
     cq.answered = true;
     const q = cq.deck[cq.i];
-    if (btn.dataset.term === q.term) cq.score += 1;
+    const correct = btn.dataset.term === q.term;
+    if (correct) cq.score += 1;
+    recordTerm(cq.n, q.term, correct);
     const body = document.getElementById('cq-body');
     body.querySelectorAll('.quiz-opt').forEach(b => {
       b.disabled = true;
@@ -273,6 +405,123 @@
   function wireChapter(n) {
     n = Number(n);
     if (chap(n)) startChapterQuiz(n);
+  }
+
+  // ---------------------------------------------------------- spaced review
+
+  const rv = { queue: [], i: 0, right: 0, answered: false };
+
+  function reviewHtml() {
+    return `<p class="crumb"><a href="#/">All periods</a></p>
+      <h1>Spaced review</h1>
+      <p class="cover-note">Terms mixed from every chapter and resurfaced on a spacing schedule — miss one and it returns sooner, get it right and it waits longer. Retrieval practice plus spacing are the two techniques the research backs most.</p>
+      <div id="rv-body"></div>`;
+  }
+  function startReview() {
+    rv.queue = dueQueue(15); rv.i = 0; rv.right = 0; rv.answered = false;
+    renderReview();
+  }
+  function renderReview() {
+    const body = document.getElementById('rv-body');
+    if (!body) return;
+    if (!rv.queue.length) {
+      body.innerHTML = '<p class="cq-score">No terms to review yet.</p><p>Take a chapter quiz first, then your missed terms show up here.</p>';
+      return;
+    }
+    if (rv.i >= rv.queue.length) {
+      body.innerHTML = `<p class="cq-score">${rv.right} / ${rv.queue.length} right</p>
+        <p>${dueCount()} term${dueCount() === 1 ? '' : 's'} still due.</p>
+        <button class="btn" id="rv-again">Another round</button>
+        <a class="btn ghost" href="#/">Back to periods</a>`;
+      return;
+    }
+    const q = rv.queue[rv.i];
+    const pool = shuffle(allTerms().filter(t => t.term !== q.term && t.def !== q.def));
+    const opts = shuffle([q].concat(pool.slice(0, 3)));
+    rv.answered = false;
+    body.innerHTML = `<p class="cq-count">Card ${rv.i + 1} of ${rv.queue.length} · chapter ${q.ch}</p>
+      <p class="quiz-q">What is <strong>${esc(q.term)}</strong>?</p>
+      <div class="cq-opts">${opts.map(o => `<button class="quiz-opt" data-term="${esc(o.term)}">${esc(o.def)}</button>`).join('')}</div>`;
+  }
+  function answerReview(btn) {
+    if (rv.answered) return;
+    rv.answered = true;
+    const q = rv.queue[rv.i];
+    const correct = btn.dataset.term === q.term;
+    if (correct) rv.right += 1;
+    recordTerm(q.ch, q.term, correct);
+    const body = document.getElementById('rv-body');
+    body.querySelectorAll('.quiz-opt').forEach(b => {
+      b.disabled = true;
+      if (b.dataset.term === q.term) b.classList.add('right');
+      else if (b === btn) b.classList.add('wrong');
+    });
+    const nav = document.createElement('div');
+    nav.className = 'cq-next';
+    nav.innerHTML = `<button class="btn small" id="rv-next">${rv.i + 1 < rv.queue.length ? 'Next' : 'Finish'}</button>
+      <a class="rv-link" href="#/ch/${q.ch}">see chapter ${q.ch}</a>`;
+    body.appendChild(nav);
+  }
+
+  // ------------------------------------------------ chronology challenge
+
+  const ord = { events: [], picked: [], done: false, uid: null };
+  function parseYear(s) {
+    const m = String(s).match(/\d+/);
+    const y = m ? parseInt(m[0], 10) : 0;
+    return /bce?\b/i.test(String(s)) ? -y : y;
+  }
+  function orderHtml(uid) {
+    const u = U.find(x => x.id === Number(uid));
+    if (!u) return notFound();
+    return `<p class="crumb"><a href="#/unit/${u.id}">Unit ${u.id} — ${esc(u.name)}</a></p>
+      <h1>Timeline challenge</h1>
+      <p class="cover-note">Click the events in order, earliest to latest. Sequencing events is exactly what the exam's causation and continuity-and-change questions test — and where students most often slip.</p>
+      <div id="ord-body"></div>`;
+  }
+  function startOrder(uid) {
+    const u = U.find(x => x.id === Number(uid));
+    if (!u) return;
+    ord.uid = uid; ord.picked = []; ord.done = false;
+    const pool = [], seen = {};
+    u.chapters.forEach(n => ((chap(n) || {}).timeline || []).forEach(e => {
+      const y = parseYear(e.year);
+      if (!(y in seen)) { seen[y] = 1; pool.push({ year: e.year, event: e.event, y: y }); }
+    }));
+    ord.events = shuffle(shuffle(pool).slice(0, Math.min(6, pool.length)));
+    renderOrder();
+  }
+  function renderOrder() {
+    const body = document.getElementById('ord-body');
+    if (!body) return;
+    if (!ord.events.length) { body.innerHTML = '<p>No timeline events for this unit.</p>'; return; }
+    if (ord.done) {
+      const truth = ord.events.slice().sort((a, b) => a.y - b.y);
+      let correct = 0;
+      ord.picked.forEach((p, i) => { if (p === truth[i]) correct += 1; });
+      body.innerHTML = `<p class="cq-score">${correct} / ${ord.events.length} placed correctly</p>
+        <p class="ord-instr">The real order:</p>
+        <ol class="ord-truth">${truth.map(e =>
+          `<li><span class="yr">${esc(e.year)}</span><span>${esc(e.event)}</span></li>`).join('')}</ol>
+        <button class="btn" id="ord-again">Play again</button>
+        <a class="btn ghost" href="#/unit/${ord.uid}">Back to unit</a>`;
+      return;
+    }
+    body.innerHTML = `
+      <ol class="ord-picked">${ord.picked.map((e, i) =>
+        `<li><span class="ord-n">${i + 1}</span>${esc(e.event)}</li>`).join('')}</ol>
+      <p class="ord-instr">Choose #${ord.picked.length + 1} — earliest first:</p>
+      <div class="ord-choices">${ord.events.map((e, i) =>
+        ord.picked.indexOf(e) === -1
+          ? `<button class="btn ghost ord-choice" data-i="${i}">${esc(e.event)}</button>` : ''
+      ).join('')}</div>`;
+  }
+  function pickOrder(i) {
+    const e = ord.events[i];
+    if (!e || ord.picked.indexOf(e) !== -1) return;
+    ord.picked.push(e);
+    if (ord.picked.length === ord.events.length) ord.done = true;
+    renderOrder();
   }
 
   // ---------------------------------------------------------- flashcards
@@ -361,24 +610,26 @@
     if (dt) dt.parentElement.classList.toggle('revealed');
   });
 
-  // map location -> jump straight to that term's definition
+  // map pin -> popover with that fact; chapter quiz + review controls
   app.addEventListener('click', e => {
-    const hot = e.target.closest('.ch-map [data-term]');
-    if (hot) {
-      const row = document.getElementById('term-' + slug(hot.getAttribute('data-term')));
-      if (row) {
-        const dl = document.getElementById('terms');
-        if (dl && dl.classList.contains('hidden')) row.classList.add('revealed');
-        row.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        row.classList.add('flash');
-        setTimeout(() => row.classList.remove('flash'), 1600);
-      }
-      return;
-    }
+    const pin = e.target.closest('.ch-map [data-pin]');
+    if (pin) { showMapPop(pin); return; }
+    const pop = document.getElementById('map-pop');
+    if (pop && !e.target.closest('#map-pop')) pop.remove();
+
     const opt = e.target.closest('.ch-quiz .quiz-opt');
     if (opt) { answerChapterQuiz(opt); return; }
     if (e.target.closest('#cq-advance')) { cq.i += 1; renderChapterQuiz(); return; }
     if (e.target.closest('#cq-restart')) { startChapterQuiz(cq.n); return; }
+
+    const ropt = e.target.closest('#rv-body .quiz-opt');
+    if (ropt) { answerReview(ropt); return; }
+    if (e.target.closest('#rv-next')) { rv.i += 1; renderReview(); return; }
+    if (e.target.closest('#rv-again')) { startReview(); return; }
+
+    const oc = e.target.closest('.ord-choice');
+    if (oc) { pickOrder(Number(oc.dataset.i)); return; }
+    if (e.target.closest('#ord-again')) { startOrder(ord.uid); return; }
   });
 
   app.addEventListener('keydown', e => {
@@ -406,11 +657,15 @@
     else if (view === 'unit') html = unit(arg);
     else if (view === 'ch') html = chapter(arg);
     else if (view === 'quiz') html = quiz(arg);
+    else if (view === 'review') html = reviewHtml();
+    else if (view === 'order') html = orderHtml(arg);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
     if (view === 'quiz') renderCard();
     if (view === 'ch') wireChapter(arg);
+    if (view === 'review') startReview();
+    if (view === 'order') startOrder(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
