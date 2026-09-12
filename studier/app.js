@@ -8,6 +8,17 @@
 
   const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const unitOf = n => U.find(u => u.chapters.includes(Number(n)));
+
+  // AI illustrations (studier/images.js). Returns a path or null.
+  const chImg = (n, cat, idx) => {
+    const m = (window.CH_IMAGES || {})[String(n)];
+    if (!m) return null;
+    if (cat === 'cover') return m.cover || null;
+    const arr = m[cat];
+    return arr && arr[idx] ? arr[idx] : null;
+  };
+  const imgTag = (src, cls, alt) =>
+    src ? `<img class="${cls}" src="${src}" alt="${esc(alt || '')}" loading="lazy">` : '';
   const chap = n => C[String(n)];
   const chTitle = n => (chap(n) ? chap(n).title : 'Chapter ' + n);
 
@@ -178,16 +189,17 @@
         <p class="ch-years">${esc(c.years)}</p>
         <p><a class="btn" href="#/comic/${n}">Read as a graphic novel</a></p>
       </header>
+      ${imgTag(chImg(n, 'cover', 0), 'ch-cover', esc(c.title) + ' cover')}
       <section class="prose">${proseWithMaps(n, c)}</section>
       <h2>The big ideas</h2>
-      <ul class="ideas">${(c.big_ideas || []).map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+      <ul class="ideas illus">${(c.big_ideas || []).map((i, idx) => `<li>${imgTag(chImg(n, 'ideas', idx), 'thumb', '')}<span>${esc(i)}</span></li>`).join('')}</ul>
       <h2>Timeline</h2>
-      <ol class="tl">${(c.timeline || []).map(t => `<li><span class="yr">${esc(t.year)}</span><span>${esc(t.event)}</span></li>`).join('')}</ol>
+      <ol class="tl illus">${(c.timeline || []).map((t, idx) => `<li><span class="yr">${esc(t.year)}</span>${imgTag(chImg(n, 'timeline', idx), 'thumb', '')}<span>${esc(t.event)}</span></li>`).join('')}</ol>
       <h2 class="terms-head">Key terms <button class="btn small" id="toggledefs" aria-pressed="false">Hide definitions</button></h2>
       <dl class="terms" id="terms">
-        ${(c.key_terms || []).map(t => `<div class="trow" id="term-${slug(t.term)}"><dt tabindex="0">${esc(t.term)}</dt><dd>${esc(t.def)}</dd></div>`).join('')}
+        ${(c.key_terms || []).map((t, idx) => `<div class="trow" id="term-${slug(t.term)}">${imgTag(chImg(n, 'terms', idx), 'thumb', esc(t.term))}<div class="trow-txt"><dt tabindex="0">${esc(t.term)}</dt><dd>${esc(t.def)}</dd></div></div>`).join('')}
       </dl>
-      ${(c.themes || []).length ? `<h2>Course themes</h2><ul class="themes">${c.themes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+      ${(c.themes || []).length ? `<h2>Course themes</h2><ul class="themes illus">${c.themes.map((t, idx) => `<li>${imgTag(chImg(n, 'themes', idx), 'thumb', '')}<span>${esc(t)}</span></li>`).join('')}</ul>` : ''}
       ${chapterQuizHtml(n)}
       <nav class="pager">
         ${prev ? `<a href="#/ch/${prev}">‹ Ch ${prev}. ${esc(chTitle(prev))}</a>` : '<span></span>'}
@@ -205,7 +217,7 @@
     const spec = (window.LOCATED_FACTS || {})[String(n)];
     const paras = c.summary || [];
     const pins = spec ? spec.pins : [];
-    return paras.map(p => {
+    return paras.map((p, i) => {
       const lc = String(p).toLowerCase();
       const here = pins.filter(pin => {
         const base = pin.label.replace(/\s*\d.*$/, '').trim().toLowerCase();
@@ -214,7 +226,8 @@
       const map = here.length
         ? mapFigure(n, { pins: here, caption: 'Places named in this passage.', inline: true })
         : '';
-      return `<p>${esc(p)}</p>${map}`;
+      const img = imgTag(chImg(n, 'summary', i), 'para-img', 'illustration');
+      return `<div class="para">${img}<p>${esc(p)}</p></div>${map}`;
     }).join('');
   }
 
@@ -633,7 +646,7 @@
     }
     if (e.target.closest('#fcard')) { flipped = !flipped; renderCard(); return; }
     const dt = e.target.closest('.terms.hidden dt');
-    if (dt) dt.parentElement.classList.toggle('revealed');
+    if (dt) dt.closest('.trow').classList.toggle('revealed');
   });
 
   // map pin -> popover with that fact; chapter quiz + review controls
@@ -663,7 +676,7 @@
       e.preventDefault(); flipped = !flipped; renderCard();
     }
     if (e.key === 'Enter' && e.target.matches('.terms.hidden dt')) {
-      e.target.parentElement.classList.toggle('revealed');
+      e.target.closest('.trow').classList.toggle('revealed');
     }
   });
 

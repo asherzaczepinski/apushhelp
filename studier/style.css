@@ -225,6 +225,37 @@ a:hover { color: #5f120c; }
 .prose p { margin-bottom: 14px; text-indent: 1.6em; }
 .prose p:first-child { text-indent: 0; }
 
+/* ── AI illustrations ── */
+.ch-cover {
+  display: block; width: 100%; max-width: 620px;
+  border: 3px solid var(--ink); box-shadow: 6px 6px 0 var(--brass);
+  border-radius: 4px; margin: 4px 0 22px;
+}
+.para { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.para p { text-indent: 0; margin-bottom: 0; }
+.para-img {
+  flex: none; width: 150px; height: auto; align-self: flex-start;
+  border: 2px solid var(--brass); border-radius: 6px;
+}
+.thumb {
+  flex: none; width: 116px; height: auto;
+  border: 2px solid var(--brass); border-radius: 6px; background: #efe4c8;
+}
+.illus li { display: flex; gap: 13px; align-items: center; }
+.ideas.illus li { padding-left: 0; margin-bottom: 12px; }
+.ideas.illus li::before { content: none; }
+.themes.illus li { padding-left: 0; margin-bottom: 12px; }
+.themes.illus li::before { content: none; }
+.tl.illus li { align-items: center; }
+.trow { display: flex; gap: 14px; align-items: flex-start; }
+.trow-txt { flex: 1; }
+.trow-txt dt { display: inline; }
+
+@media (max-width: 640px) {
+  .para { flex-direction: column; }
+  .para-img { width: 100%; max-width: 320px; }
+}
+
 .ideas { list-style: none; max-width: 68ch; }
 .ideas li { padding-left: 26px; position: relative; margin-bottom: 9px; }
 .ideas li::before { content: '\2605'; position: absolute; left: 0; color: var(--patriot); }
