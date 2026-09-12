@@ -422,6 +422,89 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
   .pager { flex-direction: column; }
 }
 
+/* ── graphic novel ── */
+.comic-head h1 { font-size: 1.9rem; line-height: 1.15; }
+.comic-head { margin-bottom: 22px; }
+.comic-strip { display: flex; flex-direction: column; gap: 22px; }
+.cpanel {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--brass);
+  padding: 12px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.cpanel.in { opacity: 1; transform: none; }
+.cpanel.right { grid-template-columns: 1fr 320px; }
+.cpanel.right .cart { order: 2; }
+.cart {
+  position: relative;
+  border: 2px solid var(--ink);
+  background: #efe4c8;
+  overflow: hidden;
+  line-height: 0;
+}
+.cart-svg { width: 100%; height: auto; display: block; }
+.cpanel-no {
+  position: absolute;
+  top: 6px; left: 6px;
+  background: var(--patriot);
+  color: var(--cream);
+  font: bold 0.8rem Georgia, serif;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 3px;
+}
+.cbubble {
+  position: relative;
+  background: #fffaf0;
+  border: 2.5px solid var(--ink);
+  border-radius: 16px;
+  padding: 16px 18px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.cbubble p { font-size: 1.08rem; line-height: 1.5; min-height: 1.5em; }
+.cbubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0; height: 0;
+  border: 12px solid transparent;
+  margin-top: -12px;
+}
+.cpanel.left .cbubble::after { left: -22px; border-right-color: var(--ink); }
+.cpanel.right .cbubble::after { right: -22px; border-left-color: var(--ink); }
+.comic-end { margin-top: 26px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* idle character + scene animations */
+@keyframes cbob { 0%, 100% { transform: translate(158px, 118px); } 50% { transform: translate(158px, 113px); } }
+.cbob { animation: cbob 2.8s ease-in-out infinite; transform-box: view-box; }
+@keyframes cblink { 0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); } }
+.cblink { animation: cblink 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes cflag { 0%, 100% { transform: skewX(0deg) scaleX(1); } 50% { transform: skewX(-8deg) scaleX(0.94); } }
+.cflag { animation: cflag 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: left; }
+@keyframes cwaves { 0% { transform: translateX(0); } 100% { transform: translateX(-40px); } }
+.cwaves { animation: cwaves 3s linear infinite; }
+@keyframes csmoke { 0% { transform: translateY(4px); opacity: 0.2; } 50% { opacity: 0.75; } 100% { transform: translateY(-16px); opacity: 0; } }
+.csmoke { animation: csmoke 3.2s ease-out infinite; transform-box: view-box; }
+@keyframes csun { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+.csun { animation: csun 26s linear infinite; transform-box: fill-box; transform-origin: center; }
+
+@media (max-width: 700px) {
+  .cpanel, .cpanel.right { grid-template-columns: 1fr; }
+  .cpanel.right .cart { order: 0; }
+  .cbubble::after { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
+  .cbob, .cblink, .cflag, .cwaves, .csmoke, .csun { animation: none !important; }
+  .cpanel { opacity: 1; transform: none; }
 }

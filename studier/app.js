@@ -176,6 +176,7 @@
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>
         <p class="ch-years">${esc(c.years)}</p>
+        <p><a class="btn" href="#/comic/${n}">Read as a graphic novel</a></p>
       </header>
       <section class="prose">${(c.summary || []).map(p => `<p>${esc(p)}</p>`).join('')}</section>
       ${mapFigure(n)}
@@ -658,6 +659,7 @@
     else if (view === 'quiz') html = quiz(arg);
     else if (view === 'review') html = reviewHtml();
     else if (view === 'order') html = orderHtml(arg);
+    else if (view === 'comic') html = Comic.html(arg);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
@@ -665,6 +667,7 @@
     if (view === 'ch') wireChapter(arg);
     if (view === 'review') startReview();
     if (view === 'order') startOrder(arg);
+    if (view === 'comic') Comic.wire(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
