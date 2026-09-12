@@ -1,0 +1,58 @@
+{
+ "chapter": 14,
+ "title": "A New Birth of Freedom: The Civil War",
+ "years": "1861–1865",
+ "summary": [
+  "The Civil War is often called the first modern war: mass armies wielding industrial-era weapons like the rifled musket produced roughly 750,000 deaths, while railroads, telegraphs, ironclads, photography, and propaganda transformed how war was fought and experienced. The Union held enormous advantages in population, industry, and finance, but it faced the harder task of conquering a vast South defended by motivated soldiers under skilled commanders like Robert E. Lee. Early fighting brought Union embarrassments in the East at Bull Run and stalemate under the cautious McClellan, though Grant's victories at Forts Henry and Donelson and Shiloh, plus the capture of New Orleans, gave the North momentum in the West.",
+  "A war to preserve the Union became a war against slavery. Slaves who fled to Union lines as 'contrabands,' pressure from abolitionists and Radical Republicans, and military necessity pushed Lincoln from caution toward the Emancipation Proclamation, issued January 1, 1863, after the bloody standoff at Antietam. The proclamation made the army an agent of freedom and opened enlistment to some 200,000 black soldiers and sailors, whose service reshaped debates over citizenship and equality. Meanwhile the war built a stronger nation-state: the Homestead Act, Morrill Act, transcontinental railroad charters, greenbacks, national banking, and new taxes fueled a booming northern economy, even as civil liberties were curtailed, draft riots erupted in New York, and western campaigns devastated Native peoples such as the Navajo and the Sioux.",
+  "The Confederacy, led by the inflexible Jefferson Davis, centralized its government but was crippled by inflation, shortages, class resentment over the 'twenty-negro' draft exemption, and failed King Cotton diplomacy. Gettysburg and Vicksburg in July 1863 marked the military turning point, and Grant's war of attrition plus Sherman's capture of Atlanta and March to the Sea broke southern resistance while ensuring Lincoln's 1864 reelection. Wartime 'rehearsals for Reconstruction' in the Sea Islands and Louisiana previewed struggles over land and black rights. The Thirteenth Amendment abolished slavery; Lee surrendered at Appomattox in April 1865; and days later Lincoln was assassinated, leaving a transformed, reunified nation."
+ ],
+ "big_ideas": [
+  "Industrial technology—rifles, railroads, ironclads, and the telegraph—made the Civil War the first modern war and produced unprecedented casualties.",
+  "Emancipation resulted from the combined actions of escaping slaves, abolitionist and Radical Republican pressure, and Lincoln's evolving calculation of military necessity.",
+  "The Emancipation Proclamation transformed Union war aims and authorized black military service, which strengthened claims to black citizenship and equal rights.",
+  "Wartime legislation—the Homestead Act, Morrill Act, railroad charters, national banking, and new taxes—vastly expanded federal power and promoted capitalist development, a 'Second American Revolution.'",
+  "The Confederacy collapsed from within as well as on the battlefield, undermined by inflation, shortages, desertion, class conflict, and declining civilian morale.",
+  "Gettysburg and Vicksburg in July 1863, followed by Grant's attrition strategy and Sherman's marches, sealed the Confederacy's military defeat and secured Lincoln's 1864 reelection.",
+  "Wartime experiments with free labor and Lincoln's clash with Congress over Reconstruction plans left unresolved the question of what freedom would mean for former slaves."
+ ],
+ "key_terms": [
+  {"term": "First Battle of Bull Run", "def": "The war's first major land battle (July 1861) near Manassas, Virginia, where Confederate forces routed Union troops, shattering northern hopes for a quick victory."},
+  {"term": "Battle of Antietam", "def": "The September 17, 1862 battle in Maryland that halted Lee's invasion of the North on the bloodiest single day in American history and gave Lincoln the opening to announce emancipation."},
+  {"term": "Contrabands", "def": "Enslaved people who escaped to Union lines and were treated as confiscated enemy property rather than returned; their flight pressured the government toward emancipation."},
+  {"term": "Radical Republicans", "def": "The Republican faction that pushed earliest and hardest for emancipation, black enlistment, and equal civil and political rights for African Americans."},
+  {"term": "Emancipation Proclamation", "def": "Lincoln's decree, effective January 1, 1863, freeing slaves in Confederate-held territory and authorizing black enlistment; issued under his war powers, it redefined the Union cause."},
+  {"term": "54th Massachusetts", "def": "A celebrated regiment of free northern black soldiers whose costly 1863 assault on Fort Wagner helped prove black troops' courage; about 200,000 black men ultimately served the Union."},
+  {"term": "Homestead Act", "def": "An 1862 law granting 160 acres of public land to settlers who lived on and improved it for five years, part of the Republican program to fill the West with free labor."},
+  {"term": "Transcontinental railroad", "def": "The rail line, chartered in 1862 to the Union Pacific and Central Pacific and finished in 1869, that linked the coasts, expanded national markets, and doomed the Plains Indians' way of life."},
+  {"term": "New York City draft riots", "def": "Four days of violence in July 1863 in which mostly Irish immigrant mobs attacked draft offices, wealthy Republicans, and especially black New Yorkers, killing over 100 people."},
+  {"term": "King Cotton diplomacy", "def": "The failed Confederate strategy of withholding cotton exports to force British intervention; instead Britain and others developed new cotton sources in Egypt, India, and Central Asia."},
+  {"term": "Battle of Gettysburg", "def": "The July 1–3, 1863 battle in Pennsylvania, the largest ever in North America, where Lee's second northern invasion was repulsed, climaxing with the failure of Pickett's Charge."},
+  {"term": "Battle of Vicksburg", "def": "Grant's siege of the Mississippi stronghold that surrendered July 4, 1863, giving the Union control of the Mississippi River and splitting the Confederacy."},
+  {"term": "Sherman's March to the Sea", "def": "General Sherman's late-1864 campaign from Atlanta to Savannah that destroyed railroads, supplies, and southern morale, exemplifying modern war against an enemy's society and economy."},
+  {"term": "Ten-Percent Plan", "def": "Lincoln's lenient 1863 Reconstruction proposal allowing a state to rejoin the Union once 10 percent of its 1860 voters swore loyalty and accepted emancipation; it offered blacks no political role."},
+  {"term": "Wade-Davis Bill", "def": "The 1864 congressional plan requiring a majority of white male southerners to pledge loyalty and guaranteeing blacks legal equality; Lincoln blocked it with a pocket veto."},
+  {"term": "Thirteenth Amendment", "def": "The constitutional amendment approved by Congress in January 1865 and ratified that year, permanently abolishing slavery throughout the United States."}
+ ],
+ "timeline": [
+  {"year": "1861", "event": "The war begins at Fort Sumter; Union forces are routed at the First Battle of Bull Run."},
+  {"year": "1862", "event": "Grant captures Forts Henry and Donelson and holds at Shiloh; the Union navy takes New Orleans."},
+  {"year": "1862", "event": "Congress passes the Homestead Act, the Morrill Act, and charters for the transcontinental railroad."},
+  {"year": "1862", "event": "Lee's invasion is stopped at Antietam in September, and Lincoln issues the Preliminary Emancipation Proclamation."},
+  {"year": "1863", "event": "The Emancipation Proclamation takes effect on January 1, committing the Union to abolition and black enlistment."},
+  {"year": "1863", "event": "Union victories at Gettysburg and Vicksburg in July mark the war's turning point; draft riots erupt in New York City."},
+  {"year": "1863", "event": "Lincoln delivers the Gettysburg Address and announces his Ten-Percent Plan for Reconstruction."},
+  {"year": "1864", "event": "Grant wages a war of attrition in Virginia; Lincoln pocket-vetoes the Wade-Davis Bill; Sherman takes Atlanta and marches to the sea; Lincoln is reelected."},
+  {"year": "1865", "event": "Congress approves the Thirteenth Amendment abolishing slavery in January."},
+  {"year": "1865", "event": "Richmond falls and Lee surrenders to Grant at Appomattox Courthouse on April 9."},
+  {"year": "1865", "event": "John Wilkes Booth assassinates Lincoln on April 14 at Ford's Theatre."},
+  {"year": "1866", "event": "In Ex parte Milligan, the Supreme Court rules civilians cannot be tried by military tribunals where civil courts function."}
+ ],
+ "themes": [
+  "Politics and power: the war forged a powerful national state with new taxing, banking, and military authority, while testing civil liberties through habeas corpus suspensions and arbitrary arrests.",
+  "Work, exchange, and technology: industrial production, railroads, greenbacks, and national banking modernized the northern economy while the blockade and inflation wrecked the South's.",
+  "American and national identity: emancipation and black military service redefined freedom and citizenship, shifting national language from 'Union' to 'nation.'",
+  "Migration and settlement: the Homestead Act and transcontinental railroad accelerated western settlement, bringing violent conflict with Native peoples including the Sand Creek Massacre and the Navajo Long Walk.",
+  "America in the world: emancipation paralleled abolition movements abroad, King Cotton diplomacy reshaped global cotton production, and Union victory was hailed internationally as a triumph for democratic government."
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "chapter": 9,
+ "title": "The Market Revolution",
+ "years": "1800–1840",
+ "summary": [
+  "In the decades after the War of 1812, breakthroughs in transportation and communication—steamboats, canals, railroads, and eventually the telegraph—pulled American farmers and artisans out of local, largely self-sufficient economies and into national and international markets. Robert Fulton proved the steamboat commercially workable in 1807, the state-funded Erie Canal (1825) tied the Great Lakes to New York City and made it the country's premier port, and roads like the National Road pushed settlement inland. Millions crossed the Appalachians, new states entered the Union, and settlers pressed into Florida and beyond, confident the flag would follow. In the South, Eli Whitney's cotton gin combined with fresh western land and British textile demand to build a booming Cotton Kingdom—reviving slavery and fueling a huge internal slave trade that moved roughly a million enslaved people to the Deep South.",
+  "The North developed differently: commercial farms fed growing cities, entrepreneurs reorganized craft work, and factories—most famously the Lowell textile mills staffed by young 'mill girls'—brought wage labor under one roof. Mass immigration, especially Irish refugees from the Great Famine and German craftsmen and farmers, supplied labor but also provoked nativist hostility toward Catholics and newcomers. Marshall Court rulings such as Dartmouth College v. Woodward and Gibbons v. Ogden protected contracts and interstate commerce, giving corporations legal room to grow.",
+  "These changes remade American ideas of freedom around individualism, mobility, and economic opportunity. Transcendentalists like Emerson and Thoreau preached self-reliance while questioning materialism; the Second Great Awakening democratized Christianity and tied moral self-discipline to market success; new faiths like Mormonism emerged from the revival ferment. Yet prosperity had limits: free Black northerners faced systematic exclusion, middle-class women were confined by the cult of domesticity, and workers—buffeted by the Panics of 1819 and 1837—organized early unions and Workingmen's Parties to defend an older ideal of economic independence."
+ ],
+ "big_ideas": [
+  "Innovations in transportation and communication (steamboat, canal, railroad, telegraph) integrated a national market economy and lowered the cost of moving goods, people, and information.",
+  "The cotton gin and westward expansion revived and expanded slavery, creating a Cotton Kingdom whose internal slave trade shattered Black families even as it enriched planters and northern merchants.",
+  "Industrialization began with textile factories like Lowell, transforming artisans into wage workers and drawing young women and immigrant families into factory labor.",
+  "Mass Irish and German immigration met economic demand for labor but triggered nativist, anti-Catholic backlash in the 1830s–1850s.",
+  "The Second Great Awakening and transcendentalism redefined freedom as individual self-improvement and moral free agency, reinforcing market-era individualism.",
+  "Supreme Court decisions favoring contracts, corporations, and federal commerce power gave legal support to the emerging capitalist economy.",
+  "The market revolution's benefits were unevenly distributed: free African Americans, women, and many wage workers found their opportunities narrowing even as white men's expanded."
+ ],
+ "key_terms": [
+  {"term": "Market revolution", "def": "The early nineteenth-century economic transformation in which new transportation, communication, and production methods drew Americans out of local self-sufficiency and into buying and selling in national and world markets."},
+  {"term": "Erie Canal", "def": "A 363-mile state-financed waterway across upstate New York, finished in 1825, that connected the Great Lakes to the Hudson River and made New York City the nation's leading commercial port."},
+  {"term": "Cotton gin", "def": "Eli Whitney's 1793 machine that quickly stripped seeds from short-staple cotton, making the crop hugely profitable and directly fueling the westward expansion of slavery."},
+  {"term": "Cotton Kingdom", "def": "The slave-labor cotton belt that spread across the Deep South after the War of 1812, supplying most of the world's cotton to northern and European textile mills."},
+  {"term": "Robert Fulton", "def": "Engineer whose 1807 voyage of the Clermont up the Hudson proved steamboats practical, opening upstream river commerce and speeding western trade."},
+  {"term": "Mill girls", "def": "Young unmarried New England farm women recruited to tend machines in textile towns like Lowell, living in supervised boardinghouses; they were among the first American women to earn independent wages, and some struck against wage cuts."},
+  {"term": "American system of manufactures", "def": "A production method using interchangeable, mass-produced parts assembled into standardized goods such as clocks and firearms; it spread mechanical skills widely across the North."},
+  {"term": "Nativism", "def": "Hostility toward immigrants, especially Irish Catholics, that blamed newcomers for crime, corruption, and falling wages and sparked riots in cities like Philadelphia in the 1840s."},
+  {"term": "Second Great Awakening", "def": "A wave of Protestant revivals in the early 1800s, led by preachers like Charles G. Finney, that stressed free moral agency and universal salvation and made Methodists and Baptists the largest denominations."},
+  {"term": "Transcendentalists", "def": "New England thinkers, including Emerson and Thoreau, who placed individual judgment and self-reliance above social convention and criticized the materialism of market society."},
+  {"term": "Manifest destiny", "def": "The belief, named by journalist John O'Sullivan in 1845, that the United States had a God-given right to expand across North America; it served to justify taking western lands."},
+  {"term": "Joseph Smith and the Mormons", "def": "Founder of the Church of Jesus Christ of Latter-Day Saints in upstate New York's revival country; persecution over his authority and polygamy led to his 1844 murder and Brigham Young's migration of the church to Utah."},
+  {"term": "Cult of domesticity", "def": "The middle-class ideal that a woman's proper role was creating a virtuous home refuge apart from the competitive market, limiting her public and economic life."},
+  {"term": "Gibbons v. Ogden", "def": "An 1824 Marshall Court ruling that struck down New York's steamboat monopoly, confirming federal authority over interstate commerce."},
+  {"term": "Dartmouth College v. Woodward", "def": "An 1819 decision holding that a corporate charter is a contract states cannot alter, shielding corporations from state interference and encouraging business growth."},
+  {"term": "Family wage", "def": "The popular idea that a male breadwinner should earn enough to support his whole household, defining paid labor as men's sphere and devaluing women's work."}
+ ],
+ "timeline": [
+  {"year": "1793", "event": "Eli Whitney invents the cotton gin, transforming southern agriculture and slavery."},
+  {"year": "1806", "event": "Congress funds the National Road from Cumberland, Maryland, toward the Old Northwest."},
+  {"year": "1807", "event": "Robert Fulton's Clermont steams up the Hudson, proving steamboat travel viable."},
+  {"year": "1814", "event": "The Boston Associates open the Waltham, Massachusetts, factory combining all stages of cloth production."},
+  {"year": "1819", "event": "Dartmouth College v. Woodward protects corporate charters; the Adams-Onís Treaty transfers Florida from Spain."},
+  {"year": "1825", "event": "The Erie Canal opens, linking the Great Lakes to New York City."},
+  {"year": "1831", "event": "Cyrus McCormick invents the mechanical reaper, boosting wheat harvests."},
+  {"year": "1837", "event": "John Deere introduces the steel plow; a major economic depression begins."},
+  {"year": "1844", "event": "Samuel Morse's telegraph enters commercial service, enabling instant communication."},
+  {"year": "1845", "event": "John O'Sullivan coins the phrase 'manifest destiny.'"},
+  {"year": "1845–1851", "event": "Ireland's Great Famine drives roughly a million emigrants, most to the United States."},
+  {"year": "1854", "event": "Henry David Thoreau publishes Walden, critiquing market society's values."}
+ ],
+ "themes": [
+  "Work, exchange, and technology: steamboats, canals, railroads, factories, and the telegraph created an integrated market economy and shifted many Americans from independent production to wage labor.",
+  "Migration and settlement: millions moved west across the Appalachians while Irish and German immigrants poured into northern cities, reshaping regional cultures and sparking nativism.",
+  "American and national identity: freedom was increasingly defined as individual self-improvement and economic opportunity, but that identity was drawn along lines of race and gender.",
+  "Geography and environment: transportation networks and fertile western land determined where cotton, wheat, and factories developed, deepening the divergence between North and South.",
+  "Politics and power: courts and state governments actively promoted economic development through charters, canal funding, and pro-business rulings."
+ ]
+}

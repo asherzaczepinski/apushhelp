@@ -1,0 +1,58 @@
+{
+ "chapter": 2,
+ "title": "Beginnings of English America",
+ "years": "1607-1660",
+ "summary": [
+  "England entered the colonial race late, delayed by religious turmoil after Henry VIII's break with Rome and by its brutal conquest of Ireland, which previewed tactics later used in America. Anti-Spanish feeling, the writings of promoters like Richard Hakluyt, and a social crisis at home, where enclosure had uprooted thousands of poor farmers, all encouraged colonization. After the failed Roanoke venture, the private Virginia Company planted Jamestown in 1607. The colony nearly collapsed from disease, starvation, and poor leadership until tobacco gave it a profitable staple. Reforms in 1618-1619 brought the headright land system and the House of Burgesses, America's first elected assembly, the same year the first Africans arrived. Expansion provoked Powhatan's successor Opechancanough to strike in 1622; the failed uprising ended the Virginia Company and hardened English policy toward pushing Indians off the land entirely.",
+  "The Chesapeake grew into a tobacco society where most immigrants arrived as indentured servants, men greatly outnumbered women, death rates stayed high, and a planter gentry engrossed land and power. Maryland, founded in 1632 as a proprietary refuge for Catholics, followed a similar tobacco path amid chronic religious conflict. New England developed very differently. Puritans, seeking to purify the Church of England, migrated in family groups during the Great Migration, built self-governing towns around Congregational churches, and defined liberty as 'moral liberty', freedom to do only what was godly, under authority.",
+  "Puritan orthodoxy quickly generated dissent: Roger Williams, banished for urging separation of church and state, founded tolerant Rhode Island, while Anne Hutchinson was tried and expelled for claiming direct revelation. The Pequot War of 1637 crushed native resistance in the region. Meanwhile, the English Civil War energized debates over the rights of freeborn Englishmen, echoed in Maryland's 1649 Toleration Act granting free worship to all Christians. By 1660, freedom and unfreedom were expanding together across English America."
+ ],
+ "big_ideas": [
+  "English colonization was driven by anti-Catholic and anti-Spanish rivalry, hopes of profit and national power, and the promise of land for England's displaced poor.",
+  "Access to land was understood as the foundation of liberty, but English settlers secured it by dispossessing Indians rather than incorporating them.",
+  "The Chesapeake became a hierarchical tobacco society dependent on indentured servant labor, with skewed sex ratios, high mortality, and rule by a planter elite.",
+  "New England was settled by Puritan families seeking a godly commonwealth; its town-based self-government and healthy climate produced a stable, growing society.",
+  "Puritan 'moral liberty' meant freedom to do what was right under authority, not religious toleration, and dissenters like Roger Williams and Anne Hutchinson were banished.",
+  "Conflicts such as the Uprising of 1622 and the Pequot War established settler supremacy and entrenched images of Indians as enemies.",
+  "The English Civil War spread new ideas about the rights of freeborn Englishmen, religious toleration, and even democracy that reverberated throughout the colonies."
+ ],
+ "key_terms": [
+  {"term": "Virginia Company", "def": "Private joint-stock corporation chartered by James I in 1606 that financed and governed early Virginia, hoping for quick profit; it surrendered its charter in 1624 when Virginia became a royal colony."},
+  {"term": "Roanoke colony", "def": "Walter Raleigh's 1580s settlement off the North Carolina coast whose colonists vanished without explanation, showing that colonization required resources beyond any individual sponsor."},
+  {"term": "Enclosure movement", "def": "The fencing-in of formerly common English farmland by profit-seeking landlords, which evicted thousands of peasants and created a displaced population willing to emigrate."},
+  {"term": "John Smith", "def": "Soldier-adventurer whose strict 'no work, no food' discipline held early Jamestown together and whose writings promoted America as a place where ordinary men could own land and labor for themselves."},
+  {"term": "Headright system", "def": "Virginia's 1618 policy granting fifty acres to anyone paying for a person's passage to the colony, which rewarded importers of servants with large estates and spread land-based wealth unevenly."},
+  {"term": "House of Burgesses", "def": "Assembly created in Virginia in 1619, the first elected legislature in English America, though voting was limited to landowners."},
+  {"term": "Uprising of 1622", "def": "Surprise attack led by Opechancanough that killed about a quarter of Virginia's settlers; its defeat ruined the Virginia Company and led to a policy of expelling Indians from settled areas."},
+  {"term": "Indentured servants", "def": "Migrants who traded several years of bound labor for passage to America; they made up roughly two-thirds of seventeenth-century English settlers and, unlike slaves, could eventually claim freedom dues."},
+  {"term": "Tobacco", "def": "The staple crop, introduced to Virginia by John Rolfe, that enriched Chesapeake planters and the crown, drove demand for servant labor, dispersed settlement, and fueled a scramble for land."},
+  {"term": "Puritans", "def": "English Protestants influenced by Calvin who thought the Church of England retained too much Catholic ritual; many migrated to New England to build a purified 'city set upon a hill.'"},
+  {"term": "John Winthrop", "def": "Long-serving governor of Massachusetts Bay who articulated the Puritan distinction between sinful 'natural' liberty and godly 'moral' liberty exercised in submission to authority."},
+  {"term": "Mayflower Compact", "def": "Agreement signed by the Pilgrims' adult men in 1620 to obey laws made by their own chosen representatives, the first written framework of government in English America."},
+  {"term": "Great Migration", "def": "Movement of about 21,000 Puritans, largely in family groups, to Massachusetts between 1629 and 1642, laying the basis for a stable and rapidly growing New England population."},
+  {"term": "Roger Williams", "def": "Minister banished from Massachusetts in 1636 for demanding separation of church and state; he founded Rhode Island, which had no established church and welcomed religious dissenters."},
+  {"term": "Anne Hutchinson", "def": "Midwife and religious leader tried for sedition in 1637 after charging that Massachusetts ministers preached salvation by works; her claim of direct revelation from God led to her banishment."},
+  {"term": "Maryland Toleration Act", "def": "1649 law (Act Concerning Religion) guaranteeing free worship to all Christians in Maryland, a landmark in colonial religious freedom born of Catholic-Protestant conflict."}
+ ],
+ "timeline": [
+  {"year": "1585", "event": "Raleigh's colonists land at Roanoke Island; the settlement later disappears."},
+  {"year": "1607", "event": "Jamestown is founded as the first permanent English settlement in North America."},
+  {"year": "1619", "event": "Virginia's House of Burgesses first meets and the first Africans arrive in the colony."},
+  {"year": "1620", "event": "The Pilgrims sign the Mayflower Compact and establish Plymouth colony."},
+  {"year": "1622", "event": "Opechancanough's uprising kills roughly a quarter of Virginia's settlers."},
+  {"year": "1624", "event": "Virginia becomes England's first royal colony after the Virginia Company loses its charter."},
+  {"year": "1630", "event": "John Winthrop leads Puritans to found the Massachusetts Bay Colony, opening the Great Migration."},
+  {"year": "1632", "event": "Maryland is chartered as a proprietary colony under the Catholic Calvert family."},
+  {"year": "1636", "event": "Roger Williams, banished from Massachusetts, establishes Rhode Island."},
+  {"year": "1637", "event": "Anne Hutchinson is tried and banished; colonial forces destroy the Pequots in the Pequot War."},
+  {"year": "1649", "event": "Maryland's Act Concerning Religion grants free worship to all Christians; Charles I is executed in England."},
+  {"year": "1662", "event": "New England churches adopt the Half-Way Covenant to address declining full church membership."}
+ ],
+ "themes": [
+  "Politics and power: Colonists created early representative institutions like the House of Burgesses and Mayflower Compact even as governors, proprietors, and the crown contested authority.",
+  "Migration and settlement: Push factors such as enclosure and religious persecution and pull factors like cheap land produced very different migrant streams to the Chesapeake and New England.",
+  "Work, exchange, and technology: Tobacco tied the Chesapeake to Atlantic markets and created insatiable demand for bound labor, while New England relied on family farms, fish, and timber.",
+  "American and national identity: Competing definitions of liberty, English rights, Puritan moral liberty, and religious toleration, took root in the colonies and shaped later debates.",
+  "America in the world: The English Civil War and Anglo-Spanish rivalry show that colonial development was inseparable from events across the Atlantic."
+ ]
+}

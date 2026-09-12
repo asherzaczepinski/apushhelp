@@ -1,0 +1,58 @@
+{
+ "chapter": 15,
+ "title": "\"What Is Freedom?\": Reconstruction",
+ "years": "1865–1877",
+ "summary": [
+  "After the Civil War, Americans fought over what freedom would mean for four million former slaves. Freedpeople defined it broadly: reuniting families, building independent churches and schools, voting, and above all owning land, a hope raised by Sherman's Special Field Order 15 and its promise of 'forty acres and a mule.' Former masters wanted a labor system as close to slavery as possible, while the Freedmen's Bureau tried to install northern free labor ideals. When President Johnson returned confiscated land to ex-Confederates, land reform died, and most freedpeople—along with many white yeomen trapped by the crop-lien system—were pulled into sharecropping and cycles of debt.",
+  "Politically, Reconstruction became a battle between Andrew Johnson and Congress. Johnson's lenient Presidential Reconstruction let former Confederates regain power and pass Black Codes restricting freedpeople's rights, outraging the Republican North. Congress responded with the Civil Rights Act of 1866, the Fourteenth Amendment's guarantee of birthright citizenship and equal protection, and the Reconstruction Act of 1867, which imposed military rule and black male suffrage on the South. Johnson's obstruction led to his impeachment and near-removal in 1868; Grant's election and the Fifteenth Amendment (1870) barring racial voting discrimination completed a constitutional revolution—though one that excluded women, splitting the feminist and abolitionist alliance.",
+  "Radical Reconstruction produced America's first experiment in interracial democracy: about 2,000 black officeholders, new state constitutions, public school systems, and civil rights laws, with support from 'carpetbaggers' and 'scalawags.' But the Ku Klux Klan and allied terrorists waged violent war on Republican rule, checked only briefly by the Enforcement Acts. Northern commitment faded amid the Liberal Republican revolt, resurgent racism, the 1873 depression, and Supreme Court rulings like Slaughterhouse and Cruikshank that gutted federal protections. State by state, Redeemer Democrats regained control, and the disputed 1876 election ended in the Bargain of 1877: Hayes took the presidency, federal intervention ceased, and Reconstruction was abandoned."
+ ],
+ "big_ideas": [
+  "Former slaves defined freedom expansively—family autonomy, independent churches and schools, political participation, and landownership—while former masters and many northerners held far narrower visions.",
+  "The failure of land redistribution left most freedpeople economically dependent, and sharecropping plus the crop-lien system trapped both black and white southern farmers in debt.",
+  "Johnson's lenient policies and the Black Codes provoked Congress to seize control of Reconstruction and to impeach the president when he obstructed its program.",
+  "The Reconstruction amendments (13th, 14th, 15th) created birthright citizenship, equal protection, and race-blind male suffrage, making the federal government the guardian of individual rights.",
+  "Radical Reconstruction created the nation's first interracial democracy, with roughly 2,000 black officeholders and new state governments that built public schools and civil rights protections.",
+  "The exclusion of women from the new voting guarantees split the women's rights movement from its abolitionist allies.",
+  "Reconstruction collapsed under Klan terrorism, northern fatigue, economic depression, hostile Supreme Court rulings, and the Bargain of 1877, though its amendments became the basis for later civil rights struggles."
+ ],
+ "key_terms": [
+  {"term": "Special Field Order 15", "def": "Sherman's January 1865 directive reserving coastal South Carolina and Georgia land for black families in forty-acre plots; it inspired the phrase 'forty acres and a mule' before Johnson reversed the policy."},
+  {"term": "Freedmen's Bureau", "def": "The federal agency created in 1865 to aid former slaves and white refugees with schools, health care, labor contracts, and legal protection; understaffed, it still made major gains in education and medicine."},
+  {"term": "Sharecropping", "def": "The postwar labor arrangement in which families farmed a plot of a landowner's plantation for a share of the crop; it freed blacks from gang labor but increasingly locked farmers into poverty."},
+  {"term": "Crop-lien system", "def": "A credit arrangement in which merchants advanced supplies against a farmer's future crop; high interest and falling cotton prices pushed many black and white farmers into permanent debt."},
+  {"term": "Black Codes", "def": "Laws passed by Johnson-era southern governments in 1865–1866 that granted freedpeople only minimal rights while compelling plantation labor; they convinced the North that the South rejected emancipation's meaning."},
+  {"term": "Civil Rights Act of 1866", "def": "The first major law passed over a presidential veto; it declared all persons born in the U.S. citizens and guaranteed equal legal rights regardless of race."},
+  {"term": "Fourteenth Amendment", "def": "Ratified in 1868, it wrote birthright citizenship, 'privileges or immunities,' and equal protection of the laws into the Constitution, becoming the foundation of modern civil rights jurisprudence."},
+  {"term": "Reconstruction Act of 1867", "def": "The law that divided the ex-Confederate South into five military districts and required new state governments based on black male suffrage, launching Radical Reconstruction."},
+  {"term": "Impeachment of Andrew Johnson", "def": "The 1868 House charges against Johnson for violating the Tenure of Office Act by firing Secretary of War Stanton; the Senate fell one vote short of removing him."},
+  {"term": "Fifteenth Amendment", "def": "Ratified in 1870, it barred federal and state governments from denying the vote on account of race, though it left open literacy tests and poll taxes and did not include women."},
+  {"term": "Carpetbaggers and scalawags", "def": "Hostile labels for Reconstruction's white Republicans: northern migrants to the South (many former Union soldiers) and southern-born white Unionists, mostly upcountry yeomen."},
+  {"term": "Ku Klux Klan", "def": "A terrorist organization founded in Tennessee in 1866 that functioned as the Democratic Party's armed wing, assassinating and intimidating black and white Republicans until the Enforcement Acts suppressed it."},
+  {"term": "Enforcement Acts", "def": "Federal laws of 1870–1871 that outlawed terrorist societies and let the president use the army against them; Grant's prosecutions broke the Klan by 1872."},
+  {"term": "Colfax Massacre", "def": "The 1873 slaughter of hundreds of black Louisianans, including surrendered militiamen, by armed whites; the Supreme Court later overturned the convictions in United States v. Cruikshank."},
+  {"term": "Redeemers", "def": "Southern Democrats who claimed to rescue their states from Republican 'misrule,' regaining power through electoral victories and campaigns of violence in the 1870s."},
+  {"term": "Bargain of 1877", "def": "The settlement of the disputed Hayes-Tilden election in which Republicans got the presidency while agreeing to end federal intervention in the South, effectively closing Reconstruction."}
+ ],
+ "timeline": [
+  {"year": "1865", "event": "Sherman issues Special Field Order 15; Congress creates the Freedmen's Bureau; Johnson becomes president and launches lenient Presidential Reconstruction."},
+  {"year": "1865", "event": "New southern governments enact Black Codes restricting the freedpeople."},
+  {"year": "1866", "event": "Congress passes the Civil Rights Act over Johnson's veto; the Ku Klux Klan is founded in Tennessee."},
+  {"year": "1867", "event": "The Reconstruction Act imposes military districts and black male suffrage, beginning Radical Reconstruction."},
+  {"year": "1868", "event": "Johnson is impeached and acquitted by one vote; the Fourteenth Amendment is ratified; Grant wins the presidency."},
+  {"year": "1870", "event": "The Fifteenth Amendment is ratified; Hiram Revels becomes the first black U.S. senator."},
+  {"year": "1870–1871", "event": "Congress passes the Enforcement Acts, and Grant's prosecutions dismantle the Klan."},
+  {"year": "1872", "event": "Liberal Republicans bolt the party and back Horace Greeley, who loses badly to Grant."},
+  {"year": "1873", "event": "The Colfax Massacre kills hundreds of black Louisianans; the Slaughterhouse Cases narrow the Fourteenth Amendment; a national depression begins."},
+  {"year": "1875", "event": "Congress passes the Civil Rights Act of 1875; violent 'Mississippi Plan' tactics end Reconstruction there."},
+  {"year": "1876", "event": "United States v. Cruikshank guts federal enforcement power; the Hayes-Tilden election ends in dispute."},
+  {"year": "1877", "event": "The Bargain of 1877 makes Hayes president and ends federal protection of Reconstruction governments."}
+ ],
+ "themes": [
+  "Politics and power: Reconstruction shifted authority from the states to the federal government as protector of citizens' rights, then saw that commitment abandoned by 1877.",
+  "American and national identity: the 14th and 15th Amendments redefined citizenship as birthright and detached voting rights from race, though gender lines remained and enforcement collapsed.",
+  "Work, exchange, and technology: without land reform, sharecropping and crop liens replaced slavery, binding black and white farmers alike to cotton and debt.",
+  "Regional and social identity: black churches, schools, colleges, and reunited families became the enduring institutional foundation of African American community life.",
+  "America in the world: U.S. emancipation paralleled post-slavery transitions across the Western Hemisphere, but only the United States quickly granted former slaves voting rights and political power."
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "chapter": 5,
+ "title": "The American Revolution",
+ "years": "1763–1783",
+ "summary": [
+  "After the Seven Years' War left Britain deep in debt, Parliament abandoned its hands-off approach to the colonies and tried to raise revenue from them directly. The Sugar Act (1764) tightened trade enforcement, and the Stamp Act (1765) placed the first direct tax on colonial printed materials. Colonists answered with the slogan 'no taxation without representation,' rejecting Britain's theory of virtual representation, under which every member of Parliament supposedly spoke for the whole empire. The Stamp Act Congress, merchant boycotts, and crowd actions organized by the Sons of Liberty—including the mob that gutted Thomas Hutchinson's Boston mansion—forced repeal in 1766, though the Declaratory Act insisted Parliament could still legislate for America 'in all cases whatsoever.'",
+  "Each new British measure widened the rift. The Townshend duties (1767) revived nonimportation, with homespun cloth and the Daughters of Liberty symbolizing colonial virtue. Troops stationed in Boston clashed with locals in the 1770 Boston Massacre, and the Tea Act triggered the Boston Tea Party in 1773. Parliament's punitive Intolerable Acts united the colonies: the First Continental Congress organized a trade embargo enforced by local committees, drawing ordinary farmers and artisans into politics. Fighting began at Lexington and Concord in April 1775, and after Thomas Paine's Common Sense demolished the case for monarchy, Congress adopted Jefferson's Declaration of Independence in July 1776, grounding the break with Britain in universal natural rights rather than merely the rights of Englishmen.",
+  "Winning independence required outlasting the world's strongest military. Washington avoided decisive defeat, kept his army alive through the Valley Forge winter, and struck morale-saving blows at Trenton and Princeton. The victory at Saratoga in 1777 convinced France to ally with the United States in 1778, turning the conflict into a global war. Britain's southern strategy collapsed amid partisan fighting, and thousands of enslaved people sought freedom by serving either side, spurred by Lord Dunmore's proclamation. After Cornwallis surrendered at Yorktown in 1781, the Treaty of Paris (1783) recognized American independence with borders stretching to the Mississippi River."
+ ],
+ "big_ideas": [
+  "Britain's effort to tax the colonies after the Seven Years' War reversed decades of loose imperial oversight and ignited a constitutional dispute over consent and representation.",
+  "Colonists moved from claiming the traditional rights of Englishmen to asserting universal natural rights, a shift completed by Common Sense and the Declaration of Independence.",
+  "Resistance tactics like boycotts, committees, and crowd actions pulled artisans, small farmers, and women into political life, dramatically expanding popular participation.",
+  "Each imperial crisis—Stamp Act, Townshend duties, Tea Act, Intolerable Acts—pushed the colonies toward unity and made Parliament's authority itself the central issue.",
+  "American victory depended on keeping an army in the field, fighting on home ground, and securing the French alliance that Saratoga made possible.",
+  "The Revolution unsettled slavery: Dunmore's proclamation and Black military service on both sides linked the rhetoric of liberty to emancipation.",
+  "The Declaration of Independence became a global template, inspiring later independence and anticolonial movements around the world."
+ ],
+ "key_terms": [
+  {"term": "Stamp Act (1765)", "def": "Parliament's first direct tax on the colonies, requiring purchased stamps on newspapers, legal documents, and other printed items; it provoked boycotts, riots, and the Stamp Act Congress before repeal in 1766."},
+  {"term": "Virtual representation", "def": "The British claim that every member of Parliament represented all subjects of the empire, voters or not; colonists rejected it, insisting only their own elected assemblies could tax them."},
+  {"term": "Sugar Act (1764)", "def": "A Grenville measure that lowered the molasses duty but cracked down on smuggling and shifted trials to juryless admiralty courts, signaling tighter imperial control."},
+  {"term": "Sons of Liberty", "def": "Radical organizations, prominent in Boston and New York, that coordinated protests, intimidated stamp distributors, and enforced boycotts of British goods."},
+  {"term": "Committees of Correspondence", "def": "Networks of writers and organizers, promoted by Samuel Adams, that spread news of British actions among the colonies and knit resistance together."},
+  {"term": "Townshend Acts (1767)", "def": "Duties on imported goods such as tea, paired with new customs enforcement machinery; they revived nonimportation and made homespun clothing a badge of patriotism."},
+  {"term": "Boston Massacre (1770)", "def": "A confrontation in which British soldiers fired into a Boston crowd, killing five including Crispus Attucks; Paul Revere's engraving turned it into powerful anti-British propaganda."},
+  {"term": "Boston Tea Party (1773)", "def": "Colonists disguised as Indians dumped over 300 chests of East India Company tea into Boston Harbor, protesting the Tea Act's implicit acceptance of Parliament's power to tax."},
+  {"term": "Intolerable Acts (1774)", "def": "Britain's retaliation for the Tea Party, closing Boston's port, gutting the Massachusetts charter, and allowing quartering of troops; they unified the colonies in opposition."},
+  {"term": "Continental Congress", "def": "Intercolonial body first convened in Philadelphia in 1774 to coordinate resistance; the Second Congress raised the Continental army, named Washington commander, and declared independence."},
+  {"term": "Battles of Lexington and Concord (1775)", "def": "The opening clashes of the Revolutionary War, fought when British troops marched from Boston to seize colonial arms and were met by militia."},
+  {"term": "Common Sense (1776)", "def": "Thomas Paine's plainly written, massively popular pamphlet attacking monarchy and hereditary rule and urging immediate independence as a cause of worldwide significance."},
+  {"term": "Declaration of Independence (1776)", "def": "Jefferson's document declaring the colonies free, resting government on consent of the governed and proclaiming unalienable rights to life, liberty, and the pursuit of happiness."},
+  {"term": "Lord Dunmore's proclamation (1775)", "def": "The Virginia royal governor's offer of freedom to enslaved people who fled to fight for the British, which alarmed slaveholders and pushed southern elites toward independence."},
+  {"term": "Battle of Saratoga (1777)", "def": "American victory forcing the surrender of Burgoyne's army in New York; it convinced France that the Americans could win and paved the way for the 1778 alliance."},
+  {"term": "Treaty of Paris (1783)", "def": "The peace settlement recognizing U.S. independence, granting territory from Canada to Florida west to the Mississippi, and following Cornwallis's 1781 surrender at Yorktown."}
+ ],
+ "timeline": [
+  {"year": "1764", "event": "Sugar Act tightens trade enforcement and taxes colonial imports"},
+  {"year": "1765", "event": "Stamp Act sparks riots, boycotts, and the Stamp Act Congress"},
+  {"year": "1767", "event": "Townshend Acts impose new duties, reviving nonimportation"},
+  {"year": "1770", "event": "Boston Massacre leaves five colonists dead"},
+  {"year": "1773", "event": "Boston Tea Party protests the Tea Act"},
+  {"year": "1774", "event": "Intolerable Acts punish Massachusetts; First Continental Congress meets"},
+  {"year": "1775", "event": "War begins at Lexington and Concord; Dunmore offers freedom to slaves who fight for Britain"},
+  {"year": "1776", "event": "Common Sense published; Declaration of Independence adopted"},
+  {"year": "1777", "event": "American victory at Saratoga becomes the war's turning point"},
+  {"year": "1778", "event": "France allies with the United States, globalizing the war"},
+  {"year": "1781", "event": "Cornwallis surrenders at Yorktown"},
+  {"year": "1783", "event": "Treaty of Paris secures American independence"}
+ ],
+ "themes": [
+  "Politics and power: The Revolution grew out of a dispute over sovereignty—whether Parliament or colonial assemblies held the right to tax—and ended by locating authority in the consent of the people.",
+  "American and national identity: Colonists who once prized British identity forged a new American nationalism built on universal liberty and the idea of the nation as an asylum for freedom.",
+  "Work, exchange, and technology: Boycotts, nonimportation agreements, and homespun production turned economic choices into political weapons against British trade.",
+  "America in the world: The war became a global contest once France and Spain joined, and the Declaration inspired independence movements worldwide.",
+  "Social structures: Revolutionary rhetoric about liberty exposed tensions of class and slavery, as crowds targeted elites and enslaved people pursued freedom through military service."
+ ]
+}

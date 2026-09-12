@@ -1,0 +1,57 @@
+{
+ "chapter": 7,
+ "title": "Founding a Nation",
+ "years": "1783–1791",
+ "summary": [
+  "The Articles of Confederation, ratified in 1781, created a deliberately weak central government—a one-house Congress with no president, no courts, and no power to tax or regulate trade. It nonetheless scored a lasting achievement in the West: after states ceded their land claims, the Ordinances of 1784, 1785, and 1787 set up survey and sale of the public domain and promised that territories would enter the Union as equal states, Jefferson's 'empire of liberty.' The Northwest Ordinance also barred slavery north of the Ohio River. But postwar depression, unpayable war debts, state paper-money schemes, and finally Shays's Rebellion in Massachusetts convinced nationalists like Madison and Hamilton that liberty itself was threatened by too little government.",
+  "Meeting in Philadelphia in 1787, fifty-five delegates scrapped the Articles and drafted a new Constitution. The Great Compromise merged the Virginia and New Jersey plans into a Congress with a population-based House and a state-equal Senate, while federalism and checks and balances divided power to prevent tyranny—and to filter popular passions through indirect elections. Slavery shaped the bargain: the three-fifths clause inflated southern power, the slave trade was protected until 1808, and a fugitive slave clause extended bondage across state lines, all without the word 'slavery' appearing in the text. Ratification pitted Federalists, armed with The Federalist essays and urban commercial support, against Anti-Federalists who feared distant, aristocratic rule; Madison's promise of a Bill of Rights, ratified in 1791, sealed the victory.",
+  "The Constitution's phrase 'We the People' concealed sharp exclusions. Indians were treated as separate nations whose land was steadily taken by treaty and war—Little Turtle's 1791 victory gave way to defeat at Fallen Timbers and the Treaty of Greenville's land cessions and annuity system. Free Blacks held an uncertain status, and the Naturalization Act of 1790 limited citizenship by immigration to 'free white persons.' Crèvecoeur's melting pot imagined only Europeans, and Jefferson's Notes on the State of Virginia gave intellectual cover to a hardening racial line, making race the chief justification for slavery in a nation dedicated to freedom."
+ ],
+ "big_ideas": [
+  "The Articles of Confederation reflected revolutionary fears of central power but left Congress unable to tax, regulate trade, or respond to economic crisis.",
+  "The land ordinances of the 1780s established the enduring principle that western territories would become equal states rather than colonies, and banned slavery in the Old Northwest.",
+  "Shays's Rebellion crystallized elite fears that unchecked popular majorities in the states endangered property rights, driving the movement for a new constitution.",
+  "The Constitution rested on compromises—the bicameral Congress, federalism, checks and balances, and indirect elections—that both empowered the national government and limited direct democracy.",
+  "Slavery was woven into the Constitution through the three-fifths, slave trade, and fugitive slave clauses, magnifying southern political power for decades.",
+  "The ratification fight between Federalists and Anti-Federalists produced the Bill of Rights, which protected individual liberties against the federal government.",
+  "Citizenship in the new republic was racially bounded: Indians were treated as foreign nations, most Blacks were enslaved, and naturalization was reserved for whites."
+ ],
+ "key_terms": [
+  {"term": "Articles of Confederation", "def": "America's first constitution (in force 1781–1788), a loose league of sovereign states with a single-house Congress that lacked the power to tax or regulate commerce."},
+  {"term": "Northwest Ordinance of 1787", "def": "Law organizing the territory north of the Ohio River, providing for three to five future states admitted as equals, pledging fair treatment of Indians, and prohibiting slavery in the region."},
+  {"term": "Empire of liberty", "def": "Jefferson's vision that the United States would expand not by ruling colonies but by admitting western territories as self-governing, equal states."},
+  {"term": "Shays's Rebellion (1786–1787)", "def": "An uprising of indebted Massachusetts farmers who closed courts to stop land seizures; its suppression convinced many leaders the national government needed strengthening."},
+  {"term": "Constitutional Convention", "def": "The 1787 Philadelphia meeting of fifty-five delegates, presided over by Washington, that abandoned the Articles and drafted an entirely new frame of government in secret sessions."},
+  {"term": "Virginia Plan", "def": "Madison's proposal for a strong national government with a two-house legislature apportioned by population, favoring large states."},
+  {"term": "New Jersey Plan", "def": "The small states' counterproposal for a one-house Congress with equal state representation; the eventual compromise combined it with the Virginia Plan in a bicameral Congress."},
+  {"term": "Federalism (division of powers)", "def": "The constitutional principle dividing authority between the national government and the states, leaving most daily governance to the states while strengthening central power over taxes, commerce, and war."},
+  {"term": "Checks and balances (separation of powers)", "def": "The system distributing power among legislative, executive, and judicial branches—veto, impeachment, judicial appointments—so no branch can dominate the others."},
+  {"term": "Three-fifths clause", "def": "The constitutional provision counting three-fifths of the enslaved population toward House representation and electoral votes, giving slave states outsized national power."},
+  {"term": "The Federalist", "def": "Eighty-five pro-ratification essays by Hamilton, Madison, and Jay writing as 'Publius'; Madison's numbers 10 and 51 argued a large, diverse republic would prevent any faction from oppressing the rest."},
+  {"term": "Anti-Federalists", "def": "Opponents of ratification, including Patrick Henry and small farmers, who feared centralized power and rule by the well-born; their pressure produced the Bill of Rights."},
+  {"term": "Bill of Rights", "def": "The first ten amendments, ratified in 1791, guaranteeing freedoms of religion, speech, press, and assembly and fair legal procedures against the federal government."},
+  {"term": "Treaty of Greenville (1795)", "def": "Agreement after the Battle of Fallen Timbers in which twelve tribes ceded most of Ohio and Indiana and accepted annuity payments that entrenched federal influence in tribal affairs."},
+  {"term": "Naturalization Act of 1790", "def": "The first federal definition of who could become an American citizen through immigration, restricting naturalization to 'free white persons' for the next eighty years."},
+  {"term": "Notes on the State of Virginia", "def": "Jefferson's 1785 book asserting that Black Americans could not be incorporated as equal citizens, reflecting and reinforcing the era's hardening racial ideology."}
+ ],
+ "timeline": [
+  {"year": "1781", "event": "Articles of Confederation ratified after states cede western land claims"},
+  {"year": "1784", "event": "Jefferson's ordinance sets stages of self-government for western territories"},
+  {"year": "1785", "event": "Land Ordinance establishes the survey and sale system for the Old Northwest"},
+  {"year": "1786", "event": "Shays's Rebellion erupts in western Massachusetts; Annapolis meeting calls for reform"},
+  {"year": "1787", "event": "Constitutional Convention drafts the Constitution; Northwest Ordinance bans slavery north of the Ohio"},
+  {"year": "1788", "event": "The Federalist published; ninth state ratifies, putting the Constitution into effect"},
+  {"year": "1790", "event": "Naturalization Act limits citizenship by immigration to free white persons; first census counts 3.9 million Americans"},
+  {"year": "1791", "event": "Bill of Rights ratified; Little Turtle routs St. Clair's army in the Ohio Valley"},
+  {"year": "1794", "event": "American forces win the Battle of Fallen Timbers"},
+  {"year": "1795", "event": "Treaty of Greenville transfers most of Ohio and Indiana to the United States"},
+  {"year": "1808", "event": "Congress bans the importation of slaves at the first moment the Constitution allows"}
+ ],
+ "themes": [
+  "Politics and power: The founding generation redesigned government twice, moving from the weak Articles to a Constitution that balanced national authority, state power, and restraints on popular democracy.",
+  "American and national identity: Debates over ratification and the Naturalization Act defined 'We the People' narrowly, excluding Native Americans and African Americans from full membership.",
+  "Migration and settlement: The land ordinances channeled the postwar rush across the Appalachians into an orderly system of surveys, sales, and future states built on Indian dispossession.",
+  "Work, exchange, and technology: Postwar depression, debt, and paper-money fights over property rights drove constitutional provisions creating a national market and protecting contracts.",
+  "Geography and the environment: Madison inverted conventional wisdom by arguing the republic's vast size would protect liberty, linking westward expansion to political stability."
+ ]
+}

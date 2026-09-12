@@ -1,0 +1,58 @@
+{
+ "chapter": 3,
+ "title": "Creating Anglo-America",
+ "years": "1660-1750",
+ "summary": [
+  "After the Restoration of 1660, England expanded its American empire under mercantilist principles, passing Navigation Acts to channel colonial trade through English ships and ports. New colonies multiplied: New Netherland was seized in 1664 and renamed New York, Carolina was founded as a Barbados offshoot that would build a rice-and-slave economy, and William Penn launched Pennsylvania in 1681 as a Quaker 'holy experiment' offering religious liberty, cheap land, and initially fair dealings with Indians. English-Iroquois cooperation was formalized in the Covenant Chain, though alliances shifted as imperial rivalries evolved.",
+  "The late seventeenth century brought cascading crises. King Philip's War (1675-1676) devastated New England but broke Indian power there, and Bacon's Rebellion (1676) revealed the dangers of a discontented class of landless former servants in Virginia, accelerating the shift from indentured servitude to African slavery. Lawmakers hardened racial lines: hereditary status followed the mother, conversion no longer freed slaves, and the 1705 Virginia slave code turned the colony into a full slave society. England's Glorious Revolution of 1688 echoed in America through the collapse of the Dominion of New England, Leisler's Rebellion in New York, and Maryland's Protestant uprising, while a new Massachusetts charter and the Salem witch trials of 1692 marked the transformation of the Puritan commonwealth.",
+  "The eighteenth century then brought stability and dramatic growth. The mainland population increased nearly tenfold between 1700 and 1770, swelled by German, Scotch-Irish, convict, and enslaved African migrants who made the colonies strikingly diverse in ethnicity and religion. Regions diverged, from New England towns to the grain-exporting Middle Colonies, plantation South, and fast-growing backcountry, while a consumer revolution and Atlantic commerce tied colonists to Britain. An Anglicized elite of merchants and planters dominated society above a broad middle rank of landowning farmers, growing numbers of poor, and enslaved people, as expanding settlement steadily eroded Indian land and autonomy, as in the fraudulent Walking Purchase of 1737."
+ ],
+ "big_ideas": [
+  "Mercantilism and the Navigation Acts organized the empire so colonial trade would enrich England, while lax enforcement let colonists prosper within the system.",
+  "Restoration-era colonies, New York, Carolina, and Pennsylvania, expanded English America with very different visions, from feudal hierarchy to Quaker religious liberty.",
+  "Bacon's Rebellion exposed class conflict among whites and pushed Chesapeake planters to replace indentured servants with enslaved Africans.",
+  "Slavery was constructed gradually through law, and by the early 1700s Virginia had become a slave society with race as its central social divide.",
+  "The Glorious Revolution triggered colonial uprisings and entrenched the ideology of English liberty, parliamentary supremacy, and Protestant identity.",
+  "Massive eighteenth-century immigration from Germany, Ireland, Scotland, and Africa created an ethnically and religiously diverse population unlike England's.",
+  "Colonial society grew more stratified even as most free families owned land, and elites increasingly modeled themselves on the English gentry through Anglicization."
+ ],
+ "key_terms": [
+  {"term": "Mercantilism", "def": "Economic doctrine holding that governments should regulate trade so exports exceeded imports and colonies enriched the mother country by supplying raw materials and buying its manufactures."},
+  {"term": "Navigation Acts", "def": "Parliamentary laws beginning in 1651 requiring that key 'enumerated' colonial goods like tobacco and sugar travel in English ships through English ports, aimed at breaking Dutch commercial dominance."},
+  {"term": "King Philip's War", "def": "1675-1676 Indian uprising in New England led in colonial eyes by the Wampanoag leader Metacom; its defeat opened land to settlers while permanently breaking the region's Indian power."},
+  {"term": "Covenant Chain", "def": "Alliance formed in the 1670s between New York's governor Edmund Andros and the Iroquois in which English and Iroquois ambitions reinforced each other before the Iroquois turned to neutrality."},
+  {"term": "Bacon's Rebellion", "def": "1676 Virginia revolt in which Nathaniel Bacon rallied small farmers, servants, and landless men against Governor Berkeley's Indian policy and corrupt rule; it frightened elites into relying more on enslaved labor."},
+  {"term": "William Penn", "def": "Quaker proprietor who founded Pennsylvania in 1681 as a 'holy experiment' committed to religious freedom, an elected assembly, and purchasing land from Indians rather than seizing it."},
+  {"term": "Society of Friends (Quakers)", "def": "Religious movement teaching that God's 'inner light' dwells in every person; Quakers embraced spiritual equality, pacifism, and eventually became early opponents of slavery."},
+  {"term": "Glorious Revolution", "def": "1688 overthrow of the Catholic James II in favor of William and Mary, which confirmed parliamentary supremacy and the idea that liberty was every Englishman's birthright."},
+  {"term": "English Bill of Rights", "def": "1689 enactment listing Parliament's powers, such as control of taxation, and individual protections like trial by jury, justifying James II's removal and defining English liberty."},
+  {"term": "Dominion of New England", "def": "James II's 1686-1689 consolidation of the New England colonies plus New York and the Jerseys under Sir Edmund Andros without an elected assembly; colonists dismantled it when James fell."},
+  {"term": "Leisler's Rebellion", "def": "1689 seizure of power in New York by militia captain Jacob Leisler after the Glorious Revolution; his execution polarized the colony's politics for a generation."},
+  {"term": "Salem witch trials", "def": "1692 wave of witchcraft accusations in Massachusetts that led to nineteen hangings before the governor halted the proceedings, discrediting witch prosecutions in America."},
+  {"term": "Virginia slave code of 1705", "def": "Comprehensive law defining enslaved people as property fully subject to their owners, separating black and white courts, and marking Virginia's completed transition to a slave society."},
+  {"term": "Redemptioners", "def": "Indentured families, many German, who received Atlantic passage in exchange for a promise to work off the cost after arrival, a key mechanism of eighteenth-century immigration."},
+  {"term": "Walking Purchase", "def": "1737 Pennsylvania land fraud in which hired runners, rather than a walking man, marked off a cession from the Lenni Lenape, poisoning the colony's once-peaceful Indian relations."},
+  {"term": "Backcountry", "def": "Rapidly growing inland region from central Pennsylvania down the Shenandoah Valley into the upland Carolinas, settled largely by Scotch-Irish and German farm families."}
+ ],
+ "timeline": [
+  {"year": "1651", "event": "Parliament passes the first Navigation Act to control colonial commerce."},
+  {"year": "1664", "event": "England seizes New Netherland from the Dutch and renames it New York."},
+  {"year": "1670", "event": "The first settlers, many from Barbados, arrive in Carolina."},
+  {"year": "1675", "event": "King Philip's War erupts in New England, devastating both settlers and Indians."},
+  {"year": "1676", "event": "Bacon's Rebellion burns Jamestown and shakes Virginia's ruling elite."},
+  {"year": "1681", "event": "William Penn receives the charter for Pennsylvania, his Quaker 'holy experiment.'"},
+  {"year": "1686", "event": "James II merges the northern colonies into the Dominion of New England under Edmund Andros."},
+  {"year": "1688", "event": "The Glorious Revolution replaces James II with William and Mary."},
+  {"year": "1689", "event": "Colonial uprisings topple Andros in Boston, Leisler takes New York, and Maryland Protestants oust the proprietor; Parliament enacts the Bill of Rights."},
+  {"year": "1692", "event": "The Salem witch trials result in nineteen executions in Massachusetts."},
+  {"year": "1705", "event": "Virginia adopts a sweeping slave code defining enslaved people as property."},
+  {"year": "1737", "event": "The Walking Purchase defrauds the Lenni Lenape of Pennsylvania land."}
+ ],
+ "themes": [
+  "Politics and power: The Glorious Revolution and colonial rebellions spread the ideology of English liberty while Britain tried, unevenly, to tighten imperial control.",
+  "Work, exchange, and technology: Mercantilist trade laws, the rise of staple crop plantations, and a transatlantic consumer revolution bound colonial economies to the Atlantic world.",
+  "Migration and settlement: German, Scotch-Irish, convict, and enslaved African arrivals diversified the colonies and pushed settlement into the backcountry at Indians' expense.",
+  "American and regional identity: Distinct regional societies emerged even as elites pursued Anglicization, and race hardened into the key line dividing freedom from slavery.",
+  "Social structures: Law converted slavery into a hereditary, racial institution, while free society stratified into gentry, a broad landowning middle, and a growing poor."
+ ]
+}

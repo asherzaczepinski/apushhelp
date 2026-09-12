@@ -1,0 +1,269 @@
+/* Give Me Liberty! studier — same table the Risk board sits on:
+   parchment, ink, navy, patriot red, brass. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --parchment: #f5ecd7;
+  --cream: #fffaf0;
+  --ink: #2b2118;
+  --ink-soft: #4a3b2a;
+  --navy: #1b2a38;
+  --patriot: #8c1c13;
+  --brass: #8b6f47;
+  --brass-pale: #d9c9a3;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--parchment);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+a { color: var(--patriot); }
+a:hover { color: #5f120c; }
+
+:focus-visible { outline: 3px solid var(--patriot); outline-offset: 2px; }
+
+/* ── masthead ── */
+.masthead {
+  background: var(--navy);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 22px;
+  border-bottom: 4px solid var(--patriot);
+}
+.site {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+}
+.site em { color: var(--brass-pale); }
+#q {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid var(--brass);
+  border-radius: 4px;
+  padding: 7px 12px;
+  width: min(300px, 70vw);
+}
+
+/* ── page frame ── */
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 34px 22px 60px;
+}
+.colophon {
+  text-align: center;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.85rem;
+  padding: 18px 22px 30px;
+  border-top: 3px double var(--brass);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── home ── */
+.cover {
+  font-size: clamp(2.1rem, 5.5vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+.cover-note {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 30px;
+  max-width: 60ch;
+}
+
+.units { display: block; }
+.band {
+  display: grid;
+  grid-template-columns: 128px 1fr auto;
+  gap: 18px;
+  align-items: start;
+  padding: 16px 10px;
+  border-top: 3px double var(--brass);
+  text-decoration: none;
+  color: var(--ink);
+}
+.band:last-child { border-bottom: 3px double var(--brass); }
+.band:hover, .band:focus-visible { background: var(--cream); }
+.era {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--patriot);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+.era.big { font-size: 1.6rem; margin-bottom: 2px; }
+.band-main strong { font-size: 1.12rem; display: block; margin-bottom: 3px; }
+.band-ch {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.weight {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--brass);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+/* ── unit page ── */
+.crumb { margin-bottom: 18px; font-size: 0.92rem; }
+.unit-head { margin-bottom: 24px; }
+.unit-head h1 { font-size: 2rem; margin-bottom: 12px; }
+
+.ch-list { list-style: none; }
+.ch-list li { border-top: 1px solid var(--brass-pale); }
+.ch-list li:last-child { border-bottom: 1px solid var(--brass-pale); }
+.ch-list a {
+  display: flex;
+  gap: 16px;
+  padding: 14px 8px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.ch-list a:hover, .ch-list a:focus-visible { background: var(--cream); }
+.ch-no {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--brass);
+  min-width: 44px;
+  text-align: right;
+  line-height: 1.1;
+}
+.ch-no.big {
+  font-size: 2.6rem;
+  color: var(--patriot);
+  margin-right: 14px;
+  vertical-align: -6px;
+}
+.ch-body strong { font-size: 1.08rem; }
+.hook { display: block; font-size: 0.92rem; color: var(--ink-soft); font-style: italic; }
+
+/* ── chapter page ── */
+.chapter h2 {
+  margin: 34px 0 12px;
+  padding-top: 14px;
+  border-top: 3px double var(--brass);
+  font-size: 1.35rem;
+}
+.ch-head h1 { font-size: 2rem; line-height: 1.15; }
+.ch-years { font-style: italic; color: var(--brass); font-size: 1.05rem; margin-top: 2px; }
+.prose { max-width: 68ch; margin-top: 18px; }
+.prose p { margin-bottom: 14px; text-indent: 1.6em; }
+.prose p:first-child { text-indent: 0; }
+
+.ideas { list-style: none; max-width: 68ch; }
+.ideas li { padding-left: 26px; position: relative; margin-bottom: 9px; }
+.ideas li::before { content: '\2605'; position: absolute; left: 0; color: var(--patriot); }
+
+.tl { list-style: none; border-left: 3px double var(--brass); padding-left: 18px; max-width: 68ch; }
+.tl li { display: flex; gap: 14px; margin-bottom: 9px; }
+.yr { font-weight: bold; color: var(--patriot); min-width: 84px; font-variant-numeric: tabular-nums; }
+
+.terms-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.terms { max-width: 72ch; }
+.trow { border-top: 1px solid var(--brass-pale); padding: 10px 4px; }
+.trow dt { font-weight: bold; display: inline; }
+.trow dd { color: var(--ink-soft); margin-top: 3px; }
+.terms.hidden dt { cursor: pointer; }
+.terms.hidden dt::after { content: ' — click to reveal'; font-weight: normal; font-style: italic; color: var(--brass); font-size: 0.85rem; }
+.terms.hidden dd { display: none; }
+.terms.hidden .trow.revealed dd { display: block; }
+.terms.hidden .trow.revealed dt::after { content: ''; }
+.tsrc { font-size: 0.82rem; font-weight: normal; margin-left: 6px; }
+
+.themes { list-style: none; max-width: 68ch; }
+.themes li { padding-left: 26px; position: relative; margin-bottom: 8px; }
+.themes li::before { content: '\2766'; position: absolute; left: 0; color: var(--brass); }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 3px double var(--brass);
+  font-size: 0.95rem;
+}
+
+/* ── buttons ── */
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--patriot);
+  color: var(--cream);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { background: #6e150e; color: var(--cream); }
+.btn.small { font-size: 0.8rem; padding: 4px 10px; }
+.btn.ghost { background: transparent; color: var(--patriot); border: 2px solid var(--patriot); }
+
+/* ── flashcards ── */
+.quiz-help { font-style: italic; color: var(--ink-soft); margin: 8px 0 18px; }
+.fcard {
+  max-width: 580px;
+  min-height: 250px;
+  margin: 0 auto;
+  background: var(--cream);
+  border: 3px double var(--brass);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 28px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.fcard:active { transform: scale(0.985); }
+.fc-term { font-size: 1.9rem; font-weight: bold; line-height: 1.2; }
+.fc-term-sm { font-size: 1.05rem; font-weight: bold; color: var(--brass); }
+.fc-def { font-size: 1.12rem; max-width: 46ch; }
+.fc-hint, .fc-src { font-style: italic; color: var(--brass); font-size: 0.9rem; }
+.quiz-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.qcount { font-variant-numeric: tabular-nums; color: var(--ink-soft); min-width: 70px; text-align: center; }
+
+.hits { list-style: none; }
+.hits li { padding: 7px 0; border-top: 1px solid var(--brass-pale); }
+
+/* ── small screens ── */
+@media (max-width: 640px) {
+  .band { grid-template-columns: 1fr; gap: 4px; }
+  .weight { padding-top: 0; }
+  .ch-no { min-width: 30px; }
+  .pager { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

@@ -1,0 +1,57 @@
+{
+ "chapter": 6,
+ "title": "The Revolution Within",
+ "years": "1776–1790",
+ "summary": [
+  "Independence was more than a war against Britain; it set off contests over what kind of society America would become. The Declaration's claim that all men are created equal challenged a colonial world built on deference to rulers, husbands, masters, and landlords. Ordinary artisans, farmers, and militiamen demanded a real voice in government, and the new state constitutions—most radically Pennsylvania's of 1776, with its single-house assembly and taxpayer suffrage—loosened or dropped property qualifications for voting. John Adams's Thoughts on Government pushed most states toward balanced two-house legislatures, but by the 1780s the vast majority of adult white men could vote, and freedom and the ballot were becoming synonymous.",
+  "The Revolution also transformed religion and the economy. States disestablished official churches, and Jefferson's Virginia Bill for Establishing Religious Freedom (enacted 1786) ended religious tests and public funding of worship, making religious liberty the model for rights shielded from government. Anti-Catholic prejudice softened after the French alliance, and denominations multiplied. Economically, indentured servitude and apprenticeship faded, sharpening the line between free wage labor in the North and slavery in the South. Wartime inflation sparked crowd actions and price-control debates, pitting the older ideal of a community-regulated economy against Adam Smith's new free-market vision in The Wealth of Nations.",
+  "Yet liberty had firm limits. Perhaps a fifth or more of free Americans were Loyalists; many faced loyalty oaths, property confiscation, and exile, with some 60,000 leaving the country. Native Americans, whether allied with Britain or the patriots, saw the Treaty of Paris ignore their claims and open their lands to settlement. Enslaved people seized the moment through freedom petitions, wartime escape, and military service; northern states began gradual abolition and a free Black community emerged, but slavery survived and kept growing in the South. Women like Abigail Adams pressed for recognition, and republican motherhood expanded female education, though coverture kept married women legally subordinate."
+ ],
+ "big_ideas": [
+  "The Revolution turned equality into a core component of American freedom, challenging inherited hierarchies of class, religion, and status.",
+  "New state constitutions broadened suffrage and shifted power to elected legislatures, with Pennsylvania's 1776 constitution the most democratic experiment.",
+  "Disestablishment and Jefferson's Virginia statute made religious liberty a defining American right and a model for separating public and private spheres.",
+  "The decline of indentured servitude created a free-labor North that contrasted ever more sharply with a slave-labor South.",
+  "Debates over wartime price controls versus free trade revealed two competing visions of economic freedom that outlasted the war.",
+  "The Revolution meant lost liberty for Loyalists and Native Americans, whose interests were sacrificed in the patriot victory and the Treaty of Paris.",
+  "Enslaved people turned revolutionary ideology into a weapon against bondage, producing northern gradual abolition and the first large free Black communities, even as slavery expanded overall; women gained education and status through republican motherhood but remained excluded from politics by coverture."
+ ],
+ "key_terms": [
+  {"term": "Republic", "def": "A government resting on the consent of the governed, in which citizens elect representatives and no king or hereditary aristocracy holds power; every new state adopted this form."},
+  {"term": "Suffrage", "def": "The right to vote, which most states expanded after independence by lowering or eliminating property requirements for white men."},
+  {"term": "Pennsylvania Constitution of 1776", "def": "The most democratic of the new state constitutions, creating a one-house legislature elected annually by all taxpaying men and abolishing the governorship."},
+  {"term": "Thoughts on Government", "def": "John Adams's 1776 blueprint urging balanced governments with two-house legislatures and strong executives to check both wealthy and ordinary citizens; most states followed it."},
+  {"term": "Bill for Establishing Religious Freedom", "def": "Jefferson's Virginia measure, drafted in the late 1770s and passed in 1786, ending religious qualifications for office and state financial support for churches."},
+  {"term": "Disestablishment", "def": "The revolutionary-era process by which states stripped official churches of public funding and legal privileges, institutionalizing religious liberty."},
+  {"term": "Christian Republicanism", "def": "The revolutionary-era blend of evangelical and republican thought holding that religion and self-discipline were needed to restrain vice and sustain a virtuous citizenry."},
+  {"term": "The Wealth of Nations", "def": "Adam Smith's 1776 treatise arguing that the free market's 'invisible hand' organized economic life better than government regulation; it armed American opponents of price controls."},
+  {"term": "Free labor", "def": "Working for wages or on one's own farm or shop; as indentured servitude and apprenticeship collapsed after independence, free labor defined the northern economy in contrast to southern slavery."},
+  {"term": "Loyalists", "def": "The roughly 20-25 percent of free Americans who sided with Britain; many endured loyalty oaths, confiscation, and exile, and about 60,000 ultimately left the United States."},
+  {"term": "Freedom petitions", "def": "Appeals submitted by enslaved New Englanders to courts and legislatures in the 1770s, using the Revolution's own language of natural rights to demand emancipation."},
+  {"term": "Lemuel Haynes", "def": "A Black Massachusetts militiaman and later renowned minister who argued in 1776 that if liberty was an innate human right, Africans were entitled to it equally with Englishmen."},
+  {"term": "Gradual abolition", "def": "The approach northern states took between 1777 and 1804, freeing children born to enslaved mothers only after years of service, so slavery in the North died slowly."},
+  {"term": "Free blacks", "def": "The rapidly growing population of African Americans not held in bondage—rising from about 10,000 in 1776 to nearly 200,000 by 1810—who built independent churches, schools, and communities."},
+  {"term": "Coverture", "def": "The legal doctrine that a married woman's identity was absorbed into her husband's, giving him control over her property and person; it survived the Revolution intact."},
+  {"term": "Republican motherhood", "def": "The postwar ideal assigning women the civic task of raising virtuous future citizens, which justified expanded female education while still barring women from politics."}
+ ],
+ "timeline": [
+  {"year": "1700", "event": "Samuel Sewall publishes The Selling of Joseph, America's first antislavery tract"},
+  {"year": "1773", "event": "Enslaved New Englanders begin submitting freedom petitions to courts and legislatures"},
+  {"year": "1776", "event": "Pennsylvania adopts its radical state constitution; Adams's Thoughts on Government and Smith's Wealth of Nations appear"},
+  {"year": "1777", "event": "Vermont's constitution becomes the first to ban slavery"},
+  {"year": "1779", "event": "Jefferson introduces the Bill for Establishing Religious Freedom; Clinton's Philipsburg Proclamation offers refuge to escaped slaves"},
+  {"year": "1780", "event": "Wartime inflation peaks amid crowd actions and failed price controls"},
+  {"year": "1782", "event": "Deborah Sampson enlists in the Continental army disguised as a man"},
+  {"year": "1783", "event": "Treaty of Paris ignores Indian land claims and requires an end to Loyalist persecution"},
+  {"year": "1786", "event": "Virginia enacts Jefferson's religious freedom statute"},
+  {"year": "1790", "event": "First census counts 700,000 enslaved people, showing slavery grew despite the Revolution"},
+  {"year": "1804", "event": "New Jersey becomes the last northern state to adopt gradual abolition"}
+ ],
+ "themes": [
+  "Politics and power: Independence democratized government, expanding suffrage and shifting authority to elected legislatures while sparking debate over how democratic a republic should be.",
+  "American and national identity: Competing claims by women, African Americans, Loyalists, and Native Americans exposed the contested boundaries of who counted as a free citizen.",
+  "Work, exchange, and technology: The disappearance of indentured servitude and the fight over price controls versus free trade redefined economic freedom and divided North from South by labor system.",
+  "Culture and society: Disestablishment, religious pluralism, and republican motherhood reshaped churches, families, and education in the new republic.",
+  "Migration and settlement: Loyalist emigration and the postwar rush onto Indian lands redistributed people and property, with Native dispossession the price of white expansion."
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "chapter": 16,
+ "title": "America's Gilded Age",
+ "years": "1870–1890",
+ "summary": [
+  "In the decades after the Civil War, the United States became the world's leading industrial power in a 'second industrial revolution.' Abundant resources, immigrant labor, new technologies like Edison's electricity, and active federal support—tariffs, land grants, and Indian removal—fueled explosive growth centered on railroads, which tripled their mileage, created a national market, and even standardized time zones in 1883. Ruthless competition drove consolidation: Carnegie built a vertically integrated steel empire and Rockefeller's Standard Oil controlled 90 percent of oil refining, making such men either admired 'captains of industry' or feared 'robber barons.' Wealth grew starkly unequal—by 1890 the richest 1 percent held as much income as the bottom half—while most workers faced insecurity, dangerous conditions, and tenement poverty documented by Jacob Riis.",
+  "Capitalism transformed the West even more dramatically. Homesteaders, immigrants, and railroads created a wheat and corn empire on the Middle Border, cowboys drove cattle to Kansas railheads, and corporate mining and giant California farms employing migrant labor foreshadowed agribusiness. This incorporation destroyed the world of the Plains Indians: the buffalo were exterminated, the Sioux crushed despite victory at the Little Bighorn in 1876, Chief Joseph's Nez Percé forced onto reservations, and the Dawes Act of 1887 broke up tribal lands, costing Indians tens of millions of acres. The 1890 massacre of Ghost Dancers at Wounded Knee ended armed Native resistance. Gilded Age politics, meanwhile, was corrupt, closely divided, and business-dominated; reforms like the Civil Service Act, Interstate Commerce Commission, and Sherman Antitrust Act set precedents but had little immediate force.",
+  "Industrialization ignited fierce debate over freedom. Social Darwinists like William Graham Sumner and courts wielding 'liberty of contract' doctrine—culminating in Lochner v. New York—defended the unregulated market, while critics answered with alternatives: Henry George's single tax, Bellamy's cooperative utopia, and the Social Gospel's Christian ethic of solidarity. Labor conflict defined the era, from the Great Railroad Strike of 1877 to the Knights of Labor's rise and the eight-hour movement, until the 1886 Haymarket Affair let employers brand unions as dangerous radicals. The question of what freedom meant in an industrial economy remained unresolved as the crisis-ridden 1890s approached."
+ ],
+ "big_ideas": [
+  "Government support—tariffs, railroad land grants, and military removal of Indians—was essential to the rapid industrialization usually credited to laissez-faire capitalism.",
+  "Railroads created a national market and enabled mass production, national brands, and corporate consolidation through pools, trusts, and vertical and horizontal integration.",
+  "Industrial growth produced extreme inequality: enormous fortunes and 'conspicuous consumption' coexisted with widespread poverty, workplace deaths, and economic insecurity.",
+  "Incorporating the West into the capitalist economy destroyed the Plains Indians' independence through buffalo extermination, warfare, reservations, boarding schools, and the Dawes Act's assault on tribal landholding.",
+  "Gilded Age national politics was closely balanced, patronage-driven, and often corrupt, and early regulatory laws (ICC, Sherman Act) were weakly enforced though precedent-setting.",
+  "Social Darwinism and the courts' 'liberty of contract' doctrine redefined freedom as an unregulated market, striking down labor protections in cases like Lochner v. New York.",
+  "Workers and reformers—the Knights of Labor, Henry George, Edward Bellamy, and Social Gospel ministers—challenged that definition, arguing genuine freedom was impossible amid extreme economic inequality."
+ ],
+ "key_terms": [
+  {"term": "Second industrial revolution", "def": "The post–Civil War surge in factory production, railroads, steel, and electricity that made the U.S. the world's largest industrial economy, producing a third of global output by 1913."},
+  {"term": "Vertical integration", "def": "A business strategy, perfected by Carnegie's steel operations, of controlling every stage of production from raw materials through manufacturing to distribution."},
+  {"term": "Horizontal expansion", "def": "Growth by buying up or merging with competitors in the same business, as when Rockefeller absorbed rival oil refineries into Standard Oil."},
+  {"term": "Robber barons", "def": "A hostile label for Gilded Age industrialists like Carnegie, Rockefeller, and Morgan, who were admired for innovation but condemned for crushing competitors and unions and wielding unaccountable power."},
+  {"term": "Bonanza farms", "def": "Huge western farms of thousands of acres worked by hired wage laborers; though exceptions to the family-farm norm, they pointed toward corporate, mechanized agriculture."},
+  {"term": "Battle of the Little Bighorn", "def": "The 1876 victory of Sioux and Cheyenne fighters under Sitting Bull and Crazy Horse, who wiped out Custer's cavalry force while defending the Black Hills."},
+  {"term": "Dawes Act", "def": "The 1887 law that divided tribal lands into individual family allotments and sold the 'surplus' to whites, aiming at forced assimilation; Indians lost about 86 million acres under it."},
+  {"term": "Wounded Knee massacre", "def": "The December 1890 killing of 150–200 Sioux men, women, and children—many Ghost Dance followers—by the army in South Dakota, ending armed Indian resistance."},
+  {"term": "Gilded Age", "def": "Mark Twain and Charles Dudley Warner's label, from their 1873 novel, for an era whose glittering wealth concealed corruption, inequality, and social conflict."},
+  {"term": "Civil Service Act of 1883", "def": "The law, prompted by Garfield's assassination, that began replacing the patronage 'spoils system' with competitive examinations for federal jobs."},
+  {"term": "Interstate Commerce Commission", "def": "The first federal regulatory agency, created in 1887 to ensure reasonable railroad rates, though its lack of rate-setting power left it initially weak."},
+  {"term": "Sherman Antitrust Act", "def": "The 1890 law banning combinations in restraint of trade; vague wording made it hard to use against monopolies, and courts applied it mainly against striking unions."},
+  {"term": "Social Darwinism", "def": "The application of 'survival of the fittest' language to society, arguing that inequality was natural and that government aid to the poor or regulation of business defied evolutionary law."},
+  {"term": "Liberty of contract", "def": "The judicial doctrine that workers and employers must be free to bargain without state interference, used in cases like Lochner v. New York (1905) to strike down maximum-hours and labor laws."},
+  {"term": "Knights of Labor", "def": "The first mass national labor organization, led by Terence Powderly, which organized skilled and unskilled workers, women, and black workers; membership peaked near 800,000 in 1886 before rapid decline."},
+  {"term": "Haymarket Affair", "def": "The May 1886 Chicago bombing at a labor protest that killed a policeman; eight anarchists were convicted on flimsy evidence, and employers used the episode to discredit the labor movement."}
+ ],
+ "timeline": [
+  {"year": "1872", "event": "The Crédit Mobilier scandal exposes corruption tied to Union Pacific railroad construction."},
+  {"year": "1873", "event": "Twain and Warner publish The Gilded Age, naming the era; a major depression begins."},
+  {"year": "1876", "event": "Sioux and Cheyenne warriors destroy Custer's command at the Little Bighorn."},
+  {"year": "1877", "event": "The Great Railroad Strike, the first national labor uprising, is suppressed by federal troops."},
+  {"year": "1879", "event": "Henry George publishes Progress and Poverty, proposing the single tax; the U.S. returns to the gold standard."},
+  {"year": "1883", "event": "The Civil Service Act creates merit-based federal hiring; railroads establish national time zones."},
+  {"year": "1886", "event": "The Knights of Labor peak, May Day strikes demand the eight-hour day, and the Haymarket Affair turns opinion against labor radicalism; the Statue of Liberty is dedicated."},
+  {"year": "1887", "event": "Congress creates the Interstate Commerce Commission and passes the Dawes Act allotting tribal lands."},
+  {"year": "1888", "event": "Edward Bellamy's utopian novel Looking Backward becomes a national bestseller."},
+  {"year": "1890", "event": "The Sherman Antitrust Act passes; the army kills Ghost Dancers at Wounded Knee; Jacob Riis publishes How the Other Half Lives."},
+  {"year": "1895", "event": "In United States v. E. C. Knight Co., the Supreme Court limits the Sherman Act by exempting manufacturing monopolies."},
+  {"year": "1905", "event": "Lochner v. New York voids a maximum-hours law for bakers, enshrining liberty of contract."}
+ ],
+ "themes": [
+  "Work, exchange, and technology: railroads, electricity, and corporate consolidation built a national industrial economy while shifting most Americans into permanent wage labor.",
+  "Politics and power: closely divided, patronage-ridden Gilded Age government struggled to regulate corporations, though the ICC and Sherman Act established the principle of federal economic regulation.",
+  "Migration and settlement: homesteaders, European immigrants, Chinese laborers, and railroad promotion peopled the West, while Native peoples were confined to reservations and pressured to assimilate.",
+  "American and national identity: debates between Social Darwinists, courts, labor, and reformers contested whether freedom meant an unregulated market or required economic equality.",
+  "America in the world: western conquest paralleled other settler societies like Australia and Canada, and U.S. farm exports and immigration tied Americans to an integrating global economy."
+ ]
+}

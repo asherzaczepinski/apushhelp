@@ -1,0 +1,58 @@
+{
+ "chapter": 13,
+ "title": "A House Divided",
+ "years": "1840–1861",
+ "summary": [
+  "During the 1840s, a surge of expansionism justified by the idea of manifest destiny carried the United States to the Pacific. American settlers in Texas had already broken from Mexico in 1836, and annexation in 1845 helped trigger the Mexican War (1846–1848). Victory brought the Treaty of Guadalupe Hidalgo and a huge Mexican Cession, while the 1848 gold discovery drew a diverse flood of migrants to California—with devastating consequences for California's Indians and 'foreign' miners. Expansion was framed in racial terms of Anglo-Saxon superiority, and it also pushed America outward globally, as Commodore Perry opened Japanese ports to U.S. trade in 1854.",
+  "The new land forced the explosive question of slavery's expansion into national politics. The Wilmot Proviso split Congress along sectional rather than party lines, and the Free Soil Party of 1848 showed antislavery politics reaching well beyond abolitionists. The Compromise of 1850 briefly calmed tensions, but its harsh Fugitive Slave Act outraged northerners and energized the Underground Railroad. Stephen Douglas's Kansas-Nebraska Act of 1854 repealed the Missouri Compromise in favor of popular sovereignty, destroying the Whigs and giving rise to the Republican Party, whose free labor ideology cast the North as a land of opportunity threatened by an expanding 'slave power.' Violence in 'Bleeding Kansas' and the caning of Charles Sumner deepened the divide, and the 1856 election revealed parties now arrayed by section.",
+  "Late-decade events made compromise nearly impossible. The Dred Scott decision (1857) denied black citizenship and barred Congress from restricting slavery in the territories, undercutting both Republicans and popular sovereignty. The Lincoln-Douglas debates of 1858 made Abraham Lincoln a national figure by framing slavery as a moral wrong that must not spread. John Brown's 1859 raid on Harpers Ferry terrified the South, and Lincoln's purely sectional victory in 1860 prompted South Carolina and six other Deep South states to secede and form the Confederacy. After compromise efforts failed, the Confederate bombardment of Fort Sumter in April 1861 began the Civil War."
+ ],
+ "big_ideas": [
+  "Manifest destiny fused ideas of democratic mission with beliefs in Anglo-Saxon racial superiority to justify continental expansion.",
+  "The Mexican War's territorial gains, not abolitionism itself, injected the slavery expansion question into the center of national politics.",
+  "The Fugitive Slave Act of 1850 nationalized the slavery controversy by forcing northern communities to participate in returning runaways.",
+  "The Kansas-Nebraska Act shattered the second party system, killing the Whigs and creating the sectional Republican Party built on free labor ideology.",
+  "The Dred Scott decision eliminated middle-ground solutions by ruling that Congress could not bar slavery from any territory and that black people could not be citizens.",
+  "The election of 1860 was effectively two sectional contests, and Lincoln's victory without any southern support convinced the Deep South that secession was its only protection for slavery.",
+  "Repeated compromises (1850, Crittenden) failed because the North's commitment to stopping slavery's expansion and the South's insistence on protecting it had become irreconcilable."
+ ],
+ "key_terms": [
+  {"term": "Manifest destiny", "def": "The widely held belief that the United States was destined, even divinely ordained, to spread across North America to the Pacific; it drove 1840s expansionism and was often tied to claims of racial superiority."},
+  {"term": "Texas Revolt", "def": "The 1835–1836 uprising of American settlers and Tejano allies against Mexican rule, marked by the fall of the Alamo and the victory at San Jacinto, which produced an independent slaveholding Texas republic."},
+  {"term": "Mexican War", "def": "The 1846–1848 conflict provoked by disputes over the Texas border and President Polk's desire for California; the U.S. victory and Treaty of Guadalupe Hidalgo added over half a million square miles of territory."},
+  {"term": "Gold rush", "def": "The mass migration to California after gold was found at Sutter's mill in 1848, which brought a diverse population of hundreds of thousands and led to violent dispossession of Indians and foreign-born miners."},
+  {"term": "Wilmot Proviso", "def": "An 1846 proposal to ban slavery in all land taken from Mexico; it passed the House along sectional lines but failed in the Senate, revealing how expansion split the parties by region."},
+  {"term": "Free Soil Party", "def": "An 1848 party opposing slavery's spread into the western territories and favoring free homesteads; its strong showing under Martin Van Buren proved antislavery politics had broad northern appeal."},
+  {"term": "Compromise of 1850", "def": "Henry Clay's package that admitted California free, ended the slave trade in Washington D.C., left slavery in the Utah and New Mexico territories to local decision, and enacted a tougher fugitive slave law."},
+  {"term": "Fugitive Slave Act", "def": "The 1850 law empowering federal commissioners to return runaways without jury trials and compelling citizens to assist; it provoked northern resistance and drove many black Americans to Canada."},
+  {"term": "Popular sovereignty", "def": "Stephen Douglas's doctrine that settlers in each territory, not Congress, should vote on whether to permit slavery; intended as a moderate solution, it instead fueled violence in Kansas."},
+  {"term": "Kansas-Nebraska Act", "def": "Douglas's 1854 law organizing two territories under popular sovereignty, thereby repealing the Missouri Compromise ban on slavery there; northern outrage destroyed the Whigs and launched the Republicans."},
+  {"term": "Know-Nothing Party", "def": "A nativist, anti-Catholic party that surged in 1854 amid heavy Irish and German immigration, briefly dominating politics in states like Massachusetts before the slavery issue eclipsed nativism."},
+  {"term": "Bleeding Kansas", "def": "The guerrilla war between proslavery and free-state settlers in Kansas Territory in the mid-1850s, which killed about 200 people and discredited popular sovereignty as a peaceful solution."},
+  {"term": "Free labor ideology", "def": "The Republican worldview holding that northern society let wage earners rise to independent farm or shop ownership, while slavery degraded labor; slavery therefore had to be kept out of the West."},
+  {"term": "Dred Scott v. Sandford", "def": "The 1857 Supreme Court ruling by Chief Justice Taney that black people could not be U.S. citizens and that Congress had no power to prohibit slavery in the territories, invalidating the Missouri Compromise."},
+  {"term": "Lincoln-Douglas debates", "def": "Seven 1858 Illinois Senate debates in which Lincoln argued slavery was a moral wrong that must not expand while Douglas defended local self-determination; Douglas kept his seat but Lincoln gained national fame."},
+  {"term": "Fort Sumter", "def": "The federal fort in Charleston harbor that Confederate forces bombarded in April 1861 after Lincoln attempted to resupply it, beginning the Civil War and prompting four more states to secede."}
+ ],
+ "timeline": [
+  {"year": "1836", "event": "Texas wins independence from Mexico after the Alamo and the Battle of San Jacinto."},
+  {"year": "1845", "event": "The United States annexes Texas; James K. Polk becomes president."},
+  {"year": "1846", "event": "The Mexican War begins and David Wilmot proposes banning slavery in any territory gained from Mexico."},
+  {"year": "1848", "event": "The Treaty of Guadalupe Hidalgo transfers the Mexican Cession; gold is discovered in California; the Free Soil Party forms."},
+  {"year": "1850", "event": "The Compromise of 1850, including the Fugitive Slave Act, temporarily eases sectional conflict."},
+  {"year": "1854", "event": "The Kansas-Nebraska Act repeals the Missouri Compromise; the Republican and Know-Nothing parties emerge."},
+  {"year": "1856", "event": "Violence peaks in 'Bleeding Kansas' and Preston Brooks canes Senator Charles Sumner; James Buchanan wins the presidency."},
+  {"year": "1857", "event": "The Supreme Court issues the Dred Scott decision denying black citizenship and congressional power over slavery in the territories."},
+  {"year": "1858", "event": "Lincoln and Douglas debate slavery's expansion in their Illinois Senate race."},
+  {"year": "1859", "event": "John Brown raids the federal arsenal at Harpers Ferry and is executed, becoming a northern martyr."},
+  {"year": "1860", "event": "Lincoln wins a four-way sectional election; South Carolina secedes in December."},
+  {"year": "1861", "event": "Seven states form the Confederacy; Fort Sumter is fired upon in April, starting the Civil War."}
+ ],
+ "themes": [
+  "Politics and power: the slavery expansion issue dissolved the national two-party system, replaced it with sectional parties, and ultimately broke the Union itself.",
+  "Migration and settlement: overland migration to Oregon, Mormon settlement in Utah, and the California gold rush reshaped the West and displaced Native and Mexican residents.",
+  "Geography and environment: control of new western lands—and whether their soil would support slave or free labor—defined the era's central political struggle.",
+  "America in the world: the Mexican War, the Ostend Manifesto, filibustering, and Perry's opening of Japan showed U.S. expansionism operating beyond its borders.",
+  "American and national identity: debates over race, citizenship for black Americans and Mexicans, and nativist hostility to Catholic immigrants revealed contested definitions of who belonged in the republic."
+ ]
+}

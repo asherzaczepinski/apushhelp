@@ -1,0 +1,58 @@
+{
+ "chapter": 11,
+ "title": "The Peculiar Institution",
+ "years": "1800–1860",
+ "summary": [
+  "By the mid-nineteenth century slavery had become the South's 'peculiar institution' and the engine of the national economy. Nearly 4 million enslaved people lived in the South by 1860, and the cotton they grew supplied about three-quarters of the world's raw cotton and more than half of U.S. export earnings. After Congress closed the Atlantic slave trade in 1808, an internal 'Second Middle Passage' sold over 2 million people from the Upper South to the cotton and sugar frontier, routinely destroying families. Northern banks, ships, insurers, and mills all profited, making slavery a truly national economic system even as the South itself stayed rural, under-industrialized, and dominated by a small planter elite whose values—wrapped in a paternalist ethos—set the tone for the whole region, including the three-quarters of white families who owned no slaves.",
+  "Enslaved people lived under law that defined them as property: they could not testify against whites, own guns, move freely, or (after the 1830s) legally learn to read, and discipline ultimately rested on the whip and the threat of sale. Free Black southerners faced tight restrictions as well. Labor varied from cotton-belt gang work under overseers to the task system on rice plantations and hired-out skilled work in cities. Within these constraints, enslaved communities built a resilient culture centered on family and a distinctive Christianity that read the Exodus story as a promise of deliverance and judged slavery a sin.",
+  "Resistance ran from everyday sabotage and running away—aided by the Underground Railroad and rescuers like Harriet Tubman—to shipboard seizures such as the Amistad and Creole and outright revolts: Gabriel's plot (1800), the 1811 Louisiana uprising, Denmark Vesey's conspiracy (1822), and Nat Turner's 1831 rebellion. After Turner, Virginia debated and rejected gradual emancipation, and the South instead tightened its slave codes, suppressed dissent, and embraced an aggressive proslavery argument insisting that white freedom depended on Black bondage—hardening the region against a Western world in which slavery was elsewhere in retreat."
+ ],
+ "big_ideas": [
+  "Cotton made slavery the economic core of both the South and the nation: enslaved people's market value exceeded that of all U.S. factories, railroads, and banks combined by 1860.",
+  "The domestic slave trade—the Second Middle Passage—moved over 2 million people to the Deep South after 1808, making family separation a defining trauma of American slavery.",
+  "Slave law defined human beings as property with almost no enforceable rights, as the case of Celia (1855) brutally demonstrated.",
+  "Most white southerners owned no slaves, yet racism, kinship, and the promise that slavery guaranteed white equality bound 'plain folk' to the planter class.",
+  "Proslavery ideology shifted from calling slavery a necessary evil to defending it as a positive good, rejecting the universal-liberty language of the Declaration of Independence.",
+  "Enslaved people forged a semi-autonomous culture of family, religion, and folklore that preserved dignity and kept alive the hope of freedom.",
+  "Resistance ranged from daily sabotage and flight to armed revolt; Nat Turner's Rebellion (1831) pushed the South to close ranks and suppress antislavery speech."
+ ],
+ "key_terms": [
+  {"term": "Peculiar institution", "def": "The euphemism white southerners used for slavery after northern abolition made it unique to their region; it framed slavery as the South's distinctive social system."},
+  {"term": "Second Middle Passage", "def": "The massive internal slave trade (roughly 1820–1860) that shipped enslaved people from the Chesapeake and Upper South to the cotton states, breaking up families and communities."},
+  {"term": "Cotton Is King", "def": "Senator James Henry Hammond's boast capturing the belief that the world economy's dependence on southern cotton made the slave system politically untouchable."},
+  {"term": "Paternalism", "def": "The slaveholders' self-justifying ideology that masters were father figures responsibly caring for dependent slaves—an image contradicted by sales, whippings, and exploitation."},
+  {"term": "Proslavery argument", "def": "The post-1830 defense of slavery as a positive good, resting on racism, biblical citations, and the claim that Black bondage guaranteed equality and freedom for whites."},
+  {"term": "George Fitzhugh", "def": "Virginia writer who took proslavery thought to its extreme, arguing that slavery—not universal liberty—was the normal foundation of civilized society."},
+  {"term": "Plain folk", "def": "The non-slaveholding white majority of the South, largely self-sufficient farmers who nonetheless backed slavery out of racism, kinship ties, and belief that it protected their own independence."},
+  {"term": "Gang labor and task system", "def": "The two main ways slave work was organized: supervised gangs working dawn to dusk in the cotton and sugar fields versus assigned daily tasks (common on rice plantations) that left slaves some control over their time."},
+  {"term": "Slave religion", "def": "The distinctive Christianity enslaved people created, blending African traditions with biblical themes—especially Exodus—to affirm their worth and promise eventual deliverance."},
+  {"term": "Fugitive slaves", "def": "Enslaved people who fled bondage; most successful runaways were young men from the Upper South, while others hid in swamps, cities, or Native communities."},
+  {"term": "Underground Railroad", "def": "The informal network of abolitionists and safe houses that helped guide escaped slaves northward to freedom before the Civil War."},
+  {"term": "Harriet Tubman", "def": "A Maryland-born woman who escaped slavery in 1849 and repeatedly returned south, leading dozens of enslaved people to freedom at enormous personal risk."},
+  {"term": "The Amistad", "def": "A ship whose enslaved African captives seized control in 1839; John Quincy Adams argued their case, and the Supreme Court freed them because they had been illegally trafficked."},
+  {"term": "Denmark Vesey's conspiracy", "def": "An alleged 1822 plan for a slave uprising in Charleston organized by a free Black carpenter who mixed the Bible, the Declaration of Independence, and the Haitian example; it was betrayed before it began."},
+  {"term": "Nat Turner's Rebellion", "def": "The 1831 Virginia revolt led by a slave preacher in which about sixty whites were killed; it terrified the South and triggered harsher slave codes rather than emancipation."},
+  {"term": "Celia", "def": "A Missouri enslaved woman executed in 1855 for killing the master who sexually assaulted her; the court ruled that self-defense laws protecting 'any woman' did not apply to slaves, exposing slavery's legal logic."}
+ ],
+ "timeline": [
+  {"year": "1791–1804", "event": "The Haitian Revolution overthrows slavery in Saint-Domingue, inspiring hope among American slaves and fear among masters."},
+  {"year": "1800", "event": "Gabriel's planned rebellion in Virginia is uncovered and suppressed."},
+  {"year": "1808", "event": "Congress prohibits the Atlantic slave trade, spurring the internal slave trade."},
+  {"year": "1811", "event": "Enslaved workers on Louisiana sugar plantations rise in the era's largest march toward New Orleans before being crushed."},
+  {"year": "1822", "event": "Denmark Vesey's conspiracy is discovered in Charleston, South Carolina."},
+  {"year": "1831", "event": "Nat Turner's Rebellion shakes Virginia; Garrison's The Liberator begins publication."},
+  {"year": "1832", "event": "Virginia rejects gradual emancipation and instead tightens its slave codes."},
+  {"year": "1833", "event": "Great Britain abolishes slavery throughout its empire, isolating the American South."},
+  {"year": "1838", "event": "Frederick Douglass escapes from slavery in Maryland."},
+  {"year": "1839", "event": "African captives seize the Amistad; the Supreme Court later frees them."},
+  {"year": "1849", "event": "Harriet Tubman escapes to Philadelphia and begins leading others to freedom."},
+  {"year": "1855", "event": "The trial and execution of Celia lays bare slaves' lack of legal personhood."}
+ ],
+ "themes": [
+  "Work, exchange, and technology: slave-grown cotton anchored the Atlantic economy, tying northern finance, shipping, and manufacturing to southern bondage.",
+  "American and regional identity: proslavery ideology redefined southern 'freedom' as resting on Black slavery, driving the sections toward incompatible values.",
+  "Migration and settlement: the forced migration of the internal slave trade relocated over a million people to the Deep South, mirroring in tragedy the voluntary westward movement of whites.",
+  "Culture and society (identity): enslaved communities built family structures, religion, and folklore that sustained resistance and a claim to American ideals of liberty.",
+  "Politics and power: law, courts, militias, and patrols formed a state apparatus dedicated to preserving slavery and suppressing dissent, including white free speech."
+ ]
+}

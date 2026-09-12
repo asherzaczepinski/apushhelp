@@ -1,0 +1,57 @@
+{
+ "chapter": 24,
+ "title": "An Affluent Society",
+ "years": "1953–1960",
+ "summary": [
+  "The postwar decades brought a 'golden age' of capitalism: between 1946 and 1960 the gross national product more than doubled, real wages soared, and most Americans lived far better than their parents. Prosperity centered on the suburbs—mass-produced developments like Levittown—fed by the baby boom, cheap FHA and VA mortgages, and the automobile, which the new interstate highway system knit into daily life. Television entered nine of ten homes, church membership peaked, and the 1959 'kitchen debate' between Nixon and Khrushchev equated American freedom with consumer abundance and the suburban housewife. Yet the suburban dream was racially closed: federal mortgage policy, private discrimination, and urban renewal confined Black Americans and Latinos to declining city neighborhoods even as white families and jobs moved out.",
+  "President Eisenhower's Modern Republicanism accepted and even expanded the core New Deal while courting business, and a labor-management 'social contract' traded union restraint for rising wages and benefits. Abroad, the Cold War entered the nuclear age of hydrogen bombs and 'massive retaliation,' and after Stalin's death Ike pursued cautious diplomacy that collapsed with the 1960 U-2 incident. Increasingly the struggle shifted to the Third World: CIA-backed coups toppled elected governments in Iran (1953) and Guatemala (1954), and after the Geneva Accords divided Vietnam, American aid propped up Diem's regime in the South. At home, critics like David Riesman, the Beats, and rebellious rock-and-roll youth questioned the era's conformity.",
+  "The decade's greatest challenge to complacency came from the Black freedom movement. Building on NAACP litigation and LULAC's Mendez victory, Thurgood Marshall persuaded the Warren Court in Brown v. Board of Education (1954) that segregated schools were inherently unequal. Rosa Parks's 1955 arrest launched the year-long Montgomery bus boycott, which brought Martin Luther King Jr. and church-based nonviolent protest to national leadership and led to the SCLC. White 'massive resistance,' proclaimed in the Southern Manifesto, stalled integration until Eisenhower reluctantly sent troops to Little Rock in 1957. The decade closed with Kennedy's razor-thin 1960 victory over Nixon and Eisenhower's farewell warning against the military-industrial complex."
+ ],
+ "big_ideas": [
+  "Postwar abundance redefined American freedom as consumer choice and suburban family life, a vision showcased against communism in the kitchen debate.",
+  "Suburbanization was built on federal policy—mortgages and highways—that deliberately excluded non-whites, hardening residential segregation nationwide.",
+  "Eisenhower's Modern Republicanism legitimized the New Deal by preserving and expanding its core programs rather than repealing them.",
+  "Cold War strategy under Dulles relied on nuclear 'massive retaliation,' while covert CIA interventions in Iran, Guatemala, and support for Diem in Vietnam extended containment into the Third World.",
+  "Brown v. Board of Education overturned 'separate but equal,' and the Montgomery bus boycott began the mass, church-based, nonviolent phase of the civil rights movement under Martin Luther King Jr.",
+  "White southern 'massive resistance,' codified in the Southern Manifesto, showed that court victories alone could not end Jim Crow without federal enforcement, as Little Rock proved.",
+  "Beneath 1950s consensus, critics of mass society, the Beats, youth culture, and a reviving conservative movement all foreshadowed the upheavals of the 1960s."
+ ],
+ "key_terms": [
+  {"term": "Levittown", "def": "Mass-produced suburban developments pioneered by William Levitt on Long Island, offering affordable prefabricated homes to whites while excluding Black buyers for years."},
+  {"term": "Baby boom", "def": "The surge in American births from the end of World War II into the mid-1960s, which fueled suburban growth, consumer demand, and a huge youth generation."},
+  {"term": "Urban renewal", "def": "Government programs that bulldozed poor city neighborhoods for highways, universities, and middle-income housing, displacing non-white residents who were shut out of the suburbs."},
+  {"term": "Interstate highway system", "def": "The 41,000-mile national highway network begun in 1956, justified partly by Cold War defense needs, that transformed travel, commerce, and suburban settlement."},
+  {"term": "Sputnik", "def": "The first artificial satellite, launched by the USSR in 1957; the shock spurred the space race and the National Defense Education Act's federal funding for science education."},
+  {"term": "Massive retaliation", "def": "Secretary of State John Foster Dulles's doctrine threatening all-out nuclear response to Soviet aggression, which deterred direct war but bred fear of mutual assured destruction."},
+  {"term": "Geneva Accords", "def": "The 1954 agreement temporarily dividing Vietnam at the seventeenth parallel with unification elections planned for 1956—elections the U.S.-backed Diem regime refused to hold."},
+  {"term": "Kitchen debate", "def": "The 1959 Moscow exchange between Nixon and Khrushchev in a model American kitchen, where Nixon presented consumer abundance and suburban domesticity as proof of capitalist freedom."},
+  {"term": "The Beats", "def": "A small circle of 1950s writers, including Allen Ginsberg, who rejected suburban materialism, conformity, and Cold War militarism in favor of spontaneity and personal liberation."},
+  {"term": "Brown v. Board of Education", "def": "The unanimous 1954 Warren Court ruling that segregated public schools violate the Fourteenth Amendment because separate facilities are inherently unequal, overturning Plessy in education."},
+  {"term": "Montgomery bus boycott", "def": "The 381-day Black boycott of Montgomery's buses after Rosa Parks's December 1955 arrest, which ended when the Supreme Court struck down bus segregation and made King a national figure."},
+  {"term": "Martin Luther King Jr.", "def": "The young Baptist minister who led the Montgomery boycott and, drawing on Christian ethics and Gandhian nonviolence, became the preeminent voice of the civil rights movement."},
+  {"term": "Southern Christian Leadership Conference (SCLC)", "def": "The organization of Black ministers and activists founded in 1957 under King's leadership to coordinate nonviolent campaigns against segregation across the South."},
+  {"term": "Southern Manifesto", "def": "The 1956 declaration signed by nearly all southern members of Congress denouncing Brown as an abuse of judicial power and endorsing resistance to integration."},
+  {"term": "Little Rock crisis", "def": "The 1957 confrontation in which Eisenhower sent federal troops to escort nine Black students into Central High School after Arkansas's governor and a mob blocked court-ordered integration."},
+  {"term": "Military-industrial complex", "def": "Eisenhower's phrase in his 1961 Farewell Address warning that the alliance of a vast military establishment and a permanent arms industry could endanger American democracy."}
+ ],
+ "timeline": [
+  {"year": "1947", "event": "Construction begins on the first Levittown, the model for mass-produced postwar suburbia."},
+  {"year": "1952", "event": "Eisenhower defeats Adlai Stevenson for the presidency, and the United States tests the first hydrogen bomb."},
+  {"year": "1953", "event": "A CIA-backed coup ousts Iran's Mossadegh; Stalin dies and the Korean armistice is signed."},
+  {"year": "1954", "event": "The Supreme Court decides Brown v. Board of Education, the CIA topples Guatemala's Arbenz, and the Geneva Accords divide Vietnam."},
+  {"year": "1955", "event": "Rosa Parks's arrest sparks the Montgomery bus boycott, and the AFL and CIO merge."},
+  {"year": "1956", "event": "Southern congressmen issue the Southern Manifesto, Congress funds the interstate highway system, and the bus boycott triumphs when the Court voids bus segregation."},
+  {"year": "1957", "event": "King and allies found the SCLC, federal troops integrate Little Rock's Central High, and the Soviets launch Sputnik."},
+  {"year": "1958", "event": "Congress passes the National Defense Education Act, the first major federal funding for higher education."},
+  {"year": "1959", "event": "Nixon and Khrushchev spar over the meaning of freedom in the kitchen debate in Moscow."},
+  {"year": "1960", "event": "The U-2 incident wrecks a planned summit, and John F. Kennedy narrowly defeats Nixon after the first televised presidential debates."},
+  {"year": "1961", "event": "In his Farewell Address, Eisenhower warns the nation against the military-industrial complex."}
+ ],
+ "themes": [
+  "Work, exchange, and technology: A consumer economy of cars, televisions, and suburban homes drove growth, while white-collar work overtook factory labor and a labor-management social contract secured union prosperity.",
+  "Migration and settlement: Whites poured into suburbs and the booming Sunbelt West, while Black southerners and Puerto Ricans moved to northern cities increasingly stripped of jobs and investment.",
+  "American and national identity: The civil rights movement demanded that freedom's promise include Black Americans, exposing the gap between Cold War rhetoric and segregated reality.",
+  "America in the world: The Cold War shifted to nuclear deterrence and Third World interventions, and America's racial practices became a global liability in the contest for hearts and minds.",
+  "Politics and power: Eisenhower's consensus politics ratified the New Deal state, the Warren Court became an engine of social change, and southern massive resistance tested federal authority."
+ ]
+}

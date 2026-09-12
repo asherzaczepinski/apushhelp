@@ -1,0 +1,57 @@
+{
+ "chapter": 18,
+ "title": "The Progressive Era",
+ "years": "1900–1916",
+ "summary": [
+  "In the early twentieth century the United States became an urban, mass-consumption society. Some 13 million immigrants, mostly from southern and eastern Europe, arrived between 1901 and 1914, joined by Japanese and Mexican newcomers in the West, and by 1920 more Americans lived in cities than on farms. Henry Ford's assembly line and five-dollar day symbolized 'Fordism,' an economy built on mass production and mass consumption, while muckraking journalists like Upton Sinclair exposed corruption, child labor, and unsafe food. The 1911 Triangle Shirtwaist fire, which killed workers trapped behind locked doors, dramatized the human cost of industrial growth and spurred demands for government action.",
+  "Reformers of many kinds—collectively called Progressives—sought to humanize industrial capitalism. Labor advocates demanded 'industrial democracy'; the Socialist Party under Eugene Debs reached its peak in 1912; and the radical IWW organized the unskilled immigrant workers the AFL ignored. Feminists such as Margaret Sanger linked freedom to birth control and sexual autonomy, while Jane Addams's Hull House and other settlement houses pushed cities and states toward protective legislation. Muller v. Oregon (1908) upheld maximum-hours laws for women, and reform governors like Robert La Follette turned Wisconsin into a laboratory of democracy. Yet Progressivism had an elitist side: faith in unelected experts, literacy tests, and acceptance of southern disenfranchisement narrowed democratic participation even as the Seventeenth Amendment and woman suffrage campaigns expanded it.",
+  "At the national level, Theodore Roosevelt's Square Deal brought antitrust prosecutions, railroad regulation, consumer protection laws, and an unprecedented conservation program. Taft continued trust-busting and backed the income-tax amendment but split the party, setting up the four-way election of 1912 in which Wilson's New Freedom defeated Roosevelt's New Nationalism. As president, Wilson lowered the tariff, created the Federal Reserve and the Federal Trade Commission, and signed labor reforms, cementing a newly activist national state."
+ ],
+ "big_ideas": [
+  "Progressivism was a broad, loosely connected movement that used government power at every level to address the problems of an urban, industrial, immigrant society.",
+  "Mass production and mass consumption—symbolized by Ford's Model T—redefined the American standard of living and tied ideas of freedom to consumer abundance.",
+  "Labor radicals, Socialists, and the IWW pushed 'industrial freedom' and collective bargaining to the center of national debate.",
+  "Women drove Progressive reform through settlement houses, maternalist legislation, the birth-control movement, and a revived mass campaign for suffrage.",
+  "Progressivism contained antidemocratic impulses—rule by experts, voting restrictions, and tolerance of Jim Crow—alongside democratizing reforms like the Seventeenth Amendment.",
+  "The 1912 election was a national debate over the state's role in economic life, contrasting Wilson's New Freedom (restore competition) with Roosevelt's New Nationalism (regulate concentrated power).",
+  "Under Roosevelt, Taft, and Wilson the federal government gained lasting regulatory machinery, including the Federal Reserve, the FTC, and the income tax."
+ ],
+ "key_terms": [
+  {"term": "Muckrakers", "def": "Investigative journalists and novelists of the early 1900s—such as Lincoln Steffens and Upton Sinclair—whose exposés of corruption, child labor, and tainted food built public support for reform."},
+  {"term": "Triangle Shirtwaist fire (1911)", "def": "New York factory fire that killed about 146 mostly young immigrant women workers; the disaster galvanized labor organizing and led to new state factory-safety laws."},
+  {"term": "Fordism", "def": "Economic model pioneered by Henry Ford combining assembly-line mass production with wages high enough for workers to buy the goods they made."},
+  {"term": "Scientific management", "def": "Frederick W. Taylor's system of using time-and-motion studies to dictate the 'one best way' to work, boosting efficiency while stripping skilled workers of control over their labor."},
+  {"term": "Socialist Party", "def": "Party founded in 1901 that demanded public ownership of major industries and immediate labor reforms; it peaked in 1912 when Eugene V. Debs won about 6 percent of the presidential vote."},
+  {"term": "Industrial Workers of the World (IWW)", "def": "Radical union founded in 1905 that welcomed the unskilled, immigrants, women, and Black workers excluded by the AFL, and led mass strikes like Lawrence (1912) under the banner of worker solidarity."},
+  {"term": "Birth-control movement", "def": "Campaign led by Margaret Sanger asserting that women could not be free without controlling reproduction; Sanger was jailed for opening a Brooklyn contraception clinic in 1916."},
+  {"term": "Hull House", "def": "Chicago settlement house founded by Jane Addams in 1889 where reformers lived among the immigrant poor, providing services and lobbying for housing, sanitation, and labor legislation."},
+  {"term": "Muller v. Oregon (1908)", "def": "Supreme Court decision, argued with Louis Brandeis's data-filled brief, upholding maximum working hours for women—breaching 'liberty of contract' but casting women workers as dependents needing protection."},
+  {"term": "Wisconsin Idea", "def": "Governor Robert La Follette's program of direct primaries, corporate taxation, railroad regulation, and reliance on university experts that made Wisconsin a model Progressive state."},
+  {"term": "Seventeenth Amendment (1913)", "def": "Constitutional change requiring the direct popular election of U.S. senators, replacing selection by state legislatures."},
+  {"term": "Square Deal", "def": "Theodore Roosevelt's domestic agenda of policing 'bad' trusts, regulating railroads, and protecting consumers, exemplified by the Northern Securities case and the Hepburn and Pure Food and Drug Acts."},
+  {"term": "Conservation movement", "def": "Federal effort under Roosevelt and Gifford Pinchot to manage forests and natural resources scientifically, alongside John Muir's push to preserve wilderness for its own sake."},
+  {"term": "New Nationalism", "def": "Roosevelt's 1912 Progressive Party program accepting big business as permanent but calling for strong federal regulation, heavy taxes on fortunes, and social-welfare legislation."},
+  {"term": "New Freedom", "def": "Wilson's 1912 platform, shaped by Brandeis, aiming to restore competition by breaking up monopolies and freeing government from corporate domination rather than expanding regulation."},
+  {"term": "Federal Reserve and FTC", "def": "Twin Wilson-era agencies (1913, 1914) giving the national government control over banking and currency and the power to police unfair business practices."}
+ ],
+ "timeline": [
+  {"year": "1889", "event": "Jane Addams founds Hull House in Chicago, launching the American settlement-house movement"},
+  {"year": "1901", "event": "McKinley is assassinated and Theodore Roosevelt becomes president; the Socialist Party is founded"},
+  {"year": "1904", "event": "Supreme Court orders the Northern Securities railroad holding company dissolved, a landmark antitrust victory"},
+  {"year": "1905", "event": "Industrial Workers of the World organized in Chicago"},
+  {"year": "1906", "event": "Sinclair's The Jungle spurs the Meat Inspection and Pure Food and Drug Acts; Hepburn Act strengthens railroad regulation"},
+  {"year": "1908", "event": "Muller v. Oregon upholds maximum-hours legislation for women workers"},
+  {"year": "1911", "event": "Triangle Shirtwaist fire kills about 146 workers and ignites factory-reform legislation"},
+  {"year": "1912", "event": "Wilson wins the four-way election over Roosevelt (Progressive), Taft, and Debs"},
+  {"year": "1913", "event": "Sixteenth and Seventeenth Amendments ratified; Federal Reserve System created"},
+  {"year": "1914", "event": "Clayton Act shields unions from antitrust suits and the Federal Trade Commission is established"},
+  {"year": "1916", "event": "Keating-Owen child-labor and Adamson eight-hour railroad laws cap Wilson's first-term reforms"}
+ ],
+ "themes": [
+  "Politics and power: Progressives expanded government's regulatory role at city, state, and federal levels while debating who deserved a voice in democracy.",
+  "Work, exchange, and technology: Assembly-line production, scientific management, and mass consumption transformed labor and living standards, provoking strikes and demands for industrial democracy.",
+  "American and national identity: The word 'feminism,' the fight for suffrage, and immigrant workers' movements broadened claims to freedom, even as experts and elites sought to limit 'unfit' voters.",
+  "Migration and settlement: Peak immigration through Ellis and Angel Islands and from Mexico made ethnic city neighborhoods central to Progressive-era politics and reform.",
+  "Geography and environment: The conservation movement made management of forests, parks, and natural resources a lasting federal responsibility."
+ ]
+}

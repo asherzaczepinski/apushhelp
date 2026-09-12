@@ -1,0 +1,58 @@
+{
+ "chapter": 8,
+ "title": "Securing the Republic",
+ "years": "1791–1815",
+ "summary": [
+  "Although the founders dreaded political parties, the 1790s became an 'age of passion' that produced them anyway. Hamilton's financial program—funding the war debt at face value, assuming state debts, a national bank, a whiskey excise, and encouragement of manufacturing—aimed to build a powerful commercial republic tied to Britain. Jefferson and Madison, envisioning an agrarian nation expanding westward, saw the plan as corrupt favoritism toward speculators and became 'strict constructionists.' A bargain placed the capital on the Potomac, but the French Revolution, Jay's Treaty, and the Whiskey Rebellion hardened the split into Federalists and Republicans, while a booming newspaper press, Democratic-Republican societies, and writers like Judith Sargent Murray expanded the public sphere.",
+  "Under John Adams, the XYZ affair sparked a quasi-war with France, and Federalists answered dissent with the Alien and Sedition Acts of 1798, prosecuting Republican editors. Madison and Jefferson responded with the Virginia and Kentucky resolutions, and the backlash helped Jefferson win the 'Revolution of 1800'—the first peaceful transfer of power between parties, though one made possible by the three-fifths clause. Slavery shadowed the era: the Haitian Revolution terrified slaveholders yet inspired enslaved Americans, and Gabriel's foiled 1800 Richmond uprising brought a Virginia crackdown on free Blacks and manumission. In office, Jefferson cut taxes, the debt, and the military, while Marshall's Court claimed judicial review in Marbury v. Madison. The Louisiana Purchase of 1803 doubled the nation's size—forcing Jefferson to bend his constitutional scruples—and the Lewis and Clark expedition mapped the way west.",
+  "Renewed European war battered American neutrality as both powers seized ships and Britain impressed sailors; Jefferson's 1807 Embargo wrecked American commerce without changing European behavior. Pressured by War Hawks like Clay and Calhoun, and alarmed by British ties to Tecumseh and Tenskwatawa's pan-Indian resistance, Madison led a divided nation into the War of 1812. The British burned Washington, but Fort McHenry held, Tecumseh died at the Thames, and Jackson triumphed at Horseshoe Bend and New Orleans. The Treaty of Ghent restored the status quo, yet this 'Second War of Independence' broke Indian power east of the Mississippi, discredited the Hartford Convention Federalists, and cemented American nationalism."
+ ],
+ "big_ideas": [
+  "Hamilton's financial system versus the Jeffersonian agrarian vision created the first party system, with Federalists favoring strong central government and Britain and Republicans favoring states' rights, farmers, and France.",
+  "The French Revolution and the wars it unleashed shaped American politics, foreign policy, and debates over the meaning of liberty throughout the era.",
+  "The Sedition Act crisis and the Virginia and Kentucky resolutions made freedom of political expression—and the question of states' power to resist federal law—central to American liberty.",
+  "The election of 1800 established the precedent of peaceful transfer of power between rival parties, though the three-fifths clause tipped it to Jefferson.",
+  "Jefferson limited federal power at home yet expanded it dramatically through the Louisiana Purchase and the Embargo, while Marshall's Court entrenched judicial review.",
+  "Slavery and Black resistance—the Haitian Revolution and Gabriel's Rebellion—exposed the contradiction between American liberty and bondage and provoked harsher racial controls.",
+  "The War of 1812 confirmed independence and fueled nationalism, destroyed organized Indian resistance east of the Mississippi, and finished off the Federalist Party."
+ ],
+ "key_terms": [
+  {"term": "Hamilton's financial program", "def": "Treasury Secretary Hamilton's five-part plan—funding the national debt, assuming state debts, a Bank of the United States, a whiskey excise, and promotion of manufacturing—designed to bind wealthy creditors to the new government and make the U.S. a commercial power."},
+  {"term": "Whiskey Rebellion (1794)", "def": "Resistance by western Pennsylvania farmers to the federal excise on distilled spirits, put down when Washington personally led some 13,000 militiamen into the region."},
+  {"term": "Jay's Treaty (1794)", "def": "Agreement in which Britain gave up its northwestern forts but conceded nothing on impressment or neutral shipping rights; outrage over its pro-British tilt helped crystallize the Republican opposition."},
+  {"term": "Federalists and Republicans", "def": "The first two national parties: Federalists (Washington, Adams, Hamilton) backed strong central government, hierarchy, and Britain; Republicans (Jefferson, Madison) backed strict construction, agrarian democracy, and sympathy with France."},
+  {"term": "XYZ affair (1798)", "def": "A diplomatic scandal in which French agents demanded bribes from American envoys, triggering an undeclared naval quasi-war with France under President Adams."},
+  {"term": "Alien and Sedition Acts (1798)", "def": "Federalist laws lengthening the naturalization period, allowing deportation of 'dangerous' foreigners, and criminalizing criticism of the government; used to prosecute Republican editors."},
+  {"term": "Virginia and Kentucky resolutions", "def": "Protests drafted by Madison and Jefferson declaring the Sedition Act unconstitutional; Jefferson's draft even suggested states could nullify federal law, planting a seed for later states'-rights arguments."},
+  {"term": "Revolution of 1800", "def": "Jefferson's defeat of Adams, the first time power passed peacefully from one American party to another; an electoral tie with Burr also produced the Twelfth Amendment."},
+  {"term": "Haitian Revolution (1791–1804)", "def": "The slave uprising in Saint Domingue led by Toussaint L'Ouverture that created the independent nation of Haiti, inspiring enslaved Americans while terrifying white slaveholders."},
+  {"term": "Gabriel's Rebellion (1800)", "def": "A planned march on Richmond by enslaved Virginians demanding abolition; its discovery brought executions and laws restricting free Blacks and manumission."},
+  {"term": "Marbury v. Madison (1803)", "def": "Marshall Court decision striking down part of the Judiciary Act of 1789, establishing the Supreme Court's power of judicial review over acts of Congress."},
+  {"term": "Louisiana Purchase (1803)", "def": "Jefferson's $15 million acquisition from Napoleon of the territory between the Mississippi and the Rockies, doubling the nation's size; made possible by the Haitian Revolution's defeat of French forces."},
+  {"term": "Embargo Act (1807)", "def": "Jefferson's ban on American ships sailing to foreign ports, meant to pressure Britain and France into respecting neutral rights; it slashed exports 80 percent and devastated port cities without changing European policy."},
+  {"term": "Tecumseh and Tenskwatawa", "def": "Shawnee brothers who led a militant pan-Indian movement against land cessions and assimilation; Tenskwatawa preached cultural revival while Tecumseh built a confederacy until his death at the Battle of the Thames in 1813."},
+  {"term": "War of 1812", "def": "The declared war with Britain over impressment, shipping seizures, and support of Indian resistance; ended by the Treaty of Ghent with no territorial change but a surge of American nationalism."},
+  {"term": "Hartford Convention (1814)", "def": "A meeting of antiwar New England Federalists that asserted state 'interposition' and proposed constitutional amendments; overtaken by peace and Jackson's New Orleans victory, it doomed the Federalist Party."}
+ ],
+ "timeline": [
+  {"year": "1789", "event": "Washington inaugurated as first president; French Revolution begins"},
+  {"year": "1791", "event": "Bank of the United States chartered; Hamilton issues his Report on Manufactures; Haitian Revolution begins"},
+  {"year": "1794", "event": "Whiskey Rebellion suppressed; Jay's Treaty negotiated with Britain"},
+  {"year": "1798", "event": "XYZ affair provokes quasi-war with France; Alien and Sedition Acts passed"},
+  {"year": "1800", "event": "Jefferson defeats Adams in the 'Revolution of 1800'; Gabriel's slave conspiracy uncovered in Virginia"},
+  {"year": "1803", "event": "Marbury v. Madison establishes judicial review; Louisiana Purchase doubles the nation"},
+  {"year": "1804", "event": "Lewis and Clark expedition departs; Haiti declares independence"},
+  {"year": "1807", "event": "Embargo Act bans American exports to pressure Britain and France"},
+  {"year": "1811", "event": "Harrison destroys Prophetstown at the Battle of Tippecanoe"},
+  {"year": "1812", "event": "Madison leads a divided Congress into war with Britain"},
+  {"year": "1814", "event": "British burn Washington; Fort McHenry holds; Treaty of Ghent signed; Hartford Convention meets"},
+  {"year": "1815", "event": "Jackson wins the Battle of New Orleans before news of peace arrives"}
+ ],
+ "themes": [
+  "Politics and power: The clash between Hamiltonian and Jeffersonian visions created the first party system, and crises over sedition and states' rights tested the limits of dissent in a republic.",
+  "America in the world: The French and Haitian Revolutions, Barbary Wars, embargoes, and the War of 1812 show how European conflicts and Atlantic revolutions repeatedly shaped domestic politics and policy.",
+  "American and national identity: The 'Second War of Independence' and symbols like the Star-Spangled Banner deepened American nationalism, while an expanding press and women writers widened the public sphere.",
+  "Migration and settlement: The Louisiana Purchase, Lewis and Clark, and postwar movement into the Old Northwest and Southwest accelerated expansion at the direct expense of Native peoples like Tecumseh's confederacy.",
+  "Work, exchange, and technology: Battles over the bank, the whiskey tax, free trade, and the embargo revealed how deeply economic policy divided farmers, merchants, and manufacturers in the young republic."
+ ]
+}

@@ -1,0 +1,14 @@
+# Scraped textbook text — copyrighted, personal-use only, never publish.
+# (output/summaries/ is kept: those are our own original study notes.)
+output/*
+!output/summaries/
+!output/summaries/**
+
+# Browser profile with live Norton login cookies — never publish.
+chrome_profile/
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.git.bak/

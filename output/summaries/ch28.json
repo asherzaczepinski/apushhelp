@@ -1,0 +1,58 @@
+{
+ "chapter": 28,
+ "title": "A New Century and New Crises",
+ "years": "2001–2015",
+ "summary": [
+  "George W. Bush opened his presidency with huge tax cuts favoring the wealthy and a rejection of the Kyoto climate treaty, but September 11, 2001, redefined his administration. Declaring a global war on terrorism under the Bush Doctrine—'either you are with us, or you are with the terrorists'—he toppled Afghanistan's Taliban and won passage of the USA Patriot Act, which vastly expanded government surveillance. Detainees were held indefinitely at Guantánamo Bay, and interrogation practices amounting to torture later stained America's reputation. In 2003, claiming Saddam Hussein possessed weapons of mass destruction—claims that proved false—the United States invaded Iraq without UN approval. Baghdad fell quickly, but insurgency and sectarian bloodshed followed, isolating America from world opinion and drawing comparisons to Vietnam.",
+  "Bush's second term unraveled. The government's failed response to Hurricane Katrina in 2005, which flooded New Orleans and displaced most of its largely Black population, destroyed his reputation for competence, while battles over undocumented immigration brought millions of protesters into the streets in 2006. The Supreme Court checked presidential power by affirming detainees' rights, and in Lawrence v. Texas signaled that the social revolution of the 1960s was permanent. Then years of low interest rates, subprime lending, and unregulated Wall Street speculation burst in 2008: Lehman Brothers collapsed, markets crashed, and a $700 billion bailout rescued banks deemed 'too big to fail' as the Great Recession became the worst downturn since the 1930s.",
+  "Amid the crisis, Barack Obama was elected the first African-American president in 2008. He won a massive stimulus, the 2010 Affordable Care Act extending health coverage to millions, and financial reform, while appointing Sonia Sotomayor, the first Hispanic justice. But the Tea Party backlash gave Republicans the House in 2010, producing lasting gridlock. Obama ended the Iraq War in 2011 and ordered the raid that killed Osama bin Laden, yet continued surveillance policies that Edward Snowden exposed in 2013. Occupy Wall Street protested extreme inequality, Black Lives Matter confronted police violence, and the Court's 2015 Obergefell ruling legalized same-sex marriage nationwide—evidence that the meaning of American freedom was still being contested."
+ ],
+ "big_ideas": [
+  "The September 11 attacks transformed U.S. foreign policy: the Bush Doctrine committed America to a global, open-ended war on terrorism beginning with the invasion of Afghanistan.",
+  "The 2003 Iraq War, launched on false claims about weapons of mass destruction and without UN backing, isolated the United States internationally and became a costly, unpopular occupation.",
+  "The war on terror revived the perennial tension between security and liberty, as the Patriot Act, Guantánamo detentions, torture, and mass surveillance tested constitutional limits that the Supreme Court partially reasserted.",
+  "Deregulation, subprime mortgages, and Wall Street speculation caused the 2008 financial collapse and the Great Recession, forcing massive federal bailouts and discrediting market fundamentalism.",
+  "Barack Obama's election as the first African-American president marked a historic milestone, and his stimulus, Affordable Care Act, and financial reforms were the most significant domestic legislation since the Great Society.",
+  "Fierce partisan polarization—embodied by the Tea Party, government shutdowns, and gridlock—defined politics even as movements like Occupy Wall Street and Black Lives Matter demanded economic and racial justice.",
+  "Rising inequality, stagnant wages, mass incarceration, and continuing racial disparities showed that prosperity and freedom remained unevenly shared in twenty-first-century America."
+ ],
+ "key_terms": [
+  {"term": "Bush Doctrine", "def": "George W. Bush's post-9/11 foreign policy declaring a worldwide war on terrorism and refusing neutrality: nations were either with the United States or with the terrorists."},
+  {"term": "War in Afghanistan", "def": "The conflict begun in October 2001 to destroy Al Qaeda and oust the Taliban regime that sheltered Osama bin Laden; it became the longest war in American history."},
+  {"term": "USA Patriot Act", "def": "Sweeping 2001 legislation that gave law enforcement unprecedented powers to wiretap, monitor communications, and gather personal records in the name of preventing domestic terrorism."},
+  {"term": "Guantánamo Bay", "def": "The U.S. naval base in Cuba where terrorism suspects were detained indefinitely without normal legal protections beginning in 2002; the Supreme Court later affirmed detainees' right to challenge their imprisonment."},
+  {"term": "Iraq War", "def": "The 2003 U.S.-led invasion that overthrew Saddam Hussein based on false claims about weapons of mass destruction; the occupation descended into insurgency and sectarian violence and lasted until 2011."},
+  {"term": "Hurricane Katrina", "def": "The 2005 storm that flooded New Orleans and devastated the Gulf Coast; the government's inept response, which left poor Black residents stranded, badly damaged the Bush administration."},
+  {"term": "Great Recession", "def": "The severe economic downturn beginning in December 2007, triggered by the collapse of the housing bubble and financial system; it became the longest slump since the Great Depression."},
+  {"term": "Bank bailout", "def": "The federal government's 2008 commitment of $700 billion in taxpayer money to rescue banks and financial firms considered 'too big to fail' after Lehman Brothers' collapse."},
+  {"term": "Affordable Care Act", "def": "Obama's 2010 health-care law requiring individuals to carry insurance, subsidizing coverage for those of modest means, and barring insurers from rejecting applicants; it insured millions despite unanimous Republican opposition."},
+  {"term": "Tea Party", "def": "A grassroots conservative movement, named for the 1770s Boston protest, that arose in 2009 against Obama's spending and health-care programs and pushed the Republican Party rightward."},
+  {"term": "Occupy Wall Street", "def": "The 2011 protest movement, launched in New York's financial district, that denounced the wealth and power of 'the 1 percent' and injected economic inequality into national debate."},
+  {"term": "Black Lives Matter", "def": "A movement emerging from deaths of unarmed Black Americans at the hands of police, using social media to demand accountability and assert Black humanity in the tradition of earlier freedom struggles."},
+  {"term": "Edward Snowden", "def": "The former NSA contractor who in 2013 leaked documents revealing massive government surveillance of Americans' phone and Internet communications, reigniting the liberty-versus-security debate."},
+  {"term": "Obergefell v. Hodges", "def": "The 2015 Supreme Court decision, written by Justice Kennedy, that established a constitutional right to same-sex marriage nationwide, treating the Constitution as a living charter of expanding liberty."},
+  {"term": "ISIS", "def": "The brutal Islamist insurgency that seized territory in Iraq, Syria, and Libya beginning in 2014, murdering religious minorities and sponsoring terror attacks abroad."},
+  {"term": "Sonia Sotomayor", "def": "Obama's 2009 Supreme Court appointee, the first Hispanic justice and third woman to serve on the Court."}
+ ],
+ "timeline": [
+  {"year": "2001", "event": "September 11 attacks kill about 3,000; the United States invades Afghanistan and Congress passes the USA Patriot Act."},
+  {"year": "2002", "event": "Bush labels Iraq, Iran, and North Korea an 'axis of evil'; the Guantánamo detention camp opens."},
+  {"year": "2003", "event": "The United States invades Iraq and topples Saddam Hussein, but insurgency and sectarian war follow."},
+  {"year": "2005", "event": "Hurricane Katrina floods New Orleans; the botched federal response discredits the Bush administration."},
+  {"year": "2007", "event": "The housing bubble bursts and the Great Recession begins in December."},
+  {"year": "2008", "event": "Lehman Brothers fails and Congress passes a $700 billion bank bailout; Barack Obama is elected the first African-American president."},
+  {"year": "2009", "event": "Congress enacts a nearly $800 billion stimulus; the Tea Party movement emerges; Sotomayor joins the Supreme Court."},
+  {"year": "2010", "event": "The Affordable Care Act and financial-reform law pass; Republicans capture the House."},
+  {"year": "2011", "event": "U.S. forces kill Osama bin Laden; the last troops leave Iraq; Occupy Wall Street protests inequality; the Arab Spring sweeps the Middle East."},
+  {"year": "2012", "event": "Obama wins reelection over Mitt Romney, powered by the growing diversity of the electorate."},
+  {"year": "2013", "event": "Edward Snowden reveals mass NSA surveillance; the Supreme Court guts a key section of the Voting Rights Act."},
+  {"year": "2015", "event": "Obergefell v. Hodges legalizes same-sex marriage nationwide; the United States restores relations with Cuba and joins the global climate agreement."}
+ ],
+ "themes": [
+  "America in the world: After 9/11 the United States waged wars in Afghanistan and Iraq largely unilaterally, raising the old question of whether America should behave as a republic or an empire.",
+  "Politics and power: The war on terror expanded presidential power and surveillance at the expense of civil liberties, while partisan polarization between Obama and the Tea Party right produced gridlock.",
+  "Work, exchange, and technology: Financial deregulation and speculation caused the 2008 crash, and the recovery flowed overwhelmingly to the wealthiest, making inequality a defining issue.",
+  "American identity: Obama's election, the Obergefell marriage ruling, and Black Lives Matter showed both the expansion of American freedom and the persistence of racial and social divides.",
+  "Migration and settlement: Debates over undocumented immigration, border enforcement, and mass deportations kept the meaning of the U.S.-Mexico borderland at the center of national politics."
+ ]
+}

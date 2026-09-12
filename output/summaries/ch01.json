@@ -1,0 +1,58 @@
+{
+ "chapter": 1,
+ "title": "A New World",
+ "years": "to 1607",
+ "summary": [
+  "Long before 1492, the Americas were home to tens of millions of people organized into an enormous variety of societies, from the urban Aztec and Inca empires to the mound-building cultures of Cahokia and Poverty Point, the town-dwelling Hopi, Zuni, and Pueblo peoples of the Southwest, and the farming and confederacy-building tribes of the East such as the Iroquois. Native peoples generally treated land as a shared resource rather than private property, organized many societies along matrilineal lines, and prized community obligation and generosity over individual accumulation. Europeans, whose own ideas of freedom rested on hierarchy, obedience to authority, coverture in marriage, and an established church, judged these differences as evidence of savagery and used them to justify conquest.",
+  "European expansion grew out of the search for a sea route to Asian trade. Portugal pioneered Atlantic navigation with the caravel, explored the African coast, and built island sugar plantations worked by African slaves, a grim preview of New World labor systems. Fresh from completing the reconquista, Spain sponsored Columbus, whose 1492 landfall opened continuous contact between hemispheres. The resulting Columbian Exchange moved crops, animals, and people across the ocean, but European diseases devastated Indian populations, the worst demographic collapse in history, which along with steel, gunpowder, and Indian allies let Cortes and Pizarro topple the Aztec and Inca empires.",
+  "Spain built a vast, urban, Catholic empire in which Indians supplied most labor under systems like the encomienda and repartimiento; critics such as Las Casas exposed its cruelties, feeding the Black Legend, while intermarriage produced a hybrid mestizo society. Spanish outposts spread into Florida and New Mexico, where the Pueblo Revolt of 1680 temporarily expelled the colonizers. France and the Netherlands later founded Quebec and New Netherland, thinly settled commercial ventures built on the fur trade that depended on Indian partners and allowed natives comparatively greater autonomy, setting the stage for England's entry into the imperial contest."
+ ],
+ "big_ideas": [
+  "Native American societies were remarkably diverse in language, politics, religion, and economy, and no unified 'Indian' identity existed before European contact.",
+  "Indian and European conceptions of freedom, property, religion, and gender differed sharply, and Europeans used those differences to justify conquest.",
+  "The desire to bypass Muslim and Italian middlemen in Asian trade, along with religious zeal and national rivalry, drove European exploration across the Atlantic.",
+  "The Columbian Exchange transformed both hemispheres, and Old World diseases caused a catastrophic decline of Native American populations that made conquest possible.",
+  "Spain's empire was urban, Catholic, and built on Indian labor, producing a hybrid culture as well as debates over the treatment of native peoples.",
+  "The French and Dutch empires were commercial and lightly settled, relying on Indian trade alliances and permitting natives more independence than later English colonies would.",
+  "From the beginning, the colonization of the Americas intertwined the expansion of freedom for some with slavery and dispossession for others."
+ ],
+ "key_terms": [
+  {"term": "Tenochtitlan", "def": "Island capital of the Aztec empire, one of the world's largest cities around 1500 with roughly 250,000 residents; the Spanish rebuilt it as Mexico City after the conquest."},
+  {"term": "Cahokia", "def": "Mississippi River valley city near modern St. Louis that held 10,000 to 30,000 people around 1200, the largest settlement in what is now the United States before the nineteenth century."},
+  {"term": "Iroquois Great League of Peace", "def": "Alliance of five nations (Mohawk, Oneida, Cayuga, Seneca, Onondaga) formed in the fifteenth or sixteenth century that brought stability to the region of present-day New York and later leveraged its unity in dealings with Europeans."},
+  {"term": "Matrilineal society", "def": "Kinship system common among eastern Indians in which children belonged to the mother's family line; women owned homes and tools and performed most farm work, arrangements Europeans misread as disorder."},
+  {"term": "Reconquista", "def": "Spain's centuries-long campaign to retake the Iberian Peninsula from the Muslim Moors, completed by Ferdinand and Isabella in 1492, the same year they sponsored Columbus."},
+  {"term": "Caravel", "def": "Portuguese-developed ship of the fifteenth century that, along with tools like the compass and quadrant, made long ocean voyages down the African coast and across the Atlantic feasible."},
+  {"term": "Christopher Columbus", "def": "Genoese mariner sailing for Spain who reached the Caribbean in 1492 while seeking a westward passage to Asia; his voyages began permanent contact between the hemispheres."},
+  {"term": "Columbian Exchange", "def": "The transfer of plants, animals, people, and microbes between the Old and New Worlds after 1492; it reshaped diets globally but brought epidemics that destroyed most of the Indian population."},
+  {"term": "Conquistadores", "def": "Spanish soldiers such as Cortes and Pizarro who, aided by disease, superior weapons, and Indian allies, overthrew the Aztec and Inca empires and seized their gold and silver."},
+  {"term": "Bartolome de Las Casas", "def": "Dominican priest who denounced Spanish brutality toward Indians in widely read writings; his campaign helped produce the New Laws of 1542 ending Indian enslavement."},
+  {"term": "Black Legend", "def": "The image of Spain as an exceptionally cruel colonizer, spread partly by Las Casas's works; rival powers like England used it to cast their own empires as bearers of freedom."},
+  {"term": "Repartimiento system", "def": "Spanish labor arrangement replacing the encomienda in 1550 under which Indian villagers remained legally free and earned wages but still owed a set quota of yearly labor."},
+  {"term": "Mestizos", "def": "People of mixed Spanish and Indian ancestry who became a major part of the population of Spanish America, reflecting the empire's blended, hybrid culture."},
+  {"term": "Pueblo Revolt", "def": "Coordinated 1680 uprising led by Pope in which Pueblo Indians drove Spanish colonists out of New Mexico for over a decade, the most successful Indian revolt in North American history."},
+  {"term": "New France", "def": "Thinly populated French colony along the St. Lawrence and Mississippi based on the fur trade; it depended on Indian alliances and fostered a 'middle ground' of cultural exchange, including metis offspring."},
+  {"term": "New Netherland", "def": "Dutch commercial colony centered on the Hudson River and New Amsterdam, notable for its diverse population, relative tolerance of private worship, and legal rights for women, though it was not democratically governed."}
+ ],
+ "timeline": [
+  {"year": "7000 BC", "event": "Agriculture emerges in Mexico and the Andes, making settled Indian civilizations possible."},
+  {"year": "900-1200", "event": "Ancestors of the Hopi and Zuni build planned towns such as Pueblo Bonita in the Southwest."},
+  {"year": "1200", "event": "Cahokia flourishes as a fortified city of up to 30,000 along the Mississippi River."},
+  {"year": "1434", "event": "Portuguese sailors first navigate past the Sahara along the sub-Saharan African coast."},
+  {"year": "1487", "event": "Bartolomeu Dias rounds the Cape of Good Hope at Africa's southern tip."},
+  {"year": "1492", "event": "Spain completes the reconquista and Columbus makes his first Atlantic crossing to the Caribbean."},
+  {"year": "1517", "event": "Martin Luther's Ninety-Five Theses launch the Protestant Reformation, intensifying Spain's Catholic missionary drive."},
+  {"year": "1519", "event": "Hernan Cortes reaches Tenochtitlan; the Aztec empire falls to the Spanish within a few years."},
+  {"year": "1542", "event": "Spain issues the New Laws forbidding the enslavement of Indians, partly due to Las Casas's protests."},
+  {"year": "1608", "event": "Samuel de Champlain founds Quebec, the base of the French fur-trading empire."},
+  {"year": "1610", "event": "Spain establishes Santa Fe as the capital of New Mexico, the first permanent European settlement in the Southwest."},
+  {"year": "1680", "event": "The Pueblo Revolt under Pope temporarily expels the Spanish from New Mexico."}
+ ],
+ "themes": [
+  "America in the world: European exploration grew out of global trade rivalries, and Spain, France, and the Netherlands built competing empires with very different relationships to native peoples.",
+  "Migration and settlement: The peopling of the Americas across the Bering Strait, the movement of Europeans and enslaved Africans, and forced population collapse reshaped two hemispheres.",
+  "Work, exchange, and technology: The Columbian Exchange, navigation technology, the fur trade, and coerced Indian labor systems like the repartimiento restructured economies on both sides of the Atlantic.",
+  "American and national identity: Contrasting Indian and European ideas of freedom, property, religion, and gender shaped how each side viewed the other and how conquest was justified.",
+  "Geography and environment: New crops, animals, and diseases transformed American environments, while regional geography produced diverse native ways of life."
+ ]
+}

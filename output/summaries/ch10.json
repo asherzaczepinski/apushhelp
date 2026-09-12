@@ -1,0 +1,58 @@
+{
+ "chapter": 10,
+ "title": "Democracy in America",
+ "years": "1815–1840",
+ "summary": [
+  "Between the War of 1812 and 1840, political democracy for white men became the defining feature of American public life. States dropped property requirements for voting, so that by 1840 over 90 percent of adult white men could cast ballots, and a cheap 'penny press' fed a newly informed mass electorate. Alexis de Tocqueville, visiting in the early 1830s, described democracy as a whole culture of equality and civic participation. Yet the same era hardened new exclusions: women remained outside politics, and state after state stripped free Black men of the vote, replacing class with race as the boundary of the political nation. Rhode Island's Dorr War of 1841 showed how explosive even white male disfranchisement had become.",
+  "Postwar nationalism produced Henry Clay's American System—a national bank, protective tariffs, and internal improvements—along with the Monroe Doctrine's claim of U.S. primacy in the Western Hemisphere. But sectional strains kept surfacing: the Panic of 1819 bred lasting distrust of banks, the Missouri Compromise of 1820 exposed the divisive question of slavery's expansion, and South Carolina's attempt to nullify the 'tariff of abominations' brought John C. Calhoun's compact theory into open conflict with Andrew Jackson's nationalism until the Force Act and a compromise tariff defused the crisis in 1833.",
+  "Jackson, elected in 1828 through Martin Van Buren's new Democratic Party machinery, embodied the era's contradictions—a self-made champion of the common white man who defended states' rights, forced Indian removal culminating in the Trail of Tears, and destroyed the Second Bank of the United States as a bastion of privilege. His Bank War, pet-bank deposits, and the Specie Circular helped trigger the Panic of 1837 and a long depression that sank Van Buren's presidency. By 1840, when the Whigs won with the 'log cabin' campaign for William Henry Harrison, two organized national parties competed everywhere and mass politics had absorbed the techniques of the marketplace."
+ ],
+ "big_ideas": [
+  "By 1840 nearly all white men could vote, but democratization coincided with the deliberate exclusion of women and free Black men, making race the new boundary of citizenship.",
+  "The American System (national bank, tariff, internal improvements) expressed postwar nationalism, while the Monroe Doctrine declared the Americas off-limits to new European colonization.",
+  "The Missouri Compromise of 1820 temporarily settled slavery's westward expansion by pairing Missouri with Maine and drawing the 36°30' line across the Louisiana Purchase.",
+  "The nullification crisis pitted Calhoun's state-compact theory against Jackson's insistence on federal supremacy, previewing the constitutional argument for secession.",
+  "The Indian Removal Act and Jackson's defiance of Worcester v. Georgia forced southeastern tribes west, most tragically on the Cherokee Trail of Tears.",
+  "Jackson's Bank War expanded presidential power through the veto and direct appeals to voters, and its aftermath helped cause the Panic of 1837.",
+  "The second party system of Democrats and Whigs, built by organizers like Martin Van Buren, made permanent, mass-based political parties central to American government."
+ ],
+ "key_terms": [
+  {"term": "American System", "def": "Henry Clay's program of a national bank, protective tariffs, and federally supported roads and canals, designed to knit the sections into one national economy; it became the core of Whig policy."},
+  {"term": "Era of Good Feelings", "def": "Label for James Monroe's presidency (1817–1825), when the Federalists collapsed and one-party rule masked growing sectional rivalries."},
+  {"term": "Panic of 1819", "def": "A financial collapse caused by falling crop prices, shrinking European demand, and reckless land speculation; it deepened popular hostility toward banks, especially the Second Bank of the United States."},
+  {"term": "McCulloch v. Maryland", "def": "An 1819 Marshall Court ruling that states could not tax the national bank, endorsing a broad 'necessary and proper' reading of congressional power."},
+  {"term": "Missouri Compromise", "def": "The 1820 deal admitting Missouri as a slave state and Maine as a free state while banning slavery in Louisiana Purchase territory north of 36°30', temporarily quieting the slavery-expansion issue."},
+  {"term": "Monroe Doctrine", "def": "Monroe's 1823 declaration, drafted by John Quincy Adams, that the Americas were closed to further European colonization and that the United States would stay out of European wars—claiming U.S. leadership in the hemisphere."},
+  {"term": "Corrupt bargain", "def": "The charge that Henry Clay traded his House support to make John Quincy Adams president in 1825 in exchange for becoming secretary of state; it energized Jackson's 1828 campaign."},
+  {"term": "Spoils system", "def": "Jackson's practice of rotating government jobs to loyal party supporters, treating officeholding as a democratic reward rather than a permanent bureaucracy."},
+  {"term": "Tariff of abominations", "def": "The steep 1828 tariff on imports that southerners, especially South Carolinians, denounced as enriching northern industry at their expense."},
+  {"term": "Nullification crisis", "def": "South Carolina's 1832 attempt, grounded in Calhoun's theory that states could void federal laws, to block the tariff; Jackson answered with the Force Act before a compromise tariff ended the standoff."},
+  {"term": "John C. Calhoun", "def": "South Carolina vice president and theorist who shifted from nationalism to states'-rights sectionalism, secretly authoring the Exposition and Protest justifying nullification."},
+  {"term": "Indian Removal Act", "def": "An 1830 law funding treaties to relocate the Five Civilized Tribes from the Southeast to land west of the Mississippi, repudiating the idea of assimilation."},
+  {"term": "Worcester v. Georgia", "def": "An 1832 decision recognizing Indian nations as distinct political communities beyond state jurisdiction; Jackson refused to enforce it."},
+  {"term": "Trail of Tears", "def": "The army's forced march of about 18,000 Cherokee to present-day Oklahoma in 1838–1839, during which roughly a quarter died."},
+  {"term": "Bank War", "def": "Jackson's fight against Nicholas Biddle's Second Bank of the United States; his 1832 veto of recharter, framed as defending ordinary citizens against privilege, killed the bank and realigned party politics."},
+  {"term": "Panic of 1837", "def": "An economic collapse triggered by speculative excess, the Specie Circular, and British credit tightening; the depression that followed lasted into the 1840s and doomed Van Buren's presidency."}
+ ],
+ "timeline": [
+  {"year": "1816", "event": "Congress charters the Second Bank of the United States and passes the first protective tariff."},
+  {"year": "1819", "event": "Panic of 1819 strikes; McCulloch v. Maryland upholds the national bank."},
+  {"year": "1820", "event": "Missouri Compromise divides the Louisiana Purchase between free and slave territory."},
+  {"year": "1823", "event": "Monroe Doctrine warns Europe against new colonization in the Americas."},
+  {"year": "1825", "event": "The House elects John Quincy Adams president after the four-way 1824 election, amid 'corrupt bargain' charges."},
+  {"year": "1828", "event": "Congress passes the 'tariff of abominations'; Andrew Jackson wins the presidency."},
+  {"year": "1830", "event": "Indian Removal Act becomes law; Webster-Hayne debate airs nullification arguments in the Senate."},
+  {"year": "1832", "event": "Jackson vetoes the bank recharter and wins reelection; South Carolina nullifies the tariff; Worcester v. Georgia is decided."},
+  {"year": "1833", "event": "Force Act and a compromise tariff end the nullification crisis."},
+  {"year": "1837", "event": "Panic of 1837 begins a depression lasting into the 1840s."},
+  {"year": "1838–1839", "event": "The Cherokee are forced west on the Trail of Tears."},
+  {"year": "1840", "event": "Whig William Henry Harrison wins the 'log cabin' campaign as turnout hits about 80 percent."}
+ ],
+ "themes": [
+  "Politics and power: universal white male suffrage, mass parties, and the strengthened presidency under Jackson created modern democratic politics—while narrowing citizenship by race and gender.",
+  "American and regional identity: nationalism (American System, Monroe Doctrine) collided with sectionalism over tariffs and slavery, foreshadowing the constitutional crisis of secession.",
+  "Migration and settlement: white expansion into the cotton South drove federal Indian removal, all but ending the Native presence east of the Mississippi.",
+  "Work, exchange, and technology: debates over banks, currency, tariffs, and internal improvements showed how the market revolution structured party conflict between Democrats and Whigs.",
+  "America in the world: the Monroe Doctrine and U.S. recognition of new Latin American republics asserted a distinct hemispheric role for the young nation."
+ ]
+}

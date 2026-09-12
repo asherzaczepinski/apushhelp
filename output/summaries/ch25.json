@@ -1,0 +1,57 @@
+{
+ "chapter": 25,
+ "title": "The Sixties",
+ "years": "1960–1968",
+ "summary": [
+  "When four Black college students refused to leave a whites-only lunch counter in Greensboro, North Carolina, in February 1960, they set off a wave of sit-ins that opened a decade of activism. Young organizers built SNCC under Ella Baker's guidance, CORE's 1961 Freedom Rides tested desegregation orders on interstate buses, and in 1963 Martin Luther King Jr.'s Birmingham campaign—met with police dogs and fire hoses broadcast worldwide—pushed President Kennedy to endorse a civil rights bill. The August 1963 March on Washington, where King delivered his 'I Have a Dream' speech, capped the nonviolent phase. Kennedy, meanwhile, governed as a Cold Warrior: he launched the Peace Corps, stumbled at the Bay of Pigs, faced down the Soviets in the 1962 Cuban missile crisis, and signed a test-ban treaty before his assassination in November 1963.",
+  "Lyndon Johnson turned Kennedy's unfinished agenda into landmark law. The Civil Rights Act of 1964 banned discrimination in employment and public accommodations, and after the violence at Selma, the 1965 Voting Rights Act secured federal protection of Black voting. The Hart-Celler Act scrapped racist immigration quotas, while Johnson's Great Society and War on Poverty created Medicare, Medicaid, Head Start, and food stamps. Yet Goldwater's 1964 campaign and groups like Young Americans for Freedom signaled a rising conservatism. The Black freedom movement itself fractured: the Watts uprising, Malcolm X's separatist message, and Stokely Carmichael's call for Black Power reflected frustration with economic inequality that legal victories left untouched.",
+  "Vietnam shattered the liberal consensus. After the 1964 Gulf of Tonkin resolution, Johnson escalated to over half a million troops, fueling a mass antiwar movement led by students. The New Left's SDS demanded 'participatory democracy,' while the counterculture rejected mainstream values altogether. Inspired by civil rights, new movements arose—second-wave feminism, gay liberation after Stonewall, Chavez's farm workers, Native American activism, and environmentalism—while the Warren Court expanded rights from Miranda warnings to privacy. In 1968, the Tet offensive, the assassinations of King and Robert Kennedy, and chaos at the Chicago convention climaxed the decade; Richard Nixon's law-and-order victory showed liberalism in retreat even as America emerged a freer, more open society."
+ ],
+ "big_ideas": [
+  "Grassroots direct action by young activists—sit-ins, Freedom Rides, and marches—forced the federal government to dismantle legal segregation through the Civil Rights Act of 1964 and Voting Rights Act of 1965.",
+  "Kennedy's presidency was dominated by Cold War crises, and the Cuban missile crisis brought the world closer to nuclear war than any other confrontation.",
+  "Johnson's Great Society represented the largest expansion of federal social programs since the New Deal, cutting poverty sharply but leaving structural economic inequality in place.",
+  "After 1965 the Black freedom struggle shifted toward economic issues and Black Power militancy as urban uprisings exposed racism outside the South.",
+  "The Vietnam War destroyed the Cold War consensus, radicalized a generation of students, and undermined public faith in government.",
+  "The civil rights model inspired a broader rights revolution—feminism, gay liberation, Latino and Native American activism, and environmentalism—while the Warren Court gave many new rights constitutional protection.",
+  "The upheavals of 1968 and the backlash they generated opened the door to a conservative resurgence that would reshape American politics."
+ ],
+ "key_terms": [
+  {"term": "Sit-ins", "def": "Protest tactic launched by Black students in Greensboro in 1960, in which demonstrators occupied segregated lunch counters and refused to leave; it began the most militant phase of the civil rights movement."},
+  {"term": "SNCC", "def": "The Student Nonviolent Coordinating Committee, formed in 1960 with encouragement from Ella Baker to coordinate youth-led protest and empower ordinary Black southerners at the grassroots."},
+  {"term": "Freedom Rides", "def": "Integrated bus trips through the Deep South in 1961 organized by CORE to test court rulings against segregated interstate travel; riders endured mob violence but won federal desegregation orders for buses and terminals."},
+  {"term": "March on Washington", "def": "Massive August 1963 demonstration of 250,000 people for 'Jobs and Freedom,' where King gave his 'I Have a Dream' speech and pressure built for a federal civil rights bill."},
+  {"term": "Cuban missile crisis", "def": "The October 1962 standoff after the United States discovered Soviet nuclear missiles in Cuba; Kennedy's naval blockade and secret diplomacy ended the Cold War's closest brush with nuclear war."},
+  {"term": "Civil Rights Act of 1964", "def": "Landmark law banning discrimination based on race and sex in employment and in public accommodations such as hotels, restaurants, and theaters."},
+  {"term": "Voting Rights Act of 1965", "def": "Law passed after the Selma marches that empowered federal officials to register voters, finally breaking the South's systematic disenfranchisement of Black citizens."},
+  {"term": "Great Society", "def": "Johnson's 1965–1967 program of federal activism that created Medicare, Medicaid, education funding, and new agencies, the most sweeping reform agenda since the New Deal."},
+  {"term": "War on Poverty", "def": "Johnson's 1964 crusade against economic deprivation, featuring Head Start, VISTA, job training, and food stamps; combined with growth it cut the poverty rate from 22 to 13 percent."},
+  {"term": "Hart-Celler Act", "def": "The 1965 immigration law that ended national-origins quotas, unexpectedly shifting future immigration toward Asia and Latin America."},
+  {"term": "Black Power", "def": "Slogan popularized by Stokely Carmichael in 1966 expressing a more militant demand for Black self-determination, pride, and community control, embodied by groups like the Black Panther Party."},
+  {"term": "Port Huron Statement", "def": "The 1962 manifesto of Students for a Democratic Society that defined the New Left's vision of 'participatory democracy' and criticized bureaucratic institutions across American life."},
+  {"term": "Gulf of Tonkin resolution", "def": "The 1964 congressional measure, passed after reported attacks on U.S. ships off North Vietnam, that gave Johnson essentially unlimited authority to wage war in Vietnam."},
+  {"term": "The Feminine Mystique", "def": "Betty Friedan's 1963 book exposing the frustration of educated suburban housewives; it helped ignite second-wave feminism and led to the founding of NOW in 1966."},
+  {"term": "Stonewall uprising", "def": "The 1969 riots that followed a police raid on a Greenwich Village gay bar; the resistance launched the modern gay liberation movement."},
+  {"term": "Tet offensive", "def": "The surprise 1968 attacks by North Vietnamese and Viet Cong forces on cities across South Vietnam; though repelled, they destroyed public confidence that the war was being won."}
+ ],
+ "timeline": [
+  {"year": "1960", "event": "Greensboro sit-in sparks a wave of student protest; SNCC is founded."},
+  {"year": "1961", "event": "Freedom Rides challenge segregated interstate travel; Bay of Pigs invasion fails; Berlin Wall is built."},
+  {"year": "1962", "event": "Cuban missile crisis; SDS issues the Port Huron Statement; Rachel Carson publishes Silent Spring."},
+  {"year": "1963", "event": "Birmingham campaign and King's 'Letter from Birmingham Jail'; March on Washington; Kennedy assassinated in Dallas."},
+  {"year": "1964", "event": "Civil Rights Act passed; Freedom Summer voter drive in Mississippi; Gulf of Tonkin resolution."},
+  {"year": "1965", "event": "Selma marches lead to the Voting Rights Act; Watts uprising erupts; Hart-Celler Act reforms immigration; Malcolm X assassinated."},
+  {"year": "1966", "event": "National Organization for Women founded; 'Black Power' slogan emerges and the Black Panther Party forms."},
+  {"year": "1967", "event": "Urban uprisings in Newark and Detroit; 100,000 protesters march on the Pentagon against the Vietnam War."},
+  {"year": "1968", "event": "Tet offensive; Johnson declines to run; King and Robert Kennedy assassinated; Nixon wins the presidency."},
+  {"year": "1969", "event": "Stonewall uprising launches gay liberation; Woodstock festival celebrates the counterculture."},
+  {"year": "1973", "event": "Roe v. Wade establishes a constitutional right to abortion, building on the Warren Court's privacy rulings."}
+ ],
+ "themes": [
+  "Politics and power: Mass movements pushed the federal government to guarantee civil and voting rights, while the Great Society expanded Washington's role in social welfare—and provoked a conservative backlash.",
+  "American and national identity: Activists redefined freedom to include racial equality, women's liberation, sexual autonomy, and group pride, permanently broadening who could claim full citizenship.",
+  "America in the world: Cold War thinking drove Kennedy's crises in Cuba and Berlin and Johnson's escalation in Vietnam, a war that divided the nation and echoed in global protest movements in 1968.",
+  "Migration and settlement: The Hart-Celler Act of 1965 abolished discriminatory quotas and reoriented immigration toward Latin America and Asia, transforming the future U.S. population.",
+  "Social structures: The Warren Court's rights revolution—privacy, criminal procedure, one person one vote, and interracial marriage—rewrote the legal framework of American life."
+ ]
+}
