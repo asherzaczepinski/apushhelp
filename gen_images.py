@@ -34,6 +34,14 @@ STYLE = ("Flat vector cartoon illustration in a warm vintage American-history "
          "anywhere in the image. Keep it respectful, symbolic and non-graphic — "
          "no violence, gore, or depictions of suffering. ")
 
+MAP_STYLE = ("A stylized vintage illustrated MAP in a warm storybook style: "
+             "parchment background, navy-blue sea, brass-gold coastlines, a small "
+             "compass rose, recognizable continents and coastlines, with a bold "
+             "muted-red marker or dotted route showing WHERE the event happened so "
+             "the geography is instantly clear. Flat, clean, slightly playful. "
+             "Absolutely NO text, letters, numbers or words anywhere. Respectful "
+             "and non-graphic. Depict: ")
+
 lock = Lock()
 
 
@@ -83,22 +91,24 @@ def save_jpg(png_bytes, path):
 
 
 def build_items(ch, c):
+    # each item: (category, index, filename, subject, style)  style: "cartoon" | "map"
     items = []
     items.append(("cover", 0, "cover",
                   f"A dramatic graphic-novel cover scene for the U.S. history chapter "
-                  f"'{c['title']}' ({c.get('years','')}). Iconic, dynamic, storybook."))
+                  f"'{c['title']}' ({c.get('years','')}). Iconic, dynamic, storybook.", "cartoon"))
     for i, p in enumerate(c.get("summary", [])):
-        items.append(("summary", i, f"summary{i}", "A comic-book panel illustrating this moment: " + p[:220]))
+        items.append(("summary", i, f"summary{i}", "A comic-book panel illustrating this moment: " + p[:220], "cartoon"))
     for i, b in enumerate(c.get("big_ideas", [])):
-        items.append(("ideas", i, f"idea{i}", "An illustration of the idea: " + b[:200]))
+        items.append(("ideas", i, f"idea{i}", "An illustration of the idea: " + b[:200], "cartoon"))
     for i, t in enumerate(c.get("key_terms", [])):
         items.append(("terms", i, f"term{i}",
-                      f"An illustration of '{t['term']}': " + t["def"][:170]))
+                      f"An illustration of '{t['term']}': " + t["def"][:170], "cartoon"))
     for i, e in enumerate(c.get("timeline", [])):
         items.append(("timeline", i, f"time{i}",
-                      f"A scene of this historical event ({e['year']}): " + e["event"][:170]))
+                      f"the geographic setting of this {e['year']} event — " + e["event"][:170]
+                      + " — mark on the map where it took place.", "map"))
     for i, th in enumerate(c.get("themes", [])):
-        items.append(("themes", i, f"theme{i}", "A symbolic illustration of the theme: " + th[:200]))
+        items.append(("themes", i, f"theme{i}", "A symbolic illustration of the theme: " + th[:200], "cartoon"))
     return items
 
 
@@ -145,7 +155,7 @@ def main():
     done = [0]
 
     def one(item):
-        cat, idx, name, subject = item
+        cat, idx, name, subject, style = item
         path = outdir / f"{name}.jpg"
         rel = f"images/ch{ch:02d}/{name}.jpg"
         if path.exists():
@@ -154,7 +164,8 @@ def main():
                 done[0] += 1
                 print(f"  [{done[0]}/{len(items)}] cached {name}")
             return
-        png = api_image(STYLE + subject)
+        prefix = MAP_STYLE if style == "map" else STYLE
+        png = api_image(prefix + subject)
         if png:
             try:
                 save_jpg(png, path)
