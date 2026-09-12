@@ -401,6 +401,16 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 }
 .map-hint { color: var(--brass); }
 
+/* ── word drop typing game ── */
+.ch-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.typer-wrap { max-width: 720px; }
+.typer-wrap canvas {
+  width: 100%; max-width: 720px; display: block;
+  border: 3px double var(--brass); background: var(--parchment);
+  cursor: text; outline: none;
+}
+.typer-help { font-style: italic; color: var(--ink-soft); margin-top: 8px; }
+
 /* ── chapter quiz ── */
 .ch-quiz {
   margin-top: 34px;

@@ -187,7 +187,8 @@
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>
         <p class="ch-years">${esc(c.years)}</p>
-        <p><a class="btn" href="#/comic/${n}">Read as a graphic novel</a></p>
+        <p class="ch-actions"><a class="btn" href="#/comic/${n}">Read as a graphic novel</a>
+          <a class="btn ghost" href="#/type/${n}">Word Drop game</a></p>
       </header>
       ${imgTag(chImg(n, 'cover', 0), 'ch-cover', esc(c.title) + ' cover')}
       <section class="prose">${proseWithMaps(n, c)}</section>
@@ -692,6 +693,7 @@
   function render() {
     const h = location.hash.replace(/^#\/?/, '');
     const [view, arg] = h.split('/');
+    if (window.Typer) Typer.destroy();
     let html;
     if (!view) html = home();
     else if (view === 'unit') html = unit(arg);
@@ -700,6 +702,7 @@
     else if (view === 'review') html = reviewHtml();
     else if (view === 'order') html = orderHtml(arg);
     else if (view === 'comic') html = Comic.html(arg);
+    else if (view === 'type') html = Typer.html(arg);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
@@ -708,6 +711,7 @@
     if (view === 'review') startReview();
     if (view === 'order') startOrder(arg);
     if (view === 'comic') Comic.wire(arg);
+    if (view === 'type') Typer.wire(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
