@@ -26,6 +26,7 @@
     return `
     <h1 class="cover">Nine periods.<br>Twenty-eight chapters.<br>One republic.</h1>
     <p class="cover-note">Summaries, big ideas, key terms, and timelines distilled from your ebook. Pick a period.</p>
+    <a class="map-callout" href="#/map">The colonies map — open a colony, run its docks, train its militia.</a>
     <nav class="units">
       ${U.map(u => `
       <a class="band" href="#/unit/${u.id}">
@@ -95,6 +96,120 @@
         ${next ? `<a href="#/ch/${next}">Ch ${next}. ${esc(chTitle(next))} ›</a>` : ''}
       </nav>
     </article>`;
+  }
+
+  // ---------------------------------------------------------- colonies map
+
+  function terPath(t) {
+    return t.polys.map(r =>
+      'M' + r.map(p => p[0].toFixed(2) + ',' + (-p[1]).toFixed(2)).join('L') + 'Z'
+    ).join('');
+  }
+
+  function mapView() {
+    const T = window.TERRITORIES || [];
+    if (!T.length) return '<h1>Map data missing</h1><p>territories.js did not load.</p>';
+    let minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+    T.forEach(t => t.polys.forEach(r => r.forEach(p => {
+      const sy = -p[1];
+      if (p[0] < minX) minX = p[0];
+      if (p[0] > maxX) maxX = p[0];
+      if (sy < minY) minY = sy;
+      if (sy > maxY) maxY = sy;
+    })));
+    const pad = 1.2;
+    const vb = [minX - pad, minY - pad, maxX - minX + 2 * pad, maxY - minY + 2 * pad]
+      .map(v => v.toFixed(1)).join(' ');
+    const shapes = T.map(t => {
+      const cls = 'ter ' + t.kind + (t.region ? ' ' + t.region : '');
+      const title = `<title>${esc(t.name)} — ${esc(t.good)}</title>`;
+      const label = `<text class="ter-label${t.kind === 'colonial' ? '' : ' faint'}" x="${t.cx}" y="${-t.cy}">${t.id}</text>`;
+      if (t.kind === 'colonial') {
+        return `<a href="#/colony/${t.id}" class="ter-link" aria-label="${esc(t.name)}">` +
+          `<path class="${cls}" d="${terPath(t)}">${title}</path>${label}</a>`;
+      }
+      return `<g class="${cls}"><path d="${terPath(t)}">${title}</path>${label}</g>`;
+    }).join('');
+    return `
+    <p class="crumb"><a href="#/">All periods</a></p>
+    <header class="map-head">
+      <h1>The thirteen colonies, about 1750</h1>
+      <p class="map-note">Click a colony to open it — the story, the money, the games.
+        Treasury: <strong data-coins>${Games.coins()}</strong> coins.</p>
+    </header>
+    <div class="map-wrap">
+      <svg viewBox="${vb}" role="img" aria-label="Map of the thirteen colonies and neighboring lands">${shapes}</svg>
+    </div>
+    <ul class="legend">
+      <li><span class="swatch newengland"></span>New England — cod, timber, ships</li>
+      <li><span class="swatch middle"></span>Middle — wheat, furs, ports</li>
+      <li><span class="swatch southern"></span>Southern — tobacco, rice, indigo</li>
+      <li><span class="swatch native"></span>Native nations</li>
+      <li><span class="swatch crown"></span>Other crown lands</li>
+    </ul>`;
+  }
+
+  function colonyView(id) {
+    const t = (window.TERRITORIES || []).find(x => x.id === id && x.kind === 'colonial');
+    const f = (window.COLONY_FACTS || {})[id];
+    if (!t || !f) return notFound();
+    let minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+    t.polys.forEach(r => r.forEach(p => {
+      const sy = -p[1];
+      if (p[0] < minX) minX = p[0];
+      if (p[0] > maxX) maxX = p[0];
+      if (sy < minY) minY = sy;
+      if (sy > maxY) maxY = sy;
+    }));
+    const vb = [minX - 0.5, minY - 0.5, maxX - minX + 1, maxY - minY + 1]
+      .map(v => v.toFixed(1)).join(' ');
+    return `
+    <p class="crumb"><a href="#/">All periods</a> / <a href="#/map">Colonies map</a></p>
+    <header class="colony-head">
+      <svg class="colony-shape" viewBox="${vb}" aria-hidden="true"><path class="ter ${t.region}" d="${terPath(t)}"></path></svg>
+      <div>
+        <h1>${esc(t.name)}</h1>
+        <p class="ch-years">${esc(f.founded)}</p>
+      </div>
+    </header>
+    <dl class="facts">
+      <div class="trow"><dt>Who and why</dt><dd>${esc(f.why)}</dd></div>
+      <div class="trow"><dt>How it made money</dt><dd>${esc(f.economy)}</dd></div>
+      <div class="trow"><dt>Watch for on the exam</dt><dd>${esc(f.exam)}</dd></div>
+    </dl>
+    <p class="colony-links">Read the full story:
+      ${f.chapters.map(n => `<a class="btn small ghost" href="#/ch/${n}">Ch ${n}. ${esc(chTitle(n))}</a>`).join(' ')}</p>
+    <h2>Dockside run — ship the ${esc(String(t.good).toLowerCase())}</h2>
+    <p class="game-note">Click barrels to load them before they roll off the pier.
+      Leave the crown customs crates alone — clicking one costs 3 coins (Navigation Acts).</p>
+    <div class="game-box">
+      <canvas id="game-export" width="640" height="380"></canvas>
+      <button class="btn" id="start-export">Start the run</button>
+    </div>
+    <h2>Militia range — marksman drill</h2>
+    <p class="game-note">Targets pop up and shrink. Bullseye scores 3; three hits in a row doubles your points.</p>
+    <div class="game-box">
+      <canvas id="game-range" width="640" height="380"></canvas>
+      <button class="btn" id="start-range">Start the drill</button>
+    </div>
+    <p class="treasury">Treasury: <strong data-coins>${Games.coins()}</strong> coins
+      · dockside best ${Games.best('export_' + id)}
+      · range best ${Games.best('range_' + id)}</p>`;
+  }
+
+  function wireColony(id) {
+    const t = (window.TERRITORIES || []).find(x => x.id === id);
+    if (!t) return;
+    const ex = document.getElementById('game-export');
+    const rg = document.getElementById('game-range');
+    const exBtn = document.getElementById('start-export');
+    const rgBtn = document.getElementById('start-range');
+    if (ex) Games.idle(ex, t.good, 'press Start the run');
+    if (rg) Games.idle(rg, 'Militia drill', 'press Start the drill');
+    if (exBtn) exBtn.addEventListener('click', () =>
+      Games.start('export', ex, { key: 'export_' + id, good: t.good, button: exBtn }));
+    if (rgBtn) rgBtn.addEventListener('click', () =>
+      Games.start('range', rg, { key: 'range_' + id, good: t.good, button: rgBtn }));
   }
 
   // ---------------------------------------------------------- flashcards
@@ -203,15 +318,19 @@
   function render() {
     const h = location.hash.replace(/^#\/?/, '');
     const [view, arg] = h.split('/');
+    if (window.Games) Games.destroy();
     let html;
     if (!view) html = home();
     else if (view === 'unit') html = unit(arg);
     else if (view === 'ch') html = chapter(arg);
     else if (view === 'quiz') html = quiz(arg);
+    else if (view === 'map') html = mapView();
+    else if (view === 'colony') html = colonyView(arg);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
     if (view === 'quiz') renderCard();
+    if (view === 'colony') wireColony(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
