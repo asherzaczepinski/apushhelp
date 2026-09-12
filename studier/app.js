@@ -81,6 +81,7 @@
         <p class="ch-years">${esc(c.years)}</p>
       </header>
       <section class="prose">${(c.summary || []).map(p => `<p>${esc(p)}</p>`).join('')}</section>
+      ${mapFigure(n)}
       <h2>The big ideas</h2>
       <ul class="ideas">${(c.big_ideas || []).map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <h2>Timeline</h2>
@@ -95,6 +96,64 @@
         ${next ? `<a href="#/ch/${next}">Ch ${next}. ${esc(chTitle(next))} ›</a>` : ''}
       </nav>
     </article>`;
+  }
+
+  // ---------------------------------------------------------- sketch maps
+
+  function mapFigure(n) {
+    const spec = (window.CHAPTER_MAPS || {})[n];
+    const B = window.MAP_BASES;
+    if (!spec || !B) return '';
+    const P = spec.space === 'colonial'
+      ? (x, y) => [x, -y]
+      : (lon, lat) => [lon * 0.8, -lat];
+    const [ax, ay] = P(spec.view[0], spec.view[3]);
+    const [bx, by] = P(spec.view[2], spec.view[1]);
+    const w = bx - ax, h = by - ay;
+    const fs = Math.min(w / 30, h / 12);
+    const lw = w / 170;
+    const path = (pts, close) => pts.map((p, i) =>
+      (i ? 'L' : 'M') + P(p[0], p[1]).map(v => v.toFixed(2)).join(',')).join('') + (close ? 'Z' : '');
+
+    let out = '';
+    if (spec.base === 'colonies') {
+      const fills = { newengland: '#33506b', middle: '#8b6f47', southern: '#8c1c13' };
+      Object.values(B.colonies).forEach(c => {
+        out += `<path d="${c.polys.map(r => path(r, true)).join('')}" fill="${fills[c.region]}" stroke="#5f4f35" stroke-width="${lw}"/>`;
+      });
+    } else {
+      const shapes = (spec.base || []).flatMap(k => k === 'world' ? B.world : [B[k]]);
+      shapes.forEach(s => {
+        out += `<path d="${path(s, true)}" fill="#e7dcc2" stroke="#8b6f47" stroke-width="${lw}"/>`;
+      });
+    }
+    (spec.layers || []).forEach(L => {
+      if (L.t === 'region') {
+        out += `<path d="${path(L.pts, true)}" fill="${L.color}" opacity="0.5" stroke="${L.color}" stroke-width="${lw}"/>`;
+      }
+      if (L.t === 'line' || L.t === 'arrow') {
+        out += `<path d="${path(L.pts)}" fill="none" stroke="${L.color}" stroke-width="${lw * 2.4}"` +
+          (L.dash ? ` stroke-dasharray="${(fs / 2).toFixed(2)} ${(fs / 3).toFixed(2)}"` : '') +
+          (L.t === 'arrow' ? ' marker-end="url(#mapArrow)"' : '') + '/>';
+      }
+      if (L.t === 'dot') {
+        const [x, y] = P(L.at[0], L.at[1]);
+        out += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${(fs / 2.6).toFixed(2)}" fill="#2b2118" stroke="#fffaf0" stroke-width="${lw}"/>`;
+      }
+      if (L.label) {
+        const at = L.label.at || (L.t === 'dot' ? L.at : L.pts[Math.floor(L.pts.length / 2)]);
+        const [x, y] = P(at[0], at[1]);
+        const west = L.label.side === 'w';
+        out += `<text x="${(x + (west ? -fs / 2 : fs / 2)).toFixed(2)}" y="${(y - fs / 3).toFixed(2)}" font-size="${fs.toFixed(2)}" text-anchor="${west ? 'end' : 'start'}" class="map-label">${esc(L.label.text)}</text>`;
+      }
+    });
+    return `<figure class="ch-map">
+      <svg viewBox="${ax.toFixed(1)} ${ay.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}" role="img" aria-label="${esc(spec.caption)}">
+        <defs><marker id="mapArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#2b2118"/></marker></defs>
+        ${out}
+      </svg>
+      <figcaption>${esc(spec.caption)}</figcaption>
+    </figure>`;
   }
 
   // ---------------------------------------------------------- flashcards

@@ -257,6 +257,28 @@ a:hover { color: #5f120c; }
 .hits { list-style: none; }
 .hits li { padding: 7px 0; border-top: 1px solid var(--brass-pale); }
 
+/* ── chapter sketch maps ── */
+.ch-map { margin: 26px 0 8px; max-width: 640px; }
+.ch-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px double var(--brass);
+  background: #dce3e7;
+}
+.map-label {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  fill: #2b2118;
+}
+.ch-map figcaption {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  max-width: 60ch;
+}
+
 /* ── small screens ── */
 @media (max-width: 640px) {
   .band { grid-template-columns: 1fr; gap: 4px; }
