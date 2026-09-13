@@ -215,7 +215,7 @@
         const map = hasPlaces ? `<a class="strip-map" href="#/atlas/${n}/${i}">See these places on the map</a>` : '';
         return `<figure class="cstrip">
           <img class="cstrip-img" src="${s.img}" alt="" loading="lazy">
-          <figcaption class="cstrip-cap"><p>${esc(s.cap)}</p>${map}</figcaption>
+          <figcaption class="cstrip-cap"><p>${esc(s.cap).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>${map}</figcaption>
         </figure>`;
       }).join('');
       return `<div class="comic-strips">${strips}</div>`;

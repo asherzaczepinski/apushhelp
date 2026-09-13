@@ -6,27 +6,31 @@ window.STORY = {
  "1": [
   {
    "img": "images/ch01/strip0.jpg",
-   "cap": "Long before 1492 the Americas were home to tens of millions of people in a huge variety of societies. Winona's people farmed together and held land in common — status came from generosity, not property, and many nations traced family through the mother's line. From the Aztec and Inca empires to the mounds of Cahokia, the cliffside Pueblo towns, and the Iroquois confederacy, there was no single “Indian” world."
+   "cap": "Farming began in Mexico and the Andes around **7000 BC**, making great civilizations possible. By **1200** the Mississippi city of **Cahokia** held up to 30,000 people, and from about **900–1200** the Hopi and Zuni built planned towns like **Pueblo Bonito**. The Aztec capital **Tenochtitlan** swelled to some 250,000, and the **Iroquois Great League of Peace** bound five nations together. Many eastern peoples were **matrilineal**, tracing family and property through the mother's line."
   },
   {
    "img": "images/ch01/strip1.jpg",
-   "cap": "Across the ocean, Europe prized hierarchy, obedience to authority, and an established church — a very different idea of freedom. It craved Asian silk and spices and dreamed of a sea route that would cut out the Muslim and Italian middlemen. Portugal led the way: the caravel carried sailors down the African coast to island sugar plantations worked by enslaved Africans — a grim preview of New World slavery."
+   "cap": "Across the ocean, Spain neared the end of the **Reconquista** against the Muslim Moors. Portugal pioneered the **caravel**, a nimble ship that with the compass and quadrant pushed past the **Sahara** in **1434**; in **1487** **Bartolomeu Dias** rounded the **Cape of Good Hope** at Africa's tip. Europe was hunting a sea route to Asia's silk and spices."
   },
   {
    "img": "images/ch01/strip2.jpg",
-   "cap": "In 1492, fresh from the Reconquista, Spain gambled on Columbus, and his landfall opened permanent contact between the hemispheres. On a Caribbean beach Winona's and Mateo's worlds finally met, with wary curiosity on both sides. The Columbian Exchange then sent crops, animals, and people both ways — corn, potatoes, and tobacco east; horses, wheat, and sugar west — remaking diets and lives worldwide."
+   "cap": "In **1492** Spain completed the **Reconquista** and backed **Christopher Columbus**, a Genoese mariner seeking a westward passage to Asia. Instead he reached the Caribbean, opening permanent contact between the hemispheres — and, for Winona's people, a world about to be turned upside down."
   },
   {
    "img": "images/ch01/strip3.jpg",
-   "cap": "But the Exchange also carried European diseases that killed the vast majority of Native people — the worst demographic collapse in human history. With disease, steel, gunpowder, and Native allies, conquistadors like Cortés and Pizarro toppled the Aztec and Inca empires. Winona's people did not surrender quietly — resistance met conquest at every step."
+   "cap": "The **Columbian Exchange** now carried plants, animals, people, and microbes both ways — corn, potatoes, and tobacco eastward; horses, wheat, and sugar westward — remaking diets worldwide. But it also spread diseases that killed the vast majority of Native people, the worst demographic collapse in human history."
   },
   {
    "img": "images/ch01/strip4.jpg",
-   "cap": "Spain built a vast, urban, Catholic empire on the wealth and labor of the peoples it conquered. Under the encomienda, Native laborers owed work to Spanish masters — until the friar Bartolomé de las Casas denounced the cruelty, feeding the “Black Legend” that Spain's rivals would use against it. Spanish and Native lives also blended into a new mestizo society, and missions pushed north into Florida and New Mexico."
+   "cap": "**Conquistadores** like Hernán Cortés and Francisco Pizarro — helped by disease, steel weapons, and Indian allies — toppled great empires. In **1519** Cortés reached **Tenochtitlan**, and within a few years the Aztec empire fell; Pizarro soon crushed the Inca. Winona's people fought back, but the conquest ground on."
   },
   {
    "img": "images/ch01/strip5.jpg",
-   "cap": "In 1680 the Pueblo Revolt drove the Spanish out of New Mexico for over a decade — the most successful Native uprising in North American history. Later, France and the Netherlands built thinly settled fur-trade colonies that, needing Native partners, left Native nations more independence than English colonies would. Two worlds were now bound together — a story that entwined new freedom for some with conquest and slavery for others."
+   "cap": "Spain built a vast Catholic empire, and after **Martin Luther's** Ninety-Five Theses launched the Reformation in **1517**, its missionary drive intensified. The priest **Bartolomé de las Casas** denounced Spanish cruelty, fueling the **Black Legend** of Spain as uniquely brutal; his protests helped win the **New Laws** of **1542** against Indian slavery, and the **repartimiento system** replaced the encomienda in 1550. Spanish and Native lives also blended into a new **mestizo** society."
+  },
+  {
+   "img": "images/ch01/strip6.jpg",
+   "cap": "Spain pushed north, founding **Santa Fe** in **1610** — until the **Pueblo Revolt** of **1680**, led by Popé, drove the colonists out for over a decade. Meanwhile **New France** rose on the fur trade after **Samuel de Champlain** founded **Quebec** in **1608**, and the Dutch built **New Netherland** on the Hudson. Needing Native partners, both left Native nations more freedom than English colonies would."
   }
  ],
  "2": [

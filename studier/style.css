@@ -600,6 +600,7 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
   font: 1.02rem/1.55 Georgia, serif;
   color: var(--ink);
 }
+.cstrip-cap strong { color: var(--navy); font-weight: 700; }
 .cstrip .strip-map { font-size: 0.82rem; padding: 5px 12px; }
 @media (max-width: 640px) {
   .comic-strips { gap: 20px; }

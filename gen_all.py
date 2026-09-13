@@ -78,7 +78,7 @@ def do_chapter(n):
     try:
         spec = json.loads(spec_path.read_text())
         strips = spec["strips"]
-        assert len(strips) == 6
+        assert len(strips) >= 1
     except Exception as e:
         print(f"ch{n}: BAD SPEC ({e}), skip"); return
     out = BASE / "studier" / "images" / f"ch{n:02d}"; out.mkdir(parents=True, exist_ok=True)
