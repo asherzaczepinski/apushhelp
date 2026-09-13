@@ -208,14 +208,25 @@
   function graphicNovel(n, c) {
     const imgs = (window.CH_IMAGES || {})[String(n)] || {};
     const comic = Array.isArray(imgs.comic) ? imgs.comic : [];
-    const parts = [];
+    const cells = [];
     let si = 0;
     (c.summary || []).forEach(p => {
       Comic.splitPara(p).forEach(sen => {
-        if (si < 16) { parts.push(Comic.panel(n, sen, comic[si], si)); si++; }
+        if (si >= 16) return;
+        const src = comic[si];
+        const art = src
+          ? `<img class="strip-img" src="${src}" alt="" loading="lazy">`
+          : (window.Comic ? Comic.mini(sen) : '');
+        const hasPlaces = (window.Atlas && Atlas.spotsFor(sen).length);
+        const map = hasPlaces ? `<a class="strip-map" href="#/atlas/${n}/${si}">See on map</a>` : '';
+        cells.push(`<figure class="strip-cell">
+          <div class="strip-art"><span class="strip-no">${si + 1}</span>${art}</div>
+          <figcaption class="strip-cap"><span>${esc(sen)}</span>${map}</figcaption>
+        </figure>`);
+        si++;
       });
     });
-    return `<div class="comic-strip chapter-gn">${parts.join('')}</div>`;
+    return `<div class="comic-page">${cells.join('')}</div>`;
   }
 
   // Plot located facts on an auto-fitted map. Pins matching a key term are

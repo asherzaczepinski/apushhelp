@@ -22,8 +22,12 @@ window.Atlas = (function () {
     { id: 'iberia', name: 'Spain & Portugal', lat: 40, lng: -5, emoji: '⛵', color: '#c07a2a', co: ['Spain', 'Portugal'], keys: ['spain', 'spanish', 'portugal', 'portuguese', 'caravel', 'columbus', 'reconquista', 'iberia', 'lisbon', 'seville', 'las casas'] },
     { id: 'africa', name: 'West Africa', lat: 6.5, lng: -2, emoji: '⛓️', color: '#6e5636', co: ['Ghana', 'Nigeria', 'Guinea', 'Senegal', 'Sierra Leone', 'Liberia', 'Benin', 'Togo', 'Burkina Faso', 'Mali'], keys: ['africa', 'african', 'slave', 'slavery', 'enslaved', 'middle passage', 'gold coast', 'guinea'] },
     { id: 'caribbean', name: 'The Caribbean', lat: 18, lng: -76, emoji: '🍬', color: '#b0842f', co: ['Cuba', 'Haiti', 'Dominican Rep.', 'Jamaica'], keys: ['caribbean', 'barbados', 'jamaica', 'sugar', 'west indies', 'hispaniola'] },
-    { id: 'mexico', name: 'Mexico (Aztecs)', lat: 19.4, lng: -99.1, emoji: '🏛️', color: '#6b4f6f', co: ['Mexico'], keys: ['aztec', 'tenochtitlan', 'cortes', 'mexico', 'moctezuma', 'conquistador'] },
-    { id: 'peru', name: 'Peru (Inca)', lat: -13.5, lng: -72, emoji: '⛰️', color: '#7d6a45', co: ['Peru'], keys: ['inca', 'pizarro', 'peru', 'andes'] }
+    { id: 'mexico', name: 'Aztec Empire', lat: 19.4, lng: -99.1, color: '#6b4f6f', co: ['Mexico'], keys: ['aztec', 'tenochtitlan', 'cortes', 'mexico', 'moctezuma', 'conquistador'] },
+    { id: 'peru', name: 'Inca Empire', lat: -13.5, lng: -72, color: '#7d6a45', co: ['Peru'], keys: ['inca', 'pizarro', 'peru', 'andes'] },
+    { id: 'cahokia', name: 'Cahokia', lat: 38.65, lng: -90.06, color: '#8b6f47', co: [], keys: ['cahokia', 'mound', 'mississippian'] },
+    { id: 'povertypoint', name: 'Poverty Point', lat: 32.6, lng: -91.4, color: '#8b6f47', co: [], keys: ['poverty point'] },
+    { id: 'pueblo', name: 'Hopi, Zuni & Pueblo', lat: 35.7, lng: -108, color: '#c07a2a', co: [], keys: ['hopi', 'zuni', 'pueblo', 'southwest', 'anasazi', 'ancestral'] },
+    { id: 'iroquois', name: 'Iroquois Confederacy', lat: 43, lng: -76, color: '#33506b', co: [], keys: ['iroquois', 'haudenosaunee', 'five nations', 'mohawk', 'confederacy'] }
   ];
   const BY = {};
   SPOTS.forEach(s => { BY[s.id] = s; });
@@ -70,10 +74,13 @@ window.Atlas = (function () {
     // areas from the notes: color the matched spots' countries
     const areaColor = {};
     focus.forEach(s => s.co.forEach(name => { areaColor[name] = s.color; }));
-    // paths from the notes: chain the matched places in order
+    // paths from the notes — only for passages about movement/trade, not lists
+    const journey = /trade|route|sail|ship|voyage|exchange|passage|explor|import|export|carr|migrat|navigat|fleet|expedition/i.test(pd ? pd.caption : '');
     const arcs = [];
-    for (let i = 0; i < focus.length - 1; i++) {
-      arcs.push({ startLat: focus[i].lat, startLng: focus[i].lng, endLat: focus[i + 1].lat, endLng: focus[i + 1].lng, color: focus[i].color });
+    if (journey) {
+      for (let i = 0; i < focus.length - 1; i++) {
+        arcs.push({ startLat: focus[i].lat, startLng: focus[i].lng, endLat: focus[i + 1].lat, endLng: focus[i + 1].lng, color: focus[i].color });
+      }
     }
 
     globe = window.Globe()(host)
@@ -93,7 +100,7 @@ window.Atlas = (function () {
       .htmlElement(d => {
         const el = document.createElement('div');
         el.className = 'globe-mark';
-        el.innerHTML = `<span class="gm-emoji">${d.emoji}</span><span class="gm-label">${esc(d.name)}</span>`;
+        el.innerHTML = `<span class="gm-dot" style="background:${d.color}"></span><span class="gm-label">${esc(d.name)}</span>`;
         return el;
       });
 
