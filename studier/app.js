@@ -208,21 +208,14 @@
   let mapSeq = 0;
   function graphicNovel(n, c) {
     const imgs = (window.CH_IMAGES || {})[String(n)] || {};
-    const arr = a => Array.isArray(a) ? a : [];
+    const comic = Array.isArray(imgs.comic) ? imgs.comic : [];
     const parts = [];
-    let i = 0;
     let si = 0;
     (c.summary || []).forEach(p => {
       Comic.splitPara(p).forEach(sen => {
-        if (si < 16) { parts.push(Comic.panel(sen, arr(imgs.comic)[si], i++)); si++; }
+        if (si < 16) { parts.push(Comic.panel(sen, comic[si], si)); si++; }
       });
     });
-    (c.big_ideas || []).forEach((b, k) =>
-      parts.push(Comic.panel(b, arr(imgs.ideas)[k], i++)));
-    (c.timeline || []).forEach((t, k) =>
-      parts.push(Comic.panel(t.year + ' — ' + t.event, arr(imgs.timeline)[k], i++)));
-    (c.key_terms || []).forEach((t, k) =>
-      parts.push(Comic.panel(t.term + ' — ' + t.def, arr(imgs.terms)[k], i++)));
     return `<div class="comic-strip chapter-gn">${parts.join('')}</div>`;
   }
 
@@ -560,22 +553,23 @@
 
   let deck = [], pos = 0, flipped = false;
 
-  // flashcards for one chapter, shown at the bottom of the chapter page
+  // flashcards for one chapter, shown at the bottom of the chapter page:
+  // key terms + timeline dates + any extra generated cards.
   function chapterCards(n) {
-    const terms = ((chap(n) || {}).key_terms) || [];
-    if (terms.length < 2) return '';
-    deck = terms.map(t => ({ term: t.term, def: t.def, ch: n }));
-    shuffle(deck);
-    pos = 0; flipped = false;
+    const c = chap(n) || {};
+    const cards = [];
+    (c.key_terms || []).forEach(t => cards.push({ front: t.term, back: t.def }));
+    (c.timeline || []).forEach(t => cards.push({ front: String(t.year), back: t.event }));
+    ((window.EXTRA_CARDS || {})[String(n)] || []).forEach(x => cards.push({ front: x.q, back: x.a }));
+    if (cards.length < 2) return '';
+    deck = cards; pos = 0; flipped = false;
     return `
     <h2>Flashcards</h2>
-    <p class="quiz-help">Click the card (or press space) to flip it — ${terms.length} terms in this chapter.</p>
     <div class="fc-stage"><div class="fcard" id="fcard" role="button" tabindex="0" aria-live="polite"></div></div>
     <nav class="quiz-nav">
       <button class="btn" id="qprev">Back</button>
       <span id="qcount" class="qcount"></span>
       <button class="btn" id="qnext">Next</button>
-      <button class="btn ghost" id="qshuffle">Shuffle</button>
     </nav>`;
   }
 
@@ -583,14 +577,9 @@
     const el = document.getElementById('fcard');
     if (!el || !deck.length) return;
     const t = deck[pos];
-    el.classList.toggle('flipped', flipped);
     el.innerHTML = flipped
-      ? `<span class="fc-term-sm">${esc(t.term)}</span>
-         <span class="fc-def">${esc(t.def)}</span>
-         <span class="fc-src">from chapter ${t.ch}</span>`
-      : `<div class="fc-scene">${window.Comic ? Comic.mini(t.term + ' ' + (t.def || '')) : ''}</div>
-         <span class="fc-term">${esc(t.term)}</span>
-         <span class="fc-hint">what is it?</span>`;
+      ? `<span class="fc-def">${esc(t.back)}</span>`
+      : `<span class="fc-term">${esc(t.front)}</span>`;
     el.classList.remove('fcflip'); void el.offsetWidth; el.classList.add('fcflip');
     const count = document.getElementById('qcount');
     if (count) count.textContent = (pos + 1) + ' / ' + deck.length;
@@ -691,13 +680,20 @@
     else if (view === 'atlas') html = Atlas.html();
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
-    app.innerHTML = html;
+    app.innerHTML = (view ? '<button class="backbtn" id="backbtn">‹ Back</button>' : '') + html;
     if (view === 'ch') { renderCard(); Comic.wire(arg); }
     if (view === 'review') startReview();
     if (view === 'atlas') Atlas.wire();
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
+
+  app.addEventListener('click', e => {
+    if (e.target.closest('#backbtn')) {
+      e.preventDefault();
+      if (history.length > 1) history.back(); else location.hash = '#/';
+    }
+  });
 
   window.addEventListener('hashchange', render);
   render();

@@ -1,0 +1,1 @@
+window.EXTRA_CARDS = {};

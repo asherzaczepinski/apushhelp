@@ -250,33 +250,15 @@ window.Comic = (function () {
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const panels = Array.prototype.slice.call(document.querySelectorAll('.cpanel'));
     if (!panels.length) return;
-    const type = p => {
-      const el = p.querySelector('.cbubble p');
-      if (!el) return;
-      const full = el.getAttribute('data-text') || '';
-      if (reduce) { el.textContent = full; return; }
-      let i = 0;
-      el.textContent = '';
-      const step = () => {
-        el.textContent = full.slice(0, i);
-        if (i++ <= full.length) setTimeout(step, 13);
-      };
-      step();
-    };
     if (!('IntersectionObserver' in window) || reduce) {
-      panels.forEach(p => { p.classList.add('in'); type(p); });
+      panels.forEach(p => p.classList.add('in'));
       return;
     }
-    const seen = new WeakSet();
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting && !seen.has(e.target)) {
-          seen.add(e.target);
-          e.target.classList.add('in');
-          setTimeout(() => type(e.target), 300);
-        }
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
     panels.forEach(p => io.observe(p));
   }
 
@@ -300,7 +282,7 @@ window.Comic = (function () {
       : panelSVG(pick(caption), action);
     return `<figure class="cpanel ${side}${action ? ' action' : ''}" data-i="${i}">
       <div class="cart">${art}<span class="cpanel-no">${i + 1}</span></div>
-      <div class="cbubble"><p data-text="${esc(caption)}"></p></div>
+      <div class="cbubble"><p>${esc(caption)}</p><a class="panel-more" href="#/atlas">🗺 Learn more on the map →</a></div>
     </figure>`;
   }
 

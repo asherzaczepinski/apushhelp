@@ -87,8 +87,28 @@ a:hover { color: #5f120c; }
 #app {
   max-width: 900px;
   margin: 0 auto;
-  padding: 34px 22px 60px;
+  padding: 22px 22px 60px;
 }
+.backbtn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--navy);
+  color: var(--cream);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.backbtn:hover { background: var(--patriot); }
+.panel-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--brass);
+  text-decoration: none;
+}
+.panel-more:hover { color: var(--patriot); }
 .colophon {
   text-align: center;
   color: var(--ink-soft);
@@ -547,7 +567,7 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 .cbubble {
   position: relative; background: #fffaf0; border: 2.5px solid var(--ink);
   border-radius: 16px; padding: 16px 18px; min-height: 60px;
-  display: flex; align-items: center;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
 }
 .cbubble p { font-size: 1.08rem; line-height: 1.5; min-height: 1.5em; }
 .cbubble::after {
