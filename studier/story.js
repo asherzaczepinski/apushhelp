@@ -199,27 +199,43 @@ window.STORY = {
  "8": [
   {
    "img": "images/ch08/strip0.jpg",
-   "cap": "By the early 1800s the young United States pushed relentlessly west into Native homelands. While Washington's government took shape after his 1789 inauguration, settlers poured across the Appalachians onto lands nations like Winona's had held for generations. The republic's promise of liberty rarely reached the people already living on the ground it claimed."
+   "cap": "In **1789 George Washington** was inaugurated the first president just as the **French Revolution** began. Treasury Secretary Alexander Hamilton pushed **Hamilton's financial program** — the federal government assuming state debts, a new **Bank of the United States** in **1791**, and a **Report on Manufactures** to promote industry — binding the country together through national credit.",
+   "date": "1789–1791"
   },
   {
    "img": "images/ch08/strip1.jpg",
-   "cap": "Hamilton's financial program funded the war debt at face value, assumed state debts, chartered a national bank, taxed whiskey, and encouraged manufacturing to build a commercial republic tied to Britain. Jefferson and Madison, dreaming of an agrarian nation, became strict constructionists who saw favoritism to speculators. Their clash created the first party system: Federalists versus Republicans."
+   "cap": "Atlantic revolutions spread. The **Haitian Revolution** (**1791–1804**) saw enslaved people overthrow French rule and declare Haiti independent in **1804**, the first Black republic. Its example terrified American slaveholders, and in **1800** Virginia crushed **Gabriel's Rebellion**, a planned slave uprising near Richmond.",
+   "date": "1791–1804"
   },
   {
    "img": "images/ch08/strip2.jpg",
-   "cap": "The 1794 Whiskey Rebellion and Jay's Treaty hardened the party split. Under Adams, the 1798 XYZ affair sparked a quasi-war with France, and Federalists passed the Alien and Sedition Acts, jailing Republican editors. Jefferson and Madison replied with the Virginia and Kentucky resolutions, arguing states could resist federal law—making free political expression central to American liberty."
+   "cap": "On the frontier, farmers rose against Hamilton's excise tax in the **Whiskey Rebellion** of **1794**; Washington personally marched an army to crush it, proving the new government's power. That same year, **Jay's Treaty** eased tensions with Britain but enraged pro-French Americans.",
+   "date": "1794"
   },
   {
    "img": "images/ch08/strip3.jpg",
-   "cap": "The 'Revolution of 1800' was the first peaceful transfer of power between parties, though the three-fifths clause tipped it to Jefferson. In 1803 Marbury v. Madison established judicial review, and the Louisiana Purchase doubled the nation—forcing Jefferson to bend his constitutional scruples—while Lewis and Clark mapped the way west toward Winona's world."
+   "cap": "Two parties hardened — the **Federalists** behind Hamilton and Adams, the **Republicans** behind Jefferson and Madison. When French agents demanded bribes in the **XYZ affair** of **1798**, a quasi-war erupted. Federalists passed the **Alien and Sedition Acts** jailing their critics, and Jefferson and Madison replied with the **Virginia and Kentucky Resolutions** asserting states' rights.",
+   "date": "1798"
   },
   {
    "img": "images/ch08/strip4.jpg",
-   "cap": "Alarmed by British ties to Tecumseh and Tenskwatawa's pan-Indian confederacy, and pushed by War Hawks Clay and Calhoun, Madison led a divided nation into the War of 1812. Harrison destroyed Prophetstown at Tippecanoe in 1811. In 1814 the British burned Washington, but Fort McHenry held. Winona joined the last great pan-Native stand in the East."
+   "cap": "In the **Revolution of 1800**, Jefferson defeated Adams in the first peaceful transfer of power between parties. His era brought **Marbury v. Madison** (**1803**), which established judicial review, and the **Louisiana Purchase** of **1803**, which bought New Orleans and doubled the size of the United States.",
+   "date": "1800–1803"
   },
   {
    "img": "images/ch08/strip5.jpg",
-   "cap": "Tecumseh died at the Thames, and Jackson triumphed at Horseshoe Bend and New Orleans in 1815. The Treaty of Ghent restored the status quo, yet this 'Second War of Independence' broke Indian power east of the Mississippi and discredited the Hartford Convention Federalists. As nationalism surged, Winona turned west—her people's long fight for their land far from over."
+   "cap": "In **1804** the **Lewis and Clark** expedition set out to explore the new western lands, guided in part by Sacagawea. But as Britain and France seized American ships, Jefferson's **Embargo Act** of **1807** banned all exports — wrecking the American economy without changing British policy.",
+   "date": "1804–1807"
+  },
+  {
+   "img": "images/ch08/strip6.jpg",
+   "cap": "In the west, the Shawnee brothers **Tecumseh and Tenskwatawa** (the Prophet) built a confederacy to resist American expansion — until Harrison destroyed Prophetstown at the **Battle of Tippecanoe** in **1811**. As the **War of 1812** began, Tecumseh allied with Britain and Winona fought beside him, but his death in 1813 broke the last great Native stand in the East.",
+   "date": "1811–1813"
+  },
+  {
+   "img": "images/ch08/strip7.jpg",
+   "cap": "In **1814** the British burned Washington, but **Fort McHenry** held — inspiring the national anthem — and the **Treaty of Ghent** ended the war. New England Federalists, meeting at the **Hartford Convention**, threatened secession and doomed their party. Then in **1815 Andrew Jackson** won the **Battle of New Orleans**, days after peace was already signed, becoming a national hero.",
+   "date": "1814–1815"
   }
  ],
  "9": [
