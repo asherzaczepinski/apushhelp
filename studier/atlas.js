@@ -40,9 +40,15 @@ window.Atlas = (function () {
   }
 
   function panelData(chStr, idxStr) {
-    const n = Number(chStr), idx = Number(idxStr);
+    const n = Number(chStr);
     const c = (window.APUSH.chapters || {})[String(n)];
     if (!c) return null;
+    // no panel index → the whole chapter's places
+    if (idxStr === undefined || idxStr === '') {
+      const whole = (c.summary || []).join(' ');
+      return { n, idx: null, caption: whole, src: null, whole: true, spots: spotsFor(whole) };
+    }
+    const idx = Number(idxStr);
     const sents = [];
     (c.summary || []).forEach(p => (window.Comic ? Comic.splitPara(p) : [p]).forEach(s => sents.push(s)));
     const caption = sents[idx] || '';
@@ -52,12 +58,13 @@ window.Atlas = (function () {
 
   function html(chStr, idxStr) {
     const pd = panelData(chStr, idxStr);
-    const cartoon = pd
-      ? `<div class="map-panel">
+    let cartoon;
+    if (!pd) cartoon = '<h1>The Atlantic world</h1>';
+    else if (pd.whole) cartoon = `<h1>Chapter ${pd.n} on the map</h1><p class="cover-note">Every place this chapter names, on the globe.</p>`;
+    else cartoon = `<div class="map-panel">
           ${pd.src ? `<img class="map-panel-img" src="${pd.src}" alt="">` : ''}
           <p class="map-panel-text">${esc(pd.caption)}</p>
-        </div>`
-      : '<h1>The Atlantic world</h1>';
+        </div>`;
     return `${cartoon}
       <div class="globe-host" id="globe-host"><p class="globe-fallback">Loading the globe…</p></div>`;
   }

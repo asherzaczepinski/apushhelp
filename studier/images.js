@@ -66,6 +66,10 @@ window.CH_IMAGES = {
    "images/ch01/comic7.jpg",
    "images/ch01/comic8.jpg",
    "images/ch01/comic9.jpg"
+  ],
+  "pages": [
+   "images/ch01/page0.jpg",
+   "images/ch01/page1.jpg"
   ]
  },
  "2": {

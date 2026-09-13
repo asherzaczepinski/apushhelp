@@ -207,6 +207,13 @@
   let mapSeq = 0;
   function graphicNovel(n, c) {
     const imgs = (window.CH_IMAGES || {})[String(n)] || {};
+    // full high-quality comic pages, if generated for this chapter
+    if (Array.isArray(imgs.pages) && imgs.pages.length) {
+      return `<div class="comic-pages">
+        ${imgs.pages.map(p => `<img class="comic-full" src="${p}" alt="comic page" loading="lazy">`).join('')}
+        <a class="map-btn" href="#/atlas/${n}">See this chapter’s places on the map</a>
+      </div>`;
+    }
     const comic = Array.isArray(imgs.comic) ? imgs.comic : [];
     const cells = [];
     let si = 0;
