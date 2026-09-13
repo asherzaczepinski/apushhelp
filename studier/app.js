@@ -682,6 +682,7 @@
     const h = location.hash.replace(/^#\/?/, '');
     const [view, arg] = h.split('/');
     if (window.Typer) Typer.destroy();
+    if (window.Globe3D) Globe3D.destroy();
     let html;
     if (!view) html = home();
     else if (view === 'unit') html = unit(arg);

@@ -396,6 +396,10 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 .ch-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .atlas-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(220px, 1fr); gap: 18px; align-items: start; }
 .atlas-wrap { background: #c3d3dc; border: 3px double var(--brass); padding: 8px; }
+.globe-host { border: 3px double var(--brass); background: var(--parchment); min-height: 300px; line-height: 0; overflow: hidden; }
+.globe-host canvas { display: block; width: 100%; cursor: grab; }
+.globe-host canvas:active { cursor: grabbing; }
+.globe-fallback { line-height: 1.5; padding: 40px 16px; text-align: center; color: var(--ink-soft); font-style: italic; }
 .atlas-svg { width: 100%; height: auto; display: block; }
 .atlas-colony, .atlas-land { stroke: #4a3b2a; stroke-width: 0.14; cursor: pointer; transition: opacity 0.12s; }
 .atlas-colony:hover, .atlas-land:hover { opacity: 0.8; }
