@@ -570,12 +570,6 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
   display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
 }
 .cbubble p { font-size: 1.08rem; line-height: 1.5; min-height: 1.5em; }
-.cbubble::after {
-  content: ''; position: absolute; top: 50%; width: 0; height: 0;
-  border: 12px solid transparent; margin-top: -12px;
-}
-.cpanel.left .cbubble::after { left: -22px; border-right-color: var(--ink); }
-.cpanel.right .cbubble::after { right: -22px; border-left-color: var(--ink); }
 .comic-end { margin-top: 26px; display: flex; gap: 10px; flex-wrap: wrap; }
 
 /* ── idle character + living-scene animations ── */

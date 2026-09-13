@@ -181,7 +181,6 @@
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>
         <p class="ch-years">${esc(c.years)}</p>
-        <p class="ch-actions"><a class="btn ghost" href="#/atlas">Atlantic world map</a></p>
       </header>
       ${graphicNovel(n, c)}
       <h2>The big ideas</h2>
@@ -677,13 +676,13 @@
     else if (view === 'unit') html = unit(arg);
     else if (view === 'ch') html = chapter(arg);
     else if (view === 'review') html = reviewHtml();
-    else if (view === 'atlas') html = Atlas.html();
+    else if (view === 'atlas') html = Atlas.html(arg);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = (view ? '<button class="backbtn" id="backbtn">‹ Back</button>' : '') + html;
     if (view === 'ch') { renderCard(); Comic.wire(arg); }
     if (view === 'review') startReview();
-    if (view === 'atlas') Atlas.wire();
+    if (view === 'atlas') Atlas.wire(arg);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
