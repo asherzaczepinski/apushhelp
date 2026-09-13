@@ -12,8 +12,13 @@ story = {}
 
 for n in range(1, 29):
     spec = json.loads((SPECS / f"ch{n}.json").read_text())
-    story[str(n)] = [{"img": f"images/ch{n:02d}/strip{i}.jpg", "cap": s["cap"]}
-                     for i, s in enumerate(spec["strips"])]
+    entries = []
+    for i, s in enumerate(spec["strips"]):
+        e = {"img": f"images/ch{n:02d}/strip{i}.jpg", "cap": s["cap"]}
+        if s.get("date"):
+            e["date"] = s["date"]
+        entries.append(e)
+    story[str(n)] = entries
 
 header = ("// Chapter comics as REAL comic strips: each entry is one wide strip image\n"
           "// (multiple different-sized panels reading left-to-right) paired with the\n"

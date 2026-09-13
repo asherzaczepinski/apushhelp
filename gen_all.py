@@ -24,10 +24,12 @@ STYLE = (
     "comic layout that reads left to right. Warm vintage American-history graphic-"
     "novel art: thick confident clean ink outlines, a rich limited palette of "
     "parchment cream, navy blue, muted brick red and brass gold, dramatic cinematic "
-    "lighting, expressive faces. Characters may speak in classic white comic speech "
-    "bubbles; keep any bubble text VERY short (1-3 words), simple and correctly "
-    "spelled. Do NOT draw narration caption boxes; no letters or numbers anywhere "
-    "except the short speech bubbles. "
+    "lighting, expressive faces. "
+    "CRITICAL TEXT RULE: the image must contain NO narration boxes, NO caption boxes, "
+    "NO title cards, NO labels, NO signs, and NO descriptive sentences of any kind. "
+    "The ONLY text allowed anywhere is at most ONE small white speech bubble per panel "
+    "with 1-3 correctly-spelled words of character dialogue. Never write narration or "
+    "sentences in the art. "
 )
 WINONA_CORE = (
     "WINONA is the SAME recurring Native American woman throughout the series — warm "

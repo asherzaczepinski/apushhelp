@@ -6,31 +6,38 @@ window.STORY = {
  "1": [
   {
    "img": "images/ch01/strip0.jpg",
-   "cap": "Farming began in Mexico and the Andes around **7000 BC**, making great civilizations possible. By **1200** the Mississippi city of **Cahokia** held up to 30,000 people, and from about **900–1200** the Hopi and Zuni built planned towns like **Pueblo Bonito**. The Aztec capital **Tenochtitlan** swelled to some 250,000, and the **Iroquois Great League of Peace** bound five nations together. Many eastern peoples were **matrilineal**, tracing family and property through the mother's line."
+   "cap": "Farming began in Mexico and the Andes around **7000 BC**, making great civilizations possible. By **1200** the Mississippi city of **Cahokia** held up to 30,000 people, and from about **900–1200** the Hopi and Zuni built planned towns like **Pueblo Bonito**. The Aztec capital **Tenochtitlan** swelled to some 250,000, and the **Iroquois Great League of Peace** bound five nations together. Many eastern peoples were **matrilineal**, tracing family and property through the mother's line.",
+   "date": "Before 1492"
   },
   {
    "img": "images/ch01/strip1.jpg",
-   "cap": "Across the ocean, Spain neared the end of the **Reconquista** against the Muslim Moors. Portugal pioneered the **caravel**, a nimble ship that with the compass and quadrant pushed past the **Sahara** in **1434**; in **1487** **Bartolomeu Dias** rounded the **Cape of Good Hope** at Africa's tip. Europe was hunting a sea route to Asia's silk and spices."
+   "cap": "Across the ocean, Spain neared the end of the **Reconquista** against the Muslim Moors. Portugal pioneered the **caravel**, a nimble ship that with the compass and quadrant pushed past the **Sahara** in **1434**; in **1487** **Bartolomeu Dias** rounded the **Cape of Good Hope** at Africa's tip. Europe was hunting a sea route to Asia's silk and spices.",
+   "date": "1434–1487"
   },
   {
    "img": "images/ch01/strip2.jpg",
-   "cap": "In **1492** Spain completed the **Reconquista** and backed **Christopher Columbus**, a Genoese mariner seeking a westward passage to Asia. Instead he reached the Caribbean, opening permanent contact between the hemispheres — and, for Winona's people, a world about to be turned upside down."
+   "cap": "In **1492** Spain completed the **Reconquista** and backed **Christopher Columbus**, a Genoese mariner seeking a westward passage to Asia. Instead he reached the Caribbean, opening permanent contact between the hemispheres — and, for Winona's people, a world about to be turned upside down.",
+   "date": "1492"
   },
   {
    "img": "images/ch01/strip3.jpg",
-   "cap": "The **Columbian Exchange** now carried plants, animals, people, and microbes both ways — corn, potatoes, and tobacco eastward; horses, wheat, and sugar westward — remaking diets worldwide. But it also spread diseases that killed the vast majority of Native people, the worst demographic collapse in human history."
+   "cap": "The **Columbian Exchange** now carried plants, animals, people, and microbes both ways — corn, potatoes, and tobacco eastward; horses, wheat, and sugar westward — remaking diets worldwide. But it also spread diseases that killed the vast majority of Native people, the worst demographic collapse in human history.",
+   "date": "After 1492"
   },
   {
    "img": "images/ch01/strip4.jpg",
-   "cap": "**Conquistadores** like Hernán Cortés and Francisco Pizarro — helped by disease, steel weapons, and Indian allies — toppled great empires. In **1519** Cortés reached **Tenochtitlan**, and within a few years the Aztec empire fell; Pizarro soon crushed the Inca. Winona's people fought back, but the conquest ground on."
+   "cap": "**Conquistadores** like Hernán Cortés and Francisco Pizarro — helped by disease, steel weapons, and Indian allies — toppled great empires. In **1519** Cortés reached **Tenochtitlan**, and within a few years the Aztec empire fell; Pizarro soon crushed the Inca. Winona's people fought back, but the conquest ground on.",
+   "date": "1519"
   },
   {
    "img": "images/ch01/strip5.jpg",
-   "cap": "Spain built a vast Catholic empire, and after **Martin Luther's** Ninety-Five Theses launched the Reformation in **1517**, its missionary drive intensified. The priest **Bartolomé de las Casas** denounced Spanish cruelty, fueling the **Black Legend** of Spain as uniquely brutal; his protests helped win the **New Laws** of **1542** against Indian slavery, and the **repartimiento system** replaced the encomienda in 1550. Spanish and Native lives also blended into a new **mestizo** society."
+   "cap": "Spain built a vast Catholic empire, and after **Martin Luther's** Ninety-Five Theses launched the Reformation in **1517**, its missionary drive intensified. The priest **Bartolomé de las Casas** denounced Spanish cruelty, fueling the **Black Legend** of Spain as uniquely brutal; his protests helped win the **New Laws** of **1542** against Indian slavery, and the **repartimiento system** replaced the encomienda in 1550. Spanish and Native lives also blended into a new **mestizo** society.",
+   "date": "1542"
   },
   {
    "img": "images/ch01/strip6.jpg",
-   "cap": "Spain pushed north, founding **Santa Fe** in **1610** — until the **Pueblo Revolt** of **1680**, led by Popé, drove the colonists out for over a decade. Meanwhile **New France** rose on the fur trade after **Samuel de Champlain** founded **Quebec** in **1608**, and the Dutch built **New Netherland** on the Hudson. Needing Native partners, both left Native nations more freedom than English colonies would."
+   "cap": "Spain pushed north, founding **Santa Fe** in **1610** — until the **Pueblo Revolt** of **1680**, led by Popé, drove the colonists out for over a decade. Meanwhile **New France** rose on the fur trade after **Samuel de Champlain** founded **Quebec** in **1608**, and the Dutch built **New Netherland** on the Hudson. Needing Native partners, both left Native nations more freedom than English colonies would.",
+   "date": "1608–1680"
   }
  ],
  "2": [

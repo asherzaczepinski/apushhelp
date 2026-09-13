@@ -590,6 +590,17 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
   box-shadow: 7px 7px 0 var(--brass);
 }
 .cstrip-img { width: 100%; display: block; border-bottom: 4px solid #1a1410; }
+.cstrip.dated { border-bottom: 4px solid #1a1410; }
+.cstrip-imgwrap { position: relative; line-height: 0; }
+.cstrip.dated .cstrip-img { border-bottom: none; }
+.cstrip-date {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  background: var(--ink); color: var(--parchment);
+  font: 700 0.95rem/1 Georgia, serif; letter-spacing: 0.02em;
+  padding: 6px 11px; border: 2px solid var(--brass);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.35);
+}
+@media (max-width: 640px) { .cstrip-date { font-size: 0.82rem; padding: 5px 9px; } }
 .cstrip-cap {
   background: var(--parchment);
   padding: 14px 18px;

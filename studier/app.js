@@ -211,6 +211,12 @@
     const story = (window.STORY || {})[String(n)];
     if (story && story.length) {
       const strips = story.map((s, i) => {
+        // New dated format: just the art + a date badge, no narration text.
+        if (s.date) {
+          return `<figure class="cstrip dated">
+            <div class="cstrip-imgwrap"><span class="cstrip-date">${esc(s.date)}</span><img class="cstrip-img" src="${s.img}" alt="" loading="lazy"></div>
+          </figure>`;
+        }
         const hasPlaces = (window.Atlas && Atlas.spotsFor(s.cap).length);
         const map = hasPlaces ? `<a class="strip-map" href="#/atlas/${n}/${i}">See these places on the map</a>` : '';
         return `<figure class="cstrip">
