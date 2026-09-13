@@ -10,13 +10,21 @@ SPECS = BASE / "output" / "comic_specs"
 
 story = {}
 
+# Chapters shown as cartoon-only (no text captions): the comic itself walks
+# through the timeline/key events, with the date baked into each image.
+NOCAP = set(range(1, 29))   # whole book is single-image, event-only, image-only
+
 for n in range(1, 29):
     spec = json.loads((SPECS / f"ch{n}.json").read_text())
     entries = []
     for i, s in enumerate(spec["strips"]):
-        e = {"img": f"images/ch{n:02d}/strip{i}.jpg", "cap": s["cap"]}
+        e = {"img": f"images/ch{n:02d}/strip{i}.jpg"}
         if s.get("date"):
             e["date"] = s["date"]
+        if n in NOCAP:
+            e["nocap"] = True          # cartoon-only: no text; date is baked into the image
+        else:
+            e["cap"] = s["cap"]
         entries.append(e)
     story[str(n)] = entries
 

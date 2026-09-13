@@ -6,756 +6,1297 @@ window.STORY = {
  "1": [
   {
    "img": "images/ch01/strip0.jpg",
-   "cap": "Farming began in Mexico and the Andes around **7000 BC**, making great civilizations possible. By **1200** the Mississippi city of **Cahokia** held up to 30,000 people, and from about **900–1200** the Hopi and Zuni built planned towns like **Pueblo Bonito**. The Aztec capital **Tenochtitlan** swelled to some 250,000, and the **Iroquois Great League of Peace** bound five nations together. Many eastern peoples were **matrilineal**, tracing family and property through the mother's line.",
-   "date": "Before 1492"
+   "date": "Before 1492",
+   "nocap": true
   },
   {
    "img": "images/ch01/strip1.jpg",
-   "cap": "Across the ocean, Spain neared the end of the **Reconquista** against the Muslim Moors. Portugal pioneered the **caravel**, a nimble ship that with the compass and quadrant pushed past the **Sahara** in **1434**; in **1487** **Bartolomeu Dias** rounded the **Cape of Good Hope** at Africa's tip. Europe was hunting a sea route to Asia's silk and spices.",
-   "date": "1434–1487"
+   "date": "1434–1487",
+   "nocap": true
   },
   {
    "img": "images/ch01/strip2.jpg",
-   "cap": "In **1492** Spain completed the **Reconquista** and backed **Christopher Columbus**, a Genoese mariner seeking a westward passage to Asia. Instead he reached the Caribbean, opening permanent contact between the hemispheres — and, for Winona's people, a world about to be turned upside down.",
-   "date": "1492"
+   "date": "1492",
+   "nocap": true
   },
   {
    "img": "images/ch01/strip3.jpg",
-   "cap": "The **Columbian Exchange** now carried plants, animals, people, and microbes both ways — corn, potatoes, and tobacco eastward; horses, wheat, and sugar westward — remaking diets worldwide. But it also spread diseases that killed the vast majority of Native people, the worst demographic collapse in human history.",
-   "date": "After 1492"
+   "date": "After 1492",
+   "nocap": true
   },
   {
    "img": "images/ch01/strip4.jpg",
-   "cap": "**Conquistadores** like Hernán Cortés and Francisco Pizarro — helped by disease, steel weapons, and Indian allies — toppled great empires. In **1519** Cortés reached **Tenochtitlan**, and within a few years the Aztec empire fell; Pizarro soon crushed the Inca. Winona's people fought back, but the conquest ground on.",
-   "date": "1519"
+   "date": "1519",
+   "nocap": true
   },
   {
    "img": "images/ch01/strip5.jpg",
-   "cap": "Spain built a vast Catholic empire, and after **Martin Luther's** Ninety-Five Theses launched the Reformation in **1517**, its missionary drive intensified. The priest **Bartolomé de las Casas** denounced Spanish cruelty, fueling the **Black Legend** of Spain as uniquely brutal; his protests helped win the **New Laws** of **1542** against Indian slavery, and the **repartimiento system** replaced the encomienda in 1550. Spanish and Native lives also blended into a new **mestizo** society.",
-   "date": "1542"
+   "date": "1542",
+   "nocap": true
   },
   {
    "img": "images/ch01/strip6.jpg",
-   "cap": "Spain pushed north, founding **Santa Fe** in **1610** — until the **Pueblo Revolt** of **1680**, led by Popé, drove the colonists out for over a decade. Meanwhile **New France** rose on the fur trade after **Samuel de Champlain** founded **Quebec** in **1608**, and the Dutch built **New Netherland** on the Hudson. Needing Native partners, both left Native nations more freedom than English colonies would.",
-   "date": "1608–1680"
+   "date": "1608–1680",
+   "nocap": true
   }
  ],
  "2": [
   {
    "img": "images/ch02/strip0.jpg",
-   "cap": "England entered the colonial race late, delayed by religious turmoil after Henry VIII and its brutal conquest of Ireland. After the failed Roanoke colony of 1585, the private Virginia Company planted Jamestown in 1607, the first permanent English settlement. Starving and sickly, the colonists survived partly by trading with Powhatan's people, whom leaders like John Smith both bargained with and threatened."
+   "date": "1585",
+   "nocap": true
   },
   {
    "img": "images/ch02/strip1.jpg",
-   "cap": "A social crisis pushed England outward: the Enclosure movement uprooted thousands of poor farmers, while promoters like Richard Hakluyt and anti-Spanish feeling urged colonization. Jamestown nearly collapsed from disease, starvation, and poor leadership until tobacco gave Virginia a profitable cash staple. The Chesapeake became a tobacco society hungry for ever more land and labor to grow it."
+   "date": "1607",
+   "nocap": true
   },
   {
    "img": "images/ch02/strip2.jpg",
-   "cap": "Reforms in 1618-1619 created the headright system, granting land for each settler brought over, and the House of Burgesses, America's first elected assembly, which met in 1619, the same year the first Africans arrived. Land was treated as the foundation of liberty, but settlers secured it by dispossessing Winona's Powhatan people rather than incorporating them, pushing steadily onto Native ground."
+   "date": "1619",
+   "nocap": true
   },
   {
    "img": "images/ch02/strip3.jpg",
-   "cap": "Relentless expansion provoked Powhatan's successor Opechancanough to strike in the Uprising of 1622, killing roughly a quarter of Virginia's settlers. Winona joined the resistance. The failed uprising doomed the Virginia Company, which lost its charter in 1624, making Virginia England's first royal colony. It also hardened English policy toward driving Indians off the land entirely."
+   "date": "1620",
+   "nocap": true
   },
   {
    "img": "images/ch02/strip4.jpg",
-   "cap": "New England developed differently. Puritans seeking to purify the Church of England migrated in family groups during the Great Migration; John Winthrop founded Massachusetts Bay in 1630. They built self-governing towns and defined 'moral liberty' as freedom to do only what was godly. Dissenters were expelled: Roger Williams founded tolerant Rhode Island, and Anne Hutchinson was tried and banished in 1637."
+   "date": "1622-1624",
+   "nocap": true
   },
   {
    "img": "images/ch02/strip5.jpg",
-   "cap": "The Pequot War of 1637 crushed Native resistance in New England, entrenching settler supremacy. Maryland, chartered in 1632 as a Catholic refuge, passed its 1649 Toleration Act granting worship to all Christians, even as the English Civil War spread ideas about the rights of freeborn Englishmen. By 1660 freedom and unfreedom expanded together, and Winona's long fight for her people's land was only beginning."
+   "date": "1630-1632",
+   "nocap": true
+  },
+  {
+   "img": "images/ch02/strip6.jpg",
+   "date": "1636-1637",
+   "nocap": true
+  },
+  {
+   "img": "images/ch02/strip7.jpg",
+   "date": "1649-1662",
+   "nocap": true
   }
  ],
  "3": [
   {
    "img": "images/ch03/strip0.jpg",
-   "cap": "By the 1670s Anglo-America was hardening around Native homelands. After England's Restoration of 1660, the crown expanded its empire on mercantilist principles, and settlement steadily eroded Indian land and autonomy. Winona's eastern woodland people, armed with bows and a few traded metal tools, watched English farms, fences, and towns press ever closer."
+   "date": "1651-1660",
+   "nocap": true
   },
   {
    "img": "images/ch03/strip1.jpg",
-   "cap": "England organized its empire so colonial trade would enrich the mother country. Mercantilism and the Navigation Acts (from 1651) channeled goods through English ships and ports. In 1664 England seized New Netherland and renamed it New York, and after 1670 Carolina, a Barbados offshoot, built a brutal rice-and-slave economy along the southern coast."
+   "date": "1664-1670",
+   "nocap": true
   },
   {
    "img": "images/ch03/strip2.jpg",
-   "cap": "In 1681 William Penn founded Pennsylvania as a Quaker 'holy experiment,' offering religious liberty, cheap land, and initially fair dealings with Indians. The Society of Friends promised peace, and English-Iroquois cooperation was formalized in the Covenant Chain. Yet the promise would later curdle into the fraudulent Walking Purchase of 1737 that cheated the Lenni Lenape of their land."
+   "date": "1675-1676",
+   "nocap": true
   },
   {
    "img": "images/ch03/strip3.jpg",
-   "cap": "In King Philip's War (1675-1676), the Wampanoag leader Metacom, called King Philip, led the last great New England resistance. Winona fought beside him as villages burned on both sides. The war devastated the region but ultimately broke Indian power in New England, opening more Native land to English settlement and driving survivors to the margins."
+   "date": "1676-1681",
+   "nocap": true
   },
   {
    "img": "images/ch03/strip4.jpg",
-   "cap": "Bacon's Rebellion (1676) burned Jamestown and exposed the danger of discontented landless former servants, pushing planters from indentured servitude toward African slavery. Lawmakers hardened racial lines: status followed the mother, conversion no longer freed slaves, and the Virginia slave code of 1705 made the colony a full slave society with race as its central divide."
+   "date": "1686-1688",
+   "nocap": true
   },
   {
    "img": "images/ch03/strip5.jpg",
-   "cap": "The Glorious Revolution of 1688 toppled the Dominion of New England and sparked Leisler's Rebellion, while the 1692 Salem witch trials ended the old Puritan order. In the 1700s the colonies grew nearly tenfold, swelled by German, Scotch-Irish, and enslaved African migrants. Watching land and power shift, Winona passes memory and resistance to the next generation who will one day fight again."
+   "date": "1689",
+   "nocap": true
+  },
+  {
+   "img": "images/ch03/strip6.jpg",
+   "date": "1692-1705",
+   "nocap": true
+  },
+  {
+   "img": "images/ch03/strip7.jpg",
+   "date": "1737-1750",
+   "nocap": true
   }
  ],
  "4": [
   {
    "img": "images/ch04/strip0.jpg",
-   "cap": "By the 1750s rival European empires pressed onto Native ground in the Ohio Valley. Britain celebrated itself as the world's freest nation, yet its power grew alongside conquest and the Atlantic slave trade. For Winona's people, French and British claims meant balance-of-power diplomacy — playing one empire against another to keep their homeland."
+   "date": "1707",
+   "nocap": true
   },
   {
    "img": "images/ch04/strip1.jpg",
-   "cap": "Triangular trade routes moved manufactured goods, enslaved Africans, and plantation staples around the Atlantic. The brutal Middle Passage killed about one in five captives in transit. Olaudah Equiano, later freed, wrote a famous account of that crossing. Under 5 percent of enslaved Africans landed in mainland North America, but slavery became central to the eighteenth-century empire."
+   "date": "1712",
+   "nocap": true
   },
   {
    "img": "images/ch04/strip2.jpg",
-   "cap": "Three distinct slave systems took root: Chesapeake tobacco, South Carolina and Georgia rice and indigo worked under the task system, and smaller nonplantation slavery in the North. From many African peoples, enslaved men and women forged new African-American cultures and resisted bondage by running away and, in the 1739 Stono Rebellion, in armed revolt."
+   "date": "1718–1732",
+   "nocap": true
   },
   {
    "img": "images/ch04/strip3.jpg",
-   "cap": "Free colonists absorbed Britain's self-image of liberty. Republicanism prized public virtue and independence; Lockean liberalism grounded government in a social contract protecting natural rights. Under salutary neglect, elected assemblies grew bold. A wide white male franchise, a booming press, the 1735 Zenger verdict, the Enlightenment, and the Great Awakening revivals of Edwards and Whitefield taught ordinary people to question authority."
+   "date": "1735–1739",
+   "nocap": true
   },
   {
    "img": "images/ch04/strip4.jpg",
-   "cap": "Rivalry over the Ohio Valley ignited the Seven Years' War, or French and Indian War, in 1754 — the year Franklin's Albany Plan of Union was rejected. Winona's people fought beside the outnumbered French against Britain. The war soon spread worldwide, but Britain's growing strength would decide North America's fate."
+   "date": "1741",
+   "nocap": true
   },
   {
    "img": "images/ch04/strip5.jpg",
-   "cap": "The 1763 Peace of Paris expelled France from North America, stripping Indians of balance-of-power diplomacy. Inspired partly by the prophet Neolin, Pontiac's Rebellion erupted, and Britain's Proclamation of 1763 barred settlement beyond the Appalachians — angering land-hungry colonists. Winona had lost her empire ally but not her fight; wartime debts and frontier tension set the stage for the coming imperial crisis."
+   "date": "1707–1750",
+   "nocap": true
+  },
+  {
+   "img": "images/ch04/strip6.jpg",
+   "date": "1754–1756",
+   "nocap": true
+  },
+  {
+   "img": "images/ch04/strip7.jpg",
+   "date": "1763",
+   "nocap": true
+  },
+  {
+   "img": "images/ch04/strip8.jpg",
+   "date": "1764–1769",
+   "nocap": true
   }
  ],
  "5": [
   {
    "img": "images/ch05/strip0.jpg",
-   "cap": "After the Seven Years' War ended in 1763, victorious Britain sat deep in debt while land-hungry colonists pushed west onto Native ground. For frontier nations like Winona's, the colonists' new cries of 'liberty' rang hollow: the same settlers demanding freedom from Parliament were eyeing the forests and hunting lands that Native peoples had held for generations."
+   "date": "1764–1765",
+   "cap": "After the Seven Years' War, Parliament taxed the colonies. The **Sugar Act** of **1764** tightened trade enforcement, and the **Stamp Act** of **1765** placed the first direct tax on printed goods. Colonists cried 'no taxation without representation,' rejecting **virtual representation**, and the **Stamp Act Congress** met to organize resistance."
   },
   {
    "img": "images/ch05/strip1.jpg",
-   "cap": "Britain ended its hands-off approach and taxed the colonies directly. The Sugar Act (1764) tightened trade enforcement and the Stamp Act (1765) taxed printed materials. Colonists answered 'no taxation without representation,' rejecting Parliament's theory of virtual representation. The Stamp Act Congress, merchant boycotts, and the Sons of Liberty forced repeal in 1766, but the Declaratory Act insisted Parliament ruled 'in all cases whatsoever.'"
+   "date": "1765–1766",
+   "cap": "The **Sons of Liberty** led mobs—gutting Thomas Hutchinson's Boston mansion—while **Committees of Correspondence** linked towns. Boycotts forced repeal of the **Stamp Act** in **1766**, but the **Declaratory Act** insisted Parliament could still legislate for America 'in all cases whatsoever.'"
   },
   {
    "img": "images/ch05/strip2.jpg",
-   "cap": "The Townshend Acts (1767) revived nonimportation, with the Daughters of Liberty weaving homespun to show colonial virtue. Troops in Boston killed five colonists in the Boston Massacre (1770), and the Tea Act sparked the Boston Tea Party (1773). Parliament's punitive Intolerable Acts (1774) backfired, uniting the colonies as the First Continental Congress organized a trade embargo enforced by local committees."
+   "date": "1767",
+   "cap": "The **Townshend Acts** of **1767** imposed new duties on imports like glass and tea. Colonists revived nonimportation, and the Daughters of Liberty made homespun cloth a badge of colonial virtue, pressuring Britain through organized boycotts."
   },
   {
    "img": "images/ch05/strip3.jpg",
-   "cap": "Fighting began at Lexington and Concord in April 1775. Thomas Paine's Common Sense (1776) demolished monarchy, and Congress adopted Jefferson's Declaration of Independence in July 1776, grounding the break in universal natural rights. On the frontier, Winona's people, like most Native nations, sided with the British Crown, fighting American militias to hold back the settlers who coveted their land."
+   "date": "1770–1773",
+   "cap": "Soldiers stationed in Boston fired on locals in the **Boston Massacre** of **1770**, killing five colonists. When Parliament passed the Tea Act, colonists staged the **Boston Tea Party** in **1773**, dumping British tea into the harbor to protest taxation."
   },
   {
    "img": "images/ch05/strip4.jpg",
-   "cap": "Washington avoided decisive defeat and survived the Valley Forge winter after morale-saving strikes at Trenton and Princeton. Victory at Saratoga (1777) convinced France to ally in 1778, globalizing the war. Lord Dunmore's proclamation (1775) pushed thousands of enslaved people to seek freedom by fighting. After Cornwallis surrendered at Yorktown (1781), the Treaty of Paris (1783) recognized independence to the Mississippi River."
+   "date": "1774",
+   "cap": "Parliament's punitive **Intolerable Acts** of **1774** closed Boston's port and punished Massachusetts. Rather than isolating the colony, they united America: the First **Continental Congress** met in Philadelphia and organized a trade embargo enforced by local committees, drawing ordinary farmers and artisans into politics."
   },
   {
    "img": "images/ch05/strip5.jpg",
-   "cap": "The Treaty of Paris (1783) handed the new United States land to the Mississippi, ignoring the Native nations who had fought there. Independence founded on natural rights would soon test whether 'liberty' included Winona's people. Her fight was far from over: as the young nation pressed westward, her descendants would keep defending their homeland for generations to come."
+   "date": "1775",
+   "cap": "War began at the **Battles of Lexington and Concord** in April **1775**. That same year, **Lord Dunmore's proclamation** offered freedom to enslaved people who fought for Britain, and thousands sought liberty by serving one side or the other during the coming war."
+  },
+  {
+   "img": "images/ch05/strip6.jpg",
+   "date": "1776",
+   "cap": "Thomas Paine's **Common Sense** of **1776** demolished the case for monarchy in plain language. Months later, Congress adopted Jefferson's **Declaration of Independence** in **1776**, grounding the break with Britain in universal natural rights rather than merely the rights of Englishmen."
+  },
+  {
+   "img": "images/ch05/strip7.jpg",
+   "date": "1777–1778",
+   "cap": "Washington kept his army alive through the Valley Forge winter after strikes at Trenton and Princeton. The American victory at the **Battle of Saratoga** in **1777** became the war's turning point, convincing France to ally with the United States in **1778** and globalizing the conflict."
+  },
+  {
+   "img": "images/ch05/strip8.jpg",
+   "date": "1781–1783",
+   "cap": "After Cornwallis surrendered at Yorktown in **1781**, Britain's war effort collapsed. The **Treaty of Paris** of **1783** recognized American independence, with borders stretching all the way to the Mississippi River, securing the new United States."
   }
  ],
  "6": [
   {
    "img": "images/ch06/strip0.jpg",
-   "cap": "Independence was more than a war with Britain; it opened contests over what kind of society America would be. The Declaration's claim that all men are created equal (1776) challenged a world built on deference to rulers, masters, and husbands. Ordinary artisans, farmers, and militiamen demanded a real voice — but that promise pointedly left out Natives, the enslaved, and women."
+   "date": "1700",
+   "cap": "In **1700**, Boston judge **Samuel Sewall** published **The Selling of Joseph**, America's first antislavery tract, planting an early seed of doubt about bondage. Decades before independence, it foreshadowed how the coming revolution would force the new **Republic** to ask whether liberty could coexist with slavery."
   },
   {
    "img": "images/ch06/strip1.jpg",
-   "cap": "New state constitutions turned freedom and the ballot into synonyms. Pennsylvania's radical 1776 constitution — a single-house assembly with taxpayer suffrage — dropped property qualifications, while John Adams's Thoughts on Government pushed most states toward balanced two-house legislatures. By the 1780s the vast majority of adult white men could vote in the new republic."
+   "date": "1773",
+   "cap": "Beginning in **1773**, enslaved New Englanders turned the Revolution's language back on their enslavers, submitting **freedom petitions** to courts and legislatures demanding liberty. These petitions argued that natural rights belonged to all, exposing the gap between patriot ideals and the reality of slavery."
   },
   {
    "img": "images/ch06/strip2.jpg",
-   "cap": "The Revolution transformed religion too. States disestablished official churches, and Jefferson's Virginia Bill for Establishing Religious Freedom (introduced 1779, enacted 1786) ended religious tests and public funding of worship. Disestablishment made religious liberty a defining American right — a model for rights shielded from government — even as Christian republicanism shaped public life. Winona weighs a liberty offered to some."
+   "date": "1776",
+   "cap": "In **1776** Pennsylvania adopted the radical **Pennsylvania Constitution of 1776**, with a single-house assembly and taxpayer **suffrage** that widened who could vote in the new **Republic**. That year John Adams's **Thoughts on Government** pushed most states toward balanced two-house legislatures, while Adam Smith's **The Wealth of Nations** offered a free-market vision challenging community-regulated economies."
   },
   {
    "img": "images/ch06/strip3.jpg",
-   "cap": "Economically, indentured servitude and apprenticeship faded, sharpening the line between free wage labor in the North and slavery in the South. Wartime inflation, peaking around 1780, sparked crowd actions and price-control fights — the old ideal of a community-regulated economy against Adam Smith's free-market vision in The Wealth of Nations (1776). Two visions of economic freedom outlasted the war."
+   "date": "1777",
+   "cap": "In **1777** Vermont's constitution became the first to ban slavery outright, turning revolutionary ideals into law. It signaled that some Americans would push beyond scattered **freedom petitions** toward abolishing bondage entirely, even as slavery survived elsewhere."
   },
   {
    "img": "images/ch06/strip4.jpg",
-   "cap": "Liberty had firm limits. The Treaty of Paris (1783) ignored Native land claims and opened them to settlement; roughly a fifth of free Americans were Loyalists, and some 60,000 fled amid oaths and confiscation. Enslaved people seized the moment — freedom petitions, wartime escape, and service (Lemuel Haynes). Vermont banned slavery (1777) and northern gradual abolition began, but slavery grew in the South."
+   "date": "1779",
+   "cap": "In **1779** Jefferson introduced his **Bill for Establishing Religious Freedom**, pressing for **disestablishment** by ending official churches, religious tests, and public funding of worship. The same year, Clinton's Philipsburg Proclamation offered refuge to escaped slaves who fled to British lines. The Revolution reshaped faith into **Christian republicanism**, prizing virtue while shielding conscience from government."
   },
   {
    "img": "images/ch06/strip5.jpg",
-   "cap": "Women like Abigail Adams pressed for recognition, and republican motherhood expanded female education — though coverture kept married women legally subordinate. The 1790 census counted 700,000 enslaved people, proof slavery outlasted the Revolution. The Revolution made equality a core American ideal but left Natives, the enslaved, and women outside it. Winona's fight for a place in that liberty was only beginning."
+   "date": "1780",
+   "cap": "By **1780**, wartime inflation peaked and Continental money collapsed in value. Crowds staged actions and demanded price controls, pitting the older ideal of a community-regulated economy against the free-market vision of **The Wealth of Nations**. These clashes deepened the divide as **free labor** slowly replaced servitude in the North."
+  },
+  {
+   "img": "images/ch06/strip6.jpg",
+   "date": "1782",
+   "cap": "In **1782** Deborah Sampson enlisted in the Continental army disguised as a man, defying the limits placed on women. Though **coverture** kept married women legally subordinate to their husbands, the Revolution birthed **republican motherhood**, honoring women who raised virtuous citizens and expanding female education."
+  },
+  {
+   "img": "images/ch06/strip7.jpg",
+   "date": "1783",
+   "cap": "The **1783** Treaty of Paris ended the war but ignored Indian land claims, opening Native homelands to settlement whether tribes had allied with Britain or the patriots; Winona watches her people dispossessed. The treaty also required an end to persecution of **Loyalists**, about a fifth of free Americans, though many still faced oaths, confiscation, and exile, with some 60,000 leaving the country."
+  },
+  {
+   "img": "images/ch06/strip8.jpg",
+   "date": "1786",
+   "cap": "In **1786** Virginia enacted Jefferson's **Bill for Establishing Religious Freedom**, completing **disestablishment** and making religious liberty the model for rights shielded from government. Amid these currents a **free black** community grew, and **Lemuel Haynes** became a celebrated Black minister to white congregations, embodying the era's expanding liberty."
+  },
+  {
+   "img": "images/ch06/strip9.jpg",
+   "date": "1790–1804",
+   "cap": "The first census of **1790** counted 700,000 enslaved people, proving slavery grew despite the Revolution, even as Northern **free labor** displaced servitude. Northern states enacted **gradual abolition**, and in **1804** New Jersey became the last to do so, while slavery entrenched in the South, showing how limited the era's liberty truly was."
   }
  ],
  "7": [
   {
    "img": "images/ch07/strip0.jpg",
-   "cap": "In 1783 an independent United States turned west toward the Ohio Valley, home to Winona's people. The war for independence was won, but the new nation was governed by the weak Articles of Confederation (ratified 1781): a one-house Congress with no president, no courts, and no power to tax or regulate trade. Its hungriest ambition lay in Native land across the Appalachians."
+   "date": "1781",
+   "cap": "The **Articles of Confederation**, ratified in **1781** after states ceded their western land claims, built a deliberately weak union: a one-house Congress with no president, no courts, and no power to tax or regulate trade. This frail government could barely pay its war debts, leaving national authority dependent on the goodwill of the states."
   },
   {
    "img": "images/ch07/strip1.jpg",
-   "cap": "After states ceded their western claims, the Ordinances of 1784, 1785, and 1787 organized the public domain: land was surveyed and sold, and territories were promised entry as equal states—Jefferson's 'empire of liberty.' The Northwest Ordinance of 1787 also barred slavery north of the Ohio River. On paper the land was empty; in truth Native nations already lived there."
+   "date": "1784–1785",
+   "cap": "In the West the Confederation scored a lasting win. Jefferson's ordinance of **1784** promised territories would enter as equal states, his **empire of liberty**, and the Land Ordinance of **1785** set up the survey and sale of the public domain across the Old Northwest. Ordered grids replaced chaos, turning wilderness into future states of the Union."
   },
   {
    "img": "images/ch07/strip2.jpg",
-   "cap": "Postwar depression, unpayable war debts, and state paper-money schemes stirred unrest. Shays's Rebellion (1786–1787) in western Massachusetts—farmers shutting courts to stop foreclosures—terrified elites. Nationalists like James Madison and Alexander Hamilton concluded that too little government now endangered liberty and property, pushing the movement that led to the Constitutional Convention."
+   "date": "1786–1787",
+   "cap": "Postwar depression, unpayable debts, and state paper-money schemes exploded into **Shays's Rebellion (1786–1787)** in western Massachusetts, while the Annapolis meeting of **1786** called for reform. To nationalists like Madison and Hamilton, the uprising proved that too little government now threatened liberty itself, and that the Articles had to be scrapped."
   },
   {
    "img": "images/ch07/strip3.jpg",
-   "cap": "In Philadelphia in 1787 delegates scrapped the Articles and wrote a new Constitution. The Great Compromise fused the Virginia and New Jersey Plans into a population-based House and a state-equal Senate; federalism and checks and balances split power to prevent tyranny. Slavery shaped the bargain—the three-fifths clause, protection of the slave trade until 1808, and a fugitive slave clause—though the word never appears."
+   "date": "1787",
+   "cap": "In **1787** the **Constitutional Convention** scrapped the Articles. The Great Compromise fused the **Virginia Plan** and the **New Jersey Plan** into a population-based House and a state-equal Senate, while **federalism** and **checks and balances** divided power to prevent tyranny. That same year the **Northwest Ordinance of 1787** organized the territories and barred slavery north of the Ohio River."
   },
   {
    "img": "images/ch07/strip4.jpg",
-   "cap": "The Constitution's 'We the People' hid sharp exclusions: Indians were treated as separate nations whose land was taken by treaty and war. Winona fought with the Northwest Confederacy under Little Turtle, whose forces routed General St. Clair's army in 1791—the worst U.S. defeat by Native forces. The 1791 Bill of Rights secured liberties for citizens, but not for her people."
+   "date": "1787–1788",
+   "cap": "Slavery shaped the bargain: the **three-fifths clause** inflated southern power, the slave trade was shielded, and a fugitive clause reached across state lines. Defending the plan, **The Federalist** essays—published from **1788**—rallied commercial support, while **Anti-Federalists** feared distant, aristocratic rule. In **1788** the ninth state ratified, putting the Constitution into effect."
   },
   {
    "img": "images/ch07/strip5.jpg",
-   "cap": "Little Turtle's triumph gave way to defeat at Fallen Timbers (1794) and the Treaty of Greenville (1795), which surrendered most of Ohio and Indiana for annuity payments. The Naturalization Act of 1790 reserved citizenship for 'free white persons,' and Jefferson's Notes on the State of Virginia hardened the racial line. Winona's fight for the land would pass to her descendants, whose battles were only beginning."
+   "date": "1790",
+   "cap": "The first census of **1790** counted 3.9 million Americans, but 'We the People' hid sharp exclusions. The **Naturalization Act of 1790** limited citizenship by immigration to 'free white persons.' Jefferson's **Notes on the State of Virginia** lent intellectual cover to a hardening racial line, helping make race the chief justification for slavery in a nation dedicated to freedom."
+  },
+  {
+   "img": "images/ch07/strip6.jpg",
+   "date": "1791",
+   "cap": "In the East, the promised **Bill of Rights** was ratified in **1791**, sealing Federalist victory. That same year in the Ohio Valley, the Miami leader **Little Turtle** routed **St. Clair's army**—the worst defeat the U.S. Army ever suffered against Native nations—as Indians defended homelands the Constitution treated as separate territory to be taken by treaty and war."
+  },
+  {
+   "img": "images/ch07/strip7.jpg",
+   "date": "1794–1795",
+   "cap": "American forces won the **Battle of Fallen Timbers** in **1794**, breaking Native resistance. The **Treaty of Greenville (1795)** then transferred most of Ohio and Indiana to the United States through land cessions and an annuity system. Finally, in **1808**, Congress banned the importation of slaves at the earliest moment the Constitution permitted."
   }
  ],
  "8": [
   {
    "img": "images/ch08/strip0.jpg",
-   "cap": "In **1789 George Washington** was inaugurated the first president just as the **French Revolution** began. Treasury Secretary Alexander Hamilton pushed **Hamilton's financial program** — the federal government assuming state debts, a new **Bank of the United States** in **1791**, and a **Report on Manufactures** to promote industry — binding the country together through national credit.",
-   "date": "1789–1791"
+   "date": "1789–1791",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip1.jpg",
-   "cap": "Atlantic revolutions spread. The **Haitian Revolution** (**1791–1804**) saw enslaved people overthrow French rule and declare Haiti independent in **1804**, the first Black republic. Its example terrified American slaveholders, and in **1800** Virginia crushed **Gabriel's Rebellion**, a planned slave uprising near Richmond.",
-   "date": "1791–1804"
+   "date": "1791–1804",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip2.jpg",
-   "cap": "On the frontier, farmers rose against Hamilton's excise tax in the **Whiskey Rebellion** of **1794**; Washington personally marched an army to crush it, proving the new government's power. That same year, **Jay's Treaty** eased tensions with Britain but enraged pro-French Americans.",
-   "date": "1794"
+   "date": "1794",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip3.jpg",
-   "cap": "Two parties hardened — the **Federalists** behind Hamilton and Adams, the **Republicans** behind Jefferson and Madison. When French agents demanded bribes in the **XYZ affair** of **1798**, a quasi-war erupted. Federalists passed the **Alien and Sedition Acts** jailing their critics, and Jefferson and Madison replied with the **Virginia and Kentucky Resolutions** asserting states' rights.",
-   "date": "1798"
+   "date": "1798",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip4.jpg",
-   "cap": "In the **Revolution of 1800**, Jefferson defeated Adams in the first peaceful transfer of power between parties. His era brought **Marbury v. Madison** (**1803**), which established judicial review, and the **Louisiana Purchase** of **1803**, which bought New Orleans and doubled the size of the United States.",
-   "date": "1800–1803"
+   "date": "1800–1803",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip5.jpg",
-   "cap": "In **1804** the **Lewis and Clark** expedition set out to explore the new western lands, guided in part by Sacagawea. But as Britain and France seized American ships, Jefferson's **Embargo Act** of **1807** banned all exports — wrecking the American economy without changing British policy.",
-   "date": "1804–1807"
+   "date": "1804–1807",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip6.jpg",
-   "cap": "In the west, the Shawnee brothers **Tecumseh and Tenskwatawa** (the Prophet) built a confederacy to resist American expansion — until Harrison destroyed Prophetstown at the **Battle of Tippecanoe** in **1811**. As the **War of 1812** began, Tecumseh allied with Britain and Winona fought beside him, but his death in 1813 broke the last great Native stand in the East.",
-   "date": "1811–1813"
+   "date": "1811–1813",
+   "nocap": true
   },
   {
    "img": "images/ch08/strip7.jpg",
-   "cap": "In **1814** the British burned Washington, but **Fort McHenry** held — inspiring the national anthem — and the **Treaty of Ghent** ended the war. New England Federalists, meeting at the **Hartford Convention**, threatened secession and doomed their party. Then in **1815 Andrew Jackson** won the **Battle of New Orleans**, days after peace was already signed, becoming a national hero.",
-   "date": "1814–1815"
+   "date": "1814–1815",
+   "nocap": true
   }
  ],
  "9": [
   {
    "img": "images/ch09/strip0.jpg",
-   "cap": "After the War of 1812, the Market Revolution (1800-1840) pulled American farmers and artisans out of self-sufficient local life into national and international markets. Steamboats, canals, and roads lowered the cost of moving goods and people. As settlement pushed inland, Winona's people were displaced westward, watching a new commercial world rise at the edges of their land."
+   "date": "1793",
+   "cap": "In **1793** **Eli Whitney** built the **cotton gin**, which cheaply separated seeds from fiber and made short-staple cotton wildly profitable. This single invention launched the **Cotton Kingdom** across the Deep South, reviving slavery and driving planters to seize ever more western land and enslaved labor."
   },
   {
    "img": "images/ch09/strip1.jpg",
-   "cap": "Robert Fulton proved the steamboat commercially viable when the Clermont steamed the Hudson in 1807. The state-funded Erie Canal (1825) tied the Great Lakes to New York City, making it the nation's premier port, while the National Road pushed settlers across the Appalachians. Millions crossed inland and new states joined the Union, pressing onto Native land as the flag followed trade."
+   "date": "1806-1807",
+   "cap": "In **1806** Congress funded the **National Road** from Cumberland, Maryland toward the Old Northwest, while in **1807** **Robert Fulton**'s Clermont steamed up the Hudson, proving steamboats viable. These transport breakthroughs kicked off the **Market revolution**, pulling once self-sufficient farmers into distant national and international markets."
   },
   {
    "img": "images/ch09/strip2.jpg",
-   "cap": "Eli Whitney's cotton gin (1793), fresh western land, and British textile demand built a booming Cotton Kingdom. Instead of dying out, slavery revived and expanded, fueling a huge internal slave trade that moved roughly a million enslaved people to the Deep South. The market's cotton profits enriched planters and northern merchants alike while shattering Black families."
+   "date": "1814",
+   "cap": "In **1814** the Boston Associates opened their **Waltham**, Massachusetts factory, combining every stage of cloth production under one roof. This pioneering **American system of manufactures** used interchangeable parts and integrated machinery, moving Northern craft work out of homes and into large water-powered mills."
   },
   {
    "img": "images/ch09/strip3.jpg",
-   "cap": "The North industrialized differently: factories like the Lowell textile mills gathered young 'mill girls' into wage labor under one roof, part of the American system of manufactures. Mass immigration — Irish fleeing the Great Famine and German craftsmen — supplied labor but sparked nativist, anti-Catholic hostility. Marshall Court rulings like Gibbons v. Ogden (1824) and Dartmouth College v. Woodward (1819) protected commerce and contracts, letting corporations grow."
+   "date": "1819",
+   "cap": "In **1819** the Marshall Court's **Dartmouth College v. Woodward** ruled a corporate charter a binding contract, shielding businesses from state interference. The same year the **Adams-Onis Treaty** transferred Florida from Spain, and the **Panic of 1819** — the young nation's first great depression — threw farmers and workers into crisis."
   },
   {
    "img": "images/ch09/strip4.jpg",
-   "cap": "These changes remade freedom around individualism, mobility, and opportunity. Transcendentalists like Emerson and Thoreau preached self-reliance while questioning materialism; the Second Great Awakening democratized Christianity and tied moral self-discipline to market success, giving rise to new faiths like Joseph Smith's Mormonism. Belief in expansion hardened into 'manifest destiny' — a confidence that the nation was meant to spread west."
+   "date": "1824-1825",
+   "cap": "In **1824** **Gibbons v. Ogden** struck down a steamboat monopoly, affirming federal power over interstate commerce. Then in **1825** the state-funded **Erie Canal** opened, linking the Great Lakes to New York City, slashing shipping costs and making New York the nation's premier port and commercial capital."
   },
   {
    "img": "images/ch09/strip5.jpg",
-   "cap": "The market revolution's benefits were unevenly shared: free Black northerners faced exclusion, middle-class women were confined by the cult of domesticity, and workers battered by the Panics of 1819 and 1837 formed early unions and Workingmen's Parties. Pushed to the country's edges, Winona survives without a battle — carrying her people forward as the coming decades of expansion, and new wars, press ever westward."
+   "date": "1831-1837",
+   "cap": "The Lowell textile mills employed young **mill girls**, bringing wage labor and independence to farm daughters. On the land, Cyrus McCormick's mechanical reaper (**1831**) and John Deere's steel plow (**1837**) multiplied harvests — even as the **Panic of 1837** launched a brutal depression, deepening the **Market revolution**."
+  },
+  {
+   "img": "images/ch09/strip6.jpg",
+   "date": "1830s-1840s",
+   "cap": "The **Second Great Awakening** democratized Christianity, tying moral self-discipline to market success and birthing new faiths — including **Joseph Smith and the Mormons**. Reacting against materialism, **Transcendentalists** like Emerson and Thoreau preached self-reliance, individualism, and communion with nature over money."
+  },
+  {
+   "img": "images/ch09/strip7.jpg",
+   "date": "1844-1845",
+   "cap": "In **1844** Samuel Morse's telegraph entered commercial service, enabling instant long-distance communication. In **1845** editor John O'Sullivan coined **Manifest destiny**, the belief that Americans were divinely fated to expand across the continent — a conviction that justified settlement pushing ever westward."
+  },
+  {
+   "img": "images/ch09/strip8.jpg",
+   "date": "1845-1854",
+   "cap": "The **Great Famine** of **1845-1851** drove roughly a million Irish, plus German craftsmen, to the U.S., fueling **Nativism** — hostility toward Catholic immigrants. Meanwhile the **Cult of domesticity** confined middle-class women to the home, and workers demanded a **Family wage**. In **1854** Thoreau published Walden, condemning market society's values."
   }
  ],
  "10": [
   {
    "img": "images/ch10/strip0.jpg",
-   "cap": "Between the War of 1812 and 1840 political democracy for white men became the defining feature of American life; states dropped property tests until over 90 percent of adult white men could vote, and a cheap penny press fed the electorate. Alexis de Tocqueville toured in the early 1830s praising this culture of equality. Yet women, free Black men, and Winona's Cherokee were shut out."
+   "date": "1816–1819",
+   "cap": "Postwar nationalism fueled Henry Clay's **American System** — a national bank, protective tariffs, and internal improvements — amid the one-party calm dubbed the **Era of Good Feelings**. Congress chartered the Second Bank and passed the first protective tariff in **1816**. Then reckless speculation burst in the **Panic of 1819**, breeding lasting distrust of banks."
   },
   {
    "img": "images/ch10/strip1.jpg",
-   "cap": "Postwar nationalism produced Henry Clay's American System — a national bank, protective tariffs, and internal improvements — while the Monroe Doctrine (1823) warned Europe against new colonization in the Americas. Strains showed fast: the Panic of 1819 bred distrust of banks, and in McCulloch v. Maryland (1819) the Supreme Court upheld the Second Bank. This was the confident 'Era of Good Feelings.'"
+   "date": "1819–1820",
+   "cap": "In **McCulloch v. Maryland** (**1819**), Marshall upheld the national bank and denied states power to tax it. Slavery's expansion then split Congress until the **Missouri Compromise** of **1820** admitted Missouri as slave and Maine as free, banning slavery north of 36°30′ across the Louisiana Purchase."
   },
   {
    "img": "images/ch10/strip2.jpg",
-   "cap": "The Missouri Compromise of 1820 paired Missouri with Maine and drew the 36°30' line across the Louisiana Purchase, briefly settling slavery's expansion. Later, South Carolina tried to nullify the 1828 'tariff of abominations,' and John C. Calhoun's compact theory of states' rights collided with Andrew Jackson's nationalism. The Force Act and a compromise tariff ended the nullification crisis in 1833."
+   "date": "1823–1825",
+   "cap": "The **Monroe Doctrine** of **1823** warned Europe against new colonization in the Americas. After the four-way **1824** election, the House in **1825** chose John Quincy Adams; when he named Clay secretary of state, Jackson's backers cried **corrupt bargain**, poisoning politics before the next contest."
   },
   {
    "img": "images/ch10/strip3.jpg",
-   "cap": "Elected in 1828 through Martin Van Buren's Democratic Party machinery, Jackson signed the Indian Removal Act of 1830. The Cherokee fought back in court and won: Worcester v. Georgia (1832) recognized their sovereignty. But Jackson defied the ruling, and to the south the Seminole Wars raged as Florida's Seminoles resisted removal by force. Winona's people refused to leave quietly."
+   "date": "1828",
+   "cap": "Congress passed the high **tariff of abominations** in **1828**, enraging the South, while Andrew Jackson won the presidency through Martin Van Buren's new Democratic machinery. Jackson rewarded loyal supporters with government jobs — the **spoils system** — casting rotation in office as democratic reform for the common white man."
   },
   {
    "img": "images/ch10/strip4.jpg",
-   "cap": "In 1838–1839 U.S. soldiers forced the Cherokee more than a thousand miles west on the Trail of Tears; thousands died of cold, hunger, and disease along the way. It was the most tragic result of the Indian Removal Act and Jackson's defiance of the courts. Winona survived the march, carrying her people's seed and memory into unfamiliar western land."
+   "date": "1830",
+   "cap": "The **Indian Removal Act** became law in **1830**, empowering Jackson to force southeastern nations — including Winona's Cherokee — off their homelands. The same year, the **Webster-Hayne debate** aired nullification arguments in the Senate, pitting states' rights against Daniel Webster's ringing defense of the Union."
   },
   {
    "img": "images/ch10/strip5.jpg",
-   "cap": "Jackson's Bank War, pet-bank deposits, and the Specie Circular helped trigger the Panic of 1837 and a long depression that sank Van Buren. By 1840 the Whigs won with William Henry Harrison's 'log cabin' campaign as turnout hit about 80 percent, and two mass parties — Democrats and Whigs — competed everywhere. Winona's democracy was built on her people's exile; her descendants would carry the fight forward."
+   "date": "1832",
+   "cap": "In **Worcester v. Georgia** (**1832**) the Court ruled Georgia could not seize Cherokee land, but Jackson ignored it. That year he vetoed the bank recharter — opening the **Bank War** — and won reelection, while South Carolina nullified the tariff. **John C. Calhoun's** compact theory drove the deepening **nullification crisis**."
+  },
+  {
+   "img": "images/ch10/strip6.jpg",
+   "date": "1833–1837",
+   "cap": "The **Force Act** and a compromise tariff ended the **nullification crisis** in **1833**. Jackson's **Bank War** — shifting deposits to pet banks and issuing the Specie Circular — destabilized credit. The resulting **Panic of 1837** began a long depression that crushed Martin Van Buren's presidency."
+  },
+  {
+   "img": "images/ch10/strip7.jpg",
+   "date": "1838–1839",
+   "cap": "Enforcing removal, the U.S. Army drove the Cherokee — Winona's people — over a thousand miles west on the **Trail of Tears** in **1838–1839**. Thousands died of cold, hunger, and disease along the way, defying the **Worcester v. Georgia** ruling and marking the era's cruelest contradiction of its democratic self-image."
+  },
+  {
+   "img": "images/ch10/strip8.jpg",
+   "date": "1840",
+   "cap": "In **1840** the Whigs won with the 'log cabin' campaign for William Henry Harrison, and turnout hit about 80 percent. Two organized national parties now competed everywhere, borrowing the marketplace's selling techniques — the mature mass politics Alexis de Tocqueville had watched take root in Jacksonian America."
   }
  ],
  "11": [
   {
    "img": "images/ch11/strip0.jpg",
-   "cap": "By the mid-1800s Winona's people had been forced west to Indian Territory, where they rebuilt in exile. Even here she witnessed the reach of the South's 'peculiar institution.' Between 1800 and 1860 slavery became the engine of the American economy, and its shadow stretched far beyond the cotton fields themselves."
+   "date": "1791–1804",
+   "cap": "From **1791 to 1804** the **Haitian Revolution** overthrew slavery in Saint-Domingue, creating the first Black republic. Its victory kindled hope among enslaved Americans and terror among masters, who feared their own **peculiar institution** might burn the same way, hardening Southern vigilance against any hint of revolt."
   },
   {
    "img": "images/ch11/strip1.jpg",
-   "cap": "Nearly 4 million enslaved people lived in the South by 1860. Their cotton supplied about three-quarters of the world's raw cotton and over half of U.S. export earnings. Northern banks, ships, insurers, and mills all profited, making slavery a truly national system—yet the South stayed rural, dominated by a small planter elite who preached a paternalist ethos."
+   "date": "1800",
+   "cap": "In **1800**, inspired by Haiti, the Virginia blacksmith Gabriel planned a large slave rebellion around Richmond, but a storm and informers doomed it — **Gabriel's plot** was uncovered and its leaders hanged. Such **fugitive slaves** and rebels revealed the resistance simmering constantly beneath the surface of Southern bondage."
   },
   {
    "img": "images/ch11/strip2.jpg",
-   "cap": "Congress closed the Atlantic slave trade in 1808, but an internal 'Second Middle Passage' then sold over 2 million people from the Upper South to the cotton and sugar frontier, routinely destroying families. Family separation became a defining trauma of American slavery. Winona, whose own nation had been uprooted, recognized the anguish of being torn from home."
+   "date": "1808",
+   "cap": "When Congress banned the Atlantic slave trade in **1808**, demand shifted inland, launching the **Second Middle Passage** — over two million people sold from the Upper South to the cotton and sugar frontier by 1860. This forced internal trade routinely shattered enslaved families for profit."
   },
   {
    "img": "images/ch11/strip3.jpg",
-   "cap": "Law defined enslaved people as property: they could not testify against whites, own guns, move freely, or (after the 1830s) legally learn to read, with discipline resting on the whip and the threat of sale. Labor ranged from cotton gang work to the rice task system. Within these bounds they built a resilient culture of family and a slave religion that read Exodus as a promise of deliverance."
+   "date": "1811",
+   "cap": "In **1811** enslaved workers on the Louisiana sugar coast staged the era's largest revolt, marching hundreds strong toward New Orleans before troops crushed them. Sugar and cotton fed the boast that **Cotton Is King**: Southern cotton supplied three-quarters of the world's raw supply and over half of U.S. export earnings."
   },
   {
    "img": "images/ch11/strip4.jpg",
-   "cap": "Resistance ran from daily sabotage and flight—aided by the Underground Railroad and rescuers like Harriet Tubman, who escaped in 1849—to revolts: Gabriel (1800), the 1811 Louisiana rising, Denmark Vesey (1822), and Nat Turner's 1831 rebellion. The Amistad captives won freedom in 1839. After Turner, Virginia rejected emancipation in 1832 and tightened its slave codes instead."
+   "date": "1822",
+   "cap": "In **1822** authorities uncovered **Denmark Vesey's conspiracy**, a planned Charleston uprising led by a free carpenter. Betrayed before it began, Vesey and dozens were executed. **Slave religion**, which read the Exodus story as God's promise of deliverance and judged slavery a sin, terrified whites, who blamed Black churches and cracked down hard."
   },
   {
    "img": "images/ch11/strip5.jpg",
-   "cap": "Proslavery thinkers like George Fitzhugh recast bondage as a 'positive good,' rejecting the Declaration's promise of universal liberty even as Britain abolished slavery in 1833. The 1855 trial of Celia laid bare slaves' lack of legal personhood. Winona, a witness in exile, saw a nation split by cotton and chains—and carried forward, into her descendants, the hope that freedom was 'not forever' denied."
+   "date": "1831",
+   "cap": "In **1831** **Nat Turner's Rebellion** killed about sixty whites in Virginia before being crushed, sending shockwaves through the South. That same year of **1831**, Garrison launched *The Liberator*, demanding immediate abolition. Both events pushed the region toward a defensive, aggressive stance on slavery."
+  },
+  {
+   "img": "images/ch11/strip6.jpg",
+   "date": "1832–1833",
+   "cap": "In **1832** Virginia debated but rejected gradual emancipation, tightening its slave codes instead. When Great Britain abolished slavery empire-wide in **1833**, the South stood isolated in a world turning against bondage. Most Southern whites were **plain folk** — the three-quarters of families who owned no slaves yet still defended the system."
+  },
+  {
+   "img": "images/ch11/strip7.jpg",
+   "date": "1838–1839",
+   "cap": "In **1838** Frederick Douglass escaped slavery in Maryland to become a leading abolitionist. In **1839** African captives seized **the Amistad**; the Supreme Court later freed them. Most enslaved people, though, endured **gang labor** in cotton under overseers or the **task system** on rice plantations, driven by the whip."
+  },
+  {
+   "img": "images/ch11/strip8.jpg",
+   "date": "1849–1855",
+   "cap": "In **1849** **Harriet Tubman** escaped to Philadelphia, then guided others north via the **Underground Railroad**. Planters justified bondage through **paternalism** and a **proslavery argument** — thinker **George Fitzhugh** claimed white freedom required Black slavery. In **1855** the trial and execution of **Celia**, who killed a rapist master, exposed slaves' utter lack of legal personhood."
   }
  ],
  "12": [
   {
    "img": "images/ch12/strip0.jpg",
-   "cap": "By the 1820s the Second Great Awakening taught that people were free moral agents who could remake themselves and society. This spirit of Perfectionism fueled an extraordinary wave of antebellum reform. Winona, living in the 1840s North, watches a nation convinced that sin and social ills could be eradicated, not merely managed."
+   "date": "1816",
+   "cap": "Revivalism spread **Perfectionism**, the faith that people and society could be remade, sparking an age of reform. In **1816** reformers founded the **American Colonization Society**, backing gradual emancipation and resettlement of free Black Americans in Africa—a plan many Black families rejected as exile from the only country they had ever known."
   },
   {
    "img": "images/ch12/strip1.jpg",
-   "cap": "Perfectionism launched the Temperance movement, begun with the American Temperance Society (1826), plus prison and asylum reform and Horace Mann's crusade for common schools, which by 1860 brought tax-supported public education to every northern state. Yet reform's Protestant moral standards angered many workers and Catholic immigrants, and Winona wonders whether its promises reach her people."
+   "date": "1825–1826",
+   "cap": "Roughly a hundred **utopian communities** tested new ways of living: the celibate **Shakers** worshiped through ecstatic dance, and in **1825** Robert Owen built the socialist **New Harmony** in Indiana. In **1826** the American Temperance Society launched the **temperance movement**, the era's largest crusade, urging Americans to swear off alcohol entirely."
   },
   {
    "img": "images/ch12/strip2.jpg",
-   "cap": "About a hundred utopian communities tested alternatives to market individualism and private property. The celibate Shakers, Robert Owen's socialist New Harmony (1825) in Indiana, and John Humphrey Noyes's Oneida (1848) experimented with cooperative property and new gender arrangements. Winona recognizes an old idea reborn: her nations, too, had long held land in common."
+   "date": "1827–1829",
+   "cap": "Horace Mann's **common schools** brought tax-supported public education, reaching every northern state by **1860**. In **1827** *Freedom's Journal*, the first Black newspaper, began publishing; then in **1829** **David Walker's Appeal** to the Coloured Citizens of the World shocked the nation by calling on enslaved people to resist slavery directly."
   },
   {
    "img": "images/ch12/strip3.jpg",
-   "cap": "In the 1830s antislavery shifted from colonization to demands for immediate abolition. David Walker's Appeal (1829) and Garrison's The Liberator (1831) led the American Anti-Slavery Society (1833), spreading moral suasion through cheap print. Black abolitionists like Frederick Douglass and Sojourner Truth were central. Mobs answered with violence, murdering editor Elijah Lovejoy in 1837."
+   "date": "1831–1833",
+   "cap": "In **1831** **William Lloyd Garrison** launched *The Liberator*, demanding immediate abolition and equal citizenship. Two years later, in **1833**, activists founded the **American Anti-Slavery Society** in Philadelphia, which grew to about 100,000 members. It fought slavery through **moral suasion**—flooding the country with cheap print and revival-style oratory to change hearts and minds."
   },
   {
    "img": "images/ch12/strip4.jpg",
-   "cap": "Abolitionism incubated feminism. The Grimke sisters and writers like Sarah Grimke and Margaret Fuller defended women's rights alongside the slave's. The 1848 Seneca Falls Convention, organized by Elizabeth Cady Stanton and Lucretia Mott, issued a Declaration of Sentiments demanding the vote, launching the woman suffrage movement. Winona hopes reform's widening circle might one day include her people."
+   "date": "1836–1837",
+   "cap": "In **1836** the House adopted the **gag rule**, automatically tabling antislavery petitions and convincing many northerners that slavery menaced white liberties too. The **Grimke sisters**, attacked for speaking publicly, defended women's rights alongside the slave's. In **1837** a mob murdered abolitionist editor Elijah Lovejoy at Alton, Illinois, making him an antislavery martyr."
   },
   {
    "img": "images/ch12/strip5.jpg",
-   "cap": "In 1840 the dispute over women's roles split organized abolition, spawning the political Liberty Party, yet reformers had shattered the national silence around slavery. The gag rule (1836) even turned free speech into a bridge issue widening antislavery's appeal. Winona watches these movements grow, still waiting for their circle to widen to Native nations too."
+   "date": "1840",
+   "cap": "In **1840** organized abolitionism split over women's public roles. One wing turned to politics and formed the **Liberty Party**, nominating James G. Birney for president to fight slavery at the ballot box. The clash pushed women reformers toward defending their own rights, planting the seeds of an organized women's movement."
+  },
+  {
+   "img": "images/ch12/strip6.jpg",
+   "date": "1848",
+   "cap": "The **1848** **Seneca Falls Convention**, organized by Elizabeth Cady Stanton and Lucretia Mott, issued a Declaration of Sentiments demanding the vote and full equality, launching the woman suffrage movement. That same year John Humphrey Noyes founded the **Oneida** community in New York, one of the boldest **utopian communities**, experimenting with shared property and radical new gender arrangements."
+  },
+  {
+   "img": "images/ch12/strip7.jpg",
+   "date": "1852",
+   "cap": "In **1852** Frederick Douglass delivered 'What, to the Slave, Is the Fourth of July?', exposing the hypocrisy of a nation that celebrated liberty while holding millions in bondage. The same year Harriet Beecher Stowe's *Uncle Tom's Cabin* became a runaway bestseller, turning countless northern readers against slavery and hardening the sectional divide."
   }
  ],
  "13": [
   {
    "img": "images/ch13/strip0.jpg",
-   "cap": "By the 1840s a surge of expansion justified by manifest destiny carried the United States toward the Pacific, fusing a democratic mission with beliefs in Anglo-Saxon racial superiority. Winona now rides the 1850s Plains, watching wagon trains push through her people's buffalo hunting grounds as the nation reaches west across the continent."
+   "date": "1836",
+   "cap": "In **1836** the **Texas Revolt** ended when Anglo settlers, having lost the Alamo, won independence from Mexico at the **Battle of San Jacinto**. This new Republic of Texas set the stage for a decade of aggressive expansion driven by the belief in **manifest destiny**."
   },
   {
    "img": "images/ch13/strip1.jpg",
-   "cap": "American settlers in Texas broke from Mexico in 1836 after the Alamo and the Battle of San Jacinto. When the United States annexed Texas in 1845 and James K. Polk took office, it helped trigger the Mexican War (1846-1848). Victory brought the Treaty of Guadalupe Hidalgo and the vast Mexican Cession stretching to California."
+   "date": "1845",
+   "cap": "Fired by **manifest destiny** and a racial vision of Anglo-Saxon superiority, the United States annexed Texas in **1845** as **James K. Polk** became president. Annexation of the vast slaveholding republic pushed the nation toward war with Mexico."
   },
   {
    "img": "images/ch13/strip2.jpg",
-   "cap": "The 1848 gold discovery drew a diverse flood of migrants to California, with devastating consequences for California's Indians and 'foreign' miners. The same outward push sent Commodore Perry to open Japanese ports to U.S. trade in 1854. Across the Plains, Winona skirmishes to defend her hunting grounds as the westward tide never stops."
+   "date": "1846",
+   "cap": "The **Mexican War** began in **1846**, opening a continental conquest. That same year **David Wilmot** proposed the **Wilmot Proviso** to ban slavery in any land won from Mexico. It failed, but it split Congress along sectional lines rather than party lines."
   },
   {
    "img": "images/ch13/strip3.jpg",
-   "cap": "New land forced the question of slavery's expansion into national politics. The Wilmot Proviso split Congress by section, and the 1848 Free Soil Party carried antislavery beyond abolitionists. The Compromise of 1850 briefly calmed tensions, but its harsh Fugitive Slave Act outraged northerners, forcing them to help return runaways and energizing the Underground Railroad."
+   "date": "1848",
+   "cap": "In **1848** the **Treaty of Guadalupe Hidalgo** ended the **Mexican War** and handed the U.S. the huge **Mexican Cession**. Gold discovered in California sparked the **Gold rush**, drawing diverse migrants and devastating California's Indians. The new **Free Soil Party** carried antislavery politics beyond the abolitionists."
   },
   {
    "img": "images/ch13/strip4.jpg",
-   "cap": "Douglas's 1854 Kansas-Nebraska Act repealed the Missouri Compromise for popular sovereignty, killing the Whigs and birthing the Republican Party and its free labor ideology. Violence in 'Bleeding Kansas' and the 1856 caning of Charles Sumner deepened the divide. In 1857 the Dred Scott decision denied black citizenship and barred Congress from restricting slavery in the territories."
+   "date": "1850",
+   "cap": "The **Compromise of 1850** briefly eased sectional conflict, but its harsh **Fugitive Slave Act** let slaveholders seize alleged runaways in the North. The law outraged northerners and energized the Underground Railroad, deepening the moral fury over slavery. Meanwhile in **1854** **Commodore Perry** opened Japanese ports to U.S. trade."
   },
   {
    "img": "images/ch13/strip5.jpg",
-   "cap": "The 1858 Lincoln-Douglas debates made Abraham Lincoln a national voice against slavery's spread; John Brown's 1859 Harpers Ferry raid terrified the South. Lincoln's sectional 1860 win drove South Carolina and six states to form the Confederacy, and the April 1861 bombardment of Fort Sumter began the Civil War. Winona watches a house divided, sensing the fight is only widening."
+   "date": "1854",
+   "cap": "Stephen Douglas's **Kansas-Nebraska Act** of **1854** repealed the Missouri Compromise, letting settlers decide slavery by **popular sovereignty**. It destroyed the Whigs and birthed the Republican Party, championing **free labor ideology**, plus the nativist **Know-Nothing Party**."
+  },
+  {
+   "img": "images/ch13/strip6.jpg",
+   "date": "1856",
+   "cap": "In **1856** violence peaked in **Bleeding Kansas** as proslavery and free-state settlers fought over popular sovereignty. Preston Brooks caned Senator **Charles Sumner** on the Senate floor, shocking the North. Amid the chaos **James Buchanan** won the presidency in an election arrayed by section."
+  },
+  {
+   "img": "images/ch13/strip7.jpg",
+   "date": "1857–1858",
+   "cap": "The **Dred Scott v. Sandford** decision of **1857** denied Black citizenship and barred Congress from restricting slavery in the territories, undercutting Republicans and popular sovereignty. In the **Lincoln-Douglas debates** of **1858**, Abraham Lincoln rose to fame by branding slavery a moral wrong that must not spread."
+  },
+  {
+   "img": "images/ch13/strip8.jpg",
+   "date": "1859–1861",
+   "cap": "In **1859** John Brown's raid on Harpers Ferry terrified the South and made him a northern martyr. Lincoln's purely sectional victory in **1860** drove South Carolina and six states to secede and form the Confederacy. In April **1861** the Confederate bombardment of **Fort Sumter** began the Civil War."
   }
  ],
  "14": [
   {
    "img": "images/ch14/strip0.jpg",
-   "cap": "In April 1861 the Civil War began when Confederate guns fired on Fort Sumter in Charleston harbor. The Union held huge advantages in population, industry, and finance, but had to conquer a vast, motivated South. Even as the nation split East and West, the same railroads and telegraphs pushed relentlessly onto Winona's Plains."
+   "date": "1861",
+   "cap": "The war began when Confederates shelled **Fort Sumter** in **1861**. Confident crowds expected a quick Union win, but green federal troops were routed at the **First Battle of Bull Run** in **1861**, the war's first major clash. The panic exposed how unready both sides were for a long, brutal fight."
   },
   {
    "img": "images/ch14/strip1.jpg",
-   "cap": "The First Battle of Bull Run in 1861 shattered hopes of a quick Union win. Rifled muskets, railroads, ironclads, the telegraph, and photography made this the first modern war, driving roughly 750,000 deaths. While McClellan stalled in the East, Grant seized Forts Henry and Donelson and held at Shiloh, giving the North momentum in the West."
+   "date": "1862",
+   "cap": "In **1862**, Ulysses S. Grant seized **Forts Henry and Donelson** and barely held the field at bloody **Shiloh**, while the Union navy captured **New Orleans**. These western victories, contrasting with eastern stalemate under the cautious McClellan, gave the North crucial momentum along the rivers and split the Confederacy's grip on the Mississippi valley."
   },
   {
    "img": "images/ch14/strip2.jpg",
-   "cap": "After the bloody standoff at Antietam in September 1862, Lincoln issued the Emancipation Proclamation, effective January 1, 1863. Driven by escaping 'contrabands,' Radical Republicans, and military necessity, it made the army an agent of freedom and opened enlistment to some 200,000 black soldiers and sailors, including the famed 54th Massachusetts, reshaping debates over citizenship."
+   "date": "1862",
+   "cap": "While armies marched, Congress rebuilt the nation in **1862**. The **Homestead Act** gave settlers free western land, the Morrill Act funded state colleges, and new charters launched the **transcontinental railroad**. Paired with greenbacks, national banking, and new taxes, these laws forged a stronger, industrializing Union state during the war."
   },
   {
    "img": "images/ch14/strip3.jpg",
-   "cap": "Even as the Civil War raged East, western campaigns devastated Native peoples like the Navajo and Sioux. In November 1864, U.S. cavalry attacked a peaceful Cheyenne camp in the Sand Creek Massacre, killing mostly women, children, and elders. Winona survived it. The war for one people's freedom coincided with catastrophe for another."
+   "date": "1862",
+   "cap": "Lee's northern invasion was stopped at the **Battle of Antietam** in September **1862**, the war's bloodiest single day. Emboldened, Lincoln issued the Preliminary **Emancipation Proclamation**. Already enslaved people fleeing to Union lines as **contrabands**, plus pressure from abolitionists and the **Radical Republicans**, had been turning a war for Union into a war against slavery."
   },
   {
    "img": "images/ch14/strip4.jpg",
-   "cap": "In July 1863 Union victories at Gettysburg and Vicksburg marked the war's turning point, splitting the Confederacy and ending Lee's northern hopes. Grant's war of attrition, plus Sherman's capture of Atlanta and March to the Sea, broke southern resistance, crippled by inflation and failed King Cotton diplomacy, and secured Lincoln's 1864 reelection."
+   "date": "1863",
+   "cap": "The **Emancipation Proclamation** took effect on January 1, **1863**, committing the Union to abolition and opening enlistment to some 200,000 Black soldiers and sailors. The famed **54th Massachusetts** proved their valor assaulting Fort Wagner. Their service transformed the army into an agent of freedom and reshaped debates over citizenship and equality."
   },
   {
    "img": "images/ch14/strip5.jpg",
-   "cap": "The Thirteenth Amendment abolished slavery, and in April 1865 Lee surrendered to Grant at Appomattox Courthouse, reuniting the nation, though Lincoln was assassinated days later. This 'new birth of freedom' remade the country. Yet for Winona's people the fighting was only beginning, as the strengthened federal state now turned west toward her homeland."
+   "date": "1863",
+   "cap": "In July **1863**, the twin Union victories at the **Battle of Gettysburg** and the **Battle of Vicksburg** marked the war's turning point, halting Lee and splitting the Confederacy. That same month, resentment over conscription exploded in the deadly **New York City draft riots**. In the South, **King Cotton diplomacy** had already failed to win European recognition."
+  },
+  {
+   "img": "images/ch14/strip6.jpg",
+   "date": "1863",
+   "cap": "At the dedication of the battlefield cemetery, Lincoln delivered the Gettysburg Address in **1863**, redefining the war as a new birth of freedom. Turning toward peace, he announced his lenient **Ten-Percent Plan** for Reconstruction, offering readmission once one-tenth of a state's voters swore loyalty and accepted emancipation."
+  },
+  {
+   "img": "images/ch14/strip7.jpg",
+   "date": "1863–1864",
+   "cap": "The war reached far beyond the South. As the Union expanded westward, campaigns devastated Native peoples: the **Navajo** were forced on the brutal Long Walk from **1863**, and the **Sioux** were driven from Minnesota and the Plains. Winona's community survived removal and violence even as the nation fought a war it called one of freedom."
+  },
+  {
+   "img": "images/ch14/strip8.jpg",
+   "date": "1864–1866",
+   "cap": "Grant's war of attrition in **1864** and Sherman's capture of Atlanta and **March to the Sea** broke the South and secured Lincoln's reelection; Lincoln pocket-vetoed the harsher **Wade-Davis Bill**. Congress passed the **Thirteenth Amendment** in January **1865**; Lee surrendered at Appomattox on April 9, **1865**, and Booth assassinated Lincoln on April 14. In **1866**, Ex parte Milligan barred military trials of civilians where courts function."
   }
  ],
  "15": [
   {
    "img": "images/ch15/strip0.jpg",
-   "cap": "In April 1865 the Civil War ended at Appomattox, and a victorious army turned west, opening the Plains Wars against nations like Winona's. The same nation that had just freed four million enslaved people now debated what freedom would mean during Reconstruction (1865-1877) — even as it marched into Native land."
+   "date": "1865",
+   "cap": "In January **1865**, Sherman's **Special Field Order 15** set aside coastal land for freedpeople, sparking the dream of 'forty acres and a mule.' That spring Congress created the **Freedmen's Bureau** to feed refugees, run schools, and enforce northern free-labor ideals. Freedpeople defined freedom broadly: reuniting families, building churches, and above all owning land."
   },
   {
    "img": "images/ch15/strip1.jpg",
-   "cap": "Freedpeople defined freedom broadly: reuniting families, building churches and schools, and above all owning land — a hope raised by Sherman's Special Field Order 15 and its promise of 'forty acres and a mule.' The Freedmen's Bureau (created 1865) aided them, but when President Andrew Johnson returned confiscated land to ex-Confederates, land reform died."
+   "date": "1865",
+   "cap": "President Johnson launched lenient **Presidential Reconstruction** in **1865**, pardoning ex-Confederates who quickly regained power. New southern governments enacted **Black Codes** that restricted freedpeople's rights, forced labor contracts, and tried to recreate slavery in all but name. Johnson soon returned confiscated land to former masters, killing land reform and outraging the Republican North."
   },
   {
    "img": "images/ch15/strip2.jpg",
-   "cap": "With land reform dead, most freedpeople — and many poor white yeomen — were pulled into sharecropping. Under the crop-lien system, farmers borrowed against future harvests and sank into permanent debt. Meanwhile Johnson's lenient Presidential Reconstruction let ex-Confederates regain power and pass Black Codes (1865) that restricted freedpeople and mimicked slavery."
+   "date": "1866",
+   "cap": "In **1866** Congress passed the **Civil Rights Act of 1866** over Johnson's veto, declaring African Americans citizens with equal rights. To secure it, Republicans drafted the **Fourteenth Amendment**, guaranteeing birthright citizenship and equal protection. That same year, former Confederates founded the **Ku Klux Klan** in Tennessee, launching a campaign of terror against freedpeople and their allies."
   },
   {
    "img": "images/ch15/strip3.jpg",
-   "cap": "Congress seized control, passing the Civil Rights Act of 1866, the Fourteenth Amendment (birthright citizenship, equal protection), and the Reconstruction Act of 1867, which imposed military rule and Black male suffrage. Johnson was impeached in 1868 and acquitted by one vote. With the 13th, 14th, and Fifteenth Amendment (1870) barring racial voting bars, a constitutional revolution — though one excluding women — was complete."
+   "date": "1867",
+   "cap": "The **Reconstruction Act of 1867** placed the South under military rule and granted Black male suffrage, beginning Radical Reconstruction. Northern **carpetbaggers** and Southern white Republican **scalawags** joined freedmen to build interracial governments. New state constitutions created the South's first public school systems and civil rights laws in an unprecedented experiment in democracy."
   },
   {
    "img": "images/ch15/strip4.jpg",
-   "cap": "Radical Reconstruction built America's first interracial democracy — roughly 2,000 Black officeholders, public schools, and civil rights laws. But the Ku Klux Klan waged terror, checked only briefly by the Enforcement Acts (1870-71) and the Colfax Massacre (1873). Northern will faded amid depression and Supreme Court rulings (Slaughterhouse, Cruikshank) that gutted federal protection."
+   "date": "1868",
+   "cap": "Johnson's obstruction led to the **Impeachment of Andrew Johnson** in **1868**; the Senate acquitted him by a single vote. That year the **Fourteenth Amendment** was ratified into the Constitution, and war hero Ulysses S. Grant won the presidency, signaling voters' support for Congress's Reconstruction program."
   },
   {
    "img": "images/ch15/strip5.jpg",
-   "cap": "The disputed 1876 Hayes-Tilden election ended in the Bargain of 1877: Hayes took the presidency, federal troops left, and Reconstruction was abandoned to the Redeemers. Winona saw two struggles fade at once — her people's land and the freedpeople's rights. Yet the 13th, 14th, and 15th Amendments endured, seeds for civil rights fights her granddaughters would still be waging."
+   "date": "1870-1871",
+   "cap": "The **Fifteenth Amendment** of **1870** barred racial discrimination in voting, completing a constitutional revolution—though it excluded women and split the feminist-abolitionist alliance. Hiram Revels became the first Black U.S. senator. In **1870-1871** the **Enforcement Acts** let Grant's prosecutors dismantle the **Ku Klux Klan** and briefly restore order."
+  },
+  {
+   "img": "images/ch15/strip6.jpg",
+   "date": "1872-1873",
+   "cap": "In **1872** Liberal Republicans bolted the party behind Horace Greeley, who lost badly to Grant, weakening Northern resolve. In **1873** the white-supremacist **Colfax Massacre** killed hundreds of Black Louisianans, the Slaughterhouse Cases narrowed the **Fourteenth Amendment**, and a national depression began, all draining commitment to Reconstruction."
+  },
+  {
+   "img": "images/ch15/strip7.jpg",
+   "date": "1875-1876",
+   "cap": "Congress passed the **Civil Rights Act of 1875**, but violent 'Mississippi Plan' intimidation in **1875** drove out Reconstruction there as **Redeemers**—conservative white Democrats—retook state after state. In **1876** United States v. Cruikshank (the **Colfax Massacre** case) gutted federal enforcement power, and the Hayes-Tilden presidential election ended in bitter dispute."
+  },
+  {
+   "img": "images/ch15/strip8.jpg",
+   "date": "1877",
+   "cap": "The disputed **1876** election produced the **Bargain of 1877**: Hayes became president, and the last federal troops left the South, ending Reconstruction. With protection gone, most freedpeople—and many poor white yeomen caught in the **crop-lien system**—sank into **sharecropping** and endless debt, as the era's promise of freedom collapsed."
   }
  ],
  "16": [
   {
    "img": "images/ch16/strip0.jpg",
-   "cap": "By the 1870s a 'second industrial revolution' made the United States the world's leading industrial power. Railroads tripled their mileage, created a national market, and in 1883 even standardized time zones. For Winona's Plains people this Gilded Age boom, backed by federal tariffs, land grants, and troops, meant iron rails and hunters closing in on the buffalo and their homeland."
+   "date": "1870s",
+   "cap": "After the Civil War a **second industrial revolution** made the U.S. the world's top industrial power. Carnegie used **vertical integration** to control steel from ore to rail, while Rockefeller's **horizontal expansion** let Standard Oil swallow rivals and refine 90% of oil. Admired as captains of industry or feared as **robber barons**, these men defined the **Gilded Age** economy."
   },
   {
    "img": "images/ch16/strip1.jpg",
-   "cap": "Ruthless competition drove consolidation: Carnegie built a vertically integrated steel empire and Rockefeller's Standard Oil controlled 90 percent of oil refining. Admired as 'captains of industry' or feared as 'robber barons,' such men grew immensely rich. By 1890 the richest 1 percent held as much income as the bottom half, while workers faced tenement poverty documented by Jacob Riis."
+   "date": "1872–1873",
+   "cap": "In **1872** the **Crédit Mobilier** scandal exposed bribery in **Union Pacific** railroad construction, a symbol of the corrupt new era. In **1873** Twain and Warner's novel *The Gilded Age* named the age, glittering on top but rotten beneath, just as a severe depression that year threw the economy into crisis."
   },
   {
    "img": "images/ch16/strip2.jpg",
-   "cap": "In 1876 Sioux and Cheyenne warriors destroyed Custer's command at the Battle of the Little Bighorn — the greatest Plains Indian victory. Winona and her people fought to defend their land and way of life. Yet incorporation of the West into the capitalist economy, and the deliberate extermination of the buffalo, meant even this triumph could not halt the army for long."
+   "date": "1876",
+   "cap": "At the **Battle of the Little Bighorn** in **1876**, Sioux and Cheyenne warriors destroyed Custer's command in the greatest Native victory of the Plains wars. Yet incorporation of the West, railroads, settlers, and the deliberate slaughter of the **buffalo**, doomed the Plains Indians even in triumph, and the army soon crushed the Sioux."
   },
   {
    "img": "images/ch16/strip3.jpg",
-   "cap": "Capitalism remade the West: homesteaders and railroads built a wheat-and-corn empire on the Middle Border, cowboys drove cattle to Kansas railheads, and giant bonanza farms foreshadowed agribusiness. This same incorporation destroyed the Plains Indians' world. Chief Joseph's Nez Percé were forced onto reservations, and the Dawes Act of 1887 broke up tribal lands, costing Native peoples tens of millions of acres."
+   "date": "1877–1879",
+   "cap": "The **Great Railroad Strike** of **1877**, the first national labor uprising, was crushed by federal troops. In **1879** Henry George's *Progress and Poverty* proposed a **single tax** on land, and the U.S. returned to the **gold standard**. Out West, **bonanza farms** on the Middle Border and cowboys driving cattle to Kansas railheads foreshadowed agribusiness."
   },
   {
    "img": "images/ch16/strip4.jpg",
-   "cap": "In 1890 the army killed Ghost Dancers at the Wounded Knee massacre, ending armed Native resistance. The Dawes Act's assault on tribal landholding, buffalo extermination, and reservations had already shattered Plains independence. For Winona this was the heartbreak after Little Bighorn — grief, endurance, and survival where an old world of freedom on the open Plains came to a close."
+   "date": "1883",
+   "cap": "The **Civil Service Act of 1883** created merit-based federal hiring, curbing the corrupt spoils system that dominated Gilded Age politics. The same year, the railroads' national reach led them to establish standard **time zones** in **1883**, imposing uniform time on the whole country, a striking sign of how corporate power reshaped everyday American life."
   },
   {
    "img": "images/ch16/strip5.jpg",
-   "cap": "Gilded Age politics was corrupt and business-dominated; the Civil Service Act of 1883, Interstate Commerce Commission, and Sherman Antitrust Act set precedents but were weakly enforced. Meanwhile Social Darwinism and 'liberty of contract' fought reformers like the Knights of Labor after the 1886 Haymarket Affair. Winona endures into a new age — her people scarred but unbroken, their fight now passing to the next generation."
+   "date": "1886",
+   "cap": "In **1886** the **Knights of Labor** peaked and May Day strikes demanded the eight-hour day, but the **Haymarket Affair**, a bombing at a Chicago rally, let employers brand all unions as dangerous radicals. That same year the **Statue of Liberty** was dedicated, offering immigrants a symbol of the freedom the industrial economy so often denied."
+  },
+  {
+   "img": "images/ch16/strip6.jpg",
+   "date": "1887–1888",
+   "cap": "In **1887** the **Dawes Act** broke up tribal lands into individual plots, costing Native peoples tens of millions of acres, while Congress created the **Interstate Commerce Commission** to regulate railroads, the first federal regulatory agency. In **1888** Edward Bellamy's *Looking Backward* imagined a cooperative future and became a national bestseller."
+  },
+  {
+   "img": "images/ch16/strip7.jpg",
+   "date": "1890",
+   "cap": "In **1890** the army killed Ghost Dancers in the **Wounded Knee massacre**, ending armed Native resistance. That year the **Sherman Antitrust Act** outlawed monopolies in principle, and Jacob Riis's *How the Other Half Lives* exposed tenement poverty, dramatizing how the richest 1% now held as much income as the bottom half of Americans."
+  },
+  {
+   "img": "images/ch16/strip8.jpg",
+   "date": "1895–1905",
+   "cap": "In **1895** *United States v. E. C. Knight Co.* gutted the **Sherman Antitrust Act** by exempting manufacturing. Defenders of the unregulated market invoked **Social Darwinism**, survival of the fittest, and the doctrine of **liberty of contract**, which in *Lochner v. New York* (**1905**) voided a maximum-hours law for bakers, leaving the meaning of freedom in an industrial age unresolved."
   }
  ],
  "17": [
   {
    "img": "images/ch17/strip0.jpg",
-   "cap": "By the 1890s the frontier was declared 'closed' and federal policy aimed to erase Native life through assimilation. Reservation-era programs and boarding schools cut children's hair, forbade their languages, and forced Euro-American dress. Winona, confined and remade, keeps her dignity as the government works to dissolve her people into the nation that conquered them."
+   "date": "1879",
+   "cap": "Fleeing violence and sharecropping debt, tens of thousands of Black southerners joined the **Kansas Exodus** beginning in **1879**, migrating west to seek land and real freedom. These 'Exodusters' hoped the plains offered what Reconstruction's collapse had denied them, though poverty and drought made the promised new start bitterly hard."
   },
   {
    "img": "images/ch17/strip1.jpg",
-   "cap": "The 1890s opened with war between capital and labor. The 1892 Homestead Strike, crushed by Pinkertons and state militia, proved even strong unions could not beat giant corporations. Squeezed by falling prices, debt, and railroad rates, southern and western farmers built the Farmers' Alliance and then the People's (Populist) Party, the era's largest political insurgency."
+   "date": "1882",
+   "cap": "The **Chinese Exclusion Act** of **1882** barred Chinese immigration, the first federal law to exclude a group by race and nationality. Aimed at the laborers who had built the western railroads, it showed how the nation's boundaries of freedom were narrowing at home even as older promises of open immigration faded."
   },
   {
    "img": "images/ch17/strip2.jpg",
-   "cap": "The 1892 Omaha platform demanded a graduated income tax, direct election of senators, government control of currency, and public ownership of railroads. The 1893 depression brought Coxey's Army (1894) and the Pullman Strike (1894), both broken by federal troops and injunctions. Populists sought to curb corporate power and restore opportunity for small producers."
+   "date": "1892",
+   "cap": "In **1892** the **Homestead Strike** against Carnegie's steel works was crushed by **Pinkerton** agents and state militia, proving unions could not beat giant corporations. That year debt-squeezed farmers turned their Alliance into the **Populist (People's) Party**, whose Omaha platform demanded a graduated income tax, direct election of senators, and public ownership of railroads; **James Weaver** ran for president."
   },
   {
    "img": "images/ch17/strip3.jpg",
-   "cap": "As Populism fell, the South hardened its racial order. From 1890 to 1906 poll taxes, literacy tests, and grandfather clauses stripped Black men of the vote, while Plessy v. Ferguson (1896) blessed segregation as 'separate but equal.' Lynching enforced it through terror, spurring Ida B. Wells's crusade; Booker T. Washington's 1895 Atlanta Compromise urged accommodation and self-help."
+   "date": "1893",
+   "cap": "In **1893** American sugar planters, backed by U.S. marines, overthrew Hawaii's **Queen Liliuokalani** to push for annexation. That same year a severe economic **depression** struck, collapsing banks and railroads and throwing millions out of work, deepening the labor and farm unrest that Populism had already stirred."
   },
   {
    "img": "images/ch17/strip4.jpg",
-   "cap": "In 1898 the United States became an empire. The sinking of the U.S.S. Maine and Cuba's revolt sparked the Spanish-American War, and victories at Manila Bay and Santiago brought Puerto Rico, Guam, and the Philippines; Hawaii was annexed the same year. Winona's son enlists and fights for a nation still confining his own people."
+   "date": "1894",
+   "cap": "In **1894**, jobless protesters in **Coxey's Army** marched on Washington to demand public works, while the **Pullman Strike** paralyzed the nation's railroads. President Cleveland broke it with federal troops and a court injunction, showing how readily national power now crushed labor during the depression."
   },
   {
    "img": "images/ch17/strip5.jpg",
-   "cap": "The Philippine War (1899-1903) against Emilio Aguinaldo revealed the violence behind 'benevolent' empire, while the Platt Amendment (1901) and Insular Cases denied colonial subjects the constitutional rights Americans claimed as fundamental. As freedom's boundaries narrowed at home and abroad, Winona endures, and her descendants will keep fighting in the nation's wars for a century to come."
+   "date": "1895",
+   "cap": "In his **Atlanta Compromise** address of **1895**, **Booker T. Washington** urged Black southerners to accept segregation and pursue economic self-help. Meanwhile Ida B. Wells waged her crusade exposing **lynching**, the terror enforcing white supremacy, and the **American Federation of Labor** organized only skilled white workers, leaving most laborers outside its ranks."
+  },
+  {
+   "img": "images/ch17/strip6.jpg",
+   "date": "1896",
+   "cap": "In **Plessy v. Ferguson** (**1896**) the Supreme Court upheld 'separate but equal,' blessing segregation, while southern states pursued **disenfranchisement** through poll taxes, literacy tests, and the **grandfather clause**. In that year's realigning election, Democrat **William Jennings Bryan** ran on free silver but lost to lavishly funded Republican William McKinley, forging a majority lasting until 1932."
+  },
+  {
+   "img": "images/ch17/strip7.jpg",
+   "date": "1898",
+   "cap": "The sinking of the **U.S.S. Maine** in **1898** helped launch the **Spanish-American War**, sparked by Cuba's revolt. Swift victories at Manila Bay and Santiago brought Puerto Rico, Guam, and the Philippines under U.S. rule, and Hawaii was annexed that year, making the United States an overseas empire almost overnight."
+  },
+  {
+   "img": "images/ch17/strip8.jpg",
+   "date": "1899–1900",
+   "cap": "In **1899** the bloody **Philippine War** began against Emilio Aguinaldo's independence movement, and John Hay announced the Open Door Policy for trade with China. In **1900** the Gold Standard Act made gold the sole currency basis, and McKinley again defeated Bryan in an election Americans framed as 'republic or empire.'"
+  },
+  {
+   "img": "images/ch17/strip9.jpg",
+   "date": "1901–1904",
+   "cap": "The **Platt Amendment** of **1901** bound Cuba as a U.S. protectorate, granting Washington the right to intervene and keep naval bases. Beginning that year, the **Insular Cases** (**1901–1904**) ruled that the Constitution did not fully follow the flag to new territories, leaving Americans to debate whether their republic had become an empire."
   }
  ],
  "18": [
   {
    "img": "images/ch18/strip0.jpg",
-   "cap": "By 1920 more Americans lived in cities than on farms, and some 13 million immigrants, mostly from southern and eastern Europe, arrived between 1901 and 1914. Henry Ford's assembly line and 1914 five-dollar day symbolized 'Fordism,' an economy of mass production and mass consumption that tied ideas of freedom to consumer abundance and reshaped the American standard of living."
+   "date": "1889",
+   "cap": "In **1889**, **Jane Addams** founded **Hull House** in Chicago, launching the American settlement-house movement. These houses served crowded immigrant neighborhoods and pushed cities and states toward protective legislation, becoming a seedbed of the broader **Progressive** reform crusade to humanize industrial capitalism."
   },
   {
    "img": "images/ch18/strip1.jpg",
-   "cap": "As Progressives reformed the cities, federal Indian boarding schools worked to erase Native language, dress, and culture through forced assimilation—'Kill the Indian, save the man.' Winona resists this campaign against her people even as reform swept the nation. Her fight this era is not a battle but the defense of identity, joining the first pan-Indian voices demanding dignity and self-determination."
+   "date": "1901",
+   "cap": "In **1901**, an anarchist assassinated McKinley, and **Theodore Roosevelt** became president, promising ordinary Americans a **Square Deal**. That same year the **Socialist Party** was founded; under Eugene Debs it demanded 'industrial democracy' and would peak in **1912** as a serious voice for working people."
   },
   {
    "img": "images/ch18/strip2.jpg",
-   "cap": "Muckraking journalists like Upton Sinclair, whose 1906 novel The Jungle spurred the Meat Inspection and Pure Food and Drug Acts, exposed corruption, child labor, and unsafe conditions. The 1911 Triangle Shirtwaist fire killed about 146 workers trapped behind locked doors, dramatizing industrial capitalism's human cost and igniting factory-safety and labor reform across the states."
+   "date": "1904",
+   "cap": "In **1904**, the Supreme Court ordered the Northern Securities railroad holding company dissolved, a landmark antitrust victory for the **Square Deal**. The ruling showed the federal government would police giant corporations, cementing 'trust-busting' as a signature of the new activist national state."
   },
   {
    "img": "images/ch18/strip3.jpg",
-   "cap": "Reformers called Progressives sought to humanize industrial capitalism. Jane Addams's Hull House (1889) and other settlement houses pushed protective laws; Eugene Debs's Socialist Party peaked in 1912; and the radical IWW (1905) organized unskilled immigrants the AFL ignored. Muller v. Oregon (1908) upheld maximum-hours laws for women, while Margaret Sanger's birth-control movement linked freedom to bodily autonomy."
+   "date": "1905",
+   "cap": "In **1905**, the radical **Industrial Workers of the World (IWW)** organized in Chicago, uniting the unskilled immigrants the AFL ignored. They rebelled against **scientific management**, which used stopwatches to control labor, and against **Fordism** — Henry Ford's assembly line and five-dollar day built on mass production and mass consumption."
   },
   {
    "img": "images/ch18/strip4.jpg",
-   "cap": "Theodore Roosevelt's Square Deal brought antitrust suits, railroad regulation, consumer laws, and conservation. The four-way 1912 election pitted Wilson's New Freedom against Roosevelt's New Nationalism, Taft, and Debs. Wilson won, lowering the tariff and creating the Federal Reserve (1913) and the Federal Trade Commission (1914). The Seventeenth Amendment (1913) brought direct election of senators, cementing an activist national state."
+   "date": "1906",
+   "cap": "In **1906**, **muckrakers** like Upton Sinclair exposed industry's horrors; his novel The Jungle spurred the Meat Inspection and Pure Food and Drug Acts. The same year the Hepburn Act strengthened railroad regulation, advancing Roosevelt's consumer protection and his sweeping **conservation movement** to safeguard forests, water, and public land."
   },
   {
    "img": "images/ch18/strip5.jpg",
-   "cap": "Women drove Progressive reform and revived a mass suffrage campaign, yet Progressivism also narrowed democracy through literacy tests, expert rule, and tolerance of Jim Crow. Winona's people, still fighting assimilation, joined early pan-Indian reformers demanding a place in the nation. The regulatory state forged under Roosevelt, Taft, and Wilson endured—and Winona's descendants would soon carry the struggle into America's wars."
+   "date": "1908",
+   "cap": "In **1908**, **Muller v. Oregon** upheld maximum-hours legislation for women workers, accepting sociological evidence about labor conditions. The decision expanded protective legislation championed by settlement reformers, though its reasoning about women's 'special' needs also revealed limits within Progressive thought."
+  },
+  {
+   "img": "images/ch18/strip6.jpg",
+   "date": "1911",
+   "cap": "In **1911**, the **Triangle Shirtwaist fire** killed about 146 workers trapped behind locked doors, dramatizing the human cost of industrial growth. Public outrage ignited factory-reform legislation and strengthened demands for government action, giving urgent momentum to the whole Progressive movement."
+  },
+  {
+   "img": "images/ch18/strip7.jpg",
+   "date": "1912",
+   "cap": "The four-way election of **1912** pitted Wilson's **New Freedom** against Roosevelt's **New Nationalism**, Taft, and Debs; Wilson won. Feminists like Margaret Sanger tied freedom to the **birth-control movement**, while Robert La Follette's **Wisconsin Idea** made his state a 'laboratory of democracy' guided by experts."
+  },
+  {
+   "img": "images/ch18/strip8.jpg",
+   "date": "1913–1916",
+   "cap": "In **1913**, the Sixteenth and **Seventeenth Amendment** were ratified — the latter for direct election of senators — and the **Federal Reserve** was created. In **1914** the Clayton Act shielded unions and the **FTC** was established; the Keating-Owen child-labor and Adamson eight-hour laws of **1916** capped Wilson's activist first term."
   }
  ],
  "19": [
   {
    "img": "images/ch19/strip0.jpg",
-   "cap": "When Europe went to war in 1914, President Wilson proclaimed U.S. neutrality. By April 1917 he asked Congress to make the world 'safe for democracy.' Winona's son enlists as a doughboy—many Native Americans served in World War I even though most were not yet U.S. citizens, marching off for a nation that had taken their land."
+   "date": "1903-1904",
+   "cap": "Pursuing **liberal internationalism**, Roosevelt backed Panama's **1903** break from Colombia to seize the **Panama Canal** Zone. In **1904** the **Roosevelt Corollary** declared a U.S. 'international police power' over the Western Hemisphere, threatening intervention to keep order and protect American trade."
   },
   {
    "img": "images/ch19/strip1.jpg",
-   "cap": "German submarine warfare turned Americans against neutrality. In 1915 a U-boat sank the Lusitania, killing 124 Americans, and in 1917 the intercepted Zimmermann Telegram revealed Germany urging Mexico to attack the U.S. Congress declared war in April 1917. Wilson framed the fight as a moral crusade rooted in his liberal internationalism."
+   "date": "1909",
+   "cap": "After the Springfield, Illinois, lynching, reformers founded the **NAACP** in **1909** to fight for Black civil rights through the courts and press. Its leaders, including W.E.B. Du Bois, would give voice to a rising militancy against segregation, disfranchisement, and mob violence."
   },
   {
    "img": "images/ch19/strip2.jpg",
-   "cap": "War mobilization built a powerful temporary national state. The Selective Service Act (1917) drafted millions; the War Industries Board directed factories; high taxes and Liberty bonds paid the bills. The Committee on Public Information flooded the country with propaganda, selling the war and demanding '100 percent Americanism' from every citizen."
+   "date": "1914-1915",
+   "cap": "In **1914** World War I broke out in Europe just as the **Panama Canal** opened. Wilson proclaimed neutrality, but in **1915** a German U-boat sank the **Lusitania**, killing 124 Americans and inflaming U.S. opinion against Germany's submarine warfare."
   },
   {
    "img": "images/ch19/strip3.jpg",
-   "cap": "American troops helped turn the tide in France, fighting at the Meuse-Argonne offensive in 1918 before the armistice ended the war that November. Winona's son survives the trenches. Wilson's Fourteen Points promised self-determination, free trade, open diplomacy, and a League of Nations to prevent future wars."
+   "date": "1917",
+   "cap": "The **Zimmermann Telegram** of **1917**, urging Mexico to attack the U.S., pushed America into war that April to make the world 'safe for democracy.' The **Selective Service Act** drafted millions of soldiers. That same year the Russian Revolution began, unsettling the world."
   },
   {
    "img": "images/ch19/strip4.jpg",
-   "cap": "Half a million Black southerners moved north in the Great Migration, meeting deadly riots in East St. Louis, Chicago, and Tulsa even as the NAACP, Du Bois, and Marcus Garvey voiced new militancy. In 1919 huge strikes and the Red Scare crushed labor and radicals. Wartime idealism also secured Prohibition and the Nineteenth Amendment (1920), giving women the vote."
+   "date": "1917-1918",
+   "cap": "The **War Industries Board** mobilized the economy while the **Committee on Public Information** flooded the nation with propaganda and Liberty bonds. The **Espionage and Sedition Acts** of **1917-1918** criminalized dissent, jailing socialist Eugene Debs and unleashing coercive '100 percent Americanism.'"
   },
   {
    "img": "images/ch19/strip5.jpg",
-   "cap": "At Versailles (1919) the treaty betrayed colonial hopes for self-determination, and the Senate rejected Wilson's League of Nations; voters chose Harding's 'return to normalcy' in 1920. Winona's son fought for democracy abroad while most Native Americans still lacked citizenship at home—a promise deferred. Her family's long struggle for belonging, and for full rights, was far from over."
+   "date": "1916-1919",
+   "cap": "In the **Great Migration**, half a million Black southerners moved north for jobs and freedom, meeting deadly riots in East St. Louis and elsewhere. **Marcus Garvey** preached Black nationalism and pride, while the **NAACP** and Du Bois pressed for justice amid rising racial militancy."
+  },
+  {
+   "img": "images/ch19/strip6.jpg",
+   "date": "1918",
+   "cap": "In **1918** Wilson announced his **Fourteen Points**, promising self-determination, free trade, open diplomacy, and a **League of Nations**. American troops helped turn the tide at the **Meuse-Argonne** offensive, and in November an armistice finally ended the fighting."
+  },
+  {
+   "img": "images/ch19/strip7.jpg",
+   "date": "1919",
+   "cap": "The **Treaty of Versailles** was signed in **1919**, but it betrayed colonial hopes for self-determination. At home a great steel strike, brutal race riots, and the **Red Scare** convulsed the nation as officials hunted suspected radicals. The **Eighteenth Amendment**, ratified that year, launched Prohibition."
+  },
+  {
+   "img": "images/ch19/strip8.jpg",
+   "date": "1920-1921",
+   "cap": "In **1920** the **Nineteenth Amendment**, won by Alice Paul's militant campaigning, gave women the vote; the Senate rejected the **Treaty of Versailles** and **League of Nations**, and Harding won on a 'return to normalcy.' The **Red Scare** faded, but in **1921** the Tulsa riot destroyed a thriving Black community."
   }
  ],
  "20": [
   {
    "img": "images/ch20/strip0.jpg",
-   "cap": "The 1920s brought spectacular growth in autos, radio, and household appliances, and American firms dominated world markets. A new consumer culture—installment buying, movies, and celebrity heroes like Charles Lindbergh, who flew solo across the Atlantic in 1927—redefined freedom as private consumption, replacing thrift with credit."
+   "date": "1919-1920",
+   "cap": "In **Schenck v. United States** (**1919**) the Court upheld silencing wartime dissent, but soon **Holmes and Brandeis** began defending free speech. In **1920** national **Prohibition** took effect and the **American Civil Liberties Union** was founded, launching a modern civil-liberties movement."
   },
   {
    "img": "images/ch20/strip1.jpg",
-   "cap": "The flapper symbolized a new personal freedom for women, though the proposed Equal Rights Amendment split the feminist movement. Prosperity was uneven: farmers sank into depression, unions lost over two million members under the open-shop 'American Plan,' and roughly 40 percent of Americans stayed poor. Adkins v. Children's Hospital (1923) struck down minimum-wage protection for women."
+   "date": "1920-1921",
+   "cap": "In **1920** Italian anarchists Sacco and Vanzetti were arrested; their **1921** trial in the **Sacco-Vanzetti case** exposed deep nativist prejudice. That same year an emergency quota act temporarily restricted European immigration, foreshadowing far harsher limits to come."
   },
   {
    "img": "images/ch20/strip2.jpg",
-   "cap": "Cultural conflict defined the decade. The Sacco-Vanzetti case (arrested 1920, executed 1927) exposed deep nativist prejudice, while the revived Second Ku Klux Klan claimed millions hostile to immigrants, Catholics, and Jews. The Immigration Act of 1924 imposed national-origins quotas, slashing southern and eastern European immigration, barring Asians entirely, and inventing the category of the 'illegal alien.'"
+   "date": "1923",
+   "cap": "In **1923** Harding died and Coolidge became president as the **Teapot Dome** oil-bribery scandal exposed corruption. The conservative Court struck a minimum-wage law in **Adkins v. Children's Hospital (1923)**, while **Meyer v. Nebraska** protected cultural pluralism, giving civil liberties constitutional footing."
   },
   {
    "img": "images/ch20/strip3.jpg",
-   "cap": "Prohibition (in effect 1920) and the 1925 Scopes trial pitted rural Protestant fundamentalism against a secular urban modernity. In response, a modern civil-liberties movement emerged: the ACLU formed in 1920, Justices Holmes and Brandeis defended free speech after Schenck v. United States (1919), and Meyer v. Nebraska gave cultural pluralism constitutional footing."
+   "date": "1924",
+   "cap": "The **Immigration Act of 1924** imposed national-origins quotas, slashed southern and eastern European immigration, barred Asians entirely, and invented the 'illegal alien.' Coolidge won in a landslide over Davis and La Follette, while the millions-strong **Second Ku Klux Klan** menaced immigrants, Catholics, and Jews."
   },
   {
    "img": "images/ch20/strip4.jpg",
-   "cap": "In 1924 Congress passed the Indian Citizenship Act, finally granting United States citizenship to all Native Americans—making Winona, at last, a citizen of the country built on her homeland. The recognition was bittersweet and incomplete, arriving the same year the nativist quota law slammed the nation's doors on others, but it marked a hard-won turn in her people's long struggle."
+   "date": "1925",
+   "cap": "The **Scopes trial (1925)** in Dayton, Tennessee, dramatized **Fundamentalism** clashing with modern secular culture. Meanwhile **Flappers** symbolized women's new personal freedom, even as the **Equal Rights Amendment** split feminists over whether equality should erase protective labor laws for women."
   },
   {
    "img": "images/ch20/strip5.jpg",
-   "cap": "Hoover's 1928 landslide over Al Smith seemed to ratify prosperity, but October 1929's stock market crash opened the Great Depression. By 1932 output had fallen a third and a quarter of workers were jobless; the Smoot-Hawley Tariff (1930) and belated Reconstruction Finance Corporation (1932) failed. Now a citizen, Winona faced the nation's hardest years—still standing, her long fight far from over."
+   "date": "1925-1927",
+   "cap": "The Great Migration fed the **Harlem Renaissance**, whose writers proclaimed a defiant 'New Negro.' In **1927** Lindbergh flew solo across the Atlantic to national adulation, but that same year Sacco and Vanzetti were executed, closing a case that had stirred worldwide protest."
+  },
+  {
+   "img": "images/ch20/strip6.jpg",
+   "date": "1928",
+   "cap": "The 1920s boom in autos, radios, and appliances fed a consumer culture of installment buying and celebrity heroes. In **1928** Hoover defeated Al Smith, the first Catholic major-party nominee, a landslide that seemed to ratify Republican business prosperity built on tax cuts and high tariffs."
+  },
+  {
+   "img": "images/ch20/strip7.jpg",
+   "date": "1929-1930",
+   "cap": "In October **1929** the **Stock market crash** on Black Tuesday opened the Great Depression, exposing unequal incomes, farm distress, and reckless speculation. In **1930** the **Smoot-Hawley Tariff (1930)** raised duties to record levels, choking world trade and deepening the global slump."
+  },
+  {
+   "img": "images/ch20/strip8.jpg",
+   "date": "1931-1932",
+   "cap": "Unions had lost over 2 million members under the open-shop **American Plan / welfare capitalism**, and by **1932** output had fallen a third with unemployment at 25 percent. Hoover's belated **Reconstruction Finance Corporation (1932)** lent to banks but failed to stem the Depression; Bonus marchers were driven from Washington."
   }
  ],
  "21": [
   {
    "img": "images/ch21/strip0.jpg",
-   "cap": "By 1932 the Great Depression had gutted the economy—banks failed, factories closed, and a quarter of workers had no jobs. President Herbert Hoover's limited response left millions in bread lines. Winona, like most Americans, waited and hoped, as the crisis exposed how little the old federal government did for ordinary citizens."
+   "date": "1931",
+   "cap": "In **1931**, nine Black teenagers were arrested and falsely accused in the **Scottsboro case**, which became an international civil rights cause as the **Great Depression** deepened. Their trials exposed the racism of the Jim Crow South and drew activists from around the world to their defense."
   },
   {
    "img": "images/ch21/strip1.jpg",
-   "cap": "Franklin D. Roosevelt crushed Hoover in 1932, and his first Hundred Days in 1933 unleashed unmatched legislation. He declared a bank holiday, rescued the banking system, and created federal deposit insurance. Over the radio, FDR promised a New Deal, redefining government as an active force responsible for Americans' economic security."
+   "date": "1932",
+   "cap": "In **1932**, **Franklin D. Roosevelt** crushed **Herbert Hoover** in a landslide amid the worst of the Depression, promising a **New Deal** for the American people. His confident, experimental spirit contrasted with Hoover's exhausted caution and gave desperate voters fresh hope."
   },
   {
    "img": "images/ch21/strip2.jpg",
-   "cap": "The First New Deal created a wave of agencies. The Civilian Conservation Corps (CCC) put jobless young men to work planting forests, the National Recovery Administration (NRA) set industry codes, and the Agricultural Adjustment Act (AAA) paid farmers to cut production. The Tennessee Valley Authority (TVA) brought flood control and cheap public electricity to a poor South."
+   "date": "1933",
+   "cap": "FDR's first **Hundred Days** in **1933** unleashed unmatched legislation: the **Emergency Banking Act** rescued banks, the **National Recovery Administration (NRA)** set industry codes, the **Agricultural Adjustment Act (AAA)** paid farmers to cut output, the **Civilian Conservation Corps (CCC)** hired the jobless, and the **Tennessee Valley Authority (TVA)** brought cheap power south. The **Twenty-first Amendment** ended Prohibition."
   },
   {
    "img": "images/ch21/strip3.jpg",
-   "cap": "As the Dust Bowl choked the Plains in the mid-1930s, the Second New Deal shifted from recovery to security. The Works Progress Administration (WPA) employed millions building roads, schools, and art. Programs like these gave Americans such as Winona relief and work when drought and depression had destroyed their old livelihoods."
+   "date": "1934",
+   "cap": "In **1934**, Senator Huey Long launched the **Share Our Wealth movement**, demanding bold redistribution as roughly 2,000 strikes swept the nation. On the Great Plains, drought and ruined soil intensified the **Dust Bowl**, driving desperate families off their land and pushing FDR to go further than the First New Deal had gone."
   },
   {
    "img": "images/ch21/strip4.jpg",
-   "cap": "In 1934 the Indian Reorganization Act—the 'Indian New Deal'—reversed decades of forced assimilation. It restored some tribal self-rule and land and encouraged tribal constitutions and councils. For Winona's people it was a real turn toward dignity, though reservation poverty endured. Meanwhile Social Security (1935) and the Wagner Act built a lasting welfare state."
+   "date": "1935",
+   "cap": "The **Second New Deal** of **1935** shifted from recovery to security: the **Works Progress Administration (WPA)** employed millions, the **Wagner Act** guaranteed the right to unionize, and the **Social Security Act** created old-age pensions and unemployment insurance. That year the Supreme Court voided the **NRA**, and industrial unionists founded the **Congress of Industrial Organizations (CIO)**."
   },
   {
    "img": "images/ch21/strip5.jpg",
-   "cap": "The New Deal permanently linked American freedom to economic security through Social Security and workers' rights, forging a lasting Democratic coalition. Yet its benefits flowed unevenly, and mass unemployment lingered until World War II mobilization ended the Depression. Winona held her restored land, knowing her descendants would soon be called to fight in that coming war."
+   "date": "1934–1936",
+   "cap": "The **Indian New Deal**, launched by the **Indian Reorganization Act** in **1934**, reversed decades of forced assimilation, restored tribal self-government, and ended the breakup of reservation land. Championed by John Collier, it let people like Winona revive their cultures, though it did not end deep reservation poverty."
+  },
+  {
+   "img": "images/ch21/strip6.jpg",
+   "date": "1936",
+   "cap": "In **1936**, the Supreme Court struck down the **AAA**, but FDR won reelection with over 60 percent of the vote, cementing a durable New Deal coalition. That same year British economist John Maynard Keynes published his **General Theory**, whose argument for deficit spending would soon shape the administration's thinking."
+  },
+  {
+   "img": "images/ch21/strip7.jpg",
+   "date": "1937",
+   "cap": "In **1937**, the **Flint sit-down strike** won UAW recognition from General Motors, proving the power of the **sit-down strike** and the **CIO**. FDR's **court packing plan** failed, yet the Court began upholding New Deal laws. Then a sharp recession struck, pushing the administration toward Keynesian deficit spending."
+  },
+  {
+   "img": "images/ch21/strip8.jpg",
+   "date": "1938–1940",
+   "cap": "The **Fair Labor Standards Act** of **1938** set a national minimum wage and banned child labor, while **HUAC** was established. In **1939**, Eleanor Roosevelt arranged Marian Anderson's Lincoln Memorial concert after the DAR barred her. By **1940**, a conservative coalition stalled reform; unemployment still topped 15 percent as war loomed. **FHA** redlining, meanwhile, had deepened housing segregation throughout."
   }
  ],
  "22": [
   {
    "img": "images/ch22/strip0.jpg",
-   "cap": "Through the 1930s most Americans wanted no foreign war, and the Neutrality Acts barred arms sales even as Japan invaded China and Hitler overran Europe. Roosevelt inched toward the Allies with 'cash and carry,' the Lend-Lease Act, and an oil embargo on Japan. Japan's surprise attack on Pearl Harbor on December 7, 1941, brought the United States fully into World War II."
+   "date": "1937–1938",
+   "cap": "In **1937** Japan launched a full-scale war on China, including the massacre of civilians at Nanjing. In **1938** Britain and France appeased Hitler at Munich after Germany annexed Austria and the Sudetenland. Scarred by World War I, most Americans wanted no part of it, and Congress had passed the **Neutrality Acts** barring arms sales to warring nations."
   },
   {
    "img": "images/ch22/strip1.jpg",
-   "cap": "Roosevelt framed the war's purpose around the Four Freedoms: of speech and worship, from want and fear. 'Freedom' saturated wartime culture but its meaning was contested. New Dealers pushed an Economic Bill of Rights and Congress passed the GI Bill of Rights, while business promoted 'free enterprise' and Hayek's Road to Serfdom armed postwar conservatism."
+   "date": "1939–1940",
+   "cap": "In **1939** Germany invaded Poland after the Nazi-Soviet pact, and Britain and France declared war. In **1940** France fell to the German blitzkrieg; **FDR** won an unprecedented third term and the first peacetime draft began. Roosevelt edged toward the Allies with 'cash and carry' sales and an oil embargo against Japan."
   },
   {
    "img": "images/ch22/strip2.jpg",
-   "cap": "The war against Nazi racism made pluralism official rhetoric, yet tolerance had limits. Under Executive Order 9066 the government interned more than 110,000 Japanese-Americans, most of them citizens — the era's gravest violation of civil liberties. In Korematsu v. United States (1944) the Supreme Court upheld internment. The Holocaust abroad exposed racism's murderous end even as injustice persisted at home."
+   "date": "1941",
+   "cap": "In **1941** FDR's **Four Freedoms** speech—of speech and worship, from want and fear—framed the struggle, and Congress passed the **Lend-Lease Act** to arm the Allies. Then Japan's surprise attack on **Pearl Harbor** on **December 7, 1941** brought the United States fully into the war."
   },
   {
    "img": "images/ch22/strip3.jpg",
-   "cap": "After early disasters the tide turned: the navy's victory at Midway in 1942 broke Japan's advance, Soviet victory at Stalingrad shattered Germany in the east, and the D-Day landings of June 1944 opened the liberation of western Europe. In the Pacific, Navajo Code Talkers — Marines transmitting in their own language — sent messages the enemy never cracked."
+   "date": "1942",
+   "cap": "In **1942** Executive Order 9066 sent over 110,000 people to **Japanese-American internment** camps, most of them citizens. The U.S. Navy's victory at the **Battle of Midway** turned the Pacific war, and **CORE** was founded, pioneering nonviolent protest against segregation."
   },
   {
    "img": "images/ch22/strip4.jpg",
-   "cap": "In 1945 US Marines fought a brutal battle for the island of Iwo Jima, and their raising of the flag atop Mount Suribachi became the war's most famous image of sacrifice. Navajo Code Talkers served through the Pacific campaigns, their unbreakable code saving countless lives — Native Americans fighting for a nation that had long denied them full rights."
+   "date": "1941–1945",
+   "cap": "War mobilization doubled the GNP and ended unemployment; millions of women took industrial jobs symbolized by Rosie the Riveter. A. Philip Randolph's march threat won **Executive Order 8802** and the **FEPC**, banning defense discrimination. Some 700,000 Black southerners joined the **Second Great Migration**, and the **Double-V campaign**—victory abroad and at home—launched the modern civil rights movement."
   },
   {
    "img": "images/ch22/strip5.jpg",
-   "cap": "Roosevelt died in April 1945 and Germany surrendered in May; after Truman ordered atomic bombs dropped on Hiroshima and Nagasaki, Japan gave up. The war ended the Depression and left the United States the dominant world power, its new order framed by Bretton Woods and the United Nations. Winona's family had fought for the Four Freedoms — and for a place in the nation they helped save."
+   "date": "1943",
+   "cap": "In **1943** race violence erupted in the Detroit riot and the Los Angeles **zoot suit riots**, targeting Mexican-American youths. The **Bracero program** brought Mexican laborers to fill wartime shortages, and Congress repealed Chinese exclusion, easing decades of discrimination."
+  },
+  {
+   "img": "images/ch22/strip6.jpg",
+   "date": "1944",
+   "cap": "In **1944** Allied forces landed at Normandy on **D-Day** in June, opening the drive to liberate western Europe. Congress passed the **GI Bill of Rights**, funding college and homes for veterans; the **Bretton Woods conference** built the postwar economic order; and the Court upheld internment in **Korematsu v. United States**."
+  },
+  {
+   "img": "images/ch22/strip7.jpg",
+   "date": "1945",
+   "cap": "In early **1945** the Big Three met at **Yalta** to shape the postwar world. Soviet victory at Stalingrad had already broken Germany in the east, and advancing Allies uncovered the full horror of the **Holocaust**, the Nazi murder of six million Jews. FDR died in April, and Harry Truman became president."
+  },
+  {
+   "img": "images/ch22/strip8.jpg",
+   "date": "1945",
+   "cap": "Germany surrendered on V-E Day in May **1945**. In August, atomic bombs destroyed **Hiroshima and Nagasaki** and Japan surrendered. The **United Nations** Charter took effect, leaving the United States the world's dominant power—though rising tension with the Soviet Union already signaled a coming Cold War."
   }
  ],
  "23": [
   {
    "img": "images/ch23/strip0.jpg",
-   "cap": "World War II left only two great powers: the United States and the Soviet Union. Their wartime alliance dissolved into the Cold War, a global rivalry over the meaning of freedom. As Winona watches from her reservation in the 1950s, her family is pulled into a struggle stretching from Europe to Asia to her own tribal land."
+   "date": "1946",
+   "cap": "In **1946** George Kennan's **Long Telegram** warned that Soviet expansion must be checked, launching the policy of **Containment** at the dawn of the **Cold War**. Churchill declared an **Iron curtain** had split Europe, while a giant postwar strike wave paralyzed American industry."
   },
   {
    "img": "images/ch23/strip1.jpg",
-   "cap": "In 1946 George Kennan's Long Telegram argued Soviet expansion must be checked, giving rise to the policy of containment, while Churchill warned an 'iron curtain' had split Europe. Containment became the foundation of postwar U.S. foreign policy, shaping every crisis to come."
+   "date": "1947",
+   "cap": "The **1947** **Truman Doctrine** pledged aid to Greece and Turkey as a global defense of 'free peoples,' and the **Marshall Plan** poured billions into rebuilding western Europe. Congress passed the anti-union **Taft-Hartley Act** over Truman's veto, HUAC opened its Hollywood probe, and Jackie Robinson integrated baseball."
   },
   {
    "img": "images/ch23/strip2.jpg",
-   "cap": "The Truman Doctrine (1947) pledged to defend 'free peoples' from communism, and the Marshall Plan poured billions into rebuilding western Europe. When the Soviets blockaded Berlin in 1948, an eleven-month Allied airlift supplied the city. In 1949 the U.S. joined NATO, its first permanent European alliance, cementing containment."
+   "date": "1947",
+   "cap": "In **1947** HUAC's Hollywood hearings jailed the **Hollywood Ten** for refusing to answer questions about communism, and the studios blacklisted them. This purge helped ignite the fearful crusade later named **McCarthyism**, which would cost thousands of dissenters their jobs across American life."
   },
   {
    "img": "images/ch23/strip3.jpg",
-   "cap": "After the Soviets tested an atomic bomb and Mao's communists won China in 1949, NSC-68 urged a massive arms buildup. When North Korea invaded the South in 1950, U.S.-led UN forces fought a brutal three-year Korean War. Truman fired General MacArthur in 1951; a 1953 armistice froze the stalemate near the thirty-eighth parallel."
+   "date": "1948",
+   "cap": "In **1948** Truman desegregated the armed forces and backed a strong civil rights plank, driving Strom Thurmond's **Dixiecrats** out of the Democratic convention. That year the UN adopted the **Universal Declaration of Human Rights**, and Truman's civil rights push reflected his broader liberal aims."
   },
   {
    "img": "images/ch23/strip4.jpg",
-   "cap": "At home, anticommunism fueled a second Red Scare. HUAC's hearings blacklisted the Hollywood Ten, and Senator Joseph McCarthy smeared thousands with unproven charges of subversion, or McCarthyism. In the same climate, the federal Termination policy tried to dissolve tribes and end their lands and status. Winona fought to keep her nation from being erased."
+   "date": "1948",
+   "cap": "When the Soviets imposed the **Berlin blockade and airlift** in **1948**, Allied planes supplied the city for eleven months. At home Truman's **Fair Deal**—health insurance, higher wages, expanded Social Security—was largely blocked by a conservative coalition, yet Truman stunned pollsters by defeating Dewey."
   },
   {
    "img": "images/ch23/strip5.jpg",
-   "cap": "By 1954 televised hearings exposed McCarthy, and the Senate condemned him, yet the crusade had narrowed dissent for a generation. The Cold War hardened into a long standoff, and Termination would take years to defeat. Winona endured both fronts, her family and her nation still standing, carrying the fight forward into the decades to come."
+   "date": "1949",
+   "cap": "In **1949** the United States joined **NATO**, its first permanent European alliance. That same year the Soviet Union tested an atomic bomb and Mao's communists won the Chinese civil war—twin shocks that spurred **NSC-68**'s call for a massive American military buildup."
+  },
+  {
+   "img": "images/ch23/strip6.jpg",
+   "date": "1950",
+   "cap": "In **1950** Senator Joseph McCarthy claimed communists riddled the State Department, giving **McCarthyism** its name. **NSC-68** urged a huge arms buildup, and North Korea's invasion of the South began the **Korean War**, in which U.S.-led UN forces fought a brutal three-year conflict."
+  },
+  {
+   "img": "images/ch23/strip7.jpg",
+   "date": "1951",
+   "cap": "In **1951**, during the **Korean War**, Truman fired General MacArthur for insubordination, defending civilian control. That same year Julius and Ethel Rosenberg were convicted of conspiring to commit atomic espionage—a case that deepened the fear driving **McCarthyism** across the country."
+  },
+  {
+   "img": "images/ch23/strip8.jpg",
+   "date": "1952–1954",
+   "cap": "In **1952** the McCarran-Walter Act kept national-origin quotas and allowed deporting immigrant communists over Truman's veto. In **1953** an armistice halted the **Korean War** near the thirty-eighth parallel and the Rosenbergs were executed. The televised **1954** Army-McCarthy hearings exposed **McCarthyism**, and the Senate condemned McCarthy."
   }
  ],
  "24": [
   {
    "img": "images/ch24/strip0.jpg",
-   "cap": "In the affluent 1950s the federal Relocation program moved thousands of Native people off reservations into cities like Los Angeles, promising jobs and assimilation. Winona's family joins them, trading tribal land for a crowded urban neighborhood. The postwar boom lifted many Americans, but its promises reached Indians on very different terms."
+   "date": "1947",
+   "cap": "In **1947** builders broke ground on the first **Levittown**, the model for mass-produced postwar suburbia sold on cheap FHA and VA mortgages. These affordable tract homes filled with families riding the **baby boom**, as returning veterans married and prosperity made large families possible for millions of new homeowners."
   },
   {
    "img": "images/ch24/strip1.jpg",
-   "cap": "Between 1946 and 1960 the gross national product more than doubled, and prosperity flowed into the suburbs. Mass-produced developments like Levittown, begun in 1947, were fed by the baby boom, cheap FHA and VA mortgages, and the automobile knit together by the new interstate highway system funded in 1956. Suburban family life became the new symbol of American freedom."
+   "date": "1952",
+   "cap": "In **1952** Dwight Eisenhower defeated Democrat Adlai Stevenson, launching an era of 'Modern Republicanism' that accepted the New Deal while courting business. That same year the United States tested the first hydrogen bomb, pushing the Cold War into a terrifying nuclear age of ever-larger weapons."
   },
   {
    "img": "images/ch24/strip2.jpg",
-   "cap": "Television entered nine of ten homes and consumerism redefined the good life. In the 1959 kitchen debate in Moscow, Nixon told Khrushchev that American freedom meant consumer abundance and the suburban housewife. Winona sees this dream sold nightly on TV, even as her own family struggles to belong in a booming, conformist America obsessed with buying."
+   "date": "1953",
+   "cap": "In **1953** a CIA-backed coup ousted Iran's elected Mossadegh, an early sign the Cold War was shifting to the Third World. The same year Stalin died and the Korean armistice was signed, opening a chance for Eisenhower's cautious diplomacy amid his doctrine of **massive retaliation**."
   },
   {
    "img": "images/ch24/strip3.jpg",
-   "cap": "The decade's greatest challenge to complacency came from the Black freedom movement. In Brown v. Board of Education (1954), Thurgood Marshall convinced the Warren Court that segregated schools were inherently unequal. Rosa Parks's 1955 arrest launched the year-long Montgomery bus boycott, lifting Martin Luther King Jr. to national leadership and founding the SCLC in 1957."
+   "date": "1954",
+   "cap": "In **1954** Thurgood Marshall won **Brown v. Board of Education**, in which the Warren Court ruled segregated schools inherently unequal. Abroad the CIA toppled Guatemala's elected Arbenz, and the **Geneva Accords** divided Vietnam, after which American aid would prop up Diem's regime in the South."
   },
   {
    "img": "images/ch24/strip4.jpg",
-   "cap": "White 'massive resistance,' proclaimed in the 1956 Southern Manifesto, stalled integration until Eisenhower reluctantly sent troops to Little Rock in 1957. Court victories alone could not end Jim Crow without federal enforcement. Meanwhile jobs and families streamed into the booming Sun Belt cities of the South and West, reshaping where power and growth would gather."
+   "date": "1955",
+   "cap": "In **1955** Rosa Parks's arrest sparked the **Montgomery bus boycott**, a year-long protest that thrust the young Reverend **Martin Luther King Jr.** into national leadership of church-based nonviolent resistance. In the same year the AFL and CIO merged, capping the labor-management social contract that traded union restraint for rising postwar wages."
   },
   {
    "img": "images/ch24/strip5.jpg",
-   "cap": "Postwar abundance redefined freedom as consumer choice and suburban family life, yet that dream was racially closed, and Relocation scattered Native families far from home. In the city Winona fights a quieter battle: holding her identity and passing it to her daughter. The 1950s consensus hid deep struggles that would erupt in the coming decade."
+   "date": "1956",
+   "cap": "In **1956** Southern congressmen issued the **Southern Manifesto**, pledging 'massive resistance' to school integration. That year Congress funded the **interstate highway system**, knitting the car-centered suburbs into daily life, and the **Montgomery bus boycott** triumphed when the Supreme Court voided bus segregation."
+  },
+  {
+   "img": "images/ch24/strip6.jpg",
+   "date": "1957",
+   "cap": "In **1957** Eisenhower reluctantly sent federal troops to the **Little Rock crisis** to integrate Central High. King and allied ministers founded the **Southern Christian Leadership Conference (SCLC)** to coordinate the movement. Meanwhile the Soviets launched **Sputnik**, shocking Americans and igniting fears they had fallen behind in the arms race."
+  },
+  {
+   "img": "images/ch24/strip7.jpg",
+   "date": "1958–1959",
+   "cap": "In **1958** the National Defense Education Act, spurred by Sputnik, gave the first major federal funding to higher education. In **1959** Nixon and Khrushchev clashed in the **kitchen debate** in Moscow, equating American freedom with consumer abundance. Yet dissenters like **the Beats** mocked the era's suburban conformity and materialism."
+  },
+  {
+   "img": "images/ch24/strip8.jpg",
+   "date": "1960–1961",
+   "cap": "In **1960** the U-2 incident wrecked a planned summit, and John F. Kennedy narrowly beat Nixon after the first televised presidential debates. In **1961** Eisenhower's Farewell Address warned against the **military-industrial complex**. Beneath the boom, **urban renewal** and racist mortgage policy confined Black Americans and Latinos to declining cities as white families fled to the suburbs."
   }
  ],
  "25": [
   {
    "img": "images/ch25/strip0.jpg",
-   "cap": "In February 1960, four Black college students refused to leave a whites-only lunch counter in Greensboro, North Carolina, sparking a wave of sit-ins. Young organizers formed SNCC under Ella Baker's guidance, launching a decade of grassroots activism. Watching, Winona senses the era turning as ordinary people demand their rights."
+   "date": "1960",
+   "cap": "In February **1960**, four Black students launched **Sit-ins** at a Greensboro lunch counter, sparking a wave of student protest across the South. Under Ella Baker's guidance, young activists founded **SNCC** to coordinate the movement, opening a decade of nonviolent direct action against segregation."
   },
   {
    "img": "images/ch25/strip1.jpg",
-   "cap": "CORE's 1961 Freedom Rides tested desegregation on interstate buses. In 1963, Martin Luther King Jr.'s Birmingham campaign—met by police dogs and fire hoses broadcast worldwide—pushed Kennedy toward a civil rights bill. That August, the March on Washington drew hundreds of thousands, where King delivered his 'I Have a Dream' speech, capping the nonviolent phase."
+   "date": "1961",
+   "cap": "In **1961**, CORE's **Freedom Rides** sent integrated buses south to test desegregation orders on interstate travel, meeting mobs and firebombs. Abroad, Kennedy's **Bay of Pigs** invasion of Cuba failed humiliatingly, and the Soviets sealed off their sector by building the **Berlin Wall**, hardening the Cold War divide."
   },
   {
    "img": "images/ch25/strip2.jpg",
-   "cap": "Johnson turned the movement's momentum into law. The Civil Rights Act of 1964 banned discrimination in jobs and public places, and after Selma the Voting Rights Act of 1965 protected Black voting. His Great Society and War on Poverty built Medicare, Medicaid, Head Start, and food stamps, while the Hart-Celler Act ended racist immigration quotas."
+   "date": "1962",
+   "cap": "In **1962**, the **Cuban missile crisis** brought the world to the brink of nuclear war until Kennedy forced Soviet withdrawal. That same year SDS issued the **Port Huron Statement**, demanding 'participatory democracy,' and Rachel Carson's Silent Spring warned of pesticides, seeding modern environmentalism."
   },
   {
    "img": "images/ch25/strip3.jpg",
-   "cap": "After the 1964 Gulf of Tonkin resolution, Johnson escalated Vietnam to over half a million troops, sparking a mass antiwar movement. SDS demanded participatory democracy in the Port Huron Statement, while the counterculture and second-wave feminism—stirred by The Feminine Mystique—reshaped values. Frustration also fractured the freedom struggle: Watts, Malcolm X, and Stokely Carmichael's cry for Black Power."
+   "date": "1963",
+   "cap": "In **1963**, King's Birmingham campaign and his 'Letter from Birmingham Jail' met dogs and fire hoses, shocking the world and pushing Kennedy to back a civil rights bill. The **March on Washington** climaxed the nonviolent phase with King's 'I Have a Dream.' In November, Kennedy was assassinated in Dallas."
   },
   {
    "img": "images/ch25/strip4.jpg",
-   "cap": "The civil rights model inspired a wider rights revolution—feminism, gay liberation after the 1969 Stonewall uprising, Chavez's farm workers, environmentalism, and Native American activism. In 1969 the new Red Power movement occupied Alcatraz Island, demanding recognition of Native rights and broken treaties. Winona joins them, carrying her ancestors' long fight into a new decade."
+   "date": "1964",
+   "cap": "In **1964**, Johnson signed the **Civil Rights Act of 1964**, banning discrimination in jobs and public accommodations. The **Freedom Summer** drive registered Black voters in Mississippi despite deadly violence. After a murky clash at sea, Congress passed the **Gulf of Tonkin resolution**, handing Johnson a blank check for war in Vietnam."
   },
   {
    "img": "images/ch25/strip5.jpg",
-   "cap": "In 1968 the Tet offensive, the assassinations of King and Robert Kennedy, and chaos at the Chicago convention climaxed the decade, and Nixon's law-and-order victory signaled liberalism's retreat. Yet America emerged freer and more open. From Alcatraz, Winona knows the struggle for justice—Black, Native, and beyond—still stretches ahead."
+   "date": "1965",
+   "cap": "After Selma's marches, the **Voting Rights Act of 1965** secured federal protection of Black voting. Frustration exploded in the Watts uprising, and **Malcolm X** was assassinated as his separatist message spread. The **Hart-Celler Act** scrapped racist immigration quotas, reopening America to the world."
+  },
+  {
+   "img": "images/ch25/strip6.jpg",
+   "date": "1965–1966",
+   "cap": "Johnson's **Great Society** and **War on Poverty** created Medicare, Medicaid, Head Start, and food stamps to fight need. In 1966 the National Organization for Women launched second-wave feminism, echoing Betty Friedan's **The Feminine Mystique**. That year Stokely Carmichael's cry for **Black Power** rose and the Black Panther Party formed, as legal wins left economic inequality untouched."
+  },
+  {
+   "img": "images/ch25/strip7.jpg",
+   "date": "1967",
+   "cap": "In **1967**, urban uprisings tore through Newark and Detroit, exposing the limits of legal gains in the North. As Johnson escalated Vietnam past half a million troops, roughly 100,000 protesters marched on the Pentagon, swelling a mass antiwar movement led by students of the New Left."
+  },
+  {
+   "img": "images/ch25/strip8.jpg",
+   "date": "1968–1969",
+   "cap": "In **1968**, the **Tet offensive** shattered faith in the war; Johnson declined to run, King and Robert Kennedy were assassinated, and Chicago's convention descended into chaos before Nixon's law-and-order victory. Inspired by civil rights, new movements surged—Chavez's farm workers and Native American activism—as Winona joined the Red Power cause. In **1969** the **Stonewall uprising** launched gay liberation and Woodstock celebrated the counterculture."
+  },
+  {
+   "img": "images/ch25/strip9.jpg",
+   "date": "1973",
+   "cap": "The Warren Court expanded rights across the decade, from **Miranda** warnings to a right of privacy. Building on those privacy rulings, **Roe v. Wade** in **1973** established a constitutional right to abortion. Even as Nixon's win showed liberalism in retreat, America emerged a freer, more open society."
   }
  ],
  "26": [
   {
    "img": "images/ch26/strip0.jpg",
-   "cap": "In February 1973 the American Indian Movement (AIM) occupied Wounded Knee, South Dakota, for 71 days, demanding treaty rights and self-determination. The armed standoff with federal marshals drew national attention amid the era's shattered trust in Washington. Winona's people, long ignored, forced Native rights back onto the national stage."
+   "date": "1970",
+   "cap": "In **1970** Nixon widened the war by ordering the invasion of **Cambodia**, igniting furious campus protest. At **Kent State**, National Guardsmen opened fire and killed four students, shocking the nation. Anger over Vietnam deepened as reports spread of the earlier **My Lai massacre**, where U.S. soldiers had slaughtered hundreds of unarmed Vietnamese civilians."
   },
   {
    "img": "images/ch26/strip1.jpg",
-   "cap": "Richard Nixon won in 1968 on a backlash against 1960s upheaval yet governed pragmatically, creating the EPA and OSHA and broadening welfare. With Henry Kissinger he pursued 'realist' diplomacy—opening relations with communist China in 1972 and signing the SALT arms-control treaty—launching detente, an era of eased Cold War tension."
+   "date": "1971",
+   "cap": "In **1971** the **Pentagon Papers** were published, exposing decades of official deception about the Vietnam War and eroding public trust in government. That same year Nixon took the United States off the **gold standard**, ending the postwar system of fixed exchange rates and setting the stage for the economic turbulence to come."
   },
   {
    "img": "images/ch26/strip2.jpg",
-   "cap": "The Pentagon Papers exposed decades of official deception about Vietnam, and the 1973 Paris accords ended U.S. involvement. Nixon's obsession with enemies produced the Watergate break-in and cover-up; in August 1974 he became the first president to resign. Together Vietnam and Watergate shattered Americans' trust in the federal government, strengthening the conservative case to limit Washington's power."
+   "date": "1972",
+   "cap": "In **1972** Nixon and Kissinger practiced realist diplomacy: Nixon visited China and signed the **SALT** arms-control treaty in Moscow, launching an era of **détente**. Congress passed **Title IX** and sent the **ERA** to the states. But that June, burglars broke into Democratic headquarters, beginning the **Watergate** scandal."
   },
   {
    "img": "images/ch26/strip3.jpg",
-   "cap": "The 1973 Arab oil embargo quadrupled energy prices, and 'stagflation'—stagnant growth with high inflation—defied liberal remedies. Deindustrialization sent manufacturing jobs to the low-wage Sunbelt and overseas, real wages began a long decline, and unions weakened. The postwar economic golden age was over, and hardship spread to reservations and mill towns alike."
+   "date": "1973",
+   "cap": "In **1973** the **Paris Peace Accords** ended U.S. combat in Vietnam. Then the Arab **oil embargo** quadrupled energy prices, fueling **stagflation**—stagnant growth paired with high inflation that defied liberal remedies. Congress passed the **War Powers Act** to curb the president's ability to wage war without its approval."
   },
   {
    "img": "images/ch26/strip4.jpg",
-   "cap": "Oil shocks and the Iran hostage crisis made Carter seem helpless, fueling a conservative coalition: neoconservatives, the evangelical Moral Majority, tax rebels behind California's Proposition 13, and Sunbelt suburbanites. Ronald Reagan harnessed it in 1980, making 'freedom' the right's rallying cry. His supply-side tax cuts and deregulation revived growth but widened inequality and tripled the national debt."
+   "date": "1974–1975",
+   "cap": "Facing impeachment over **Watergate**, Nixon became the first president to resign in **1974**; **Gerald Ford** succeeded him and pardoned him. In **1975** South Vietnam fell to the North, ending the war in defeat. Ford's thin record included the **Helsinki Accords**, which linked European security to human-rights pledges."
   },
   {
    "img": "images/ch26/strip5.jpg",
-   "cap": "By 1988 conservatism had captured the language of freedom, yet Nixon-era self-determination policy let tribes govern their own affairs, and the first tribal-gaming court rulings opened a new road toward casino revenue and sovereignty. From the frozen standoff at Wounded Knee, Winona's people turned struggle into a future they would build themselves."
+   "date": "1976",
+   "cap": "In **1976** **Jimmy Carter**, campaigning as a post-Watergate outsider, narrowly defeated Ford. He inherited an economy reshaped by **deindustrialization**, as manufacturing jobs fled the Rust Belt for the low-wage **Sunbelt** and overseas. Real wages began a long decline and labor unions steadily weakened across the industrial North."
+  },
+  {
+   "img": "images/ch26/strip6.jpg",
+   "date": "1978",
+   "cap": "In **1978** California's **Proposition 13** slashed property taxes, sparking a nationwide anti-tax rebellion. The Supreme Court's **Regents v. Bakke** decision barred rigid racial quotas while allowing race as one admissions factor. That year Carter also brokered the **Camp David Accords**, a historic peace between Egypt and Israel."
+  },
+  {
+   "img": "images/ch26/strip7.jpg",
+   "date": "1979",
+   "cap": "In **1979** the **Three Mile Island** accident frightened the nation, a second oil shock hit, and Iranian revolutionaries seized American hostages, making Carter appear helpless when the Soviets also invaded Afghanistan. That year the **Moral Majority** was founded, mobilizing the evangelical Religious Right and swelling a rising conservative movement."
+  },
+  {
+   "img": "images/ch26/strip8.jpg",
+   "date": "1980–1987",
+   "cap": "In **1980** **Ronald Reagan** defeated Carter, launching the **Reagan Revolution**. In **1981** his supply-side **Reaganomics** won huge tax cuts, and he fired 13,000 striking air traffic controllers. The **Iran-Contra affair** hearings in **1987** exposed illegal arms deals, yet that year Reagan and **Gorbachev** agreed to eliminate intermediate-range nuclear missiles, thawing the Cold War."
   }
  ],
  "27": [
   {
    "img": "images/ch27/strip0.jpg",
-   "cap": "As Winona's generation came of age in the early 1990s, the Cold War ended: in 1989 crowds breached the Berlin Wall as communism collapsed across eastern Europe, and by 1991 the Soviet Union dissolved into fifteen nations. The United States stood as the world's lone superpower. On tribal land, the 1988 Indian Gaming Regulatory Act opened a new path toward economic self-determination."
+   "date": "1989",
+   "cap": "In **1989** the **Berlin Wall** fell as communist regimes collapsed peacefully across eastern Europe, while Chinese troops crushed pro-democracy protesters in **Tiananmen Square**. The Cold War was ending, leaving the U.S. the lone superpower. President **George H. W. Bush** proclaimed a **new world order**."
   },
   {
    "img": "images/ch27/strip1.jpg",
-   "cap": "President George H. W. Bush proclaimed a 'new world order,' intervening in Panama and leading an international coalition in the 1991 Gulf War that expelled Iraq from Kuwait. But a recession undercut his popularity. In 1992 Bill Clinton, blending social liberalism with promises to shrink government, won a three-way race in which Ross Perot took nearly a fifth of the vote."
+   "date": "1990–1991",
+   "cap": "In **1991** Bush led an international coalition in the **Gulf War**, expelling Iraq from Kuwait. That year the **Soviet Union** dissolved into fifteen nations, ending the Cold War. At home the **Americans with Disabilities Act** (**1990**) barred discrimination and required accessibility for millions of citizens."
   },
   {
    "img": "images/ch27/strip2.jpg",
-   "cap": "Clinton pushed NAFTA through Congress in 1993, creating a North American free-trade zone, and expanded the Earned Income Tax Credit, though his health-care plan collapsed. Winona helped build the tribal casino authorized under gaming law—revenue that would fund schools, clinics, and the tribe's sovereignty, turning a federal opening into real self-government for her people."
+   "date": "1992",
+   "cap": "In **1992** the acquittal of officers who beat Rodney King sparked the **Rodney King riots**, exposing persistent racial injustice. That fall **Bill Clinton** won a three-way race, blending social liberalism with promises to shrink government, while **Ross Perot** took nearly a fifth of the vote."
   },
   {
    "img": "images/ch27/strip3.jpg",
-   "cap": "In 1994 Newt Gingrich's 'Contract with America' Republicans captured Congress; Clinton recovered by declaring 'the era of big government is over,' signing the 1996 abolition of AFDC welfare. Yet the decade saw violence: the 1992 Los Angeles riots after the Rodney King verdict exposed persistent racial injustice, and Timothy McVeigh's 1995 Oklahoma City bombing killed 168, revealing antigovernment extremism."
+   "date": "1993",
+   "cap": "In **1993** Clinton pushed **NAFTA** through Congress, creating a North American free-trade zone that erased tariffs among the U.S., Canada, and Mexico. He also expanded the Earned Income Tax Credit, but his ambitious health-care plan soon collapsed in Congress."
   },
   {
    "img": "images/ch27/strip4.jpg",
-   "cap": "A booming economy driven by computers, the Internet, and globalization brought low unemployment and budget surpluses, though inequality widened and the 1999 Glass-Steagall repeal loosened banking. In 1999, Battle of Seattle protesters challenged the World Trade Organization. Casino revenue let Winona's tribe open a clinic and school, funding sovereignty while the wider boom's costs sparked debate over globalization."
+   "date": "1994",
+   "cap": "In **1994** Newt Gingrich's **Contract with America** carried Republicans to sweeping control of Congress. That same year the **Rwandan genocide** killed more than 800,000 people while Clinton stood by, an act of **ethnic cleansing** the U.S. failed to stop."
   },
   {
    "img": "images/ch27/strip5.jpg",
-   "cap": "Culture Wars over multiculturalism and immigration reshaped the nation as Latinos became the largest minority. Clinton survived 1999 impeachment over the Lewinsky affair; in 2000 the Supreme Court's Bush v. Gore ruling handed the presidency to George W. Bush. On September 11, 2001, Al Qaeda's attacks killed some 3,000 and shattered post-Cold War security. Winona's people, self-governing at last, faced a new century."
+   "date": "1995",
+   "cap": "On April 19, **1995**, antigovernment extremist Timothy McVeigh set off a truck bomb in the **Oklahoma City bombing**, destroying the Murrah federal building and killing 168 people. The attack marked the deadliest act of domestic terrorism in American history to that point."
+  },
+  {
+   "img": "images/ch27/strip6.jpg",
+   "date": "1996",
+   "cap": "Declaring 'the era of big government is over,' Clinton signed the **1996** law abolishing AFDC welfare and won reelection over Bob Dole. Post-1965 immigration remade society, making Latinos the largest minority and igniting **Culture Wars** over **multiculturalism**, bilingualism, and family values."
+  },
+  {
+   "img": "images/ch27/strip7.jpg",
+   "date": "1998–1999",
+   "cap": "The House impeached Clinton over the Lewinsky scandal in **1998**; the Senate acquitted him in the **Clinton impeachment**'s conclusion in early **1999**. That year NATO waged war over Kosovo against **ethnic cleansing**, Congress repealed Glass-Steagall, and the **Battle of Seattle** protesters disrupted the WTO, challenging **globalization**."
+  },
+  {
+   "img": "images/ch27/strip8.jpg",
+   "date": "2000–2001",
+   "cap": "In **2000** the Supreme Court's **Bush v. Gore** ruling halted Florida's recount, handing **George W. Bush** the presidency despite his loss of the popular vote. On **September 11, 2001**, **Al Qaeda** hijackers struck the World Trade Center and Pentagon, killing about 3,000 and shattering America's post–Cold War security."
   }
  ],
  "28": [
   {
    "img": "images/ch28/strip0.jpg",
-   "cap": "A new century opened with George W. Bush in the White House, pushing huge tax cuts favoring the wealthy and rejecting the Kyoto climate treaty. From a shared homeland long ago to this quiet register, Winona's line endures into 2001. Then September 11 would redefine everything about the years ahead."
+   "date": "2001",
+   "cap": "On September 11, **2001**, attacks killed about 3,000 people and remade the Bush presidency. Under the **Bush Doctrine** ('either you are with us, or with the terrorists'), the U.S. launched the **War in Afghanistan** and toppled the Taliban, while Congress passed the **USA Patriot Act**, hugely expanding surveillance."
   },
   {
    "img": "images/ch28/strip1.jpg",
-   "cap": "On September 11, 2001, hijacked-plane attacks killed about 3,000 people. Bush declared a global War on Terror under the Bush Doctrine—'either you are with us, or you are with the terrorists.' U.S. forces invaded Afghanistan, toppling the Taliban, and Congress passed the USA Patriot Act, vastly expanding government surveillance."
+   "date": "2002",
+   "cap": "In **2002**, Bush branded Iraq, Iran, and North Korea an 'axis of evil,' signaling wider confrontation. That same year the **Guantánamo Bay** detention camp opened, holding detainees indefinitely without trial; harsh interrogations amounting to torture would later stain America's global reputation."
   },
   {
    "img": "images/ch28/strip2.jpg",
-   "cap": "In 2003 the United States invaded Iraq without UN approval, claiming Saddam Hussein held weapons of mass destruction—claims that proved false. Baghdad fell fast, but insurgency and sectarian war followed. Detainees were held indefinitely at Guantánamo Bay, and interrogation amounting to torture stained America's reputation, reviving the old tension between security and liberty."
+   "date": "2003",
+   "cap": "In **2003**, claiming Saddam Hussein held weapons of mass destruction—claims that proved false—the U.S. launched the **Iraq War** without UN approval. Baghdad fell fast and Saddam was toppled, but insurgency and sectarian bloodshed followed, isolating America and drawing comparisons to Vietnam."
   },
   {
    "img": "images/ch28/strip3.jpg",
-   "cap": "Hurricane Katrina flooded New Orleans in 2005; the botched federal response wrecked Bush's reputation for competence. Then years of low interest rates, subprime lending, and unregulated Wall Street speculation burst in 2008: Lehman Brothers collapsed and a $700 billion bank bailout rescued firms 'too big to fail.' The Great Recession became the worst downturn since the 1930s."
+   "date": "2005",
+   "cap": "**Hurricane Katrina** flooded New Orleans in **2005**, displacing most of its largely Black population. The botched federal response discredited the Bush administration's reputation for competence. Courts also checked the president, affirming detainees' rights and, in **Lawrence v. Texas**, signaling the 1960s social revolution was permanent."
   },
   {
    "img": "images/ch28/strip4.jpg",
-   "cap": "In 2008 Barack Obama was elected the first African-American president. He won a huge stimulus, the 2010 Affordable Care Act extending coverage to millions, and financial reform, and appointed Sonia Sotomayor, the first Hispanic justice. A Tea Party backlash brought gridlock; Occupy Wall Street and Black Lives Matter demanded justice, and Obergefell v. Hodges legalized same-sex marriage in 2015."
+   "date": "2007–2008",
+   "cap": "The housing bubble burst and the **Great Recession** began in December **2007**. In **2008**, subprime lending and unregulated speculation caught up: Lehman Brothers failed and Congress passed a $700 billion **Bank bailout** to rescue firms 'too big to fail'—the worst downturn since the 1930s."
   },
   {
    "img": "images/ch28/strip5.jpg",
-   "cap": "From sharing the land, to fighting for it, to fighting under America's flag, to defending tribal sovereignty—Winona's people carried through every century in this chapter's crises. In twenty-first-century America, freedom's meaning stayed contested and prosperity unevenly shared. Yet at her register in the tribal casino, Winona rings up the next customer. Still here."
+   "date": "2008–2009",
+   "cap": "In **2008**, **Barack Obama** was elected the first African-American president. In **2009** Congress enacted a nearly $800 billion stimulus and **Sonia Sotomayor** became the first Hispanic Supreme Court justice—but the **Tea Party** movement emerged in backlash against spending and government growth."
+  },
+  {
+   "img": "images/ch28/strip6.jpg",
+   "date": "2010",
+   "cap": "In **2010**, the **Affordable Care Act** extended health coverage to millions, alongside a sweeping financial-reform law. But the **Tea Party** backlash helped Republicans capture the House that fall, producing years of lasting gridlock between Congress and the president."
+  },
+  {
+   "img": "images/ch28/strip7.jpg",
+   "date": "2011–2012",
+   "cap": "In **2011**, U.S. forces killed Osama bin Laden and the last troops left Iraq, ending the **Iraq War**; **Occupy Wall Street** protested extreme inequality as the Arab Spring swept the Middle East. In **2012**, Obama won reelection over Mitt Romney, powered by the electorate's growing diversity."
+  },
+  {
+   "img": "images/ch28/strip8.jpg",
+   "date": "2013–2015",
+   "cap": "In **2013**, **Edward Snowden** exposed mass NSA surveillance as the Court gutted the Voting Rights Act; **Black Lives Matter** confronted police violence while **ISIS** rose in Iraq and Syria. In **2015**, **Obergefell v. Hodges** legalized same-sex marriage nationwide, the U.S. restored relations with Cuba, and joined the global climate agreement."
   }
  ]
 };

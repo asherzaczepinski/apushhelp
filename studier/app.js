@@ -124,7 +124,8 @@
           </div>
         </div>
       </div>`).join('')}
-    </nav>`;
+    </nav>
+    <section class="home-geoquiz" id="geoquiz"></section>`;
   }
 
   function dashboard() {
@@ -205,18 +206,37 @@
   // The whole chapter told as one inline graphic novel: the story, then the
   // big ideas, the timeline, and the key terms — each an illustrated panel.
   let mapSeq = 0;
+  function illustratedTimeline(n) {
+    const tl = (window.TL || {})[String(n)];
+    if (!tl || !tl.length) return '';
+    const rows = tl.map(e => `
+      <div class="tl-entry">
+        <div class="tl-head"><span class="tl-date">${esc(e.date)}</span><h3 class="tl-title">${esc(e.title)}</h3></div>
+        <div class="tl-imgs">${e.imgs.map(src => `<img class="tl-img" src="${src}" alt="" loading="lazy">`).join('')}</div>
+      </div>`).join('');
+    return `<div class="tl">${rows}</div>`;
+  }
+
   function graphicNovel(n, c) {
+    // an illustrated timeline (each key term / event demonstrated) takes precedence
+    const tl = illustratedTimeline(n);
+    if (tl) return tl;
     const imgs = (window.CH_IMAGES || {})[String(n)] || {};
     // a hand-authored follow-along story (paired panels + narration), if any
     const story = (window.STORY || {})[String(n)];
     if (story && story.length) {
       const strips = story.map((s, i) => {
+        // Cartoon-only: the comic itself carries the timeline; date is baked into the image.
+        if (s.nocap) {
+          return `<figure class="cstrip dated"><img class="cstrip-img" src="${s.img}" alt="" loading="lazy"></figure>`;
+        }
         // New dated format: just the art + a date badge, no narration text.
         if (s.date) {
           const dmap = (window.Atlas && Atlas.spotsFor(s.cap).length)
             ? `<a class="strip-map" href="#/atlas/${n}/${i}">See these places on the map</a>` : '';
+          // date is baked into the top-left of the image itself now, so no HTML badge
           return `<figure class="cstrip dated">
-            <div class="cstrip-imgwrap"><span class="cstrip-date">${esc(s.date)}</span><img class="cstrip-img" src="${s.img}" alt="" loading="lazy"></div>
+            <img class="cstrip-img" src="${s.img}" alt="" loading="lazy">
             <figcaption class="cstrip-cap"><p>${esc(s.cap).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p>${dmap}</figcaption>
           </figure>`;
         }
@@ -717,6 +737,7 @@
     if (view === 'ch') { renderCard(); Comic.wire(arg); }
     if (view === 'review') startReview();
     if (view === 'atlas') Atlas.wire(parts[1], parts[2]);
+    if (!view && window.GeoQuiz) GeoQuiz.mount(document.getElementById('geoquiz'));
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }

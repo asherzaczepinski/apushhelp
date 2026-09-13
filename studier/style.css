@@ -736,3 +736,68 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
   .cpanel.in .cart-svg, .cpanel.action.in .cart::after, .fcard.fcflip { animation: none !important; }
   .cpanel { opacity: 1; transform: none; }
 }
+
+/* ── homepage map drill (Seterra-style) ── */
+.home-geoquiz {
+  margin-top: 34px; padding: 20px;
+  background: var(--cream); border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--brass);
+}
+.gq-head h2 { margin: 0 0 4px; font: 700 1.5rem Georgia, serif; color: var(--navy); }
+.gq-sub { margin: 0 0 12px; color: var(--ink); font: 0.95rem/1.4 Georgia, serif; }
+.gq-modes { display: flex; gap: 8px; flex-wrap: wrap; }
+.gq-mode {
+  font: 600 0.9rem Georgia, serif; cursor: pointer;
+  background: var(--parchment); color: var(--ink);
+  border: 2px solid var(--ink); padding: 6px 14px; border-radius: 3px;
+}
+.gq-mode.is-on { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+.gq-prompt {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin: 14px 0 8px; gap: 10px;
+}
+#gq-ask { font: 700 1.35rem Georgia, serif; color: var(--patriot); }
+.gq-score { font: 700 1.1rem Georgia, serif; color: var(--brass); }
+.gq-mapwrap { background: #cfe0ec; border: 2px solid var(--ink); border-radius: 4px; overflow: hidden; }
+.gq-svg { display: block; }
+.gq-state {
+  fill: #e9dcbf; stroke: #7d6a45; stroke-width: 0.8; cursor: pointer;
+  transition: fill 0.12s;
+}
+.gq-state:hover { fill: #d8c393; }
+.gq-state.is-colony { fill: #cdb98a; }
+.gq-state.is-right, .gq-river.is-right { fill: #6b8f4e; stroke: #3f5a2c; }
+.gq-state.is-wrong { fill: var(--patriot); }
+.gq-state.is-answer { fill: #d8a54a; }
+.gq-river { fill: none; stroke: #2f6f9e; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; opacity: 0; pointer-events: none; }
+.gq-river-hit { fill: none; stroke: #000; stroke-width: 12; opacity: 0; cursor: pointer; }
+.gq-rivers-on .gq-river { opacity: 1; }
+.gq-rivers-on .gq-state { fill: #ece3cd; cursor: default; }
+.gq-river.is-right { stroke: #6b8f4e; opacity: 1; }
+.gq-river.is-answer { stroke: #d8a54a; opacity: 1; }
+.gq-tip { margin: 8px 0 0; font: italic 0.82rem Georgia, serif; color: #6b5d45; }
+@media (max-width: 640px) { .home-geoquiz { padding: 14px; } #gq-ask { font-size: 1.1rem; } }
+
+/* ── illustrated timeline (each key term / event demonstrated) ── */
+.tl { position: relative; margin-left: 4px; }
+.tl-entry {
+  border-left: 3px solid var(--brass); padding: 0 0 22px 18px;
+  margin-left: 6px; position: relative;
+}
+.tl-entry::before {
+  content: ''; position: absolute; left: -9px; top: 4px;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--patriot); border: 3px solid var(--parchment);
+}
+.tl-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.tl-date {
+  font: 700 0.95rem Georgia, serif; color: var(--patriot);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.tl-title { font: 700 1.25rem Georgia, serif; color: var(--navy); margin: 0; }
+.tl-imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; }
+.tl-img {
+  width: 100%; display: block; border-radius: 6px;
+  mix-blend-mode: multiply;   /* pure-white bg melts into the parchment page */
+}
+@media (max-width: 640px) { .tl-imgs { gap: 7px; } .tl-title { font-size: 1.08rem; } }
