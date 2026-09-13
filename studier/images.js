@@ -357,7 +357,7 @@ window.CH_IMAGES = {
    "images/ch06/time6.jpg",
    "images/ch06/time7.jpg",
    "images/ch06/time8.jpg",
-   null,
+   "images/ch06/time9.jpg",
    "images/ch06/time10.jpg"
   ]
  },
@@ -784,7 +784,7 @@ window.CH_IMAGES = {
    "images/ch14/idea1.jpg",
    "images/ch14/idea2.jpg",
    "images/ch14/idea3.jpg",
-   null,
+   "images/ch14/idea4.jpg",
    "images/ch14/idea5.jpg",
    "images/ch14/idea6.jpg"
   ],
@@ -859,7 +859,7 @@ window.CH_IMAGES = {
    null,
    "images/ch15/term12.jpg",
    "images/ch15/term13.jpg",
-   null,
+   "images/ch15/term14.jpg",
    "images/ch15/term15.jpg"
   ],
   "timeline": [
@@ -1273,7 +1273,7 @@ window.CH_IMAGES = {
    "images/ch22/time0.jpg",
    null,
    "images/ch22/time2.jpg",
-   null,
+   "images/ch22/time3.jpg",
    "images/ch22/time4.jpg",
    "images/ch22/time5.jpg",
    "images/ch22/time6.jpg",
@@ -1324,7 +1324,21 @@ window.CH_IMAGES = {
    "images/ch23/term10.jpg",
    "images/ch23/term11.jpg",
    "images/ch23/term12.jpg",
-   "images/ch23/term13.jpg"
+   "images/ch23/term13.jpg",
+   "images/ch23/term14.jpg",
+   "images/ch23/term15.jpg"
+  ],
+  "timeline": [
+   "images/ch23/time0.jpg",
+   "images/ch23/time1.jpg",
+   "images/ch23/time2.jpg",
+   "images/ch23/time3.jpg",
+   "images/ch23/time4.jpg",
+   "images/ch23/time5.jpg",
+   "images/ch23/time6.jpg",
+   "images/ch23/time7.jpg",
+   "images/ch23/time8.jpg",
+   "images/ch23/time9.jpg"
   ]
  },
  "24": {
@@ -1344,6 +1358,46 @@ window.CH_IMAGES = {
    "images/ch24/comic11.jpg",
    "images/ch24/comic12.jpg",
    "images/ch24/comic13.jpg"
+  ],
+  "ideas": [
+   "images/ch24/idea0.jpg",
+   "images/ch24/idea1.jpg",
+   "images/ch24/idea2.jpg",
+   "images/ch24/idea3.jpg",
+   "images/ch24/idea4.jpg",
+   "images/ch24/idea5.jpg",
+   "images/ch24/idea6.jpg"
+  ],
+  "terms": [
+   "images/ch24/term0.jpg",
+   "images/ch24/term1.jpg",
+   "images/ch24/term2.jpg",
+   "images/ch24/term3.jpg",
+   "images/ch24/term4.jpg",
+   "images/ch24/term5.jpg",
+   "images/ch24/term6.jpg",
+   "images/ch24/term7.jpg",
+   "images/ch24/term8.jpg",
+   "images/ch24/term9.jpg",
+   "images/ch24/term10.jpg",
+   "images/ch24/term11.jpg",
+   "images/ch24/term12.jpg",
+   "images/ch24/term13.jpg",
+   "images/ch24/term14.jpg",
+   "images/ch24/term15.jpg"
+  ],
+  "timeline": [
+   "images/ch24/time0.jpg",
+   "images/ch24/time1.jpg",
+   "images/ch24/time2.jpg",
+   "images/ch24/time3.jpg",
+   "images/ch24/time4.jpg",
+   "images/ch24/time5.jpg",
+   "images/ch24/time6.jpg",
+   "images/ch24/time7.jpg",
+   "images/ch24/time8.jpg",
+   "images/ch24/time9.jpg",
+   "images/ch24/time10.jpg"
   ]
  },
  "25": {
@@ -1363,6 +1417,46 @@ window.CH_IMAGES = {
    "images/ch25/comic11.jpg",
    "images/ch25/comic12.jpg",
    "images/ch25/comic13.jpg"
+  ],
+  "ideas": [
+   "images/ch25/idea0.jpg",
+   "images/ch25/idea1.jpg",
+   "images/ch25/idea2.jpg",
+   "images/ch25/idea3.jpg",
+   "images/ch25/idea4.jpg",
+   "images/ch25/idea5.jpg",
+   "images/ch25/idea6.jpg"
+  ],
+  "terms": [
+   "images/ch25/term0.jpg",
+   "images/ch25/term1.jpg",
+   "images/ch25/term2.jpg",
+   "images/ch25/term3.jpg",
+   "images/ch25/term4.jpg",
+   "images/ch25/term5.jpg",
+   "images/ch25/term6.jpg",
+   "images/ch25/term7.jpg",
+   "images/ch25/term8.jpg",
+   "images/ch25/term9.jpg",
+   "images/ch25/term10.jpg",
+   "images/ch25/term11.jpg",
+   "images/ch25/term12.jpg",
+   "images/ch25/term13.jpg",
+   "images/ch25/term14.jpg",
+   "images/ch25/term15.jpg"
+  ],
+  "timeline": [
+   "images/ch25/time0.jpg",
+   "images/ch25/time1.jpg",
+   "images/ch25/time2.jpg",
+   "images/ch25/time3.jpg",
+   "images/ch25/time4.jpg",
+   "images/ch25/time5.jpg",
+   "images/ch25/time6.jpg",
+   "images/ch25/time7.jpg",
+   "images/ch25/time8.jpg",
+   "images/ch25/time9.jpg",
+   "images/ch25/time10.jpg"
   ]
  },
  "26": {
@@ -1381,6 +1475,47 @@ window.CH_IMAGES = {
    "images/ch26/comic10.jpg",
    "images/ch26/comic11.jpg",
    "images/ch26/comic12.jpg"
+  ],
+  "ideas": [
+   "images/ch26/idea0.jpg",
+   "images/ch26/idea1.jpg",
+   "images/ch26/idea2.jpg",
+   null,
+   "images/ch26/idea4.jpg",
+   "images/ch26/idea5.jpg",
+   "images/ch26/idea6.jpg"
+  ],
+  "terms": [
+   "images/ch26/term0.jpg",
+   "images/ch26/term1.jpg",
+   "images/ch26/term2.jpg",
+   "images/ch26/term3.jpg",
+   "images/ch26/term4.jpg",
+   "images/ch26/term5.jpg",
+   "images/ch26/term6.jpg",
+   "images/ch26/term7.jpg",
+   "images/ch26/term8.jpg",
+   "images/ch26/term9.jpg",
+   "images/ch26/term10.jpg",
+   "images/ch26/term11.jpg",
+   "images/ch26/term12.jpg",
+   "images/ch26/term13.jpg",
+   "images/ch26/term14.jpg",
+   "images/ch26/term15.jpg"
+  ],
+  "timeline": [
+   "images/ch26/time0.jpg",
+   "images/ch26/time1.jpg",
+   "images/ch26/time2.jpg",
+   "images/ch26/time3.jpg",
+   "images/ch26/time4.jpg",
+   "images/ch26/time5.jpg",
+   "images/ch26/time6.jpg",
+   "images/ch26/time7.jpg",
+   "images/ch26/time8.jpg",
+   "images/ch26/time9.jpg",
+   "images/ch26/time10.jpg",
+   "images/ch26/time11.jpg"
   ]
  },
  "27": {
@@ -1400,7 +1535,45 @@ window.CH_IMAGES = {
    "images/ch27/comic12.jpg",
    "images/ch27/comic13.jpg"
   ],
-  "cover": "images/ch27/cover.jpg"
+  "cover": "images/ch27/cover.jpg",
+  "ideas": [
+   "images/ch27/idea0.jpg",
+   "images/ch27/idea1.jpg",
+   "images/ch27/idea2.jpg",
+   "images/ch27/idea3.jpg",
+   "images/ch27/idea4.jpg",
+   "images/ch27/idea5.jpg",
+   "images/ch27/idea6.jpg"
+  ],
+  "terms": [
+   "images/ch27/term0.jpg",
+   "images/ch27/term1.jpg",
+   "images/ch27/term2.jpg",
+   "images/ch27/term3.jpg",
+   "images/ch27/term4.jpg",
+   "images/ch27/term5.jpg",
+   null,
+   "images/ch27/term7.jpg",
+   "images/ch27/term8.jpg",
+   "images/ch27/term9.jpg",
+   "images/ch27/term10.jpg",
+   "images/ch27/term11.jpg",
+   "images/ch27/term12.jpg",
+   "images/ch27/term13.jpg",
+   "images/ch27/term14.jpg"
+  ],
+  "timeline": [
+   "images/ch27/time0.jpg",
+   "images/ch27/time1.jpg",
+   "images/ch27/time2.jpg",
+   "images/ch27/time3.jpg",
+   "images/ch27/time4.jpg",
+   null,
+   "images/ch27/time6.jpg",
+   "images/ch27/time7.jpg",
+   "images/ch27/time8.jpg",
+   "images/ch27/time9.jpg"
+  ]
  },
  "28": {
   "comic": [
@@ -1421,6 +1594,47 @@ window.CH_IMAGES = {
    "images/ch28/comic14.jpg",
    "images/ch28/comic15.jpg"
   ],
-  "cover": "images/ch28/cover.jpg"
+  "cover": "images/ch28/cover.jpg",
+  "ideas": [
+   "images/ch28/idea0.jpg",
+   "images/ch28/idea1.jpg",
+   "images/ch28/idea2.jpg",
+   "images/ch28/idea3.jpg",
+   "images/ch28/idea4.jpg",
+   "images/ch28/idea5.jpg",
+   "images/ch28/idea6.jpg"
+  ],
+  "terms": [
+   "images/ch28/term0.jpg",
+   "images/ch28/term1.jpg",
+   "images/ch28/term2.jpg",
+   "images/ch28/term3.jpg",
+   "images/ch28/term4.jpg",
+   "images/ch28/term5.jpg",
+   "images/ch28/term6.jpg",
+   "images/ch28/term7.jpg",
+   "images/ch28/term8.jpg",
+   "images/ch28/term9.jpg",
+   "images/ch28/term10.jpg",
+   "images/ch28/term11.jpg",
+   "images/ch28/term12.jpg",
+   "images/ch28/term13.jpg",
+   null,
+   "images/ch28/term15.jpg"
+  ],
+  "timeline": [
+   "images/ch28/time0.jpg",
+   "images/ch28/time1.jpg",
+   "images/ch28/time2.jpg",
+   "images/ch28/time3.jpg",
+   "images/ch28/time4.jpg",
+   "images/ch28/time5.jpg",
+   "images/ch28/time6.jpg",
+   "images/ch28/time7.jpg",
+   "images/ch28/time8.jpg",
+   "images/ch28/time9.jpg",
+   "images/ch28/time10.jpg",
+   "images/ch28/time11.jpg"
+  ]
  }
 };
