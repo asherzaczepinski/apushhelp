@@ -274,19 +274,19 @@ window.Comic = (function () {
   }
 
   // one comic panel: a caption + an image (AI art if given, else animated SVG).
-  // If the caption names places, "Learn more" opens the map focused on them.
-  function panel(caption, imgSrc, i) {
+  // If the caption names places, add a "See these places on the map" link.
+  function panel(n, caption, imgSrc, i) {
     const action = ACTION.test(caption);
     const side = i % 2 ? 'right' : 'left';
     const art = imgSrc
       ? `<img class="cart-img" src="${imgSrc}" alt="" loading="lazy">`
       : panelSVG(pick(caption), action);
-    const ids = (window.Atlas && Atlas.spotsFor) ? Atlas.spotsFor(caption) : [];
-    const href = ids.length ? '#/atlas/' + ids.join(',') : '#/atlas';
-    const more = ids.length ? '🗺 See these places on the map →' : '🗺 Open the map →';
+    const hasPlaces = (window.Atlas && Atlas.spotsFor && Atlas.spotsFor(caption).length);
+    const more = hasPlaces
+      ? `<a class="panel-more" href="#/atlas/${n}/${i}">🌍 See these places on the map →</a>` : '';
     return `<figure class="cpanel ${side}${action ? ' action' : ''}" data-i="${i}">
       <div class="cart">${art}<span class="cpanel-no">${i + 1}</span></div>
-      <div class="cbubble"><p>${esc(caption)}</p><a class="panel-more" href="${href}">${more}</a></div>
+      <div class="cbubble"><p>${esc(caption)}</p>${more}</div>
     </figure>`;
   }
 

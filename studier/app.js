@@ -212,7 +212,7 @@
     let si = 0;
     (c.summary || []).forEach(p => {
       Comic.splitPara(p).forEach(sen => {
-        if (si < 16) { parts.push(Comic.panel(sen, comic[si], si)); si++; }
+        if (si < 16) { parts.push(Comic.panel(n, sen, comic[si], si)); si++; }
       });
     });
     return `<div class="comic-strip chapter-gn">${parts.join('')}</div>`;
@@ -668,21 +668,22 @@
 
   function render() {
     const h = location.hash.replace(/^#\/?/, '');
-    const [view, arg] = h.split('/');
+    const parts = h.split('/');
+    const view = parts[0], arg = parts[1];
     if (window.Typer) Typer.destroy();
-    if (window.Globe3D) Globe3D.destroy();
+    if (window.Atlas && Atlas.destroy) Atlas.destroy();
     let html;
     if (!view) html = home();
     else if (view === 'unit') html = unit(arg);
     else if (view === 'ch') html = chapter(arg);
     else if (view === 'review') html = reviewHtml();
-    else if (view === 'atlas') html = Atlas.html(arg);
+    else if (view === 'atlas') html = Atlas.html(parts[1], parts[2]);
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = (view ? '<button class="backbtn" id="backbtn">‹ Back</button>' : '') + html;
     if (view === 'ch') { renderCard(); Comic.wire(arg); }
     if (view === 'review') startReview();
-    if (view === 'atlas') Atlas.wire(arg);
+    if (view === 'atlas') Atlas.wire(parts[1], parts[2]);
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
   }
