@@ -581,6 +581,32 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 .strip-map:hover { background: var(--patriot); border-color: var(--patriot); }
 @media (max-width: 640px) { .comic-page { grid-template-columns: 1fr; } }
 
+/* ── stacked comic strips: one wide multi-panel image + narration card ── */
+.comic-strips { display: flex; flex-direction: column; gap: 26px; }
+.cstrip {
+  margin: 0;
+  background: #1a1410;
+  border: 4px solid #1a1410;
+  box-shadow: 7px 7px 0 var(--brass);
+}
+.cstrip-img { width: 100%; display: block; border-bottom: 4px solid #1a1410; }
+.cstrip-cap {
+  background: var(--parchment);
+  padding: 14px 18px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.cstrip-cap p {
+  margin: 0;
+  font: 1.02rem/1.55 Georgia, serif;
+  color: var(--ink);
+}
+.cstrip .strip-map { font-size: 0.82rem; padding: 5px 12px; }
+@media (max-width: 640px) {
+  .comic-strips { gap: 20px; }
+  .cstrip-cap p { font-size: 0.96rem; }
+  .cstrip { box-shadow: 5px 5px 0 var(--brass); }
+}
+
 /* ── graphic novel (legacy panels, still used on the map) ── */
 .comic-strip { display: flex; flex-direction: column; gap: 22px; }
 .cpanel {

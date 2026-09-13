@@ -210,15 +210,15 @@
     // a hand-authored follow-along story (paired panels + narration), if any
     const story = (window.STORY || {})[String(n)];
     if (story && story.length) {
-      const cells = story.map((s, i) => {
+      const strips = story.map((s, i) => {
         const hasPlaces = (window.Atlas && Atlas.spotsFor(s.cap).length);
-        const map = hasPlaces ? `<a class="strip-map" href="#/atlas/${n}/${i}">See on map</a>` : '';
-        return `<figure class="strip-cell">
-          <div class="strip-art"><span class="strip-no">${i + 1}</span><img class="strip-img" src="${s.img}" alt="" loading="lazy"></div>
-          <figcaption class="strip-cap"><span>${esc(s.cap)}</span>${map}</figcaption>
+        const map = hasPlaces ? `<a class="strip-map" href="#/atlas/${n}/${i}">See these places on the map</a>` : '';
+        return `<figure class="cstrip">
+          <img class="cstrip-img" src="${s.img}" alt="" loading="lazy">
+          <figcaption class="cstrip-cap"><p>${esc(s.cap)}</p>${map}</figcaption>
         </figure>`;
       }).join('');
-      return `<div class="comic-page">${cells}</div>`;
+      return `<div class="comic-strips">${strips}</div>`;
     }
     const comic = Array.isArray(imgs.comic) ? imgs.comic : [];
     const cells = [];
