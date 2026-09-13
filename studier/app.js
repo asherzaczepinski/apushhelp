@@ -207,12 +207,18 @@
   let mapSeq = 0;
   function graphicNovel(n, c) {
     const imgs = (window.CH_IMAGES || {})[String(n)] || {};
-    // full high-quality comic pages, if generated for this chapter
-    if (Array.isArray(imgs.pages) && imgs.pages.length) {
-      return `<div class="comic-pages">
-        ${imgs.pages.map(p => `<img class="comic-full" src="${p}" alt="comic page" loading="lazy">`).join('')}
-        <a class="map-btn" href="#/atlas/${n}">See this chapter’s places on the map</a>
-      </div>`;
+    // a hand-authored follow-along story (paired panels + narration), if any
+    const story = (window.STORY || {})[String(n)];
+    if (story && story.length) {
+      const cells = story.map((s, i) => {
+        const hasPlaces = (window.Atlas && Atlas.spotsFor(s.cap).length);
+        const map = hasPlaces ? `<a class="strip-map" href="#/atlas/${n}/${i}">See on map</a>` : '';
+        return `<figure class="strip-cell">
+          <div class="strip-art"><span class="strip-no">${i + 1}</span><img class="strip-img" src="${s.img}" alt="" loading="lazy"></div>
+          <figcaption class="strip-cap"><span>${esc(s.cap)}</span>${map}</figcaption>
+        </figure>`;
+      }).join('');
+      return `<div class="comic-page">${cells}</div>`;
     }
     const comic = Array.isArray(imgs.comic) ? imgs.comic : [];
     const cells = [];

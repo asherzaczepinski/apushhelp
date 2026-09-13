@@ -49,6 +49,10 @@ window.Atlas = (function () {
       return { n, idx: null, caption: whole, src: null, whole: true, spots: spotsFor(whole) };
     }
     const idx = Number(idxStr);
+    const story = (window.STORY || {})[String(n)];
+    if (story && story[idx]) {
+      return { n, idx, caption: story[idx].cap, src: story[idx].img, spots: spotsFor(story[idx].cap) };
+    }
     const sents = [];
     (c.summary || []).forEach(p => (window.Comic ? Comic.splitPara(p) : [p]).forEach(s => sents.push(s)));
     const caption = sents[idx] || '';
