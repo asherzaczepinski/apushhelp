@@ -109,23 +109,21 @@
       return '<h1>No data yet</h1><p>Run <code>python3 build_data.py</code> in the project folder, then reload.</p>';
     }
     return `
+    <section class="home-intro">
+      <h1>Give Me Liberty!</h1>
+      <p>An illustrated study companion to Eric Foner's <em>Give Me Liberty! An American History</em> (Brief 5th edition) — the whole sweep of U.S. history, from first contact to today. Each chapter is retold as a graphic novel, with its big ideas, timeline, key terms, and flashcards all on one page. Pick a chapter to begin.</p>
+    </section>
     <nav class="units">
-      ${U.map(u => {
-        const m = unitMastery(u);
-        const pct = m.total ? Math.round(100 * m.known / m.total) : 0;
-        return `
-      <a class="band" href="#/unit/${u.id}">
+      ${U.map(u => `
+      <div class="band">
         <span class="era">${esc(u.years)}</span>
-        <span class="band-main">
+        <div class="band-main">
           <strong>Unit ${u.id} — ${esc(u.name)}</strong>
-          ${u.chapters.map(n => `<span class="band-ch">Ch ${n}. ${esc(chTitle(n))}</span>`).join('')}
-        </span>
-        <span class="band-side">
-          <span class="weight">${esc(u.weight)}</span>
-          <span class="umini" title="${m.known} of ${m.total} terms mastered"><span style="width:${pct}%"></span></span>
-        </span>
-      </a>`;
-      }).join('')}
+          <div class="band-chs">
+            ${u.chapters.map(n => `<a class="band-ch" href="#/ch/${n}">Ch ${n}. ${esc(chTitle(n))}</a>`).join('')}
+          </div>
+        </div>
+      </div>`).join('')}
     </nav>`;
   }
 
@@ -153,8 +151,6 @@
     <header class="unit-head">
       <p class="era big">${esc(u.years)}</p>
       <h1>Unit ${u.id} — ${esc(u.name)}</h1>
-      <p class="unit-actions"><a class="btn" href="#/quiz/${u.id}">Flashcards</a>
-        <a class="btn ghost" href="#/order/${u.id}">Timeline challenge</a></p>
     </header>
     <ul class="ch-list">
       ${u.chapters.map(n => {
@@ -197,7 +193,7 @@
         ${(c.key_terms || []).map((t, idx) => `<div class="trow" id="term-${slug(t.term)}">${imgTag(chImg(n, 'terms', idx), 'thumb', esc(t.term))}<div class="trow-txt"><dt tabindex="0">${esc(t.term)}</dt><dd>${esc(t.def)}</dd></div></div>`).join('')}
       </dl>
       ${(c.themes || []).length ? `<h2>Course themes</h2><ul class="themes">${c.themes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
-      ${chapterQuizHtml(n)}
+      ${chapterCards(n)}
       <nav class="pager">
         ${prev ? `<a href="#/ch/${prev}">‹ Ch ${prev}. ${esc(chTitle(prev))}</a>` : '<span></span>'}
         ${next ? `<a href="#/ch/${next}">Ch ${next}. ${esc(chTitle(next))} ›</a>` : ''}
@@ -564,24 +560,22 @@
 
   let deck = [], pos = 0, flipped = false;
 
-  function quiz(id) {
-    const u = U.find(x => x.id === Number(id));
-    if (!u) return notFound();
-    deck = u.chapters.flatMap(n =>
-      ((chap(n) || {}).key_terms || []).map(t => ({ term: t.term, def: t.def, ch: n })));
+  // flashcards for one chapter, shown at the bottom of the chapter page
+  function chapterCards(n) {
+    const terms = ((chap(n) || {}).key_terms) || [];
+    if (terms.length < 2) return '';
+    deck = terms.map(t => ({ term: t.term, def: t.def, ch: n }));
     shuffle(deck);
     pos = 0; flipped = false;
-    if (!deck.length) return '<p>No terms for this unit yet.</p>';
     return `
-    <p class="crumb"><a href="#/unit/${u.id}">Unit ${u.id} — ${esc(u.name)}</a></p>
-    <h1>Term quiz — Unit ${u.id}</h1>
-    <p class="quiz-help">Click the card (or press space) to flip it.</p>
+    <h2>Flashcards</h2>
+    <p class="quiz-help">Click the card (or press space) to flip it — ${terms.length} terms in this chapter.</p>
     <div class="fc-stage"><div class="fcard" id="fcard" role="button" tabindex="0" aria-live="polite"></div></div>
     <nav class="quiz-nav">
       <button class="btn" id="qprev">Back</button>
       <span id="qcount" class="qcount"></span>
       <button class="btn" id="qnext">Next</button>
-      <button class="btn ghost" id="qshuffle">Reshuffle</button>
+      <button class="btn ghost" id="qshuffle">Shuffle</button>
     </nav>`;
   }
 
@@ -664,10 +658,6 @@
     if (ropt) { answerReview(ropt); return; }
     if (e.target.closest('#rv-next')) { rv.i += 1; renderReview(); return; }
     if (e.target.closest('#rv-again')) { startReview(); return; }
-
-    const oc = e.target.closest('.ord-choice');
-    if (oc) { pickOrder(Number(oc.dataset.i)); return; }
-    if (e.target.closest('#ord-again')) { startOrder(ord.uid); return; }
   });
 
   app.addEventListener('keydown', e => {
@@ -696,17 +686,13 @@
     if (!view) html = home();
     else if (view === 'unit') html = unit(arg);
     else if (view === 'ch') html = chapter(arg);
-    else if (view === 'quiz') html = quiz(arg);
     else if (view === 'review') html = reviewHtml();
-    else if (view === 'order') html = orderHtml(arg);
     else if (view === 'atlas') html = Atlas.html();
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = html;
-    if (view === 'quiz') renderCard();
-    if (view === 'ch') { wireChapter(arg); Comic.wire(arg); }
+    if (view === 'ch') { renderCard(); Comic.wire(arg); }
     if (view === 'review') startReview();
-    if (view === 'order') startOrder(arg);
     if (view === 'atlas') Atlas.wire();
     window.scrollTo(0, 0);
     app.focus({ preventScroll: true });
