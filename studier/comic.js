@@ -283,7 +283,7 @@ window.Comic = (function () {
       : panelSVG(pick(caption), action);
     const hasPlaces = (window.Atlas && Atlas.spotsFor && Atlas.spotsFor(caption).length);
     const more = hasPlaces
-      ? `<a class="panel-more" href="#/atlas/${n}/${i}">🌍 See these places on the map →</a>` : '';
+      ? `<a class="map-btn" href="#/atlas/${n}/${i}">See these places on the map</a>` : '';
     return `<figure class="cpanel ${side}${action ? ' action' : ''}" data-i="${i}">
       <div class="cart">${art}<span class="cpanel-no">${i + 1}</span></div>
       <div class="cbubble"><p>${esc(caption)}</p>${more}</div>

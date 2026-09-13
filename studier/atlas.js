@@ -1,38 +1,32 @@
 // The map, opened from a panel's "See these places on the map": a real 3D
-// Earth (globe.gl, blue-marble) that shows the panel's cartoon and text, then
-// spins to focus on the places the panel names, with emoji markers and the
-// triangular-trade arcs. No extra write-up — just the story and the geography.
+// Earth (globe.gl, blue-marble) with split country areas (AP-World style).
+// The highlighted areas AND the trade paths are built from the panel's own
+// notes — the places it names get their countries colored and chained by arcs.
 window.Atlas = (function () {
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-  // id, name, lat, lng, emoji, keywords
+  // id, name, lat, lng, emoji, color, countries (Natural-Earth NAME), keywords
   const SPOTS = [
-    { id: 'MA', name: 'Massachusetts', lat: 42.4, lng: -71.1, emoji: '🐟', keys: ['massachusetts', 'boston', 'puritan', 'plymouth', 'pilgrim', 'new england', 'winthrop'] },
-    { id: 'RI', name: 'Rhode Island', lat: 41.6, lng: -71.4, emoji: '🥃', keys: ['rhode island', 'roger williams', 'newport'] },
-    { id: 'CT', name: 'Connecticut', lat: 41.5, lng: -72.7, emoji: '🐄', keys: ['connecticut', 'fundamental orders', 'hooker'] },
-    { id: 'NY', name: 'New York', lat: 42.6, lng: -74.6, emoji: '🦫', keys: ['new york', 'new netherland', 'dutch', 'new amsterdam', 'hudson', 'manhattan'] },
-    { id: 'PA', name: 'Pennsylvania', lat: 40.9, lng: -77.6, emoji: '🌾', keys: ['pennsylvania', 'penn', 'quaker', 'philadelphia'] },
-    { id: 'MD', name: 'Maryland', lat: 39.2, lng: -76.8, emoji: '🍂', keys: ['maryland', 'calvert', 'baltimore', 'catholic'] },
-    { id: 'VA', name: 'Virginia', lat: 37.6, lng: -78.6, emoji: '🍂', keys: ['virginia', 'jamestown', 'tobacco', 'burgesses', 'bacon', 'chesapeake', 'rolfe', 'powhatan'] },
-    { id: 'NC', name: 'North Carolina', lat: 35.6, lng: -79.4, emoji: '⚓', keys: ['north carolina', 'naval stores', 'regulator', 'roanoke'] },
-    { id: 'SC', name: 'South Carolina', lat: 33.8, lng: -80.9, emoji: '🌾', keys: ['south carolina', 'charleston', 'rice', 'indigo', 'stono', 'task system'] },
-    { id: 'GA', name: 'Georgia', lat: 32.7, lng: -83.4, emoji: '🌾', keys: ['georgia', 'oglethorpe', 'debtor'] },
-    { id: 'england', name: 'England', lat: 52.5, lng: -1.5, emoji: '👑', keys: ['england', 'english', 'britain', 'british', 'london', 'crown', 'parliament', 'navigation act'] },
-    { id: 'iberia', name: 'Spain & Portugal', lat: 40, lng: -5, emoji: '⛵', keys: ['spain', 'spanish', 'portugal', 'portuguese', 'caravel', 'columbus', 'reconquista', 'iberia', 'lisbon', 'seville', 'las casas'] },
-    { id: 'africa', name: 'West Africa', lat: 6.5, lng: -2, emoji: '⛓️', keys: ['africa', 'african', 'slave', 'slavery', 'enslaved', 'middle passage', 'gold coast', 'guinea'] },
-    { id: 'caribbean', name: 'The Caribbean', lat: 18, lng: -76, emoji: '🍬', keys: ['caribbean', 'barbados', 'jamaica', 'sugar', 'west indies', 'hispaniola'] },
-    { id: 'mexico', name: 'Mexico (Aztecs)', lat: 19.4, lng: -99.1, emoji: '🏛️', keys: ['aztec', 'tenochtitlan', 'cortes', 'mexico', 'moctezuma', 'conquistador'] },
-    { id: 'peru', name: 'Peru (Inca)', lat: -13.5, lng: -72, emoji: '⛰️', keys: ['inca', 'pizarro', 'peru', 'andes'] }
+    { id: 'MA', name: 'Massachusetts', lat: 42.4, lng: -71.1, emoji: '🐟', color: '#8c1c13', co: ['United States of America'], keys: ['massachusetts', 'boston', 'puritan', 'plymouth', 'pilgrim', 'new england', 'winthrop'] },
+    { id: 'RI', name: 'Rhode Island', lat: 41.6, lng: -71.4, emoji: '🥃', color: '#8c1c13', co: ['United States of America'], keys: ['rhode island', 'roger williams', 'newport'] },
+    { id: 'CT', name: 'Connecticut', lat: 41.5, lng: -72.7, emoji: '🐄', color: '#8c1c13', co: ['United States of America'], keys: ['connecticut', 'fundamental orders', 'hooker'] },
+    { id: 'NY', name: 'New York', lat: 42.6, lng: -74.6, emoji: '🦫', color: '#8c1c13', co: ['United States of America'], keys: ['new york', 'new netherland', 'dutch', 'new amsterdam', 'hudson', 'manhattan'] },
+    { id: 'PA', name: 'Pennsylvania', lat: 40.9, lng: -77.6, emoji: '🌾', color: '#8c1c13', co: ['United States of America'], keys: ['pennsylvania', 'penn', 'quaker', 'philadelphia'] },
+    { id: 'MD', name: 'Maryland', lat: 39.2, lng: -76.8, emoji: '🍂', color: '#8c1c13', co: ['United States of America'], keys: ['maryland', 'calvert', 'baltimore', 'catholic'] },
+    { id: 'VA', name: 'Virginia', lat: 37.6, lng: -78.6, emoji: '🍂', color: '#8c1c13', co: ['United States of America'], keys: ['virginia', 'jamestown', 'tobacco', 'burgesses', 'bacon', 'chesapeake', 'rolfe', 'powhatan'] },
+    { id: 'NC', name: 'North Carolina', lat: 35.6, lng: -79.4, emoji: '⚓', color: '#8c1c13', co: ['United States of America'], keys: ['north carolina', 'naval stores', 'regulator', 'roanoke'] },
+    { id: 'SC', name: 'South Carolina', lat: 33.8, lng: -80.9, emoji: '🌾', color: '#8c1c13', co: ['United States of America'], keys: ['south carolina', 'charleston', 'rice', 'indigo', 'stono', 'task system'] },
+    { id: 'GA', name: 'Georgia', lat: 32.7, lng: -83.4, emoji: '🌾', color: '#8c1c13', co: ['United States of America'], keys: ['georgia', 'oglethorpe', 'debtor'] },
+    { id: 'england', name: 'England', lat: 52.5, lng: -1.5, emoji: '👑', color: '#33506b', co: ['United Kingdom'], keys: ['england', 'english', 'britain', 'british', 'london', 'crown', 'parliament', 'navigation act'] },
+    { id: 'iberia', name: 'Spain & Portugal', lat: 40, lng: -5, emoji: '⛵', color: '#c07a2a', co: ['Spain', 'Portugal'], keys: ['spain', 'spanish', 'portugal', 'portuguese', 'caravel', 'columbus', 'reconquista', 'iberia', 'lisbon', 'seville', 'las casas'] },
+    { id: 'africa', name: 'West Africa', lat: 6.5, lng: -2, emoji: '⛓️', color: '#6e5636', co: ['Ghana', 'Nigeria', 'Guinea', 'Senegal', 'Sierra Leone', 'Liberia', 'Benin', 'Togo', 'Burkina Faso', 'Mali'], keys: ['africa', 'african', 'slave', 'slavery', 'enslaved', 'middle passage', 'gold coast', 'guinea'] },
+    { id: 'caribbean', name: 'The Caribbean', lat: 18, lng: -76, emoji: '🍬', color: '#b0842f', co: ['Cuba', 'Haiti', 'Dominican Rep.', 'Jamaica'], keys: ['caribbean', 'barbados', 'jamaica', 'sugar', 'west indies', 'hispaniola'] },
+    { id: 'mexico', name: 'Mexico (Aztecs)', lat: 19.4, lng: -99.1, emoji: '🏛️', color: '#6b4f6f', co: ['Mexico'], keys: ['aztec', 'tenochtitlan', 'cortes', 'mexico', 'moctezuma', 'conquistador'] },
+    { id: 'peru', name: 'Peru (Inca)', lat: -13.5, lng: -72, emoji: '⛰️', color: '#7d6a45', co: ['Peru'], keys: ['inca', 'pizarro', 'peru', 'andes'] }
   ];
   const BY = {};
   SPOTS.forEach(s => { BY[s.id] = s; });
-
-  const ROUTES = [
-    { startLat: 52.5, startLng: -1.5, endLat: 6.5, endLng: -2, color: '#c9a24a' },
-    { startLat: 6.5, startLng: -2, endLat: 18, endLng: -76, color: '#d05a4a' },
-    { startLat: 18, startLng: -76, endLat: 52.5, endLng: -1.5, color: '#5a86b0' }
-  ];
 
   let globe = null;
 
@@ -70,17 +64,31 @@ window.Atlas = (function () {
     if (!window.Globe) { host.innerHTML = '<p class="globe-fallback">The globe needs WebGL, which isn’t available here.</p>'; return; }
     host.innerHTML = '';
     const pd = panelData(chStr, idxStr);
-    const focusIds = pd ? pd.spots : [];
-    const markers = focusIds.length ? SPOTS.filter(s => focusIds.indexOf(s.id) !== -1) : SPOTS;
+    const focus = (pd ? pd.spots : []).map(id => BY[id]).filter(Boolean);
+    const markers = focus.length ? focus : SPOTS;
+
+    // areas from the notes: color the matched spots' countries
+    const areaColor = {};
+    focus.forEach(s => s.co.forEach(name => { areaColor[name] = s.color; }));
+    // paths from the notes: chain the matched places in order
+    const arcs = [];
+    for (let i = 0; i < focus.length - 1; i++) {
+      arcs.push({ startLat: focus[i].lat, startLng: focus[i].lng, endLat: focus[i + 1].lat, endLng: focus[i + 1].lng, color: focus[i].color });
+    }
 
     globe = window.Globe()(host)
       .globeImageUrl('vendor/earth-blue-marble.jpg')
       .backgroundColor('#f5ecd7')
       .showAtmosphere(true).atmosphereColor('#9ab0c4').atmosphereAltitude(0.2)
       .width(host.clientWidth || 660).height(460)
-      .arcsData(ROUTES)
-      .arcColor(d => d.color).arcStroke(0.6)
-      .arcDashLength(0.5).arcDashGap(0.25).arcDashAnimateTime(3500).arcAltitudeAutoScale(0.5)
+      .polygonsData(window.COUNTRIES_GEO || [])
+      .polygonAltitude(d => areaColor[d.properties.NAME] ? 0.02 : 0.006)
+      .polygonCapColor(d => areaColor[d.properties.NAME] ? hexA(areaColor[d.properties.NAME], 0.72) : 'rgba(0,0,0,0)')
+      .polygonSideColor(() => 'rgba(0,0,0,0)')
+      .polygonStrokeColor(() => '#d9c9a3')
+      .arcsData(arcs)
+      .arcColor(d => d.color).arcStroke(0.7)
+      .arcDashLength(0.5).arcDashGap(0.25).arcDashAnimateTime(3500).arcAltitudeAutoScale(0.6)
       .htmlElementsData(markers)
       .htmlElement(d => {
         const el = document.createElement('div');
@@ -91,25 +99,26 @@ window.Atlas = (function () {
 
     const controls = globe.controls();
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.6;
+    controls.autoRotateSpeed = 0.55;
     controls.addEventListener('start', () => { controls.autoRotate = false; });
 
-    if (focusIds.length) {
-      const fs = SPOTS.filter(s => focusIds.indexOf(s.id) !== -1);
-      const lat = fs.reduce((a, s) => a + s.lat, 0) / fs.length;
-      const lng = fs.reduce((a, s) => a + s.lng, 0) / fs.length;
-      const spread = Math.max.apply(null, fs.map(s => Math.abs(s.lat - lat) + Math.abs(s.lng - lng))) || 10;
+    if (focus.length) {
+      const lat = focus.reduce((a, s) => a + s.lat, 0) / focus.length;
+      const lng = focus.reduce((a, s) => a + s.lng, 0) / focus.length;
+      const spread = Math.max.apply(null, focus.map(s => Math.abs(s.lat - lat) + Math.abs(s.lng - lng))) || 10;
       globe.pointOfView({ lat, lng, altitude: Math.max(1.1, Math.min(2.5, spread / 40)) }, 1200);
     } else {
       globe.pointOfView({ lat: 25, lng: -45, altitude: 2.2 });
     }
   }
 
+  function hexA(hex, a) {
+    const n = parseInt(hex.slice(1), 16);
+    return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`;
+  }
+
   function destroy() {
-    if (globe) {
-      try { globe._destructor && globe._destructor(); } catch (e) { }
-      globe = null;
-    }
+    if (globe) { try { globe._destructor && globe._destructor(); } catch (e) { } globe = null; }
   }
 
   return { html, wire, spotsFor, destroy };

@@ -101,14 +101,19 @@ a:hover { color: #5f120c; }
   margin-bottom: 20px;
 }
 .backbtn:hover { background: var(--patriot); }
-.panel-more {
+.map-btn {
   display: inline-block;
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: var(--brass);
+  margin-top: 12px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--navy);
+  color: var(--cream);
   text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 2px solid var(--brass);
 }
-.panel-more:hover { color: var(--patriot); }
+.map-btn:hover, .map-btn:focus-visible { background: var(--patriot); color: var(--cream); border-color: var(--patriot); }
 .colophon {
   text-align: center;
   color: var(--ink-soft);
