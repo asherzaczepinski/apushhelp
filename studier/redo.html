@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redo picker — Give Me Liberty!</title>
+<style>
+  :root { --parchment:#f5ecd7; --cream:#fffaf0; --ink:#2b2118; --navy:#1b2a38; --patriot:#8c1c13; --brass:#8b6f47; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Georgia,serif; background:var(--parchment); color:var(--ink); }
+  header {
+    position:sticky; top:0; z-index:10; background:var(--navy); color:var(--cream);
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap; padding:12px 18px;
+    border-bottom:4px solid var(--patriot);
+  }
+  header h1 { font-size:1.15rem; margin:0; }
+  header p { margin:0; font-size:.85rem; color:#d9c9a3; }
+  #submit {
+    margin-left:auto; font:600 .95rem Georgia,serif; cursor:pointer;
+    background:var(--patriot); color:var(--cream); border:none; padding:9px 18px; border-radius:5px;
+  }
+  #submit:hover { background:#b3271b; }
+  #count { font-weight:700; color:var(--brass); }
+  select { font-family:inherit; padding:5px 8px; border-radius:4px; border:2px solid var(--brass); }
+  main { padding:16px; }
+  .chapter-h { font-size:1.3rem; color:var(--navy); border-bottom:3px double var(--brass); margin:22px 0 12px; padding-bottom:4px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+  .card { position:relative; cursor:pointer; background:var(--cream); border:2px solid #ddd; border-radius:8px; overflow:hidden; }
+  .card img { width:100%; display:block; }
+  .card .lab { font-size:.72rem; padding:5px 7px; color:var(--ink); border-top:1px solid #eee; }
+  .card.sel { border-color:var(--patriot); box-shadow:0 0 0 3px var(--patriot) inset; }
+  .card.sel::after {
+    content:"REDO"; position:absolute; top:6px; right:6px; background:var(--patriot); color:#fff;
+    font:700 .7rem Georgia,serif; padding:3px 8px; border-radius:4px;
+  }
+  .card.sel img { opacity:.55; }
+  .done { color:#6b8f4e; font-weight:700; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Click the images that need redoing</h1>
+    <p>Selected ones get a red REDO badge. Then hit Submit and tell your assistant &ldquo;go&rdquo;.</p>
+  </div>
+  <label style="color:#d9c9a3;font-size:.85rem">Chapter
+    <select id="chsel"><option value="all">all</option></select>
+  </label>
+  <span id="count">0 selected</span>
+  <button id="submit">Submit redo list</button>
+</header>
+<main id="main"></main>
+
+<script src="timeline.js"></script>
+<script>
+  const TL = window.TL || {};
+  const main = document.getElementById('main');
+  const selected = new Set();
+  const chsel = document.getElementById('chsel');
+
+  const chapters = Object.keys(TL).sort((a,b)=>a-b);
+  chapters.forEach(ch => { const o=document.createElement('option'); o.value=ch; o.textContent='Chapter '+ch; chsel.appendChild(o); });
+
+  function render(filter) {
+    main.innerHTML = '';
+    chapters.filter(ch => filter==='all' || ch===filter).forEach(ch => {
+      const h = document.createElement('div'); h.className='chapter-h'; h.textContent='Chapter '+ch; main.appendChild(h);
+      const grid = document.createElement('div'); grid.className='grid'; main.appendChild(grid);
+      TL[ch].forEach(entry => {
+        entry.imgs.forEach((src,j) => {
+          const card = document.createElement('div'); card.className='card' + (selected.has(src)?' sel':'');
+          card.innerHTML = `<img src="${src}" loading="lazy"><div class="lab">${entry.title} · #${j+1}</div>`;
+          card.onclick = () => {
+            if (selected.has(src)) { selected.delete(src); card.classList.remove('sel'); }
+            else { selected.add(src); card.classList.add('sel'); }
+            count();
+          };
+          grid.appendChild(card);
+        });
+      });
+    });
+  }
+  function count(){ document.getElementById('count').textContent = selected.size + ' selected'; }
+
+  chsel.onchange = () => render(chsel.value);
+  document.getElementById('submit').onclick = async () => {
+    const list = [...selected];
+    if (!list.length) { alert('Nothing selected yet — click the images to redo.'); return; }
+    try {
+      const r = await fetch('/save-redo', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(list) });
+      if (r.ok) document.getElementById('count').innerHTML = '<span class="done">Saved '+list.length+' images — now tell your assistant &ldquo;go&rdquo;.</span>';
+      else alert('Save failed (is serve.py the updated version?)');
+    } catch(e) { alert('Save failed: '+e); }
+  };
+
+  render('all');
+</script>
+</body>
+</html>

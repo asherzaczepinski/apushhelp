@@ -22,12 +22,27 @@ MODEL = "gemini-3.1-flash-image"
 
 STYLE = (
     "A single warm vintage American-history graphic-novel illustration — thick clean "
-    "confident ink outlines and rich color — of the described subject FULLY ISOLATED "
-    "on a completely plain PURE WHITE #FFFFFF background, like a clean cut-out sticker "
-    "with NOTHING behind it: no scenery, no backdrop, no shadow on the floor, no border "
-    "or frame, only flat pure white all around the subject. Center the subject and fill "
-    "the frame. NO text, letters, numbers, labels or speech bubbles anywhere. Subject: "
+    "confident ink outlines and rich color — of the described subject as a COMPACT "
+    "VIGNETTE centered on a SOLID UNIFORM BRIGHT MAGENTA (#FF00FF) chroma-key screen. "
+    "The magenta fills the whole background with a clear magenta margin all around the "
+    "subject; the subject must NOT touch the edges and must NEVER be a full-bleed scene. "
+    "NO scenery, NO white or grey background, and NO border, frame, outline, sticker "
+    "edge, drop shadow or halo around the subject — nothing but the subject and flat "
+    "solid magenta everywhere else. NO text, letters, numbers, labels or speech bubbles "
+    "anywhere. Subject: "
 )
+
+
+def key_magenta(im):
+    """Replace the magenta chroma screen (and its fringe) with pure white."""
+    im = im.convert("RGB")
+    px = im.load(); W, H = im.size
+    for y in range(H):
+        for x in range(W):
+            r, g, b = px[x, y]
+            if r > 115 and b > 105 and g < r - 45 and g < b - 40:   # magenta / magenta-fringe
+                px[x, y] = (255, 255, 255)
+    return im
 
 
 class CreditsOut(Exception):
@@ -39,7 +54,7 @@ def gen(prompt, aspect="1:1"):
             "generationConfig": {"responseModalities": ["IMAGE"],
                                  "imageConfig": {"aspectRatio": aspect}}}
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={KEY}"
-    for a in range(5):
+    for a in range(9):
         try:
             req = urllib.request.Request(url, data=json.dumps(body).encode(),
                                          headers={"Content-Type": "application/json"})
@@ -51,11 +66,15 @@ def gen(prompt, aspect="1:1"):
             print("    no image; retry"); time.sleep(4)
         except urllib.error.HTTPError as e:
             body = e.read().decode()
-            if "deplet" in body.lower() or "prepay" in body.lower() or "billing" in body.lower():
+            low = body.lower()
+            # ONLY true prepay-credit depletion stops the run; a plain rate-limit 429
+            # ("exceeded your current quota") just needs a wait.
+            if "deplet" in low or "prepayment" in low:
                 raise CreditsOut()
-            print("    HTTP", e.code, body[:160]); time.sleep(8 * (a + 1))
+            print("    HTTP", e.code, "(rate limit — waiting)" if e.code == 429 else body[:120])
+            time.sleep(15 * (a + 1))   # back off through per-minute rate limits
         except Exception as e:
-            print("    err", str(e)[:120]); time.sleep(5)
+            print("    err", str(e)[:120]); time.sleep(6)
     return None
 
 
@@ -63,6 +82,7 @@ def to_jpeg(png, max_w=900):
     im = Image.open(io.BytesIO(png)).convert("RGB")
     if im.width > max_w:
         im.thumbnail((max_w, max_w))
+    im = key_magenta(im)   # magenta screen -> pure white (blends into parchment)
     buf = io.BytesIO(); im.save(buf, "JPEG", quality=90, optimize=True)
     return buf.getvalue(), im.size
 
