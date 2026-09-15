@@ -69,8 +69,8 @@ def gen(prompt, aspect="1:1"):
             low = body.lower()
             # ONLY true prepay-credit depletion stops the run; a plain rate-limit 429
             # ("exceeded your current quota") just needs a wait.
-            if "deplet" in low or "prepayment" in low:
-                raise CreditsOut()
+            if "deplet" in low or "prepayment" in low or "per_day" in low or "requests_per_model_per_day" in low:
+                raise CreditsOut()     # out of credits OR hit the 1000/day cap → stop cleanly
             print("    HTTP", e.code, "(rate limit — waiting)" if e.code == 429 else body[:120])
             time.sleep(15 * (a + 1))   # back off through per-minute rate limits
         except Exception as e:
@@ -111,7 +111,7 @@ def main():
                     print(f"    {j}: ok")
             print(f"ch{n} DONE")
     except CreditsOut:
-        print("!! CREDITS DEPLETED — stopping cleanly. Re-run to resume after topping up.")
+        print("!! STOPPED — out of credits OR hit the 1000-images/day cap. Re-run after a top-up or the daily reset.")
         return
     print("ALL DONE")
 
