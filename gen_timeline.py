@@ -109,6 +109,7 @@ def main():
                     jpg, size = to_jpeg(png)
                     dest.write_bytes(jpg)
                     print(f"    {j}: ok")
+                    time.sleep(4)   # pace requests to stay under the per-minute rate limit
             print(f"ch{n} DONE")
     except CreditsOut:
         print("!! STOPPED — out of credits OR hit the 1000-images/day cap. Re-run after a top-up or the daily reset.")
