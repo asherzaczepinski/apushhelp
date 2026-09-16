@@ -111,14 +111,14 @@
     return `
     <section class="home-intro">
       <h1>Give Me Liberty!</h1>
-      <p>An illustrated study companion to Eric Foner's <em>Give Me Liberty! An American History</em> (Brief 5th edition). Every chapter is a <strong>visual timeline</strong> — each key term and turning point drawn as its own illustrated moment, in order — with a short intro up top and a <strong>pop quiz</strong> at the bottom covering everything it hits. Pick a chapter to begin.</p>
+      <p>An illustrated study companion to Eric Foner's <em>Give Me Liberty! An American History</em> (Brief 5th edition). Every chapter is a <strong>visual timeline</strong>: each key term and turning point drawn as its own illustrated moment, in order. At the bottom you pick the concepts you want to drill for a <strong>ten-question quiz</strong> on each, then put the events in order in a <strong>date-sorting game</strong>. Pick a chapter to begin.</p>
     </section>
     <nav class="units">
       ${U.map(u => `
       <div class="band">
         <span class="era">${esc(u.years)}</span>
         <div class="band-main">
-          <strong>Unit ${u.id} — ${esc(u.name)}</strong>
+          <strong>Unit ${u.id}: ${esc(u.name)}</strong>
           <div class="band-chs">
             ${u.chapters.map(n => `<a class="band-ch" href="#/ch/${n}">Ch ${n}. ${esc(chTitle(n))}</a>`).join('')}
           </div>
@@ -139,7 +139,7 @@
         <span class="seg learning" style="width:${pct(m.learning)}%"></span>
       </div>
       <p class="dash-legend"><strong>${m.known}</strong> mastered · <strong>${m.learning}</strong> learning · <strong>${m.fresh}</strong> new · ${m.total} key terms</p>
-      <p class="dash-cta"><a class="btn" href="#/review">${due ? 'Review ' + due + ' due term' + (due === 1 ? '' : 's') : (started ? 'Start a review session' : 'Start studying — mixed review')}</a></p>
+      <p class="dash-cta"><a class="btn" href="#/review">${due ? 'Review ' + due + ' due term' + (due === 1 ? '' : 's') : (started ? 'Start a review session' : 'Start studying (mixed review)')}</a></p>
     </section>`;
   }
 
@@ -150,7 +150,7 @@
     <p class="crumb"><a href="#/">All periods</a></p>
     <header class="unit-head">
       <p class="era big">${esc(u.years)}</p>
-      <h1>Unit ${u.id} — ${esc(u.name)}</h1>
+      <h1>Unit ${u.id}: ${esc(u.name)}</h1>
     </header>
     <ul class="ch-list">
       ${u.chapters.map(n => {
@@ -206,7 +206,7 @@
     if (!c) return notFound();
     return `<article class="chapter">
       <p class="crumb">Remnant · <a href="#/ch/${n}">back to Chapter ${n}</a></p>
-      <h1>Ch ${n} — remnant (${esc(c.years)})</h1>
+      <h1>Ch ${n}: remnant (${esc(c.years)})</h1>
       <h2>The big ideas</h2>
       <ul class="ideas">${(c.big_ideas || []).map(i => `<li>${esc(i)}</li>`).join('')}</ul>
       <h2>Timeline</h2>
@@ -220,83 +220,18 @@
   // ---------------------------------------------------------- fact maps
 
   // The whole chapter told as one inline graphic novel: the story, then the
-  // big ideas, the timeline, and the key terms — each an illustrated panel.
+  // big ideas, the timeline, and the key terms, each an illustrated panel.
   let mapSeq = 0;
-  let curTL = [], flagged = new Set();
   function illustratedTimeline(n) {
     const tl = (window.TL || {})[String(n)];
     if (!tl || !tl.length) return '';
-    curTL = tl; flagged = new Set();
     const rows = tl.map((e, i) => `
       <div class="tl-entry" id="tle-${i}">
         <div class="tl-imgs">${e.imgs.map(src => `<img class="tl-img" src="${src}" alt="" loading="lazy">`).join('')}</div>
-        <div class="tl-head"><span class="tl-date">${esc(e.date)}</span><h3 class="tl-title">${esc(e.title)}</h3>
-          <button class="tl-flag" data-flag="${i}" aria-pressed="false" title="Flag this if you're confused">Confused?</button></div>
-        ${e.text ? `<p class="tl-text">${esc(e.text)}</p>` : ''}
+        <div class="tl-head"><span class="tl-date">${esc(e.date)}</span><h3 class="tl-title">${esc(e.title)}</h3></div>
         ${e.detail ? `<p class="tl-detail">${esc(e.detail)}</p>` : ''}
       </div>`).join('');
-    return `<div class="tl">${rows}</div><section class="flagged" id="flagged"></section>`;
-  }
-
-  // The running "review log" of the sections you tapped "Confused?" on.
-  function renderFlagged() {
-    const host = document.getElementById('flagged');
-    if (!host) return;
-    if (!flagged.size) {
-      host.innerHTML = `<p class="flag-hint">Tap <strong>“Confused?”</strong> on any section above — it collects here with its explanation, and you can run a focused quiz on just those.</p>`;
-      return;
-    }
-    const items = [...flagged].sort((a, b) => a - b).map(i => {
-      const e = curTL[i];
-      const body = e.detail || e.text || '';
-      return `<div class="flag-item"><h3>${esc(e.date)} — ${esc(e.title)}</h3>${body ? `<p>${esc(body)}</p>` : ''}</div>`;
-    }).join('');
-    host.innerHTML = `<h2>Your review — ${flagged.size} section${flagged.size > 1 ? 's' : ''} to focus on</h2>
-      ${items}
-      <button class="btn" id="flag-quiz">Quiz me on these ${flagged.size}</button>
-      <div id="fq-body"></div>`;
-  }
-
-  // Targeted quiz over just the flagged sections.
-  const fq = { deck: [], i: 0, score: 0, answered: false, correct: '' };
-  function startFlaggedQuiz() {
-    const deck = [];
-    [...flagged].sort((a, b) => a - b).forEach(i => { const e = curTL[i]; if (e.text) deck.push({ q: e.title, a: e.text }); });
-    shuffle(deck);
-    fq.deck = deck; fq.i = 0; fq.score = 0; renderFlaggedQuiz();
-  }
-  function renderFlaggedQuiz() {
-    const body = document.getElementById('fq-body');
-    if (!body) return;
-    if (!fq.deck.length) { body.innerHTML = '<p class="flag-hint">These sections have no short definition to quiz — try the full pop quiz below.</p>'; return; }
-    if (fq.i >= fq.deck.length) {
-      body.innerHTML = `<p class="cq-score">${fq.score} / ${fq.deck.length} — ${Math.round(100 * fq.score / fq.deck.length)}%</p>
-        <button class="btn small" id="fq-restart">Again</button>`;
-      return;
-    }
-    const q = fq.deck[fq.i];
-    const pool = curTL.map(e => e.text).filter(t => t && t !== q.a);
-    shuffle(pool);
-    const opts = shuffle([q.a].concat(pool.slice(0, 3)));
-    fq.correct = q.a; fq.answered = false;
-    body.innerHTML = `<p class="cq-count">Q ${fq.i + 1} of ${fq.deck.length} · score ${fq.score}</p>
-      <p class="quiz-q">What is <strong>${esc(q.q)}</strong>?</p>
-      <div class="cq-opts fq-opts">${opts.map(o => `<button class="quiz-opt" data-fopt="${esc(o)}">${esc(o)}</button>`).join('')}</div>`;
-  }
-  function answerFlaggedQuiz(btn) {
-    if (fq.answered) return;
-    fq.answered = true;
-    if (btn.dataset.fopt === fq.correct) fq.score += 1;
-    const body = document.getElementById('fq-body');
-    body.querySelectorAll('.quiz-opt').forEach(b => {
-      b.disabled = true;
-      if (b.dataset.fopt === fq.correct) b.classList.add('right');
-      else if (b === btn) b.classList.add('wrong');
-    });
-    const nav = document.createElement('div');
-    nav.className = 'cq-next';
-    nav.innerHTML = `<button class="btn small" id="fq-advance">${fq.i + 1 < fq.deck.length ? 'Next' : 'Score'}</button>`;
-    body.appendChild(nav);
+    return `<div class="tl">${rows}</div>`;
   }
 
   function graphicNovel(n, c) {
@@ -382,7 +317,7 @@
       const yr = (pin.label.match(/\d{3,4}/) || [])[0];
       const ev = chTimeline.find(e =>
         (e.event || '').toLowerCase().includes(base) || (yr && String(e.year) === yr));
-      return ev ? ev.year + ' — ' + ev.event : '';
+      return ev ? ev.year + ': ' + ev.event : '';
     };
 
     const P = (lon, lat) => [lon * 0.8, -lat];
@@ -501,68 +436,244 @@
 
   // ---------------------------------------------------------- chapter quiz
 
-  const cq = { n: null, deck: [], i: 0, score: 0, answered: false };
+  // Study & quiz: pick the sections above you want to lock in, skim a quick
+  // recap of each, then get quizzed on just those concepts (never dates).
+  const sq = { n: null, sections: [], selected: new Set(), phase: 'select', oi: 0, deck: [], i: 0, score: 0, answered: false, correct: '' };
+
+  function firstSentence(s) {
+    if (!s) return '';
+    const m = String(s).match(/[^.!?]+[.!?]+/);
+    return (m ? m[0] : String(s)).trim();
+  }
+  function conceptOf(e) {
+    return (e && e.text && e.text.trim()) ? e.text.trim() : firstSentence(e && e.detail);
+  }
 
   function chapterQuizHtml(n) {
-    const c = chap(n);
-    if (!c || (c.key_terms || []).length < 4) return '';
-    return `<section class="ch-quiz" id="ch-quiz"><h2>Pop quiz</h2>
-      <p class="cq-intro">Every key term and event in this chapter — work through them all.</p>
+    const tl = (window.TL || {})[String(n)] || [];
+    if (tl.length < 2) return '';
+    return `<section class="ch-quiz" id="ch-quiz"><h2>Study &amp; quiz</h2>
       <div id="cq-body"></div></section>`;
   }
 
   function startChapterQuiz(n) {
-    const c = chap(n) || {};
-    const deck = [];
-    (c.key_terms || []).forEach(t => { if (t.term && t.def) deck.push({ kind: 'term', q: t.term, a: t.def }); });
-    (c.timeline || []).forEach(t => { if (t.event && t.year) deck.push({ kind: 'year', q: t.event, a: t.year }); });
-    shuffle(deck);
-    cq.n = n; cq.deck = deck; cq.i = 0; cq.score = 0; cq.answered = false;
-    renderChapterQuiz();
+    n = Number(n);
+    const tl = (window.TL || {})[String(n)] || [];
+    sq.n = n;
+    sq.sections = tl.map((e, i) => ({ i, date: e.date, title: e.title, detail: e.detail || '', concept: conceptOf(e) }));
+    sq.selected = new Set();
+    sq.phase = 'select'; sq.oi = 0; sq.deck = []; sq.i = 0; sq.score = 0; sq.answered = false;
+    renderStudyQuiz();
   }
 
-  function renderChapterQuiz() {
+  function renderStudyQuiz() {
     const body = document.getElementById('cq-body');
     if (!body) return;
-    if (!cq.deck.length) { body.innerHTML = ''; return; }
-    if (cq.i >= cq.deck.length) {
-      const pct = Math.round(100 * cq.score / cq.deck.length);
-      body.innerHTML = `<p class="cq-score">${cq.score} / ${cq.deck.length} right — ${pct}%</p>
-        <button class="btn" id="cq-restart">Retake the quiz</button>`;
-      return;
-    }
-    const q = cq.deck[cq.i];
-    const c = chap(cq.n) || {};
-    let prompt, pool;
-    if (q.kind === 'term') {
-      prompt = `What is <strong>${esc(q.q)}</strong>?`;
-      pool = (c.key_terms || []).map(t => t.def).filter(d => d && d !== q.a);
+    if (!sq.sections.length) { body.innerHTML = ''; return; }
+    if (sq.phase === 'quiz') return renderConceptQuiz(body);
+    // ---- select phase: choose which concepts to drill
+    const items = sq.sections.map(s => `
+      <button class="sq-item${sq.selected.has(s.i) ? ' on' : ''}" data-sqsel="${s.i}" aria-pressed="${sq.selected.has(s.i)}">
+        <span class="sq-check" aria-hidden="true"></span>
+        <span class="sq-item-txt"><span class="sq-item-date">${esc(s.date)}</span> ${esc(s.title)}</span>
+      </button>`).join('');
+    const k = sq.selected.size;
+    body.innerHTML = `
+      <div class="sq-tools">
+        <button class="btn small ghost" id="sq-all">${k === sq.sections.length ? 'Clear all' : 'Select all'}</button>
+        <span class="sq-count">${k} selected</span>
+      </div>
+      <div class="sq-list">${items}</div>
+      <button class="btn" id="sq-start"${k ? '' : ' disabled'}>Quiz me${k ? ` (${k * 10} questions)` : ''} →</button>`;
+  }
+
+  function pickedSections() {
+    return sq.sections.filter(s => sq.selected.has(s.i));
+  }
+
+  // Ten questions per selected concept, alternating "name the definition" and
+  // "name the concept" and cycling the wording so the reps don't feel identical.
+  const FWD_PHRASE = [
+    'Which best describes <strong>%</strong>?',
+    'What was <strong>%</strong>?',
+    'Which definition matches <strong>%</strong>?',
+    'What does <strong>%</strong> refer to?',
+    'Pick the correct account of <strong>%</strong>:',
+  ];
+  const REV_PHRASE = [
+    'Which concept does this describe?',
+    'This description fits which concept?',
+    'Which term matches this?',
+    'Identify the concept:',
+  ];
+  const QUESTIONS_PER_CONCEPT = 10;
+
+  // One machine-generated fallback question (used only where no authored bank exists).
+  function genQuestion(s, r) {
+    const phrase = Math.floor(r / 2);
+    let qHtml, answer, pool;
+    if (r % 2) {
+      qHtml = `${REV_PHRASE[phrase % REV_PHRASE.length]}<br><em class="quiz-desc">${esc(s.concept)}</em>`;
+      answer = s.title;
+      pool = [...new Set(sq.sections.map(x => x.title).filter(t => t && t !== answer))];
     } else {
-      prompt = `When did this happen? — <em>${esc(q.q)}</em>`;
-      pool = [...new Set((c.timeline || []).map(t => t.year))].filter(y => y && y !== q.a);
+      qHtml = FWD_PHRASE[phrase % FWD_PHRASE.length].replace('%', esc(s.title));
+      answer = s.concept;
+      pool = [...new Set(sq.sections.map(x => x.concept).filter(c => c && c !== answer))];
     }
     shuffle(pool);
-    const opts = shuffle([q.a].concat(pool.slice(0, 3)));
-    cq.correct = q.a; cq.answered = false;
-    body.innerHTML = `<p class="cq-count">Question ${cq.i + 1} of ${cq.deck.length} · score ${cq.score}</p>
-      <p class="quiz-q">${prompt}</p>
+    return { qHtml, choices: [answer].concat(pool.slice(0, 3)), answer };
+  }
+
+  function startQuizDeck() {
+    const picked = pickedSections();
+    const titles = new Set(picked.map(s => s.title));
+    const bank = ((window.QUIZ || {})[String(sq.n)] || [])
+      .filter(q => titles.has(q.concept) && Array.isArray(q.choices)
+        && typeof q.answer === 'number' && q.choices[q.answer] != null);
+    let deck;
+    if (bank.length) {
+      // authored, exam-style questions for the picked concepts
+      deck = bank.map(q => ({ q: q.q, choices: q.choices.slice(), answer: q.choices[q.answer] }));
+    } else {
+      // fallback: machine-generated drill for chapters not yet authored
+      deck = [];
+      picked.filter(s => s.concept).forEach(s => {
+        for (let r = 0; r < QUESTIONS_PER_CONCEPT; r++) deck.push(genQuestion(s, r));
+      });
+    }
+    shuffle(deck);
+    sq.deck = deck; sq.i = 0; sq.score = 0; sq.answered = false; sq.phase = 'quiz';
+    renderStudyQuiz();
+  }
+
+  function renderConceptQuiz(body) {
+    body = body || document.getElementById('cq-body');
+    if (!body) return;
+    if (!sq.deck.length) {
+      body.innerHTML = `<p class="flag-hint">Those sections don't have a concept to quiz on.
+        <button class="btn small" id="cq-restudy">Pick others</button></p>`;
+      return;
+    }
+    if (sq.i >= sq.deck.length) {
+      const pct = Math.round(100 * sq.score / sq.deck.length);
+      body.innerHTML = `<p class="cq-score">${sq.score} / ${sq.deck.length} right (${pct}%)</p>
+        <div class="ov-nav">
+          <button class="btn small ghost" id="cq-restudy">Pick different concepts</button>
+          <button class="btn" id="cq-restart">Retake these</button>
+        </div>`;
+      return;
+    }
+    const item = sq.deck[sq.i];
+    const stem = item.qHtml || esc(item.q);
+    const opts = shuffle(item.choices.slice());
+    sq.correct = item.answer; sq.answered = false;
+    body.innerHTML = `<div class="cq-top">
+        <button class="btn small ghost" id="sq-back">‹ Back to sections</button>
+        <span class="cq-count">Question ${sq.i + 1} of ${sq.deck.length} · score ${sq.score}</span>
+      </div>
+      <p class="quiz-q">${stem}</p>
       <div class="cq-opts">${opts.map(o => `<button class="quiz-opt" data-opt="${esc(o)}">${esc(o)}</button>`).join('')}</div>`;
   }
 
   function answerChapterQuiz(btn) {
-    if (cq.answered) return;
-    cq.answered = true;
-    if (btn.dataset.opt === cq.correct) cq.score += 1;
+    if (sq.answered) return;
+    sq.answered = true;
+    if (btn.dataset.opt === sq.correct) sq.score += 1;
     const body = document.getElementById('cq-body');
     body.querySelectorAll('.quiz-opt').forEach(b => {
       b.disabled = true;
-      if (b.dataset.opt === cq.correct) b.classList.add('right');
+      if (b.dataset.opt === sq.correct) b.classList.add('right');
       else if (b === btn) b.classList.add('wrong');
     });
     const nav = document.createElement('div');
     nav.className = 'cq-next';
-    nav.innerHTML = `<button class="btn small" id="cq-advance">${cq.i + 1 < cq.deck.length ? 'Next question' : 'See score'}</button>`;
+    nav.innerHTML = `<button class="btn small" id="cq-advance">${sq.i + 1 < sq.deck.length ? 'Next question' : 'See score'}</button>`;
     body.appendChild(nav);
+  }
+
+  // ---------------------------------------------------------- date-sorting game
+  // Drag (or nudge) the chapter's events into chronological order, then grade.
+  const dg = { n: null, items: [], order: [], checked: false };
+  let dgDrag = null;
+
+  function dateGameHtml(n) {
+    const c = chap(n);
+    const pool = ((c && c.timeline) || []).filter(t => t.event && /\d/.test(String(t.year)));
+    const years = new Set(pool.map(t => parseYear(t.year)));
+    if (years.size < 3) return '';
+    return `<section class="date-game" id="date-game"><h2>Put it in order</h2><div id="dg-body"></div></section>`;
+  }
+
+  function startDateGame(n) {
+    n = Number(n);
+    const c = chap(n) || {};
+    const pool = [], seen = {};
+    (c.timeline || []).forEach(t => {
+      if (!t.event || !/\d/.test(String(t.year))) return;
+      const y = parseYear(t.year);
+      if (!(y in seen)) { seen[y] = 1; pool.push({ year: t.year, event: t.event, key: y }); }
+    });
+    if (pool.length < 3) { dg.items = []; renderDateGame(); return; }
+    shuffle(pool);
+    dg.items = pool.slice(0, Math.min(7, pool.length)).map((it, id) => ({ ...it, id }));
+    dg.order = dg.items.map(it => it.id);
+    for (let t = 0; t < 6 && dgSorted(); t++) shuffle(dg.order);   // don't start already-solved
+    dg.n = n; dg.checked = false;
+    renderDateGame();
+  }
+
+  function dgKey(id) { return dg.items.find(it => it.id === id).key; }
+  function dgSorted() { return dg.order.every((id, p) => p === 0 || dgKey(dg.order[p - 1]) <= dgKey(id)); }
+
+  function renderDateGame() {
+    const body = document.getElementById('dg-body');
+    if (!body) return;
+    if (!dg.items.length) { body.innerHTML = ''; return; }
+    const truth = [...dg.order].sort((a, b) => dgKey(a) - dgKey(b));
+    const item = id => dg.items.find(it => it.id === id);
+    const cards = dg.order.map((id, pos) => {
+      const it = item(id);
+      let cls = 'dg-card';
+      let dateHtml = '';
+      if (dg.checked) {
+        cls += (dg.order[pos] === truth[pos]) ? ' ok' : ' bad';
+        dateHtml = `<span class="dg-date">${esc(String(it.year))}</span>`;
+      }
+      return `<li class="${cls}" draggable="${dg.checked ? 'false' : 'true'}" data-id="${id}">
+        <span class="dg-grip" aria-hidden="true">⋮⋮</span>
+        <span class="dg-event">${esc(it.event)}</span>
+        ${dateHtml}
+        <span class="dg-move">
+          <button class="dg-arrow" data-mv="up" aria-label="Move earlier"${pos === 0 || dg.checked ? ' disabled' : ''}>▲</button>
+          <button class="dg-arrow" data-mv="down" aria-label="Move later"${pos === dg.order.length - 1 || dg.checked ? ' disabled' : ''}>▼</button>
+        </span></li>`;
+    }).join('');
+    let foot;
+    if (dg.checked) {
+      const right = dg.order.reduce((a, id, p) => a + (id === truth[p] ? 1 : 0), 0);
+      const perfect = right === dg.order.length;
+      foot = `<p class="dg-result ${perfect ? 'win' : 'miss'}">${perfect
+        ? `Perfect. All ${dg.order.length} in chronological order.`
+        : `${right} of ${dg.order.length} in the right spot. The ones in red are out of place. Dates are shown now, so drag or replay to fix them.`}</p>
+        <button class="btn" id="dg-again">Play again</button>`;
+    } else {
+      foot = `<div class="dg-actions"><button class="btn" id="dg-check">Check order</button>
+        <button class="btn small ghost" id="dg-shuffle">Shuffle</button></div>`;
+    }
+    body.innerHTML = `<p class="dg-instr">Drag the events so the earliest sits at the top, then check your answer.</p>
+      <ol class="dg-list" id="dg-list">${cards}</ol>${foot}`;
+  }
+
+  function dgAfterEl(list, y) {
+    const els = [...list.querySelectorAll('.dg-card:not(.dragging)')];
+    let best = { off: -Infinity, el: null };
+    els.forEach(el => {
+      const box = el.getBoundingClientRect();
+      const off = y - box.top - box.height / 2;
+      if (off < 0 && off > best.off) best = { off, el };
+    });
+    return best.el;
   }
 
   function wireChapter(n) {
@@ -577,7 +688,7 @@
   function reviewHtml() {
     return `<p class="crumb"><a href="#/">All periods</a></p>
       <h1>Spaced review</h1>
-      <p class="cover-note">Terms mixed from every chapter and resurfaced on a spacing schedule — miss one and it returns sooner, get it right and it waits longer. Retrieval practice plus spacing are the two techniques the research backs most.</p>
+      <p class="cover-note">Terms mixed from every chapter and resurfaced on a spacing schedule: miss one and it returns sooner, get it right and it waits longer. Retrieval practice plus spacing are the two techniques the research backs most.</p>
       <div id="rv-body"></div>`;
   }
   function startReview() {
@@ -637,9 +748,9 @@
   function orderHtml(uid) {
     const u = U.find(x => x.id === Number(uid));
     if (!u) return notFound();
-    return `<p class="crumb"><a href="#/unit/${u.id}">Unit ${u.id} — ${esc(u.name)}</a></p>
+    return `<p class="crumb"><a href="#/unit/${u.id}">Unit ${u.id}: ${esc(u.name)}</a></p>
       <h1>Timeline challenge</h1>
-      <p class="cover-note">Click the events in order, earliest to latest. Sequencing events is exactly what the exam's causation and continuity-and-change questions test — and where students most often slip.</p>
+      <p class="cover-note">Click the events in order, earliest to latest. Sequencing events is exactly what the exam's causation and continuity-and-change questions test, and where students most often slip.</p>
       <div id="ord-body"></div>`;
   }
   function startOrder(uid) {
@@ -673,7 +784,7 @@
     body.innerHTML = `
       <ol class="ord-picked">${ord.picked.map((e, i) =>
         `<li><span class="ord-n">${i + 1}</span>${esc(e.event)}</li>`).join('')}</ol>
-      <p class="ord-instr">Choose #${ord.picked.length + 1} — earliest first:</p>
+      <p class="ord-instr">Choose #${ord.picked.length + 1}, earliest first:</p>
       <div class="ord-choices">${ord.events.map((e, i) =>
         ord.picked.indexOf(e) === -1
           ? `<button class="btn ghost ord-choice" data-i="${i}">${esc(e.event)}</button>` : ''
@@ -776,28 +887,68 @@
     const pop = document.getElementById('map-pop');
     if (pop && !e.target.closest('#map-pop')) pop.remove();
 
-    const fb = e.target.closest('[data-flag]');
-    if (fb) {
-      const i = +fb.dataset.flag, row = document.getElementById('tle-' + i);
-      if (flagged.has(i)) { flagged.delete(i); fb.setAttribute('aria-pressed', 'false'); if (row) row.classList.remove('is-flagged'); }
-      else { flagged.add(i); fb.setAttribute('aria-pressed', 'true'); if (row) row.classList.add('is-flagged'); }
-      renderFlagged(); return;
+    // Study & quiz: section select → recap overview → concept quiz
+    const sel = e.target.closest('[data-sqsel]');
+    if (sel) {
+      const i = +sel.dataset.sqsel;
+      if (sq.selected.has(i)) sq.selected.delete(i); else sq.selected.add(i);
+      renderStudyQuiz(); return;
     }
-    if (e.target.closest('#flag-quiz')) { startFlaggedQuiz(); return; }
-    const fopt = e.target.closest('.fq-opts .quiz-opt');
-    if (fopt) { answerFlaggedQuiz(fopt); return; }
-    if (e.target.closest('#fq-advance')) { fq.i += 1; renderFlaggedQuiz(); return; }
-    if (e.target.closest('#fq-restart')) { startFlaggedQuiz(); return; }
+    if (e.target.closest('#sq-all')) {
+      if (sq.selected.size === sq.sections.length) sq.selected.clear();
+      else sq.sections.forEach(s => sq.selected.add(s.i));
+      renderStudyQuiz(); return;
+    }
+    if (e.target.closest('#sq-start')) { startQuizDeck(); return; }
+    if (e.target.closest('#sq-back')) { sq.phase = 'select'; renderStudyQuiz(); return; }
 
     const opt = e.target.closest('.ch-quiz .quiz-opt');
     if (opt) { answerChapterQuiz(opt); return; }
-    if (e.target.closest('#cq-advance')) { cq.i += 1; renderChapterQuiz(); return; }
-    if (e.target.closest('#cq-restart')) { startChapterQuiz(cq.n); return; }
+    if (e.target.closest('#cq-advance')) { sq.i += 1; renderStudyQuiz(); return; }
+    if (e.target.closest('#cq-restudy')) { sq.phase = 'select'; renderStudyQuiz(); return; }
+    if (e.target.closest('#cq-restart')) { startQuizDeck(); return; }
+
+    // date-sorting game: nudge / check / shuffle / replay
+    const arrow = e.target.closest('.dg-arrow');
+    if (arrow) {
+      const id = +arrow.closest('.dg-card').dataset.id, pos = dg.order.indexOf(id);
+      const np = pos + (arrow.dataset.mv === 'up' ? -1 : 1);
+      if (np >= 0 && np < dg.order.length) { dg.order[pos] = dg.order[np]; dg.order[np] = id; renderDateGame(); }
+      return;
+    }
+    if (e.target.closest('#dg-check')) { dg.checked = true; renderDateGame(); return; }
+    if (e.target.closest('#dg-shuffle')) { shuffle(dg.order); renderDateGame(); return; }
+    if (e.target.closest('#dg-again')) { startDateGame(dg.n); return; }
 
     const ropt = e.target.closest('#rv-body .quiz-opt');
     if (ropt) { answerReview(ropt); return; }
     if (e.target.closest('#rv-next')) { rv.i += 1; renderReview(); return; }
     if (e.target.closest('#rv-again')) { startReview(); return; }
+  });
+
+  // drag-and-drop reordering for the date-sorting game
+  app.addEventListener('dragstart', e => {
+    const card = e.target.closest('.dg-card');
+    if (!card || dg.checked) return;
+    dgDrag = card; e.dataTransfer.effectAllowed = 'move';
+    setTimeout(() => card.classList.add('dragging'), 0);
+  });
+  app.addEventListener('dragover', e => {
+    const list = e.target.closest('#dg-list');
+    if (!list || !dgDrag) return;
+    e.preventDefault();
+    const after = dgAfterEl(list, e.clientY);
+    if (after == null) list.appendChild(dgDrag);
+    else list.insertBefore(dgDrag, after);
+  });
+  app.addEventListener('drop', e => { if (e.target.closest('#dg-list')) e.preventDefault(); });
+  app.addEventListener('dragend', () => {
+    if (!dgDrag) return;
+    dgDrag.classList.remove('dragging');
+    const list = document.getElementById('dg-list');
+    if (list) dg.order = [...list.children].map(c => +c.dataset.id);
+    dgDrag = null;
+    renderDateGame();
   });
 
   app.addEventListener('keydown', e => {
@@ -834,7 +985,7 @@
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = (view ? '<button class="backbtn" id="backbtn">‹ Back</button>' : '') + html;
-    if (view === 'ch') { startChapterQuiz(arg); renderFlagged(); Comic.wire(arg); }
+    if (view === 'ch') { startChapterQuiz(arg); startDateGame(arg); Comic.wire(arg); }
     if (view === 'review') startReview();
     if (view === 'atlas') Atlas.wire(parts[1], parts[2]);
     window.scrollTo(0, 0);
