@@ -28,7 +28,7 @@ for p in sorted(SPECS.glob("ch*_quiz.json")):
     if good:
         quiz[n] = good
 
-out = "// Authored exam-style quiz bank (window.QUIZ) — built by build_quiz.py.\n"
+out = "// Authored exam-style quiz bank (window.QUIZ), built by build_quiz.py.\n"
 out += "window.QUIZ = " + json.dumps(quiz, ensure_ascii=False) + ";\n"
 (BASE / "studier" / "quiz.js").write_text(out)
 total = sum(len(v) for v in quiz.values())

@@ -985,7 +985,7 @@
     else if (view === 'find') html = find(decodeURIComponent(h.slice(5)));
     else html = notFound();
     app.innerHTML = (view ? '<button class="backbtn" id="backbtn">‹ Back</button>' : '') + html;
-    if (view === 'ch') { startChapterQuiz(arg); startDateGame(arg); Comic.wire(arg); }
+    if (view === 'ch') { startChapterQuiz(arg); Comic.wire(arg); }
     if (view === 'review') startReview();
     if (view === 'atlas') Atlas.wire(parts[1], parts[2]);
     window.scrollTo(0, 0);
