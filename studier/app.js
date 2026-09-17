@@ -6,6 +6,16 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+  // The timeline already shows each event's date on the left, so drop a
+  // redundant leading year/date from the title ("1856 Bleeding Kansas" ->
+  // "Bleeding Kansas"). Only a LEADING year is stripped, so names that carry a
+  // year inside them ("War of 1812", "Panic of 1819") are left alone.
+  const cleanTitle = t => {
+    const s = String(t == null ? '' : t);
+    const stripped = s.replace(/^\s*\d{4}(?:[–—-]\d{2,4})?s?\b[\s:.,–—-]*/, '').trim();
+    return stripped || s;
+  };
+
   const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const unitOf = n => U.find(u => u.chapters.includes(Number(n)));
 
@@ -111,7 +121,7 @@
     return `
     <section class="home-intro">
       <h1>Give Me Liberty!</h1>
-      <p>An illustrated study companion to Eric Foner's <em>Give Me Liberty! An American History</em> (Brief 5th edition). Every chapter is a <strong>visual timeline</strong>: each key term and turning point drawn as its own illustrated moment, in order. At the bottom you pick the concepts you want to drill for a <strong>ten-question quiz</strong> on each, then put the events in order in a <strong>date-sorting game</strong>. Pick a chapter to begin.</p>
+      <p>An illustrated study companion to Eric Foner's <em>Give Me Liberty! An American History</em> (Brief 5th edition). Every chapter is a <strong>visual timeline</strong>: each key term and turning point drawn as its own illustrated moment, in order. At the bottom you pick the concepts you want to drill in a <strong>quiz</strong>, then put the events in order in a <strong>date-sorting game</strong>. Pick a chapter to begin.</p>
     </section>
     <nav class="units">
       ${U.map(u => `
@@ -124,7 +134,8 @@
           </div>
         </div>
       </div>`).join('')}
-    </nav>`;
+    </nav>
+    <p class="built-by">Built by Asher Zaczepinski</p>`;
   }
 
   function dashboard() {
@@ -181,7 +192,10 @@
       <header class="ch-head">
         <h1><span class="ch-no big">${n}</span>${esc(c.title)}</h1>
       </header>
-      <p class="ch-intro">${esc(chapterIntro(c))}</p>
+      <section class="ch-overview">
+        <span class="ov-label">Overview</span>
+        <p class="ch-intro">${esc(chapterIntro(c).replace(/\s*[—–]\s*/g, ', '))}</p>
+      </section>
       ${graphicNovel(n, c)}
       ${chapterQuizHtml(n)}
       <nav class="pager">
@@ -228,7 +242,7 @@
     const rows = tl.map((e, i) => `
       <div class="tl-entry" id="tle-${i}">
         <div class="tl-imgs">${e.imgs.map(src => `<img class="tl-img" src="${src}" alt="" loading="lazy">`).join('')}</div>
-        <div class="tl-head"><span class="tl-date">${esc(e.date)}</span><h3 class="tl-title">${esc(e.title)}</h3></div>
+        <div class="tl-head"><span class="tl-date">${esc(e.date)}</span><h3 class="tl-title">${esc(cleanTitle(e.title))}</h3></div>
         ${e.detail ? `<p class="tl-detail">${esc(e.detail)}</p>` : ''}
       </div>`).join('');
     return `<div class="tl">${rows}</div>`;
