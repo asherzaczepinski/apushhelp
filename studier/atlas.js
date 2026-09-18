@@ -96,7 +96,7 @@ window.Atlas = (function () {
 
     globe = window.Globe()(host)
       .globeImageUrl('vendor/earth-blue-marble.jpg')
-      .backgroundColor('#f5ecd7')
+      .backgroundColor('#ffffff')
       .showAtmosphere(true).atmosphereColor('#9ab0c4').atmosphereAltitude(0.2)
       .width(host.clientWidth || 660).height(460)
       .polygonsData(window.COUNTRIES_GEO || [])

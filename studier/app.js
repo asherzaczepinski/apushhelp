@@ -498,7 +498,7 @@
         <span class="sq-count">${k} selected</span>
       </div>
       <div class="sq-list">${items}</div>
-      <button class="btn" id="sq-start"${k ? '' : ' disabled'}>Quiz me${k ? ` (${k * 10} questions)` : ''} →</button>`;
+      <button class="btn" id="sq-start"${k ? '' : ' disabled'}>Quiz me →</button>`;
   }
 
   function pickedSections() {
