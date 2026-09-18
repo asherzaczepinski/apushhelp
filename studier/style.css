@@ -498,6 +498,12 @@ text.map-hot { fill: var(--patriot); text-decoration: underline; }
 .quiz-opt:disabled { cursor: default; }
 .quiz-opt.right { border-color: #3f6d3f; background: #e6ecdd; }
 .quiz-opt.wrong { border-color: var(--patriot); background: #f0dcd8; }
+.cq-explain { margin-top: 12px; padding: 10px 12px; border-left: 4px solid var(--patriot); background: #f6efe6; border-radius: 4px; }
+.cq-ex-line { margin: 2px 0; line-height: 1.4; }
+.cq-ex-x { font-weight: bold; color: var(--patriot); }
+.cq-ex-ok { font-weight: bold; color: #3f6d3f; }
+.cq-ex-why { margin: 2px 0 8px 18px; font-size: 0.92rem; line-height: 1.45; color: #444; }
+.cq-ex-concept { margin: 6px 0 0; font-size: 0.9rem; opacity: 0.8; }
 .cq-next { margin-top: 12px; }
 .cq-score { font-size: 1.3rem; font-weight: bold; color: var(--patriot); margin-bottom: 12px; }
 

@@ -536,7 +536,7 @@
       pool = [...new Set(sq.sections.map(x => x.concept).filter(c => c && c !== answer))];
     }
     shuffle(pool);
-    return { qHtml, choices: [answer].concat(pool.slice(0, 3)), answer };
+    return { qHtml, choices: [answer].concat(pool.slice(0, 3)), answer, concept: s.title };
   }
 
   function startQuizDeck() {
@@ -548,7 +548,7 @@
     let deck;
     if (bank.length) {
       // authored, exam-style questions for the picked concepts
-      deck = bank.map(q => ({ q: q.q, choices: q.choices.slice(), answer: q.choices[q.answer] }));
+      deck = bank.map(q => ({ q: q.q, choices: q.choices.slice(), answer: q.choices[q.answer], concept: q.concept, ex: q.ex }));
     } else {
       // fallback: machine-generated drill for chapters not yet authored
       deck = [];
@@ -593,13 +593,28 @@
   function answerChapterQuiz(btn) {
     if (sq.answered) return;
     sq.answered = true;
-    if (btn.dataset.opt === sq.correct) sq.score += 1;
+    const isRight = btn.dataset.opt === sq.correct;
+    if (isRight) sq.score += 1;
     const body = document.getElementById('cq-body');
     body.querySelectorAll('.quiz-opt').forEach(b => {
       b.disabled = true;
       if (b.dataset.opt === sq.correct) b.classList.add('right');
       else if (b === btn) b.classList.add('wrong');
     });
+    if (!isRight) {
+      const item = sq.deck[sq.i] || {};
+      const picked = btn.dataset.opt;
+      const whyWrong = item.ex && item.ex.wrong ? item.ex.wrong[picked] : '';
+      const whyRight = item.ex ? item.ex.right : '';
+      const ex = document.createElement('div');
+      ex.className = 'cq-explain';
+      ex.innerHTML = `<p class="cq-ex-line"><span class="cq-ex-x">✕ You picked:</span> ${esc(picked)}</p>
+        ${whyWrong ? `<p class="cq-ex-why">${esc(whyWrong)}</p>` : ''}
+        <p class="cq-ex-line"><span class="cq-ex-ok">✓ Correct answer:</span> ${esc(sq.correct)}</p>
+        ${whyRight ? `<p class="cq-ex-why">${esc(whyRight)}</p>` : ''}
+        ${item.concept ? `<p class="cq-ex-concept">This question tests: <strong>${esc(item.concept)}</strong></p>` : ''}`;
+      body.appendChild(ex);
+    }
     const nav = document.createElement('div');
     nav.className = 'cq-next';
     nav.innerHTML = `<button class="btn small" id="cq-advance">${sq.i + 1 < sq.deck.length ? 'Next question' : 'See score'}</button>`;
